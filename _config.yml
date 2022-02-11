@@ -16,10 +16,10 @@ minimal_mistakes_skin    : "air" # "default", "air", "aqua", "contrast", "dark",
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Long Do's Site"
+title                    : "LDs Handbook"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Long Do"
+name                     : "LDs Handbook"
 description              : "Who care"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -126,7 +126,7 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
-      
+
 header:
   image: "/assets/images/51281910550_1647e1056b_k.jpg"
   image_description: "The chrysanths looks like a lotus flower"
