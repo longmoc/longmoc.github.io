@@ -21,3 +21,6 @@ Generator
 Discriminator
 
 ### Loss function
+
+Hàm loss của GAN có mục đích kết hợp tối ưu mục tiêu của cả Discriminator và Generator
+$$ \min_{\substack{G}}\max_{\substack{D}}(D,G) = \mathbb{E}_{x~p_{data}(x)}[\log D(x)] + \mathbb{E}_{z~p_{z}(z)}[\log (1-D(G(z)))]$$
