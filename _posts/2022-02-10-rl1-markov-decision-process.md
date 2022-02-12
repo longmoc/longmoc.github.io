@@ -5,7 +5,7 @@ categories: reinforcement-learning
 mathjax: true
 header:
   image: /assets/images/rl.jpeg
-  image_description: "Light"
+  image_description: "Studying"
 ---
 Mở đầu series Reinforcement Learning (RL) bằng Markov Decision Process(es).
 
