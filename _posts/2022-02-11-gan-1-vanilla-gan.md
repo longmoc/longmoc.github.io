@@ -16,9 +16,15 @@ Mô hình GAN được xếp vào nhóm mô hình *Generative* so với nhóm m�
 những dự đoán về nhãn hoặc giá trị $ y $ từ biến đầu vào $ \mathbf{x} $, giá trị dự báo là một xác suất có điều kiện $ \mathrm{P}(y|\mathbf{x}) $ .
  Trong đó $ y $ là mục tiêu cần dự báo và $ \mathbf{x} $ là điều kiện. Hàm số *sigmoid* và *softmax* thường được sử dụng để dự báo xác suất. 
 Ví dụ trong trường hợp dự báo nhị phân:
-$$ \p(y|\mathbf{x}) = \frac{1}{1+e^{-w^T\mathbf{x}}} $$
 
-Ngược lại, mô hình *generative* dự báo $ \mathrm{P}(\mathbf{x}|y) $, mô hình sẽ dựa vào đầu ra mong muốn để tìm các đặc trưng của dữ liệu.
+$$ p(y|\mathbf{x}) = \frac{1}{1+e^{-w^T\mathbf{x}}} $$
+
+Ngược lại, mô hình *generative* dự báo $ \mathrm{P}(\mathbf{x}|y) $, tức là dựa vào đầu ra mong muốn để tìm kiếm các đặc trưng của dữ liệu. 
+Dựa vào * công thức bayes * để tính ngược lại xác suất $ \mathrm{P}(\mathbf{x}|y) $:
+
+$$ \begin{aligned} p(y|\mathbf{x}) &= \frac{p(\mathbf{x},y)}{p(\mathbf{x})} \\ &= \frac{p(\mathbf{x}|y)p(y)}{sum_{y}{p(\mathbf{x},y)}} \\ &= \frac{p(\mathbf{x}|y)p(y)}{sum_{y}{p(\mathbf{x}|y)p(y)}} \end{aligned} $$
+
+
 , bài toán unsupervised
 
 Giải quyết unsupervised bằng supervised
