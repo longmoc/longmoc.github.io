@@ -61,10 +61,10 @@ $$ \underset{G}{\min}\underset{D}{\max}V(D,G) = \mathbb{E}_{x \sim p_{data}(x)}[
 
 Ta có $ D(y) $ là xác suất y nằm trong plausible data. Giả sử:
 
-$ \begin{case} 
+$$ \begin{case} 
 L(y) = 1 \\
 L(y) = 0
-\end{case} $
+\end{case} $$
 
 $$ \begin{case} 
 L(y) = 1, & \text{nếu y là ảnh thật} \\
