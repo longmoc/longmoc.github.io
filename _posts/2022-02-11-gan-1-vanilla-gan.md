@@ -62,6 +62,11 @@ $$ \underset{G}{\min}\underset{D}{\max}V(D,G) = \mathbb{E}_{x \sim p_{data}(x)}[
 Ta có $ D(y) $ là xác suất y nằm trong plausible data. Giả sử:
 
 $$ \begin{case} 
+L(y) = 1\\
+L(y) = 0
+\end{case} $$
+
+$$ \begin{case} 
 L(y) = 1, & \text{nếu y là ảnh thật} \\
 L(y) = 0, & \text{nếu y là ảnh giả}
 \end{case} $$
@@ -83,3 +88,4 @@ $$ \begin{case}
 \text{trong trường hợp ảnh thật} x \sim p_{data}(x) & (1) \approx \log (D(x))\\
 \text{đối với ảnh sinh} z \sim p_{z}(z) & (1) \approx \log (1-D(G(z)))
 \end{case} $$
+
