@@ -45,7 +45,7 @@ trực tiếp từ mô hình.
 GAN là một *implicit model*. Đặc biệt, GAN sử dụng *supervised learning* để giải quyết vấn đề *unsupervised learning*, 
 điều này được thực hiện thông qua hai thành phần đối lập *Discriminator* và *Generator* 
 
-![Kiến trúc của GAN]({{ site.url }}{{ site.baseurl }}/assets/images/posts/g1-structure.jpg)
+![Kiến trúc của GAN]({{ site.url }}{{ site.baseurl }}/assets/images/g1-structure.jpg)
 
 Hai thành phần (có thể coi như hai model) generator và discriminator được huấn luyện đồng thời. Trong khi generator có nhiệm vụ sinh ảnh thì discriminator 
 lại có chức năng phân biệt ảnh thật hay giả. Đầu vào của discriminator là ảnh sinh từ generator và ảnh thật từ dữ liệu.
