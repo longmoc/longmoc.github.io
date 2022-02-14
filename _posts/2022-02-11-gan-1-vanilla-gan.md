@@ -70,7 +70,7 @@ L(y) = 0, & \text{nếu y là ảnh giả}
 
 Công thức cross-entropy:
 
-$$ L(y)\log (D(y)) + (1 - L(y))\log (1-D(y)) ~~~ \tag{2}\label{2}$$
+$$ -(L(y)\log (D(y)) + (1 - L(y))\log (1-D(y))) \tag{2}\label{2}$$
 
 Biết rằng:
 $$ \begin{cases} 
@@ -80,7 +80,7 @@ L(y) = 0, & \text{với mọi } z \sim p_{z}(z)
 , vì thế
 
 $$ \begin{cases} 
-\text{trong trường hợp ảnh thật } x \sim p_{data}(x) & \eqref{2} \approx \log (D(x))\\
-\text{đối với ảnh sinh } z \sim p_{z}(z) & \eqref{2} \approx \log (1-D(G(z)))
+\text{trong trường hợp ảnh thật } x \sim p_{data}(x) & \eqref{2} \approx -\log (D(x))\\
+\text{đối với ảnh sinh } z \sim p_{z}(z) & \eqref{2} \approx -\log (1-D(G(z)))
 \end{cases} $$
 
