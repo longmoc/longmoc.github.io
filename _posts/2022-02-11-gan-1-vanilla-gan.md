@@ -19,7 +19,7 @@ Ví dụ trong trường hợp dự báo nhị phân:
 
 $$ p(y|\mathbf{x}) = \frac{1}{1+e^{-w^T\mathbf{x}}} $$
 
-Ngược lại, mô hình *generative* dự báo $ \mathrm{P}(\mathbf{x} | y) $ tức là dựa vào đầu ra mong muốn để tìm kiếm các đặc trưng của dữ liệu. 
+Ngược lại, mô hình *generative* dự báo $ \mathrm{P}(\mathbf{x}\mid y) $ tức là dựa vào đầu ra mong muốn để tìm kiếm các đặc trưng của dữ liệu. 
 Dựa vào *công thức bayes* để tính ngược lại xác suất $ \mathrm{P}(\mathbf{x}|y) $:
 
 $$ \begin{aligned} p(y|\mathbf{x}) &= \frac{p(\mathbf{x},y)}{p(\mathbf{x})} \\ &= \frac{p(\mathbf{x}|y)p(y)}{\sum_{y}{p(\mathbf{x},y)}} \\ &= \frac{p(\mathbf{x}|y)p(y)}{\sum_{y}{p(\mathbf{x}|y)p(y)}} \end{aligned} $$
