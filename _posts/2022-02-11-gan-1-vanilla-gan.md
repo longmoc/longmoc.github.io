@@ -59,6 +59,8 @@ Hàm loss của GAN có mục đích kết hợp tối ưu mục tiêu của c�
 
 $$ \underset{G}{\min}\underset{D}{\max}V(D,G) = \mathbb{E}_{x \sim p_{data}(x)}[\log D(x)] + \mathbb{E}_{z \sim p_{z}(z)}[\log (1-D(G(z)))] \tag{(1)}\label{(1)} $$
 
+Giờ ta sẽ làm rõ ý nghĩa của hàm loss này!
+
 Ta có $ D(y) $ là xác suất y nằm trong plausible data. Giả sử:
 
 $$ \begin{cases} 
