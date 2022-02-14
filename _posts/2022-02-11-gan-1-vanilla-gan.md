@@ -73,10 +73,10 @@ Công thức cross-entropy:
 $$ L(y)\log (D(y)) + (1 - L(y))\log (1-D(y)) ~~~ \tag{2}\label{2}$$
 
 Biết rằng:
-$ \begin{cases} 
+$$ \begin{cases} 
 L(x) = 1, & \text{với mọi } x \sim p_{data}(x)\\
 L(y) = 0, & \text{với mọi } z \sim p_{z}(z) 
-\end{cases} $
+\end{cases} $$
 , vì thế
 
 $$ \begin{cases} 
