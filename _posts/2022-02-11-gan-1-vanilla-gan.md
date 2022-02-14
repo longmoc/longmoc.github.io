@@ -57,7 +57,7 @@ Cả discriminator và generator đều được tối ưu để thực hiện t
 
 Hàm loss của GAN có mục đích kết hợp tối ưu mục tiêu của cả Discriminator và Generator
 
-$$ \underset{G}{\min}\underset{D}{\max}V(D,G) = \mathbb{E}_{x \sim p_{data}(x)}[\log D(x)] + \mathbb{E}_{z \sim p_{z}(z)}[\log (1-D(G(z)))] ~~~ (1) $$
+$$ \underset{G}{\min}\underset{D}{\max}V(D,G) = \mathbb{E}_{x \sim p_{data}(x)}[\log D(x)] + \mathbb{E}_{z \sim p_{z}(z)}[\log (1-D(G(z)))] \tag{(1)}\label{(1)} $$
 
 Ta có $ D(y) $ là xác suất y nằm trong plausible data. Giả sử:
 
@@ -68,7 +68,7 @@ L(y) = 0, & \text{nếu y là ảnh giả}
 
 Công thức cross-entropy:
 
-$$ L(y)\log (D(y)) + (1 - L(y))\log (1-D(y)) ~~~ (2) $$
+$$ L(y)\log (D(y)) + (1 - L(y))\log (1-D(y)) ~~~ \tag{(2)}\label{(2)}$$
 
 Biết rằng:
 
@@ -80,7 +80,7 @@ L(y) = 0, & \text{với mọi } z \sim p_{z}(z)
 , vì thế
 
 $$ \begin{cases} 
-\text{trong trường hợp ảnh thật } x \sim p_{data}(x) & (1) \approx \log (D(x))\\
-\text{đối với ảnh sinh } z \sim p_{z}(z) & (1) \approx \log (1-D(G(z)))
+\text{trong trường hợp ảnh thật } x \sim p_{data}(x) & \eqref{(2)} \approx \log (D(x))\\
+\text{đối với ảnh sinh } z \sim p_{z}(z) & \eqref{(2)} \approx \log (1-D(G(z)))
 \end{cases} $$
 
