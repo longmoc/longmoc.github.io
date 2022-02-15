@@ -84,5 +84,5 @@ L(y) = 0, & \text{với mọi } z \sim p_{z}(z)
 
 Đổi dấu hàm trên ta có $ V $
 Mục tiêu huấn luyện $ D $ là tối thiểu cross-entropy, tương đương với tối đa $ V $, ngược lại mục tiêu huấn luyện $ G $ để đánh lừa discriminator, 
-tương đương với việc tối đa thiểu $ V $.
+tương đương với việc tối thiểu $ V $.
 
