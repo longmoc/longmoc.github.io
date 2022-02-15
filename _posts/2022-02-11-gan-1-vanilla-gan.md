@@ -93,7 +93,7 @@ $$ \eqref{1} \Leftrightarrow \underset{D}{\max}V(D,G^*) = \mathbb{E}_{x \sim p_{
 
 Mặt khác input noise $ z \sim p_{z}(z) $ là ngẫu nhiên $ \Rightarrow $ giá trị hàm generator có thể coi là hàm liên tục. Tương tự x cũng liên tục
 
-$$ \mathbb{E}_{x \sim p(x)}[f(x)] = \int_{x}{p(x)f(x)dx} \tag{4}\label{4} $$
+$$ \mathbb{E}_{x \sim p(x)}[f(x)] = \int_{x}{p(x)f(x) \ dx} \tag{4}\label{4} $$
 
 $$ \eqref{3}, \eqref{4} \Rightarrow \underset{D}{\max}V(D,G^{*}) &= \int_{x}{p_{data}(x)\log (D(x)) \ dx} + \int_{x}{p_{g}(x)\log (1-D(x)) \ dx} \\
 &= \int_{x}{(p_{data}(x)\log (D(x)) + p_{g}(x)\log (1-D(x))) \ dx} \tag{3}\label{3} $$
