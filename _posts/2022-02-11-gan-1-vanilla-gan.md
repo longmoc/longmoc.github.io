@@ -17,7 +17,7 @@ nội dung chủ yếu đi vào các chi tiết quan trọng cần nhớ (với 
 
 Paper [Generative Adversarial Network](https://arxiv.org/abs/1406.2661) (2014), Ian J. Goodfellow.
 
-#### Generative Model
+### Generative Model
 
 Mô hình GAN được xếp vào nhóm mô hình *Generative* so với nhóm mô hình *Discriminative*. Các mô hình *discriminative* sẽ đưa ra 
 những dự đoán về nhãn hoặc giá trị $ y $ từ biến đầu vào $ \mathbf{x} $, giá trị dự báo là một xác suất có điều kiện $ \mathrm{P}(y|\mathbf{x}) $ .
@@ -31,7 +31,7 @@ Dựa vào *công thức bayes* để tính ngược lại xác suất $ \mathrm
 
 $$ \begin{aligned} p(y|\mathbf{x}) &= \frac{p(\mathbf{x},y)}{p(\mathbf{x})} \\ &= \frac{p(\mathbf{x}|y)p(y)}{\sum_{y}{p(\mathbf{x},y)}} \\ &= \frac{p(\mathbf{x}|y)p(y)}{\sum_{y}{p(\mathbf{x}|y)p(y)}} \end{aligned} $$
 
-#### Implicit Model
+### Implicit Model
 
 Hai dạng chính của *Generative model* là *Explicit* và *Implicit*.
 
@@ -53,7 +53,7 @@ lại có chức năng phân biệt ảnh thật hay giả. Đầu vào của di
 Cả discriminator và generator đều được tối ưu để thực hiện tốt nhất nhiệm vụ của mình, mô hình GAN được cho là hội tụ khi discriminator không thể đánh giá 
 được ảnh sinh là thật hay giả.
 
-### Loss function
+## Loss function
 
 Hàm loss của GAN có mục đích kết hợp tối ưu mục tiêu của cả Discriminator và Generator
 
