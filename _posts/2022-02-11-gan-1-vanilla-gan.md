@@ -13,7 +13,7 @@ nội dung chủ yếu đi vào các chi tiết quan trọng cần nhớ (với 
 
 ---
 
-### Generative Adversarial Networks
+## Generative Adversarial Networks
 
 Paper [Generative Adversarial Network](https://arxiv.org/abs/1406.2661) (2014), Ian J. Goodfellow.
 
