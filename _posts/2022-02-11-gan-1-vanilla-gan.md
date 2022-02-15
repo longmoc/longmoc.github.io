@@ -116,6 +116,10 @@ $$ \begin{aligned} &\ \frac{p_{data}(x)}{y} - \frac{p_g(x}{1-y} &= \ &0 \\
 \Rightarrow \ \ &\ y &= \ &\frac{p_{data}(x)}{p_{data}(x) + p_g(x)}
 \end{aligned} $$
 
-$$ \Leftrightarrow \ \ \int_{x}$$
+$ \Rightarrow $ Giá trị hội tụ
+
+$$ \begin{aligned} &int_{x}{\biggl(p_{data}(x)\log (\frac{p_{data}(x)}{p_{data}(x) + p_g(x)}) + p_{g}(x)\log (1-\frac{p_{data}(x)}{p_{data}(x) + p_g(x)})\biggr) \ dx} \\
+= \ &0
+\end{aligned} $$
 
 
