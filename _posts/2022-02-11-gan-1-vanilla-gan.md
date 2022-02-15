@@ -131,7 +131,7 @@ $$  = \ \ \bbox[5px,border:2px solid red]{\mathrm{D_{JS}}(P_{data}(x) \| P_g(x))
 
 Trong đó $ \mathrm{D_{JS}} $ *là Jensen-Shannon Divergence*
 
-Mặt khác tại $ G^* \rightarrow x $, ảnh thật và ảnh sinh là giống nhau, đồng nghĩa $ \mathrm{D_{JS}}(P_{data}(x) \| P_g(x)) = 0 $.
+Mặt khác tại $ G^* \rightarrow x $, ảnh thật và ảnh sinh là giống nhau, đồng nghĩa $$ \mathrm{D_{JS}}(P_{data}(x) \| P_g(x)) = 0 $$.
 Vậy giá trị hội tụ của loss khi huấn luyện mô hình GAN là $ \bbox[5px,border:2px solid red]{-2\log 2} $.
 
 ---
