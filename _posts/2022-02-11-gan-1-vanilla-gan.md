@@ -96,7 +96,7 @@ Mặt khác input noise $ z \sim p_{z}(z) $ là ngẫu nhiên $ \Rightarrow $ gi
 $$ \mathbb{E}_{x \sim p(x)}[f(x)] = \int_{x}{p(x)f(x) \ dx} \tag{4}\label{4} $$
 
 $$ \begin{aligned} \eqref{3}, \eqref{4} \Rightarrow \underset{D}{\max}V(D,G^{*}) &= \int_{x}{p_{data}(x)\log (D(x)) \ dx} + \int_{x}{p_{g}(x)\log (1-D(x)) \ dx} \\
-&= \int_{x}{\bigl(p_{data}(x)\log (D(x)) + p_{g}(x)\log (1-D(x))\bigr) \ dx}  
+&= \int_{x}{\biggl(p_{data}(x)\log (D(x)) + p_{g}(x)\log (1-D(x))\biggr) \ dx}  
 \end{aligned} $$
 
 Đặt $ D(x) = y $. Xét $ V(y) = p_{data}(x)\log (y) + p_{g}(x)\log (1-y) $ là hàm khả khi 2 lần:
@@ -110,12 +110,12 @@ $ \Rightarrow V(y) $ là hàm lõm (concave function).
 
 $ \Rightarrow $ Cực đại của $ V(y) $ là nghiệm của phương trình đạo hàm bậc nhất bằng 0
 
-$$ \begin{aligned} &\ \frac{p_{data}(x)}{y} - \frac{p_g(x}{1-y} & = &0 \\
-\Leftrightarrow \ \ &\ \frac{p_{data}(x)(1-y) - p_g(x)y}{y(1-y)} & = &0 \\
-\Rightarrow \ \ &\ p_{data}(x)y + p_g(x)y & = p_{data}(x) \\
-\Rightarrow \ \ &\ y & = &\frac{p_{data}(x)}{p_{data}(x) + p_g(x)}
+$$ \begin{aligned} &\ \frac{p_{data}(x)}{y} - \frac{p_g(x}{1-y} &= \ &0 \\
+\Leftrightarrow \ \ &\ \frac{p_{data}(x)(1-y) - p_g(x)y}{y(1-y)} &= \ &0 \\
+\Rightarrow \ \ &\ p_{data}(x)y + p_g(x)y &= \ &p_{data}(x) \\
+\Rightarrow \ \ &\ y &= \ &\frac{p_{data}(x)}{p_{data}(x) + p_g(x)}
 \end{aligned} $$
 
-$$ \Leftrightarrow \ \ $$
+$$ \Leftrightarrow \ \ \int_{x}$$
 
 
