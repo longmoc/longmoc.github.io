@@ -130,4 +130,4 @@ $$ \begin{aligned} &\int_{x}{\biggl[p_{data}(x)\log \biggl(\frac{p_{data}(x)}{p_
 $$  = \ \ \bbox[5px,border:2px solid red]{\mathrm{D_{JS}}(P_{data}(x) \| P_g(x)) - 2\log 2} \tag{*}\label{*} $$
 
 
-*$ \eqref{*}: \mathrm{D_{JS}} $ là Jensen-Shannon Divergence*
+$ \eqref{*}: \mathrm{D_{JS}} $ *là Jensen-Shannon Divergence*
