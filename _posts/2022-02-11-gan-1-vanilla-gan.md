@@ -86,7 +86,7 @@ Kết hợp và đổi dấu hàm trên ta có $ V $.
 Mục tiêu huấn luyện $ D $ là tối thiểu cross-entropy, tương đương với tối đa $ V $, ngược lại mục tiêu huấn luyện $ G $ để đánh lừa discriminator, 
 tương đương với việc tối thiểu $ V $.
 
-Tại điểm mô hình GAN hội tụ, giả sử nghiệm hội tụ của generator là $ G^* $, khi đó $ G^* \rightarrow x $ và 
+Tại điểm mô hình GAN hội tụ, giả sử nghiệm hội tụ của generator là $ G^* $ , khi đó $ G^* \rightarrow x $ và 
 $ \mathbb{E}_{z \sim p_{z}(z)}[f(G^{*}(z))] \rightarrow  $ . Suy ra 
 $ \mathbb{E}_{x \sim p_{g}(x)}[f(x)] $
 
