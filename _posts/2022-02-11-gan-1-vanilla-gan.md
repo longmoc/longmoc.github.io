@@ -118,10 +118,11 @@ $$ \begin{aligned} &\ \frac{p_{data}(x)}{y} - \frac{p_g(x}{1-y} &= \ &0 \\
 
 $ \Rightarrow $ Giá trị hội tụ
 
-$$ \begin{aligned} &\int_{x}{\biggl[p_{data}(x)\log biggl(\frac{p_{data}(x)}{p_{data}(x) + p_g(x)}\biggr) + p_{g}(x)\log \biggl(1-\frac{p_{data}(x)}{p_{data}(x) + p_g(x)}\biggr)\biggr] \ dx} \\
-= \ &\int_{x}{\biggl(p_{data}(x)\log biggl(\frac{p_{data}(x)}{p_{data}(x) + p_g(x)}\biggr) + p_{g}(x)\log \biggl(\frac{p_g(x)}{p_{data}(x) + p_g(x)}\biggr)\biggr) \ dx} \\
-= \ &\int_{x}{\biggl(p_{data}(x)\log biggl(2\frac{p_{data}(x)}{p_{data}(x) + p_g(x)}\biggr) - \log (2)p_{data}(x) 
-+ p_{g}(x)\log \biggl(2\frac{p_g(x)}{p_{data}(x) + p_g(x)}\biggr) - \log (2)p_{data}(x)\biggr) \ dx} \\
+$$ \begin{aligned} &\int_{x}{\biggl[p_{data}(x)\log \biggl(\frac{p_{data}(x)}{p_{data}(x) + p_g(x)}\biggr) + p_{g}(x)\log \biggl(1-\frac{p_{data}(x)}{p_{data}(x) + p_g(x)}\biggr)\biggr] \ dx} \\
+= \ &\int_{x}{\biggl[p_{data}(x)\log \biggl(\frac{p_{data}(x)}{p_{data}(x) + p_g(x)}\biggr) + p_{g}(x)\log \biggl(\frac{p_g(x)}{p_{data}(x) + p_g(x)}\biggr)\biggr] \ dx} \\
+= \ &\int_{x}{\biggl[p_{data}(x)\log \biggl(2\frac{p_{data}(x)}{p_{data}(x) + p_g(x)}\biggr) - \log 2p_{data}(x) 
++ p_{g}(x)\log \biggl(2\frac{p_g(x)}{p_{data}(x) + p_g(x)}\biggr) - \log 2p_{data}(x)\biggr] \ dx} \\
+= \ &\int_{x}{\biggl[p_{data}(x)\log \biggl(2\frac{p_{data}(x)}{p_{data}(x) + p_g(x)}\biggr) + p_{g}(x)\log \biggl(2\frac{p_g(x)}{p_{data}(x) + p_g(x)}\biggr)\biggr] \ dx}
 \end{aligned} $$
 
 
