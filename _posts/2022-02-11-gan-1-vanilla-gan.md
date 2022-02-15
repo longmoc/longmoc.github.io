@@ -116,4 +116,6 @@ $$ \begin{aligned} &\ \frac{p_{data}(x)}{y} - \frac{p_g(x}{1-y} &= 0 \\
 \Rightarrow \ \ &\ y &= \frac{p_{data}(x)}{p_{data}(x) + p_g(x)}
 \end{aligned} $$
 
+$$ \Leftrightarrow \ \ $$
+
 
