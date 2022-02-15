@@ -96,6 +96,6 @@ Mặt khác input noise $ z \sim p_{z}(z) $ là ngẫu nhiên $ \Rightarrow $ gi
 
 $$ \mathbb{E}_{x \sim p(x)}[f(x)] = \int_{x}{p(x)f(x) \ dx} \tag{4}\label{4} $$
 
-$$ \eqref{3}, \eqref{4} \Rightarrow \underset{D}{\max}V(D,G^{*}) &= \int_{x}{p_{data}(x)\log (D(x)) \ dx} + \int_{x}{p_{g}(x)\log (1-D(x)) \ dx} \\
-&= \int_{x}{(p_{data}(x)\log (D(x)) + p_{g}(x)\log (1-D(x))) \ dx} \tag{3}\label{3} $$
+$$ \begin{aligned} \eqref{3}, \eqref{4} \Rightarrow \underset{D}{\max}V(D,G^{*}) &= \int_{x}{p_{data}(x)\log (D(x)) \ dx} + \int_{x}{p_{g}(x)\log (1-D(x)) \ dx} \\
+&= \int_{x}{(p_{data}(x)\log (D(x)) + p_{g}(x)\log (1-D(x))) \ dx} \tag{3}\label{3} \end{aligned} $$
 
