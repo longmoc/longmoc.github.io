@@ -127,10 +127,9 @@ $$ \begin{aligned} &\int_{x}{\biggl[p_{data}(x)\log \biggl(\frac{p_{data}(x)}{p_
 \end{aligned} $$
 
 
-$$  = \ \ \bbox[5px,border:2px solid red]{\mathrm{D_{JS}}(P_{data}(x) \| P_g(x)) - 2\log 2} \tag{*}\label{*} $$
+$$  = \ \ \bbox[5px,border:2px solid red]{\mathrm{D_{JS}}(P_{data}(x) \| P_g(x)) - 2\log 2} $$
 
-
-$ \eqref{*}: \mathrm{D_{JS}} $ *là Jensen-Shannon Divergence*
+$ \mathrm{D_{JS}} $ *là Jensen-Shannon Divergence*
 
 Mặt khác tại $ G^* \rightarrow x $, ảnh thật và ảnh sinh là giống nhau, đồng nghĩa $ \mathrm{D_{JS}}(P_{data}(x) \| P_g(x)) = 0 $.
 Vậy giá trị hội tụ của loss khi huấn luyện mô hình GAN là $ -2\log 2 $.
