@@ -105,6 +105,11 @@ $$ \begin{cases}
 \pdv{V}{y} = \frac{p_{data}(x)}{y} - \frac{p_g(x}{1-y} \\
 \pdv[2]{V}{y} = -\frac{p_{data}(x)}{y^2} - \frac{p_g(x}{(1-y)^2} \lt 0
 \end{cases} $$
+$ \Rightarrow V(y) $ là hàm lõm (concave function).
+$ \Rightarrow $ Cực đại của $ V(y) $ là nghiệm của phương trình đạo hàm bậc nhất bằng 0
 
+$$ \begin{aligned} & \frac{p_{data}(x)}{y} - \frac{p_g(x}{1-y} &= 0 \\
+\Leftrightarrow & \frac{p_{data}(x)(1-y) - p_g(x)y}{y(1-y)} &= 0 
+\end{aligned} $$
 
 
