@@ -82,7 +82,7 @@ L(y) = 0, & \text{với mọi } z \sim p_{z}(z)
  - đối với ảnh thật $ x \sim p_{data}(x) $: &nbsp; $ \eqref{2} \approx -\log (D(x)) $
  - đối với ảnh sinh $ z \sim p_{z}(z) $: &nbsp; &nbsp; &nbsp; $ \eqref{2} \approx -\log (1-D(G(z))) $
 
-Kết hợp và đổi dấu hàm trên ta có $ V $. 
+Kết hợp và đổi dấu các hàm trên ta có $ V $. 
 Mục tiêu huấn luyện $ D $ là tối thiểu cross-entropy, tương đương với tối đa $ V $, ngược lại mục tiêu huấn luyện $ G $ để đánh lừa discriminator, 
 tương đương với việc tối thiểu $ V $.
 
@@ -129,7 +129,9 @@ $$ \begin{aligned} &\int_{x}{\biggl[p_{data}(x)\log \biggl(\frac{p_{data}(x)}{p_
 
 $$  = \ \ \bbox[5px,border:2px solid red]{\mathrm{D_{JS}}(P_{data}(x) \| P_g(x)) - 2\log 2} $$
 
-$ \mathrm{D_{JS}} $ *là Jensen-Shannon Divergence*
+Trong đó $ \mathrm{D_{JS}} $ *là Jensen-Shannon Divergence*
 
 Mặt khác tại $ G^* \rightarrow x $, ảnh thật và ảnh sinh là giống nhau, đồng nghĩa $ \mathrm{D_{JS}}(P_{data}(x) \| P_g(x)) = 0 $.
 Vậy giá trị hội tụ của loss khi huấn luyện mô hình GAN là $ \bbox[5px,border:2px solid red]{-2\log 2} $.
+
+---
