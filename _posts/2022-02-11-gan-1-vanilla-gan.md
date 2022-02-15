@@ -87,8 +87,7 @@ Mục tiêu huấn luyện $ D $ là tối thiểu cross-entropy, tương đươ
 tương đương với việc tối thiểu $ V $.
 
 Tại điểm mô hình GAN hội tụ, giả sử nghiệm hội tụ của generator là $ G^* $ , khi đó $ G^* \rightarrow x $ và 
-$$ \mathbb{E}_{z \sim p_{z}(z)}[f(G^{*}(z))] \rightarrow  $$ . Suy ra 
-$$ \mathbb{E}_{x \sim p_{g}(x)}[f(x)] $$
+$$ \mathbb{E}_{z \sim p_{z}(z)}[f(G^{*}(z))] \rightarrow \mathbb{E}_{x \sim p_{g}(x)}[f(x)] $$ . Suy ra
 
 $$ \eqref{1} \Leftrightarrow \underset{D}{\max}V(D,G^*) = \mathbb{E}_{x \sim p_{data}(x)}[\log D(x)] + \mathbb{E}_{x \sim p_{g}(x)}[\log (1-D(x))] \tag{3}\label{3} $$
 
