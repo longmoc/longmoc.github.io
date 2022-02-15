@@ -80,7 +80,7 @@ L(y) = 0, & \text{với mọi } z \sim p_{z}(z)
 , vì thế:
 
  - đối với ảnh thật $ x \sim p_{data}(x) $: $ \eqref{2} \approx -\log (D(x)) $
- - đối với ảnh sinh $ z \sim p_{z}(z) $: $ \eqref{2} \approx -\log (1-D(G(z))) $
+ - đối với ảnh sinh $ z \sim p_{z}(z)    $: $ \eqref{2} \approx -\log (1-D(G(z))) $
 
 Đổi dấu hàm trên ta có $ V $
 Mục tiêu huấn luyện $ D $ là tối thiểu cross-entropy, tương đương với tối đa $ V $, ngược lại mục tiêu huấn luyện $ G $ để đánh lừa discriminator, 
