@@ -86,8 +86,8 @@ Kết hợp và đổi dấu hàm trên ta có $ V $.
 Mục tiêu huấn luyện $ D $ là tối thiểu cross-entropy, tương đương với tối đa $ V $, ngược lại mục tiêu huấn luyện $ G $ để đánh lừa discriminator, 
 tương đương với việc tối thiểu $ V $.
 
-Tại điểm mô hình GAN hội tụ, giả sử nghiệm hội tụ của generator là $ G^* $ , khi đó $ G^* \rightarrow x $ và 
-$$ \mathbb{E}_{z \sim p_{z}(z)}[f(G^{*}(z))] \rightarrow \mathbb{E}_{x \sim p_{g}(x)}[f(x)] $$ . Suy ra
+Tại điểm mô hình GAN hội tụ, giả sử nghiệm hội tụ của generator là $ G^* $, khi đó $ G^* \rightarrow x $ và 
+$$ \mathbb{E}_{z \sim p_{z}(z)}[f(G^{*}(z))] \rightarrow \mathbb{E}_{x \sim p_{g}(x)}[f(x)] $$. Suy ra
 
 $$ \eqref{1} \Leftrightarrow \underset{D}{\max}V(D,G^*) = \mathbb{E}_{x \sim p_{data}(x)}[\log D(x)] + \mathbb{E}_{x \sim p_{g}(x)}[\log (1-D(x))] \tag{3}\label{3} $$
 
@@ -96,7 +96,8 @@ Mặt khác input noise $ z \sim p_{z}(z) $ là ngẫu nhiên $ \Rightarrow $ gi
 $$ \mathbb{E}_{x \sim p(x)}[f(x)] = \int_{x}{p(x)f(x) \ dx} \tag{4}\label{4} $$
 
 $$ \begin{aligned} \eqref{3}, \eqref{4} \Rightarrow \underset{D}{\max}V(D,G^{*}) &= \int_{x}{p_{data}(x)\log (D(x)) \ dx} + \int_{x}{p_{g}(x)\log (1-D(x)) \ dx} \\
+&= \int_{x}{(p_{data}(x)\log (D(x)) + p_{g}(x)\log (1-D(x))) \ dx} \tag{5}\label{5} 
 \end{aligned} $$
 
-&= \int_{x}{(p_{data}(x)\log (D(x)) + p_{g}(x)\log (1-D(x))) \ dx} \tag{3}\label{3} 
+
 
