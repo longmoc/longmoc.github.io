@@ -99,5 +99,12 @@ $$ \begin{aligned} \eqref{3}, \eqref{4} \Rightarrow \underset{D}{\max}V(D,G^{*})
 &= \int_{x}{\bigl(p_{data}(x)\log (D(x)) + p_{g}(x)\log (1-D(x))\bigr) \ dx}  
 \end{aligned} $$
 
+Đặt $ D(x) = y $. Xét $ V(y) = p_{data}(x)\log (y) + p_{g}(x)\log (1-y) $ là hàm khả khi 2 lần:
+
+$$ \begin{cases} 
+\pdv{V}{y} = \frac{p_{data}(x)}{y} - \frac{p_g(x}{1-y} \\
+\pdv[2]{V}{y} = -\frac{p_{data}(x)}{y^2} - \frac{p_g(x}{(1-y)^2} \lt 0
+\end{cases} $$
+
 
 
