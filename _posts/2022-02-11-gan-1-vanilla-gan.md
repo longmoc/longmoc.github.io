@@ -61,30 +61,45 @@ $$ \underset{G}{\min}\underset{D}{\max}V(D,G) = \mathbb{E}_{x \sim p_{data}(x)}[
 
 Giờ ta sẽ làm rõ ý nghĩa của hàm loss này!
 
-Ta có $ D(y) $ là xác suất y nằm trong plausible data. Giả sử:
+### Discriminator loss function 
+
+Ta có $ D(y) $ là xác suất discriminator đánh giá $ y $ nằm trong plausible data, $ L(y) $ xác suất $ y $ là ảnh thật trong thực tế. 
+Định lượng thông tin cần thiết để biến đổi từ phân phối của L sang D được tính theo công thức của cross-entropy:
+
+$$ H(L,D) = -\mathbb{E}_L[\log (D(x))] = -\frac{1}{N}\sum_{i}^{N}(L(y_i)\log (D(y_i)) $$
+
+Xét trên phân phối xác suất của $ y $ là ảnh sinh $ L^'(y) = 1 - L(y) $, xác suất đánh giá của discriminator là $ (1-D(y)) $.
+
+$$ H(L^',D) = -\frac{1}{N}\sum_{i}^{N}(1-L(y_i)\log (1-D(y_i)) $$
+
+Lưu ý:
 
 $$ \begin{cases} 
 L(y) = 1, & \text{nếu y là ảnh thật} \\
 L(y) = 0, & \text{nếu y là ảnh giả}
 \end{cases} $$
 
-Công thức cross-entropy:
+Khi huấn luyện đồng thời tập sinh và tập thực tế, dữ liệu của các tập được đưa vào như nhau. kết hợp lại hàm loss của *disciminator* có dạng:
 
-$$ -(L(y)\log (D(y)) + (1 - L(y))\log (1-D(y))) \tag{2}\label{2}$$
+$$ \begin{aligned} L_D = &= -\frac{1}{N}\sum_{i}^{N}
+&= - \bigl[\mathbb{E}_{x \sim p_{data}}[\log D(x)] + \mathbb{E}_{x \sim p_{g}}[\log (1-D(x))]\bigr] 
+\end{aligned} $$
 
-Biết rằng
-$$ \begin{cases} 
-L(x) = 1, & \text{với mọi } x \sim p_{data}(x)\\
-L(y) = 0, & \text{với mọi } z \sim p_{z}(z) 
-\end{cases} $$
-, vì thế:
+Ảnh sinh được lấy mẫu từ $ p_g $ là output của *generator* với input từ *latent space* $ z $, do đó có thể viết $ D(x), x \sim p_g $ thành $ D(G(z)), z \sim p_z $
 
- - đối với ảnh thật $ x \sim p_{data}(x) $: &nbsp; $ \eqref{2} \approx -\log (D(x)) $
- - đối với ảnh sinh $ z \sim p_{z}(z) $: &nbsp; &nbsp; &nbsp; $ \eqref{2} \approx -\log (1-D(G(z))) $
+$$ L_D = - \bigl[\mathbb{E}_{x \sim p_{data}}[\log D(x)] + \mathbb{E}_{z \sim p_{z}}[\log (1-D(G(z)))]\bigr] \tag{2}\label{2}$$
 
-Kết hợp và đổi dấu các hàm trên ta có $ V $. 
-Mục tiêu huấn luyện $ D $ là tối thiểu cross-entropy, tương đương với tối đa $ V $, ngược lại mục tiêu huấn luyện $ G $ để đánh lừa discriminator, 
-tương đương với việc tối thiểu $ V $.
+### Zero-sum game
+
+Mục tiêu huấn luyện $ D $ là tối thiểu $ L_D \eqref{2}$, tương đương với tối đa $ -L_D $, 
+
+$$ \underset{D}{\max}\bigl[-L_D\bigr] = \underset{D}{\max}\bigl[\mathbb{E}_{x \sim p_{data}}[\log D(x)] + \mathbb{E}_{z \sim p_{z}}[\log (1-D(G(z)))]\bigr] \tag{2}\label{2}$$
+
+Ngược lại mục tiêu huấn luyện $ G $ để đánh lừa discriminator, tương đương với tối thiểu $ -L_D $, do đó $ L_G = -L_D $. 
+Và vì việc huấn luyện *generator* và *discriminator* là đồng thời, liên quan chặt chẽ với nhau nên có thể mô tả 
+*Zero-sum* game thông qua **value function** $ V(D,G) = -L_D $. 
+Bài toán lúc này trở thành bài toán tối ưu $$ \underset{G}{\min}\underset{D}{\max}V(D,G)] $$ như công thức của $ \eqref{1} $.
+
 
 Tại điểm mô hình GAN hội tụ, giả sử nghiệm hội tụ của generator là $ G^* $, khi đó $ G^* \rightarrow x $ và 
 $$ \mathbb{E}_{z \sim p_{z}(z)}[f(G^{*}(z))] \rightarrow \mathbb{E}_{x \sim p_{g}(x)}[f(x)] $$. Suy ra
