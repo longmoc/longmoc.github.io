@@ -72,15 +72,14 @@ Xét trên phân phối xác suất của $ y $ là ảnh sinh $ L^{\'}(y) = 1 -
 
 $$ H(L^{'},D) = -\frac{1}{N}\sum_{i}^{N} 1-L(y_i)\log (1-D(y_i) $$
 
-Trong quá trình huấn luyện *discriminator*, dữ liệu ảnh thật ($ x \sim p_{data} $) và dữ liệu ảnh sinh ($ x \sim p_g $) được đưa vào đồng thời 
-. Và
+Trong quá trình huấn luyện *discriminator*, dữ liệu ảnh thật ($ x \sim p_{data} $) và dữ liệu ảnh sinh ($ x \sim p_g $) được đưa vào đồng thời. Với
 
 $$ \begin{cases} 
 L(x) = 1, & x \sim p_{data} \\
 L(x) = 0, & x \sim p_g
 \end{cases} $$
 
-kết hợp lại hàm loss của *disciminator* có dạng:
+Kết hợp lại hàm loss của *disciminator* có dạng:
 
 $$ \begin{aligned} L_D &= -\frac{1}{N}\sum_{i}^{N} \log (D(x_i) -\frac{1}{N}\sum_{i}^{N} log (1 - D(x_i)) \\
 &= - \bigl[\mathbb{E}_{x \sim p_{data}}[\log D(x)] + \mathbb{E}_{x \sim p_{g}}[\log (1-D(x))]\bigr] 
