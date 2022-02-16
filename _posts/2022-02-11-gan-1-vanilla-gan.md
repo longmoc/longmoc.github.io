@@ -92,7 +92,7 @@ $$ L_D = - \bigl[\mathbb{E}_{x \sim p_{data}}[\log D(x)] + \mathbb{E}_{z \sim p_
 
 ### Zero-sum game
 
-Mục tiêu huấn luyện $ D $ là tối thiểu $ L_D \eqref{2}$, tương đương với tối đa $ -L_D $, 
+Mục tiêu huấn luyện $ D $ là tối thiểu $ L_D \eqref{2}$, tương đương với tối đa $ -L_D $
 
 $$ \underset{D}{\max}\bigl[-L_D \bigr] = \underset{D}{\max}\bigl[\mathbb{E}_{x \sim p_{data}}[\log D(x)] + \mathbb{E}_{z \sim p_{z}}[\log (1-D(G(z)))]\bigr] $$
 
