@@ -85,7 +85,8 @@ $$ \begin{aligned} L_D &= -\sum_{i}^{N} \log (D(x_i) - \sum_{i}^{N} log (1 - D(\
 &= - \bigl[\mathbb{E}_{x \sim p_{data}}[\log D(x)] + \mathbb{E}_{\hat{x} \sim p_{g}}[\log (1-D(\hat{x}))]\bigr] 
 \end{aligned} $$
 
-Ảnh sinh được lấy mẫu từ $ p_g $ là output của *generator* với input từ *latent space* $ z $, do đó có thể viết $ D(\hat{x}), \hat{x} \sim p_g $ thành $ D(G(z)), z \sim p_z $
+Ảnh sinh được lấy mẫu từ $ p_g $ là output của *generator* với input từ *latent space* $ z $, 
+do đó có thể viết $ D(\hat{x}), \hat{x} \sim p_g $ thành $ D(G(z)), z \sim p_z $
 
 $$ L_D = - \bigl[\mathbb{E}_{x \sim p_{data}}[\log D(x)] + \mathbb{E}_{z \sim p_{z}}[\log (1-D(G(z)))]\bigr] \tag{2}\label{2} $$
 
@@ -93,11 +94,9 @@ $$ L_D = - \bigl[\mathbb{E}_{x \sim p_{data}}[\log D(x)] + \mathbb{E}_{z \sim p_
 
 Mục tiêu huấn luyện $ D $ là tối thiểu $ L_D \eqref{2}$, tương đương với tối đa $ -L_D $, 
 
-$$ \underset{D}{\max}\bigl[-L_D \bigr] $$
+$$ \underset{D}{\max}\bigl[-L_D \bigr] = \underset{D}{\max}\bigl[\mathbb{E}_{x \sim p_{data}}[\log D(x)] $$
 
-$$ = \underset{D}{\max}\bigl[\mathbb{E}_{x \sim p_{data}}[\log D(x)] $$
-
-$$ + \mathbb{E}_{z \sim p_{z}}[\log (1-D(G(z)))]\bigr] \tag{2}\label{2}$$
+$$ + \mathbb{E}_{z \sim p_{z}}[\log (1-D(G(z)))]\bigr] \tag{2}\label{2} $$
 
 Ngược lại mục tiêu huấn luyện $ G $ để đánh lừa discriminator, tương đương với tối thiểu $ -L_D $, do đó $ L_G = -L_D $. 
 Và vì việc huấn luyện *generator* và *discriminator* là đồng thời, liên quan chặt chẽ với nhau nên có thể mô tả 
