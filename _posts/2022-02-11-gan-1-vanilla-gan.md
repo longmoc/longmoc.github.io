@@ -150,7 +150,8 @@ $$ \begin{aligned} &\int_{x}{\biggl[p_{data}(x)\log \biggl(\frac{p_{data}(x)}{p_
 = \ &\int_{x}{\biggl[p_{data}(x)\log \biggl(2\frac{p_{data}(x)}{p_{data}(x) + p_g(x)}\biggr) - \log 2p_{data}(x) 
 + p_{g}(x)\log \biggl(2\frac{p_g(x)}{p_{data}(x) + p_g(x)}\biggr) - \log 2p_{data}(x)\biggr] \ dx} \\
 = \ &\int_{x}{\biggl[p_{data}(x)\log \biggl(2\frac{p_{data}(x)}{p_{data}(x) + p_g(x)}\biggr) + p_{g}(x)\log \biggl(2\frac{p_g(x)}{p_{data}(x) + p_g(x)}\biggr)\biggr] \ dx} \\
- &- \log 2\int_{x}{p_{data}(x) \ dx} - \log 2\int_{x}{p_g(x) \ dx}
+ &- \log 2\int_{x}{p_{data}(x) \ dx} - \log 2\int_{x}{p_g(x) \ dx} \\
+= \ &\mathrm{D_{KL}}(P_{data} \| \frac{P_{data} + P_g}{2}) + \mathrm{D_{KL}}(P_{g} \| \frac{P_{data} + P_g}{2}) - 2\log 2
 \end{aligned} $$
 
 
