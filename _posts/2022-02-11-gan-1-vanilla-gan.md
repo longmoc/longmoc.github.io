@@ -66,12 +66,11 @@ Giờ ta sẽ làm rõ ý nghĩa của hàm loss này!
 Ta có $ D(y) $ là xác suất discriminator đánh giá $ y $ nằm trong plausible data, $ L(y) $ xác suất $ y $ là ảnh thật trong thực tế. 
 Định lượng thông tin cần thiết để biến đổi từ phân phối của L sang D được tính theo công thức của cross-entropy:
 
-$$ H(L,D) = -\mathbb{E}_L[\log (D(x))] = -\frac{1}{N}\sum_{i}^{N}(L(y_i)\log (D(y_i)) $$
+$$ H(L,D) = -\mathbb{E}_L[\log (D(x))] = -\frac{1}{N}\sum_{i}^{N} L(y_i)\log (D(y_i) $$
 
 Xét trên phân phối xác suất của $ y $ là ảnh sinh $ L^{\'}(y) = 1 - L(y) $, xác suất đánh giá của discriminator là $ (1-D(y)) $.
 
-$$ H(L^{'},D) = -\frac{1}{N}\sum_{i}^{N}(1-L(y_i)\log (1-D(y_i)) $$
-
+$$ H(L^{'},D) = -\frac{1}{N}\sum_{i}^{N} 1-L(y_i)\log (1-D(y_i) $$
 
 Trong quá trình huấn luyện *discriminator*, dữ liệu ảnh thật ($ x \sim p_{data} $) và dữ liệu ảnh sinh ($ x \sim p_g $) được đưa vào đồng thời 
 . Và
@@ -83,7 +82,7 @@ L(x) = 0, & x \sim p_g
 
 kết hợp lại hàm loss của *disciminator* có dạng:
 
-$$ \begin{aligned} L_D = &= -\frac{1}{N}\sum_{i}^{N}
+$$ \begin{aligned} L_D &= -\frac{1}{N}\sum_{i}^{N} \log (D(x_i) -\frac{1}{N}\sum_{i}^{N} log (1 - D(x_i)) \\
 &= - \bigl[\mathbb{E}_{x \sim p_{data}}[\log D(x)] + \mathbb{E}_{x \sim p_{g}}[\log (1-D(x))]\bigr] 
 \end{aligned} $$
 
