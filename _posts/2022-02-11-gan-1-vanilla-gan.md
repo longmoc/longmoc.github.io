@@ -70,7 +70,7 @@ $$ H(L,D) = -\mathbb{E}_L[\log (D(x))] = -\frac{1}{N}\sum_{i}^{N}(L(y_i)\log (D(
 
 Xét trên phân phối xác suất của $ y $ là ảnh sinh $ L^{\'}(y) = 1 - L(y) $, xác suất đánh giá của discriminator là $ (1-D(y)) $.
 
-$$ H(L^',D) = -\frac{1}{N}\sum_{i}^{N}(1-L(y_i)\log (1-D(y_i)) $$
+$$ H(L^{'},D) = -\frac{1}{N}\sum_{i}^{N}(1-L(y_i)\log (1-D(y_i)) $$
 
 
 Trong quá trình huấn luyện *discriminator*, dữ liệu ảnh thật ($ x \sim p_{data} $) và dữ liệu ảnh sinh ($ x \sim p_g $) được đưa vào đồng thời 
