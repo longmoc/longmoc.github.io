@@ -153,7 +153,7 @@ $$ \begin{aligned} &\int_{x}{\biggl[p_{data}(x)\log \biggl(\frac{p_{data}(x)}{p_
  &- \log 2\int_{x}{p_{data}(x) \ dx} - \log 2\int_{x}{p_g(x) \ dx} \\
 = \ &\mathrm{D_{KL}}(P_{data} \| \frac{P_{data} + P_g}{2}) + \mathrm{D_{KL}}(P_{g} \| \frac{P_{data} + P_g}{2}) - 2\log 2 \\
   \\
-= \ &\ \ \ \ \ \ \bbox[5px,border:2px solid red]{\mathrm{D_{JS}}(P_{data} \| P_g) - 2\log 2}   
+= \ &\ \ \ \ \bbox[5px,border:2px solid red]{\mathrm{D_{JS}}(P_{data} \| P_g) - 2\log 2}   
 \end{aligned} $$
 
 
