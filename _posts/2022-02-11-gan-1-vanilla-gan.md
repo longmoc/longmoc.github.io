@@ -68,18 +68,20 @@ Ta có $ D(y) $ là xác suất discriminator đánh giá $ y $ nằm trong plau
 
 $$ H(L,D) = -\mathbb{E}_L[\log (D(x))] = -\frac{1}{N}\sum_{i}^{N}(L(y_i)\log (D(y_i)) $$
 
-Xét trên phân phối xác suất của $ y $ là ảnh sinh $ L^'(y) = 1 - L(y) $, xác suất đánh giá của discriminator là $ (1-D(y)) $.
+Xét trên phân phối xác suất của $ y $ là ảnh sinh $ L^{\'}(y) = 1 - L(y) $, xác suất đánh giá của discriminator là $ (1-D(y)) $.
 
 $$ H(L^',D) = -\frac{1}{N}\sum_{i}^{N}(1-L(y_i)\log (1-D(y_i)) $$
 
-Lưu ý:
+
+Trong quá trình huấn luyện *discriminator*, dữ liệu ảnh thật ($ x \sim p_{data} $) và dữ liệu ảnh sinh ($ x \sim p_g $) được đưa vào đồng thời 
+. Và
 
 $$ \begin{cases} 
-L(y) = 1, & \text{nếu y là ảnh thật} \\
-L(y) = 0, & \text{nếu y là ảnh giả}
+L(x) = 1, & x \sim p_{data} \\
+L(x) = 0, & x \sim p_g
 \end{cases} $$
 
-Khi huấn luyện đồng thời tập sinh và tập thực tế, dữ liệu của các tập được đưa vào như nhau. kết hợp lại hàm loss của *disciminator* có dạng:
+kết hợp lại hàm loss của *disciminator* có dạng:
 
 $$ \begin{aligned} L_D = &= -\frac{1}{N}\sum_{i}^{N}
 &= - \bigl[\mathbb{E}_{x \sim p_{data}}[\log D(x)] + \mathbb{E}_{x \sim p_{g}}[\log (1-D(x))]\bigr] 
