@@ -103,6 +103,7 @@ Và vì việc huấn luyện *generator* và *discriminator* là đồng thời
 *Zero-sum* game thông qua **value function** $ V(D,G) = -L_D $. 
 Bài toán lúc này trở thành bài toán tối ưu $$ \underset{G}{\min}\underset{D}{\max}V(D,G)] $$ như công thức của $ \eqref{1} $.
 
+### Điểm hội tụ
 
 Tại điểm mô hình GAN hội tụ, giả sử nghiệm hội tụ của generator là $ G^* $, khi đó $ G^* \rightarrow x $ và 
 $$ \mathbb{E}_{z \sim p_{z}(z)}[f(G^{*}(z))] \rightarrow \mathbb{E}_{x \sim p_{g}(x)}[f(x)] $$. Suy ra
