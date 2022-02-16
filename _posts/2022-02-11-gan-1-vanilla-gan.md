@@ -88,31 +88,41 @@ $$ \begin{aligned} L_D &= -\sum_{i} \log (D(x_i) - \sum_{i} log (1 - D(\hat{x_i}
 Ảnh sinh được lấy mẫu từ $ p_g $ là output của *generator* với input từ *latent space* $ z $, 
 do đó có thể viết $ D(\hat{x}), \hat{x} \sim p_g $ thành $ D(G(z)), z \sim p_z $
 
-$$ L_D = - \bigl[\mathbb{E}_{x \sim p_{data}}[\log D(x)] + \mathbb{E}_{z \sim p_{z}}[\log (1-D(G(z)))]\bigr] \tag{2}\label{2} $$
+$$ L_D = - \bigl[\mathbb{E}_{x \sim p_{data}}[\log D(x)] + \mathbb{E}_{z \sim p_{z}}[\log (1-D(G(z)))]\bigr] $$
 
 ### Zero-sum game
 
-Mục tiêu huấn luyện $ D $ là tối thiểu $ L_D \eqref{2}$, tương đương với tối đa $ -L_D $
+Mục tiêu huấn luyện $ D $ là tối thiểu $ L_D $, tương đương với tối đa $ -L_D $
 
-$$ \underset{D}{\max}\bigl[-L_D \bigr] = \underset{D}{\max}\bigl[\mathbb{E}_{x \sim p_{data}}[\log D(x)] + \mathbb{E}_{z \sim p_{z}}[\log (1-D(G(z)))]\bigr] $$
+$$ \underset{D}{\max}\bigl[-L_D \bigr] = \underset{D}{\max}\bigl[\mathbb{E}_{x \sim p_{data}}[\log D(x)] + \mathbb{E}_{z \sim p_{z}}[\log (1-D(G(z)))]\bigr] \tag{2}\label{2}$$
 
-Ngược lại mục tiêu huấn luyện $ G $ để đánh lừa discriminator, tương đương với tối thiểu $ -L_D $, do đó $ L_G = -L_D $. 
+Ngược lại mục tiêu huấn luyện $ G $ để đánh lừa discriminator, tương đương với tối thiểu $ -L_D $ nhưng chỉ xét trên tập ảnh sinh. 
+
+$$ \underset{G}{\min}\bigl[-L_D \bigr] = \underset{G}{\min}\bigl[\mathbb{E}_{z \sim p_{z}}[\log (1-D(G(z)))]\bigr] \tag{3}\label{3}$$
+
 Và vì việc huấn luyện *generator* và *discriminator* là đồng thời, liên quan chặt chẽ với nhau nên có thể mô tả 
 *Zero-sum* game thông qua **value function** $ V(D,G) = -L_D $. 
 Bài toán lúc này trở thành bài toán tối ưu $$ \underset{G}{\min}\underset{D}{\max}V(D,G)] $$ như công thức của $ \eqref{1} $.
+
+Việc cập nhật trọng số của *discriminator* và *generator* được mô tả trong paper thể hiện cho $ \eqref{2} $ và $ \eqref{3} $, 
+với cost được normalize theo batch (chia cho $ m $).
+
+![Cập nhật trọng số D và G]({{ site.url }}{{ site.baseurl }}/assets/images/posts/g1-training.png){:style="display:block; margin-left:auto; margin-right:auto"}
+
+Ta thấy các công thức này khá giống cross-entropy trên *Bernoulli distribution* hay ***Binary Cross-Entropy***.
 
 ### Điểm hội tụ
 
 Tại điểm mô hình GAN hội tụ, giả sử nghiệm hội tụ của generator là $ G^* $, khi đó $ G^* \rightarrow x $ và 
 $$ \mathbb{E}_{z \sim p_{z}(z)}[f(G^{*}(z))] \rightarrow \mathbb{E}_{x \sim p_{g}(x)}[f(x)] $$. Suy ra
 
-$$ \eqref{1} \Leftrightarrow \underset{D}{\max}V(D,G^*) = \mathbb{E}_{x \sim p_{data}(x)}[\log D(x)] + \mathbb{E}_{x \sim p_{g}(x)}[\log (1-D(x))] \tag{3}\label{3} $$
+$$ \eqref{1} \Leftrightarrow \underset{D}{\max}V(D,G^*) = \mathbb{E}_{x \sim p_{data}(x)}[\log D(x)] + \mathbb{E}_{x \sim p_{g}(x)}[\log (1-D(x))] \tag{4}\label{4} $$
 
 Mặt khác input noise $ z \sim p_{z}(z) $ là ngẫu nhiên $ \Rightarrow $ giá trị hàm generator có thể coi là hàm liên tục. Tương tự x cũng liên tục
 
-$$ \mathbb{E}_{x \sim p(x)}[f(x)] = \int_{x}{p(x)f(x) \ dx} \tag{4}\label{4} $$
+$$ \mathbb{E}_{x \sim p(x)}[f(x)] = \int_{x}{p(x)f(x) \ dx} \tag{5}\label{5} $$
 
-$$ \begin{aligned} \eqref{3}, \eqref{4} \Rightarrow \underset{D}{\max}V(D,G^{*}) &= \int_{x}{p_{data}(x)\log (D(x)) \ dx} + \int_{x}{p_{g}(x)\log (1-D(x)) \ dx} \\
+$$ \begin{aligned} \eqref{4}, \eqref{5} \Rightarrow \underset{D}{\max}V(D,G^{*}) &= \int_{x}{p_{data}(x)\log (D(x)) \ dx} + \int_{x}{p_{g}(x)\log (1-D(x)) \ dx} \\
 &= \int_{x}{\biggl(p_{data}(x)\log (D(x)) + p_{g}(x)\log (1-D(x))\biggr) \ dx}  
 \end{aligned} $$
 
