@@ -72,20 +72,20 @@ Xét trên phân phối xác suất của $ y $ là ảnh sinh $ L^{\'}(y) = 1 -
 
 $$ H(L^{'},D) = -\sum_{i}^{N} 1-L(y_i)\log (1-D(y_i) $$
 
-Trong quá trình huấn luyện *discriminator*, dữ liệu ảnh thật ($ x \sim p_{data} $) và dữ liệu ảnh sinh ($ x \sim p_g $) được đưa vào đồng thời. Với
+Trong quá trình huấn luyện *discriminator*, dữ liệu ảnh thật ($ x \sim p_{data} $) và dữ liệu ảnh sinh ($ \hat{x} \sim p_g $) được đưa vào đồng thời. Với
 
 $$ \begin{cases} 
 L(x) = 1, & x \sim p_{data} \\
-L(x) = 0, & x \sim p_g
+L(\hat{x}) = 0, & \hat{x} \sim p_g
 \end{cases} $$
 
 Kết hợp lại hàm loss của *disciminator* có dạng:
 
-$$ \begin{aligned} L_D &= -\sum_{i}^{N} \log (D(x_i) - \sum_{i}^{N} log (1 - D(x_i)) \\
-&= - \bigl[\mathbb{E}_{x \sim p_{data}}[\log D(x)] + \mathbb{E}_{x \sim p_{g}}[\log (1-D(x))]\bigr] 
+$$ \begin{aligned} L_D &= -\sum_{i}^{N} \log (D(x_i) - \sum_{i}^{N} log (1 - D(\hat{x_i})) \\
+&= - \bigl[\mathbb{E}_{x \sim p_{data}}[\log D(x)] + \mathbb{E}_{\hat{x} \sim p_{g}}[\log (1-D(\hat{x}))]\bigr] 
 \end{aligned} $$
 
-Ảnh sinh được lấy mẫu từ $ p_g $ là output của *generator* với input từ *latent space* $ z $, do đó có thể viết $ D(x), x \sim p_g $ thành $ D(G(z)), z \sim p_z $
+Ảnh sinh được lấy mẫu từ $ p_g $ là output của *generator* với input từ *latent space* $ z $, do đó có thể viết $ D(\hat{x}), \hat{x} \sim p_g $ thành $ D(G(z)), z \sim p_z $
 
 $$ L_D = - \bigl[\mathbb{E}_{x \sim p_{data}}[\log D(x)] + \mathbb{E}_{z \sim p_{z}}[\log (1-D(G(z)))]\bigr] \tag{2}\label{2} $$
 
