@@ -47,28 +47,28 @@ GAN là một *implicit model*. Đặc biệt, GAN sử dụng *supervised learn
 
 ![Kiến trúc của GAN]({{ site.url }}{{ site.baseurl }}/assets/images/posts/g1-structure.jpg){:style="display:block; margin-left:auto; margin-right:auto"}
 
-Hai thành phần (có thể coi như hai model) generator và discriminator được huấn luyện đồng thời. Trong khi generator có nhiệm vụ sinh ảnh thì discriminator 
-lại có chức năng phân biệt ảnh thật hay giả. Đầu vào của discriminator là ảnh sinh từ generator và ảnh thật từ dữ liệu.
+Hai thành phần (có thể coi như hai model) *generator* và *discriminator* được huấn luyện đồng thời. Trong khi *generator* có nhiệm vụ sinh ảnh thì *discriminator*
+lại có chức năng phân biệt ảnh thật hay giả. Đầu vào của *discriminator* là ảnh sinh từ *generator* và ảnh thật từ dữ liệu.
 
-Cả discriminator và generator đều được tối ưu để thực hiện tốt nhất nhiệm vụ của mình, mô hình GAN được cho là hội tụ khi discriminator không thể đánh giá 
+Cả *discriminator* và *generator* đều được tối ưu để thực hiện tốt nhất nhiệm vụ của mình, mô hình GAN được cho là hội tụ khi *discriminator* không thể đánh giá 
 được ảnh sinh là thật hay giả.
 
-## Loss function
+## GANs Training
 
-Hàm loss của GAN có mục đích kết hợp tối ưu mục tiêu của cả Discriminator và Generator
+Hàm loss của GAN có mục đích kết hợp tối ưu mục tiêu của cả *discriminator* và *generator*
 
 $$ \underset{G}{\min}\underset{D}{\max}V(D,G) = \mathbb{E}_{x \sim p_{data}(x)}[\log D(x)] + \mathbb{E}_{z \sim p_{z}(z)}[\log (1-D(G(z)))] \tag{1}\label{1} $$
 
-Giờ ta sẽ làm rõ ý nghĩa của hàm loss này!
+Giờ ta sẽ làm rõ ý nghĩa của hàm loss này cũng như quá trình huấn luyện.
 
 ### Discriminator loss function 
 
-Ta có $ D(y) $ là xác suất discriminator đánh giá $ y $ nằm trong plausible data, $ L(y) $ xác suất $ y $ là ảnh thật trong thực tế. 
+Ta có $ D(y) $ là xác suất *discriminator* đánh giá $ y $ nằm trong plausible data, $ L(y) $ xác suất $ y $ là ảnh thật trong thực tế. 
 Định lượng thông tin cần thiết để biến đổi từ phân phối của L sang D được tính theo công thức của cross-entropy:
 
 $$ H(L,D) = -\mathbb{E}_L[\log (D(x))] = -\sum_{i} L(y_i)\log (D(y_i) $$
 
-Xét trên phân phối xác suất của $ y $ là ảnh sinh $ L^{\'}(y) = 1 - L(y) $, xác suất đánh giá của discriminator là $ (1-D(y)) $.
+Xét trên phân phối xác suất của $ y $ là ảnh sinh $ L^{\'}(y) = 1 - L(y) $, xác suất đánh giá của *discriminator* là $ (1-D(y)) $.
 
 $$ H(L^{'},D) = -\sum_{i} 1-L(y_i)\log (1-D(y_i) $$
 
@@ -113,7 +113,7 @@ Ta thấy các công thức này khá giống cross-entropy trên *Bernoulli dis
 
 ### Điểm hội tụ
 
-Tại điểm mô hình GAN hội tụ, giả sử nghiệm hội tụ của generator là $ G^* $, khi đó $ G^* \rightarrow x $ và 
+Tại điểm mô hình GAN hội tụ, giả sử nghiệm hội tụ của *generator* là $ G^* $, khi đó $ G^* \rightarrow x $ và 
 $$ \mathbb{E}_{z \sim p_{z}(z)}[f(G^{*}(z))] \rightarrow \mathbb{E}_{x \sim p_{g}(x)}[f(x)] $$. Suy ra
 
 $$ \eqref{1} \Leftrightarrow \underset{D}{\max}V(D,G^*) = \mathbb{E}_{x \sim p_{data}(x)}[\log D(x)] + \mathbb{E}_{x \sim p_{g}(x)}[\log (1-D(x))] \tag{4}\label{4} $$
