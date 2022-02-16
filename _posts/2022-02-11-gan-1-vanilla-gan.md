@@ -95,7 +95,9 @@ Mục tiêu huấn luyện $ D $ là tối thiểu $ L_D \eqref{2}$, tương đ�
 
 $$ \underset{D}{\max}\bigl[-L_D \bigr] $$
 
-$$ = \underset{D}{\max}\bigl[\mathbb{E}_{x \sim p_{data}}[\log D(x)] + \mathbb{E}_{z \sim p_{z}}[\log (1-D(G(z)))]\bigr] \tag{2}\label{2}$$
+$$ = \underset{D}{\max}\bigl[\mathbb{E}_{x \sim p_{data}}[\log D(x)] $$
+
+$$ + \mathbb{E}_{z \sim p_{z}}[\log (1-D(G(z)))]\bigr] \tag{2}\label{2}$$
 
 Ngược lại mục tiêu huấn luyện $ G $ để đánh lừa discriminator, tương đương với tối thiểu $ -L_D $, do đó $ L_G = -L_D $. 
 Và vì việc huấn luyện *generator* và *discriminator* là đồng thời, liên quan chặt chẽ với nhau nên có thể mô tả 
