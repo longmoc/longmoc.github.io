@@ -36,7 +36,7 @@ $$ \mathrm{Information}(x) = -\log (p(x)) $$
 Trong lý thuyết thông tin người ta sử dụng base-2 logarithm, lượng thông tin đo bằng binary, tượng trưng cho số bit 
 cần thiết để mã hóa thông tin.
 
-Tính toán thông tin được ký hiệu là $ h() $: $ h(x) = -log(p(x)) $
+Tính toán thông tin được ký hiệu là $ h() $: $ \ h(x) = -log(p(x)) $
 
 ### Entropy của biến ngẫu nhiên
 
