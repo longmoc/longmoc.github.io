@@ -67,8 +67,8 @@ trở nên có ý nghĩa trong việc đo lường tính bất ngờ của event
 ## Cross-entropy
 
 Dựa trên ý tưởng entropy, cross-entropy tính toán số bit cần thiết để biểu diễn hoặc truyền một event từ một 
-phân phối này sang phân phối khác. Một cách diễn đạt khác trong Machine learning thì cross-entropy là trung bình 
-số bits cần thiết để mã hóa dữ liệu từ nguồn với phân phối $p$ khi chúng ta sử dụng model $q$. Trực giác của khái niệm 
+phân phối này sang phân phối khác. Một cách diễn đạt khác trong Machine learning thì *cross-entropy là trung bình 
+số bits cần thiết để mã hóa dữ liệu từ nguồn với phân phối $p$ khi chúng ta sử dụng model $q$*. Trực giác của khái niệm 
 này đến từ việc giả sử ta có một phân phối đích (một phân phối xác suất nền tảng) $P$ và $Q$ là một *xấp xỉ* của phân phối 
 đích, khi đó cross-entropy của $Q$ xét từ $P$ là số bits cần thêm để biểu diễn một sự kiện nếu dùng $Q$ thay vì $P$.
 
@@ -95,7 +95,7 @@ Có thể biểu diễn cross-entropy dưới dạng *giá trị kỳ vọng* (e
 
 $$ H(P,Q) = -\mathbb{E}_P[\log(Q)] $$
 
-*Ký hiệu của cross-entropy* $ H(P,Q) $ *cũng được dùng cho [**join entropy**](https://en.wikipedia.org/wiki/Joint_entropy) nên đôi khi có thể xảy ra nhầm lẫn.*
+*Ký hiệu của cross-entropy* $ H(P,Q) $ *cũng được dùng cho [**joint entropy**](https://en.wikipedia.org/wiki/Joint_entropy) nên đôi khi có thể xảy ra nhầm lẫn.*
 
 
 
