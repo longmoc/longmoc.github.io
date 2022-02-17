@@ -78,10 +78,14 @@ $$ H(P,Q) $$
 
 Trong đó $H()$ là hàm cross-entropy, $P$ là phân phối đích, $Q$ là xấp xỉ của phân phối đích.
 
-Công thức tính cross-entropy sử dụng xác suất event của $P$ và $Q$ như sau:
+Công thức tính cross-entropy sử dụng xác suất event của $P$ và $Q$ trên biến rời rạc như sau:
 
 $$ H(P,Q) = -\sum_{x}P(x) \cdot \log (Q(x)) $$
 
+Với $P(x)$ là xác suất xảy ra event $x$ trên $P$, $Q(x)$ là xác suất xảy ra event $x$ trên $Q$.
 
+Công thức tương tự có thể dùng cho phân phối xác suất liên tục:
+
+$$ H(P,Q) = -\int_{x}P(x)\log (Q(x)) \ dx$$
 
 
