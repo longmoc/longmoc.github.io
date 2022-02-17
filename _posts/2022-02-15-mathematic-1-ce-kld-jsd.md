@@ -97,6 +97,13 @@ $$ H(P,Q) = -\mathbb{E}_P[\log(Q)] $$
 
 *Ký hiệu của cross-entropy* $ H(P,Q) $ *cũng được dùng cho [**joint entropy**](https://en.wikipedia.org/wiki/Joint_entropy) nên đôi khi có thể xảy ra nhầm lẫn.*
 
+## Kullback-Leibler divergence
+
+Việc so sánh các phân phối xác suất thường được đưa về bài toán tính toán *khoảng cách thống kê (statistical distance)* 
+giữa hai phân phối. Một cách tiếp cận cho vấn đề này là tính *distance measure*. Điều này thực tế rất khó làm được, 
+thay vào đó, cách phổ biến hơn là tính độ *phân kỳ (divergence)* giữa hai phân phối xác suất. *Divergence* cũng giống như 
+*measure* nhưng không có tính đối xứng. Có nghĩa là *divergence* chỉ thể hiện độ khác của một phân phối so với phân phối 
+khác, do đó *divergence* của phân phối $P$ và $Q$ sẽ khác *divergence* của phân phối $Q$ và $P$.
 
 
 
