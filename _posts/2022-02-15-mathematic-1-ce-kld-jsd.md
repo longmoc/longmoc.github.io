@@ -91,7 +91,7 @@ $$ H(P,Q) = -\int_{x}P(x)\log (Q(x)) \ dx$$
 Giá trị cross-entropy là một số dương đơn vị bits và sẽ bằng entropy của phân phối nếu hai phân phối xác suất là giống 
 hệt nhau. 
 
-Có thể biểu diễn cross-entropy dưới dạng *giá trị kỳ vọng* (expected value) với hàm $\log$:
+Có thể biểu diễn cross-entropy dưới dạng *giá trị kỳ vọng* (expected value) trên phân phối $P$ với function $\log (Q)$:
 
 $$ H(P,Q) = -\mathbb{E}_P[\log(Q)] $$
 
