@@ -95,6 +95,9 @@ Có thể biểu diễn cross-entropy dưới dạng *giá trị kỳ vọng* (e
 
 $$ H(P,Q) = -\mathbb{E}_P[\log(Q)] $$
 
+*Ký hiệu của cross-entropy* $ H(P,Q) $ *cũng được dùng cho [**join entropy**](https://en.wikipedia.org/wiki/Joint_entropy) nên đôi khi có thể xảy ra nhầm lẫn.*
+
+
 
 
 
