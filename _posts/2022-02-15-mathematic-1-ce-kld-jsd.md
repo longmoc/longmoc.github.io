@@ -106,5 +106,3 @@ thay vào đó, cách phổ biến hơn là tính độ *phân kỳ (divergence)
 khác, do đó *divergence* của phân phối $P$ và $Q$ sẽ khác *divergence* của phân phối $Q$ và $P$.
 
 
-
-
