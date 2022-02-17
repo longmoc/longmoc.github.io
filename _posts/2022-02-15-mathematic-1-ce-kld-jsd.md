@@ -40,13 +40,48 @@ Tính toán thông tin được ký hiệu là $ h() $: $ h(x) = -log(p(x)) $
 
 ### Entropy của biến ngẫu nhiên
 
-Biến ngẫu nhiên $ X$ với phân phối xác suất $ P $, $ H(X) $ gọi là *information entropy* hay *Shannon entropy* 
+Biến ngẫu nhiên *rời rạc* $ X$ với phân phối xác suất $ P $, $ H(X) $ gọi là *information entropy* hay *Shannon entropy* 
 hay đơn giản hơn là *entropy*.
 
 Trực giác: số bit trung bình cần thiết để biểu diễn hoặc truyền một event được lấy từ phân phối xác suất của biến 
 ngẫu nhiên.
 
-Ví dụ tính *entropy* của biến ngẫu nhiên $ X $
+Ví dụ tính *entropy* của biến ngẫu nhiên $ X $ với $k \in K$ trạng thái rời rạc:
+
+$$ H(X) = - \sum_{k\in K} p(k)\cdot \log (p(k)) $$
+
+Cũng giống như *information* $ h() $, hàm $\log ()$ được sử dụng là hàm base-2 với đơn vị *bits*. Hoặc có thể dùng 
+logarithm tự nhiên (natural logarithm, base-e logarithm) với đơn vị tính được là *nats*.
+
+*Entropy* của biến ngẫu nhiên rời rạc nhỏ nhất khi phân phối chỉ có một event với xác suất bằng 1 và lớn nhất khi 
+mọi event đều có khả năng xảy ra như nhau.
+
+Trong trường hợp biến ngẫu nhiên liên tục, Claude Shannon - cha đẻ của lý thuyết thông tin cũng như entropy - 
+đã đưa ra công thức của entropy cho phân phối liên tục (continuous distribution), hay còn gọi là *differential entropy*:
+
+$$ h(X) = - \int{p(x)\log p(x) \ dx} $$
+
+Tuy nhiên công thức này không phải kết quả của một đạo hàm nào và không có đẩy đủ các tính chất như entropy rời rạc để 
+trở nên có ý nghĩa trong việc đo lường tính bất ngờ của event.
+
+## Cross-entropy
+
+Dựa trên ý tưởng entropy, cross-entropy tính toán số bit cần thiết để biểu diễn hoặc truyền một event từ một 
+phân phối này sang phân phối khác. Một cách diễn đạt khác trong Machine learning thì cross-entropy là trung bình 
+số bits cần thiết để mã hóa dữ liệu từ nguồn với phân phối $p$ khi chúng ta sử dụng model $q$. Trực giác của khái niệm 
+này đến từ việc giả sử ta có một phân phối đích (một phân phối xác suất nền tảng) $P$ và $Q$ là một *xấp xỉ* của phân phối 
+đích, khi đó cross-entropy của $Q$ xét từ $P$ là số bits cần thêm để biểu diễn một sự kiện nếu dùng $Q$ thay vì $P$.
+
+Cross-entropy giữa hai phân phối xác suất $Q$ và $P$ được viết dưới dạng:
+
+$$ H(P,Q) $$
+
+Trong đó $H()$ là hàm cross-entropy, $P$ là phân phối đích, $Q$ là xấp xỉ của phân phối đích.
+
+Công thức tính cross-entropy sử dụng xác suất event của $P$ và $Q$ như sau:
+
+$$ H(P,Q) = -\sum_{x}P(x) \cdot \log (Q(x)) $$
+
 
 
 
