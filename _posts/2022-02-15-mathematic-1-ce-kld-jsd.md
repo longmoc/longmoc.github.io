@@ -95,7 +95,8 @@ Có thể biểu diễn cross-entropy dưới dạng *giá trị kỳ vọng* (e
 
 $$ H(P,Q) = -\mathbb{E}_P[\log(Q)] $$
 
-*Ký hiệu của cross-entropy* $ H(P,Q) $ *cũng được dùng cho [**joint entropy**](https://en.wikipedia.org/wiki/Joint_entropy) nên đôi khi có thể xảy ra nhầm lẫn.*
+*Ký hiệu của cross-entropy* $ H(P,Q) $ *cũng được dùng cho [**joint entropy**](https://en.wikipedia.org/wiki/Joint_entropy) 
+nên đôi khi có thể xảy ra nhầm lẫn.*
 
 ## Kullback-Leibler divergence
 
@@ -104,5 +105,11 @@ giữa hai phân phối. Một cách tiếp cận cho vấn đề này là tính
 thay vào đó, cách phổ biến hơn là tính độ *phân kỳ (divergence)* giữa hai phân phối xác suất. *Divergence* cũng giống như 
 *measure* nhưng không có tính đối xứng. Có nghĩa là *divergence* chỉ thể hiện độ khác của một phân phối so với phân phối 
 khác, do đó *divergence* của phân phối $P$ và $Q$ sẽ khác *divergence* của phân phối $Q$ và $P$.
+
+***Kullback-Leibler divergence*** score hay *KL divergence* score định lượng một phân phối xác suất khác biệt như thế 
+nào so với một phân phối xác suất khác.
+
+*KL divergence* giữa hai phân phối $P$ và $Q$ thường được viết dưới dạng $ KL(P \| Q) $. Với $\|$ là toán tử thê hiện 
+sự *phân kỳ* hay $P$ phân kỳ so với $Q$
 
 
