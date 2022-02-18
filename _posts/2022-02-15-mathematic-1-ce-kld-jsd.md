@@ -110,9 +110,15 @@ khác, do đó *divergence* của phân phối $P$ và $Q$ sẽ khác *divergenc
 nào so với một phân phối xác suất khác.
 
 *KL divergence* giữa hai phân phối $Q$ và $P$ thường được viết dưới dạng $$ KL(P \| Q) $$. Với $$\|$$ là toán tử thể hiện 
-sự *phân kỳ* hay $P$ phân kỳ từ $Q$. Công thức tính KL divergence như sau:
+sự *phân kỳ* hay $P$ phân kỳ từ $Q$. Công thức tính KL divergence score của phân phối rời rạc:
 
-$$ KL(P\|Q) = -\sum_{x}{P(x)\log (\frac{Q(x)}{P(x)}} $$
+$$ KL(P\|Q) = -\sum_{x}{P(x)\log \biggl(\frac{Q(x)}{P(x)}\biggr)} $$
+
+Trực giác ý nghĩa của KL divergence score là khi xác suất xảy ra event từ $P$ lớn nhưng xác suất xảy ra event đó từ $Q$ 
+lại nhỏ thì độ phân kỳ lớn. Nếu xác suất xảy ra event từ $P$ nhỏ nhưng từ $Q$ lớn thì độ phân kỳ cũng lớn, tuy nhiên 
+trường hợp này divergence score không đạt được độ lớn tương đương với trường hợp trước.
+
+Đối với phân phối xác suất của biến liên tiếp, công thức tính có dạng:
 
 
 
