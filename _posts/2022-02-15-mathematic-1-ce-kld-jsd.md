@@ -109,7 +109,7 @@ khác, do đó *divergence* của phân phối $P$ và $Q$ sẽ khác *divergenc
 ***Kullback-Leibler divergence*** score hay *KL divergence* score định lượng một phân phối xác suất khác biệt như thế 
 nào so với một phân phối xác suất khác.
 
-*KL divergence* giữa hai phân phối $P$ và $Q$ thường được viết dưới dạng $ KL(P \| Q) $. Với $\|$ là toán tử thê hiện 
-sự *phân kỳ* hay $P$ phân kỳ so với $Q$
+*KL divergence* giữa hai phân phối $Q$ và $P$ thường được viết dưới dạng $$ KL(P \| Q) $$. Với $$\|$$ là toán tử thê hiện 
+sự *phân kỳ* hay $P$ phân kỳ từ $Q$.
 
 
