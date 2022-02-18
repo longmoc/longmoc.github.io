@@ -124,7 +124,7 @@ trường hợp này divergence score không đạt được độ lớn tương
 
 $$ KL(P\|Q) = -\int_{x}{P(x)\log \biggl(\frac{Q(x)}{P(x)}\biggr) \ \mathrm{d}x} $$
 
-
-
+Cũng giống như cross-entropy, KL divergence score có đơn vị *bits* nếu sử dụng base-2 $\log$ và *nats* nếu sử dụng 
+natural $\log$.
 
 
