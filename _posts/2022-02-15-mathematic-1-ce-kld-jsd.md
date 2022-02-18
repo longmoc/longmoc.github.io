@@ -107,7 +107,9 @@ thay vào đó, cách phổ biến hơn là tính độ *phân kỳ (divergence)
 khác, do đó *divergence* của phân phối $P$ và $Q$ sẽ khác *divergence* của phân phối $Q$ và $P$.
 
 ***Kullback-Leibler divergence*** score hay *KL divergence* score định lượng một phân phối xác suất khác biệt như thế 
-nào so với một phân phối xác suất khác.
+nào so với một phân phối xác suất khác. 
+Trong cuốn [Machine Learning: A Probabilistic Perspective](https://probml.github.io/pml-book/book0.html), 
+Kevin P. Murphy, 2012, KL divergence còn được gọi là *relative entropy*
 
 *KL divergence* giữa hai phân phối $Q$ và $P$ thường được viết dưới dạng $$ KL(P \| Q) $$. Với $$\|$$ là toán tử thể hiện 
 sự *phân kỳ* hay $P$ phân kỳ từ $Q$. Công thức tính KL divergence score của phân phối rời rạc:
@@ -121,6 +123,7 @@ trường hợp này divergence score không đạt được độ lớn tương
 Đối với phân phối xác suất của biến liên tiếp, công thức tính có dạng:
 
 $$ KL(P\|Q) = -\int_{x}{P(x)\log \biggl(\frac{Q(x)}{P(x)}\biggr) \ \mathrm{d}x} $$
+
 
 
 
