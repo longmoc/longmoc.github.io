@@ -112,6 +112,8 @@ nào so với một phân phối xác suất khác.
 *KL divergence* giữa hai phân phối $Q$ và $P$ thường được viết dưới dạng $$ KL(P \| Q) $$. Với $$\|$$ là toán tử thể hiện 
 sự *phân kỳ* hay $P$ phân kỳ từ $Q$. Công thức tính KL divergence như sau:
 
-$$ KL(P\|Q) = -\sum_{x}{P(x)\log (\frac{Q(x)}{P(x)}}
+$$ KL(P\|Q) = -\sum_{x}{P(x)\log (\frac{Q(x)}{P(x)}} $$
+
+
 
 
