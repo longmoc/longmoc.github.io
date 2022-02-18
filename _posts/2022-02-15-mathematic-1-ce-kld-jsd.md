@@ -120,6 +120,8 @@ trường hợp này divergence score không đạt được độ lớn tương
 
 Đối với phân phối xác suất của biến liên tiếp, công thức tính có dạng:
 
+$$ KL(P\|Q) = -\int_{x}{P(x)\log \biggl(\frac{Q(x)}{P(x)}\biggr) \ \mathrm{d}x} $$
+
 
 
 
