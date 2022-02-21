@@ -135,7 +135,7 @@ $$ KL(P\|Q) \neq KL(Q\|P) $$
 *Jensen-Shannon Divergence* viết ngắn gọn là *JS divergence*. Dựa trên ý tưởng của KL divergence đã được chuẩn hóa và thỏa mãn tính đối xứng, tức là độ phân kỳ của $P$ từ $Q$ giống với độ phân kỳ 
 của $Q$ từ $P$, hay: 
 
-$$ JS(P\|Q) = JS(Q\|P) $$.
+$$ JS(P\|Q) = JS(Q\|P) $$
 
 Công thức tính JS divergence:
 
@@ -147,6 +147,8 @@ JS divergence dùng làm độ đo sẽ có ý nghĩa hơn so với KL divergenc
 0 (giống hệt nhau) đến 1 (khác nhau nhất có thể) nếu sử dụng base-2 logarithm.
 
 Căn bậc hai của JS divergence score được gọi là *Jensen-Shannon distance* hay *JS distance*.
+
+
 
 ---
 
