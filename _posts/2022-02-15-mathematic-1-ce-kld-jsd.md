@@ -125,8 +125,8 @@ trường hợp này divergence score không đạt được độ lớn tương
 $$ KL(P\|Q) = -\int_{x}{P(x)\log \biggl(\frac{Q(x)}{P(x)}\biggr) \ \mathrm{d}x} $$
 
 Cũng giống như cross-entropy, KL divergence score có đơn vị *bits* nếu sử dụng base-2 $\log$ và *nats* nếu sử dụng 
-natural $\log$. Khi score bằng $0$, hai phân phối là giống hệt nhau. KL divergence không có tính đối xứng, điều này 
-khá quan trọng khi xét các lợi ích và điều kiện sử dụng của nó.
+natural $\log$. Khi score bằng $0$, hai phân phối là giống hệt nhau. Một điều cần lưu ý là KL divergence không có tính 
+đối xứng.
 
 $$ KL(P\|Q) \neq KL(Q\|P) $$
 
