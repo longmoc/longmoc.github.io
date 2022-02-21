@@ -139,7 +139,7 @@ Công thức tính JS divergence:
 
 $$ JS(P\|Q) = \frac{1}{2}KL(P \| M) + \frac{1}{2}KL(Q \| M) $$
 
-Với $$ M = \frac{P + Q}{2}
+Với $$ M = \frac{P + Q}{2} $$.
 
 JS divergence dùng làm độ đo sẽ có ý nghĩa hơn so với KL divergence vì giá trị được làm mịn và chuẩn hóa trong miền từ 
 0 (giống hệt nhau) đến 1 (khác nhau nhất có thể) nếu sử dụng base-2 logarithm.
