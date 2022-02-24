@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "Earth-Mover/Wasserstein-1 distance & Kantorovich-Rubistein duality"
+title: "Earth-Mover/Wasserstein-1 distance & Kantorovich-Rubinstein duality"
 categories: mathematic
 mathjax: true
 header:
@@ -8,7 +8,7 @@ header:
   image_description: "Mathematic"
 ---
 
-*Ghi chú cần thiết về khoảng cách Wasserstetin và đối ngẫu Kantorivich-Rubinstein*
+*Ghi chú cần thiết về khoảng cách Wasserstein và đối ngẫu Kantorovich-Rubinstein*
 
 ---
 
