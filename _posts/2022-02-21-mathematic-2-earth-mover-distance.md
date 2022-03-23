@@ -3,7 +3,7 @@ layout: posts
 title: "Earth-Mover/Wasserstein distance & Kantorovich-Rubistein duality"
 categories: mathematic
 mathjax: true
-header:nn
+header:
   image: /assets/images/mathematic.jpeg
   image_description: "Mathematic"
 ---
