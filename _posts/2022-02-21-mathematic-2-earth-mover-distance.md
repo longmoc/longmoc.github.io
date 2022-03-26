@@ -22,21 +22,16 @@ một số khối lượng nhất định tại những điểm trên phân ph�
 lượng $m$ khoảng cách $d$ sẽ cần một công bằng $m \times d$. Giá trị khoảng cách *EM* có thể coi như việc tối thiểu số 
 công cần thiết.
 
-Rộng hơn, có thể liên hệ khoảng các của hai phân phối qua việc dịch chuyển các khối lượng tại các điểm của hai 
-phân phối đó để chúng trở nên giống nhau. Ví dụ ta có hai phân phối $P$ và $Q$, mỗi phân phối đều có 13 khối lượng 
-đất và trải trên 5 ô. Phân bố khối lượng tại các ô (hay sức nặng tại các điểm như đã nói ở trên) cụ thể như sau:
+Ví dụ chúng ta có phân phối xác suất nguồn $P_r$ đại diện bởi mô đất bên trái hình dưới, phân phối xác suất đích 
+$P_{\theta}$ đại diện bởi hình dạng mô đất phải. Cả hai mô đất đều có thể được lấp đầy bởi 10 khối đất. Các trạng thái 
+khối đất từ $P_r$ được đặt là $x$ (1, 2, 3 như hình), từ $P_{\theta}$ được đặt là $y$ (7, 8, 9, 10).
 
-$$ P(p_1=3, p_2=1, p_3=2, p_4=2, p_5=5) $$
-$$ Q(q_1=2, q_2=1, q_3=3, q_4=4, q_5=3) $$
+![Ý tưởng Earth-Mover dựa trên bài toán di chuyển các khối đất]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-earthmover-1.png){:style="display:block; margin-left:auto; margin-right:auto"}
 
-Phương án biến đổi $P$ và $Q$ để chúng trở nên giống nhau:
-- Step 1: Di chuyển 1 khối từ $p_1$ sang $p_2$, $p_1$ và $q_1$ giống nhau
-- Step 2: Di chuyển 1 khối từ $p_2$ sang $p_3$, $p_2$ và $q_2$ giống nhau
-- Step 3: Giữ nguyên $p_3$ do $p_3$ và $q_3$ đã giống nhau.
-- Step 4: Di chuyển 1 khối từ $p_1$ sang $p_2$, $p_1$ và $q_1$ đã giống với nhau
-- Step 5: Giữ nguyên $p_3$ do $p_3$ và $q_3$ đã giống nhau.
+Có rất nhiều cách để di chuyển các khối đất từ $P_r$ sang $P_{\theta}$, đặt các chiến lược di chuyển (*plan*) có thể 
+là $\gamma$. Ví dụ về một số chiến lược di chuyển các khối đất:
 
-![Phương án di chuyển các khối của 2 phân phối để chúng giống nhau]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-earthmover-example.png){:style="display:block; margin-left:auto; margin-right:auto"}
+![Ví dụ một vài plan]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-earthmover-2.jpeg){:style="display:block; margin-left:auto; margin-right:auto"}
 
 
 ---
