@@ -69,7 +69,8 @@ $$ \begin{aligned}
 Có thể thấy $\gamma \in \Pi(P_r, P_{\theta}$ là *phân phối xác suất đồng thời* (*joint probability distribution*) của 
 $P_r$, $P_{\theta}$ và $P_r$, $P_{\theta}$ là các *phân phối biên* (*margin distribution*) của $\gamma \in \Pi$.
 
-Xét khoảng cách giữa các trạng thái của hai phân phối là $\|x - y\|$. Chi phí di chuyển hay khoảng cách của hai phân phối được tính bằng:
+Xét khoảng cách giữa các trạng thái của hai phân phối là $\|x - y\|$. Chi phí di chuyển hay khoảng cách giữa phép dịch 
+chuyển phân phối $p_r$ sang $P_{\theta}$ tính bằng công :
 
 $$\int_x \int_y \gamma(x,y) \| x - y \| \,dy\,dx = \mathbb{E}_{(x,y) \sim \gamma}\big[\|x - y\|\big]$$
 
