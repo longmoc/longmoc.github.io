@@ -8,13 +8,13 @@ header:
   image_description: "Mathematic"
 ---
 
-*Ghi chú cần thiết về khoảng cách Wasserstetin và đối ngẫu Kantorovich-Rubinstein*
+*Ghi chú cần thiết về khoảng cách Wasserstein và đối ngẫu Kantorovich-Rubinstein*
 
 ---
 
-## Earth-Mover distance
+## Earth-Mover/Wasserstein distance
 
-***Earth-Mover*** (*EM*) distance là một giá trị đo khoảng cách giữa hai phân phối. 
+***Earth-Mover*** (*EM*, hay ***Wasserstein***) distance là một giá trị đo khoảng cách giữa hai phân phối. 
 Ý tưởng của *EM* dựa trên tối thiểu hóa hoạt động của máy xúc trong việc xúc đất từ nơi này sang nơi khác với vị trí, 
 hình khối định trước. Trực giác của việc cụ thể hóa ý tưởng này là coi định nghĩa phân phối xác suất qua sức nặng tại 
 mỗi điểm (giống như khối lượng, thể tích đất tại mỗi $m^2$). Giả sử ta có phân phối nguồn $P$, và mong muốn di chuyển 
