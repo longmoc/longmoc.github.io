@@ -23,10 +23,23 @@ lượng $m$ khoảng cách $d$ sẽ cần một công bằng $m \times d$. Giá
 công cần thiết.
 
 Ví dụ chúng ta có phân phối xác suất nguồn $P_r$ đại diện bởi mô đất bên trái hình dưới, phân phối xác suất đích 
-$P_{\theta}$ đại diện bởi hình dạng mô đất phải. Cả hai mô đất đều có thể được lấp đầy bởi 10 khối đất. Các trạng thái 
+$P_{\theta}$ đại diện bởi hình dạng mô đất phải. Cả hai mô đất đều có thể được lấp đầy bởi 6 khối đất. Các trạng thái 
 khối đất từ $P_r$ được đặt là $x$ (1, 2, 3 như hình), từ $P_{\theta}$ được đặt là $y$ (7, 8, 9, 10).
 
 ![Ý tưởng Earth-Mover dựa trên bài toán di chuyển các khối đất]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-earthmover-1.png){:style="display:block; margin-left:auto; margin-right:auto"}
+
+Hàm phân phối có thể thể hiện như sau:
+
+$$ \begin{aligned}
+P_r(1) &= \frac{3}{6} = 0.5 \\
+P_r(2) &= \frac{1}{6} = 0.1667 \\
+P_r(3) &= \frac{2}{6} = 0.3333 \\
+\\
+P_{\theta}(7) &= \frac{1}{6} = 0.1667 \\
+P_{\theta}(8) &= \frac{1}{6} = 0.1667 \\
+P_{\theta}(9) &= \frac{2}{6} = 0.3333 \\
+P_{\theta}(10) &= \frac{2}{6} = 0.3333 \\
+\end{aligned} $$
 
 Có rất nhiều cách để di chuyển các khối đất từ $P_r$ sang $P_{\theta}$, đặt các chiến lược di chuyển (*plan*) có thể 
 là $\gamma$. Ví dụ về một số chiến lược di chuyển các khối đất:
@@ -38,7 +51,7 @@ Cách tính công thực hiện như đã nói bằng $m \times d$, với plan $
 $$ 1 \times (7-1) + 2 \times (10-1) + 1 \times (8-2) + 2 \times (9-3) = 42 $$
 
 Không phải tất cả các plan đều cho kết quả chi phí giống nhau, trong những trường hợp vị trí, hình dạng mô đất phức 
-tạp các cách di chuyển sẽ có thể tốn chi phí khác nhau.
+tạp các cách di chuyển khác nhau có thể tốn chi phí khác nhau.
 
 
 
