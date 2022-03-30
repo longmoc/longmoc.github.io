@@ -70,9 +70,13 @@ Có thể thấy $\gamma \in \Pi(P_r, P_{\theta}$ là *phân phối xác suất 
 $P_r$, $P_{\theta}$ và $P_r$, $P_{\theta}$ là các *phân phối biên* (*margin distribution*) của $\gamma \in \Pi$.
 
 Xét khoảng cách giữa các trạng thái của hai phân phối là $\|x - y\|$. Chi phí di chuyển hay khoảng cách giữa phép dịch 
-chuyển phân phối $p_r$ sang $P_{\theta}$ tính bằng công :
+chuyển phân phối $p_r$ sang $P_{\theta}$ được viết qua công thức:
 
 $$\int_x \int_y \gamma(x,y) \| x - y \| \,dy\,dx = \mathbb{E}_{(x,y) \sim \gamma}\big[\|x - y\|\big]$$
+
+EM hoặc Wasserstein distance là giá trị *infimum* hay cận dưới nhỏ nhất của khoảng cách trên:
+
+$$ W(P_r, P_g) = \inf_{\gamma \in \Pi(P_r ,P_{\theta})} \mathbb{E}_{(x, y) \sim \gamma}\big[\|x - y\|\big] $$
 
 ---
 
