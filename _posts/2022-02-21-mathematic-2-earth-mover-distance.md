@@ -28,7 +28,7 @@ khối đất từ $P_r$ được đặt là $x$ (1, 2, 3 như hình), từ $P_{
 
 ![Ý tưởng Earth-Mover dựa trên bài toán di chuyển các khối đất]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-earthmover-1.png){:style="display:block; margin-left:auto; margin-right:auto"}
 
-Hàm phân phối có thể thể hiện như sau:
+Hàm phân phối có thể viết như sau:
 
 $$ \begin{aligned}
 P_r(1) &= \frac{3}{6} = 0.5 \\
@@ -51,9 +51,20 @@ Cách tính công thực hiện như đã nói bằng $m \times d$, với plan $
 $$ 1 \times (7-1) + 2 \times (10-1) + 1 \times (8-2) + 2 \times (9-3) = 42 $$
 
 Không phải tất cả các plan đều cho kết quả chi phí giống nhau, trong những trường hợp vị trí, hình dạng mô đất phức 
-tạp các cách di chuyển khác nhau có thể tốn chi phí khác nhau.
+tạp các cách di chuyển khác nhau có thể tốn chi phí khác nhau. Earth-Mover distance tương ứng với plan có chi phí nhỏ 
+nhất.
 
+Xét plan di chuyển $\gamma_1$, ta luôn có $\sum_x \gamma(x,y) = P_{\theta}(y)$ và $\sum_y \gamma(x,y) = P_r(x)$. Điều 
+này là tất yếu nếu vì các cách di chuyển là đúng và khối đất được lấy từ phân phối nguồn $P_r$ đặt vào phân phối đích 
+$P_{\theta}$.
 
+![Thể hiện của joined probability distribution]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-earthmover-3.jpeg){:style="display:block; margin-left:auto; margin-right:auto"}
+
+Tương tự với $P_r$ và $P_{\theta}$ là các phân phối xác suất liên tục, tính chất này vẫn được đảm bảo:
+
+$$ &\int_{x}{\theta(x,y) \ dx} = P_{\theta}(y) \\
+&\int_{y}{\theta(x,y) \ dy} = P_r(x) \\
+$$
 
 ---
 
