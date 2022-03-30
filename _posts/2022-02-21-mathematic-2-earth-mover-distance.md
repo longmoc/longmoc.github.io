@@ -35,10 +35,10 @@ P_r(1) &= \frac{3}{6} = 0.5 \\
 P_r(2) &= \frac{1}{6} = 0.1667 \\
 P_r(3) &= \frac{2}{6} = 0.3333 \\
 \\
-P_{\theta}(7) &= \frac{1}{6} = 0.1667 \\
-P_{\theta}(8) &= \frac{1}{6} = 0.1667 \\
-P_{\theta}(9) &= \frac{2}{6} = 0.3333 \\
-P_{\theta}(10) &= \frac{2}{6} = 0.3333 \\
+P_{\theta}(7) &= 1/6 = 0.1667 \\
+P_{\theta}(8) &= 1/6 = 0.1667 \\
+P_{\theta}(9) &= 2/6 = 0.3333 \\
+P_{\theta}(10) &= 2/6 = 0.3333 \\
 \end{aligned} $$
 
 Có rất nhiều cách để di chuyển các khối đất từ $P_r$ sang $P_{\theta}$, đặt các chiến lược di chuyển (*plan*) có thể 
@@ -62,9 +62,10 @@ $P_{\theta}$.
 
 Tương tự với $P_r$ và $P_{\theta}$ là các phân phối xác suất liên tục, tính chất này vẫn được đảm bảo:
 
-$$ &\int_{x}{\theta(x,y) \ dx} = P_{\theta}(y) \\
-&\int_{y}{\theta(x,y) \ dy} = P_r(x) \\
-$$
+$$ \begin{aligned} 
+&\int_{x}{\theta(x,y) \ dx} = P_{\theta}(y) \\
+&\int_{y}{\theta(x,y) \ dy} = P_r(x)
+\end{aligned} $$
 
 ---
 
