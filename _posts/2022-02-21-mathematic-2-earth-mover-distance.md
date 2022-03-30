@@ -76,7 +76,7 @@ $$\int_x \int_y \gamma(x,y) \| x - y \| \,dy\,dx = \mathbb{E}_{(x,y) \sim \gamma
 
 EM hoặc Wasserstein distance là giá trị *infimum* hay cận dưới nhỏ nhất của khoảng cách trên:
 
-$$ W(P_r, P_g) = \inf_{\gamma \in \Pi(P_r ,P_{\theta})} \mathbb{E}_{(x, y) \sim \gamma}\big[\|x - y\|\big] $$
+$$ W(P_r, P_{\theta}) = \inf_{\gamma \in \Pi(P_r ,P_{\theta})} \mathbb{E}_{(x,y) \sim \gamma}\big[\|x - y\|\big] $$
 
 ---
 
