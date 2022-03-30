@@ -51,7 +51,7 @@ Cách tính công thực hiện như đã nói bằng $m \times d$, với plan $
 $$ 1 \times (7-1) + 2 \times (10-1) + 1 \times (8-2) + 2 \times (9-3) = 42 $$
 
 Không phải tất cả các plan đều cho kết quả chi phí giống nhau, trong những trường hợp vị trí, hình dạng mô đất phức 
-tạp các cách di chuyển khác nhau có thể tốn chi phí khác nhau. Earth-Mover distance tương ứng với plan có chi phí nhỏ 
+tạp các cách di chuyển khác nhau có thể tốn chi phí khác nhau. *Earth-Mover distance* tương ứng với plan có chi phí nhỏ 
 nhất.
 
 Ta luôn có $\sum_x \gamma(x,y) = P_{\theta}(y)$ và $\sum_y \gamma(x,y) = P_r(x)$. Điều này là tất yếu nếu vì các cách 
@@ -74,7 +74,7 @@ chuyển phân phối $p_r$ sang $P_{\theta}$ được viết qua công thức:
 
 $$\int_x \int_y \gamma(x,y) \| x - y \| \,dy\,dx = \mathbb{E}_{(x,y) \sim \gamma}\big[\|x - y\|\big]$$
 
-EM hoặc Wasserstein distance là giá trị *infimum* hay cận dưới nhỏ nhất của khoảng cách trên:
+*EM* hoặc *Wasserstein distance* là giá trị ***infimum*** hay cận dưới nhỏ nhất của khoảng cách trên:
 
 $$ W(P_r, P_{\theta}) = \inf_{\gamma \in \Pi(P_r ,P_{\theta})} \mathbb{E}_{(x,y) \sim \gamma}\big[\|x - y\|\big] $$
 
