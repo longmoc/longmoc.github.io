@@ -54,17 +54,16 @@ Không phải tất cả các plan đều cho kết quả chi phí giống nhau,
 tạp các cách di chuyển khác nhau có thể tốn chi phí khác nhau. Earth-Mover distance tương ứng với plan có chi phí nhỏ 
 nhất.
 
-Xét plan di chuyển $\gamma_1$, ta luôn có $\sum_x \gamma(x,y) = P_{\theta}(y)$ và $\sum_y \gamma(x,y) = P_r(x)$. Điều 
-này là tất yếu nếu vì các cách di chuyển là đúng và khối đất được lấy từ phân phối nguồn $P_r$ đặt vào phân phối đích 
-$P_{\theta}$.
+Ta luôn có $\sum_x \gamma(x,y) = P_{\theta}(y)$ và $\sum_y \gamma(x,y) = P_r(x)$. Điều này là tất yếu nếu vì các cách 
+di chuyển là đúng và khối đất được lấy từ phân phối nguồn $P_r$ đặt vào phân phối đích $P_{\theta}$.
 
 ![Thể hiện của joined probability distribution]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-earthmover-3.jpeg){:style="display:block; margin-left:auto; margin-right:auto"}
 
 Tương tự với $P_r$ và $P_{\theta}$ là các phân phối xác suất liên tục, tính chất này vẫn được đảm bảo:
 
 $$ \begin{aligned} 
-&\int_{x}{\theta(x,y) \ dx} = P_{\theta}(y) \\
-&\int_{y}{\theta(x,y) \ dy} = P_r(x)
+&\int_{x}{\gamma(x,y) \ dx} = P_{\theta}(y) \\
+&\int_{y}{\gamma(x,y) \ dy} = P_r(x)
 \end{aligned} $$
 
 ---
