@@ -42,7 +42,7 @@ P_{\theta}(10) &= 2/6 = 0.3333 \\
 \end{aligned} $$
 
 Có rất nhiều cách để di chuyển các khối đất từ $P_r$ sang $P_{\theta}$, đặt các chiến lược di chuyển (*plan*) có thể 
-là $\gamma$. Ví dụ về một số chiến lược di chuyển các khối đất:
+là $\gamma \in \Pi$. Ví dụ về một số chiến lược di chuyển các khối đất:
 
 ![Ví dụ một vài plan]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-earthmover-2.jpeg){:style="display:block; margin-left:auto; margin-right:auto"}
 
@@ -65,6 +65,9 @@ $$ \begin{aligned}
 &\int_{x}{\gamma(x,y) \ dx} = P_{\theta}(y) \\
 &\int_{y}{\gamma(x,y) \ dy} = P_r(x)
 \end{aligned} $$
+
+Có thể thấy $\gamma \in \Pi(P_r, P_{\theta}$ là *phân phối xác suất đồng thời* (*joint probability distribution*) của 
+$P_r$, $P_{\theta}$ và  $P_r$, $P_{\theta}$ là các *phân phối biên* (*margin distribution*).
 
 ---
 
