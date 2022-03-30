@@ -33,6 +33,14 @@ là $\gamma$. Ví dụ về một số chiến lược di chuyển các khối �
 
 ![Ví dụ một vài plan]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-earthmover-2.jpeg){:style="display:block; margin-left:auto; margin-right:auto"}
 
+Cách tính công thực hiện như đã nói bằng $m \times d$, với plan ${\gamma}_1$, từ bảng phân bổ tương ứng ta tính được công này bằng:
+
+$$ 1 \times (7-1) + 2 \times (10-1) + 1 \times (8-2) + 2 \times (9-3) = 42 $$
+
+Không phải tất cả các plan đều cho kết quả chi phí giống nhau, trong những trường hợp vị trí, hình dạng mô đất phức 
+tạp các cách di chuyển sẽ có thể tốn chi phí khác nhau.
+
+
 
 ---
 
