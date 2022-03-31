@@ -72,11 +72,18 @@ $P_r$, $P_{\theta}$ và $P_r$, $P_{\theta}$ là các *phân phối biên* (*marg
 Xét khoảng cách giữa các trạng thái của hai phân phối là $$\|x - y\|$$. Chi phí di chuyển hay khoảng cách giữa phép dịch 
 chuyển phân phối $p_r$ sang $P_{\theta}$ được viết qua công thức:
 
+$$\sum_x \sum_y \gamma(x,y) \| x - y \| = \mathbb{E}_{(x,y) \sim \gamma}\big[\|x - y\|\big]$$
+
+Hoặc đối với trường hợp phân phối liên tục:
+
 $$\int_x \int_y \gamma(x,y) \| x - y \| \,dy\,dx = \mathbb{E}_{(x,y) \sim \gamma}\big[\|x - y\|\big]$$
 
-*EM* hoặc *Wasserstein distance* là giá trị ***infimum*** hay cận dưới nhỏ nhất của khoảng cách trên:
+*EM* (đối với trường hợp phân phối rời rạc) hoặc *Wasserstein distance* (đối với trường hợp phân phối liên tục) là giá 
+trị ***infimum*** hay cận dưới nhỏ nhất của khoảng cách trên:
 
 $$ W(P_r, P_{\theta}) = \inf_{\gamma \in \Pi(P_r ,P_{\theta})} \mathbb{E}_{(x,y) \sim \gamma}\big[\|x - y\|\big] $$
+
+# Kantorovich-Rubinstein duality
 
 ---
 
