@@ -78,8 +78,8 @@ Hoặc đối với trường hợp phân phối liên tục:
 
 $$\int_x \int_y \gamma(x,y) \| x - y \| \,dy\,dx = \mathbb{E}_{(x,y) \sim \gamma}\big[\|x - y\|\big]$$
 
-*EM* (đối với trường hợp phân phối rời rạc) hoặc *Wasserstein distance* (đối với trường hợp phân phối liên tục) là giá 
-trị ***infimum*** hay cận dưới nhỏ nhất của khoảng cách trên:
+*Earth-Mover distance * $EMD(P_r, P_{\theta})$ (đối với trường hợp phân phối rời rạc) hoặc *Wasserstein distance* 
+W(P_r, P_{\theta})(đối với trường hợp phân phối liên tục) là giá trị ***infimum*** hay cận dưới nhỏ nhất của khoảng cách trên:
 
 $$ W(P_r, P_{\theta}) = \inf_{\gamma \in \Pi(P_r ,P_{\theta})} \mathbb{E}_{(x,y) \sim \gamma}\big[\|x - y\|\big] $$
 
