@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "Earth-Mover/Wasserstein distance & Kantorovich-Rubistein duality"
+title: "Earth-Mover/Wasserstein distance & Kantorovich-Rubinstein duality"
 categories: mathematic
 mathjax: true
 header:
