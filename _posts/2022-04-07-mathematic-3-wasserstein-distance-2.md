@@ -8,12 +8,11 @@ header:
   image_description: "Mathematic"
 ---
 
-*Ghi chú cần thiết về khoảng cách Wasserstein và đối ngẫu Kantorovich-Rubinstein*
+*Phần cuối ghi chú cần thiết về khoảng cách Wasserstein: đối ngẫu Kantorovich-Rubinstein*
 
 ---
 
-
-# Kantorovich-Rubinstein duality
+# Linear programming
 
 Trở lại bài toán tính công $$\sum_{x,y}\gamma(x,y) D(x,y)$$, việc tính tổng các phần tử của tích element-wise giữa 
 $\gamma$ và $D$ có thể viết dưới dạng $\vec{D}^T\vec{\gamma}$, trong đó $\vec{D}$ và $\vec{\gamma}$ lần lượt là các 
@@ -27,6 +26,9 @@ với $x$ trong khi $\vec{D}$ tương đương với $c$. Điều kiện ràng b
 $\sum_x \gamma(x,y) = P_{\theta}(y)$ và $\sum_y \gamma(x,y) = P_r(x)$. Thông tin thêm về *linear programming* có thể 
 tìm hiểu tại [đây](https://en.wikipedia.org/wiki/Linear_programming).
 
+# Kantorovich-Rubinstein duality
+
+...
 
 ---
 
