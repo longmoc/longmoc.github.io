@@ -32,12 +32,12 @@ thành 5 cột đất. Các cột đất của $P_r$ (tương ứng các trạng
 Hàm phân phối có thể viết như sau:
 
 $$ \begin{aligned}
-P_r(1) &= 3/13 \, , P_r(2) &= 1/13 \\
-P_r(3) &= 2/13 \, , P_r(4) &= 2/13 \\
+P_r(1) &= 3/13 \, , &P_r(2) = 1/13 \\
+P_r(3) &= 2/13 \, , &P_r(4) = 2/13 \\
 P_r(5) &= 5/13 \\
 \\
-P_{\theta}(1) &= 2/13 \, , P_{\theta}(2) &= 1/13 \\
-P_{\theta}(3) &= 3/13 \, , P_{\theta}(4) &= 4/13 \\
+P_{\theta}(1) &= 2/13 \, , &P_{\theta}(2) = 1/13 \\
+P_{\theta}(3) &= 3/13 \, , &P_{\theta}(4) = 4/13 \\
 P_{\theta}(5) &= 3/13 \\
 \end{aligned} $$
 
