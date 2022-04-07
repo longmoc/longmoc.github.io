@@ -53,7 +53,7 @@ Cách tính công thực hiện như đã nói bằng $m \times d$. Ví dụ v�
 công tương ứng:
 
 $$ \begin{aligned}
-&=&&\sum_{x,y}\gamma_1(x,y) D(x,y) \\
+&&&\sum_{x,y}\gamma_1(x,y) D(x,y) \\
 &=&&\gamma_1(1,1) D(1,1) + \gamma_1(1,2) D(1,2) + \gamma_1(1,3) D(1,3) + \ ... \\
 &&+\ &\gamma_1(2,1) D(2,1) + \gamma_1(2,2) D(2,2) + \gamma_1(2,3) D(2,3) +  \ ... \\
 &&+\ &... \\
@@ -98,6 +98,8 @@ $W(P_r, P_{\theta})$ (đối với trường hợp phân phối liên tục) là
 $$ W(P_r, P_{\theta}) = \inf_{\gamma \in \Pi(P_r ,P_{\theta})} \mathbb{E}_{(x,y) \sim \gamma}\big[\|x - y\|\big] $$
 
 # Kantorovich-Rubinstein duality
+
+Trở lại bài toán tính công $$ \sum_{x,y}\gamma(x,y) D(x,y) $$
 
 ---
 
