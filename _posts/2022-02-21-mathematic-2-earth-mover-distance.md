@@ -23,44 +23,55 @@ lượng $m$ khoảng cách $d$ sẽ cần một công bằng $m \times d$. Giá
 công cần thiết.
 
 Ví dụ chúng ta có phân phối xác suất nguồn $P_r$ đại diện bởi mô đất bên trái hình dưới, phân phối xác suất đích 
-$P_{\theta}$ đại diện bởi hình dạng mô đất phải. Cả hai mô đất đều có thể được lấp đầy bởi 13 khối đất. Các trạng thái 
-khối đất từ $P_r$ được đặt là $x$, từ $P_{\theta}$ được đặt là $y$.
+$P_{\theta}$ đại diện bởi hình dạng mô đất phải. Cả hai mô đất đều có thể được lấp đầy bởi 13 khối đất và được chia 
+thành 5 cột đất. Các cột đất của $P_r$ (tương ứng các trạng thái của phân phối) được đặt là $x$, của $P_{\theta}$ được 
+đặt là $y$.
 
 ![Ý tưởng Earth-Mover dựa trên bài toán di chuyển các khối đất]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-earthmover-1.png){:style="display:block; margin-left:auto; margin-right:auto"}
 
 Hàm phân phối có thể viết như sau:
 
 $$ \begin{aligned}
-P_r(1) &= 3/13 \\
-P_r(2) &= 1/13 \\
-P_r(3) &= 2/13 \\
-P_r(4) &= 2/13 \\
-P_r(3) &= 5/13 \\
+P_r(1) &= 3/13 \, , P_r(2) &= 1/13 \\
+P_r(3) &= 2/13 \, , P_r(4) &= 2/13 \\
+P_r(5) &= 5/13 \\
 \\
-P_{\theta}(1) &= 2/13 \\
-P_{\theta}(2) &= 1/13 \\
-P_{\theta}(3) &= 3/13 \\
-P_{\theta}(4) &= 4/13 \\
+P_{\theta}(1) &= 2/13 \, , P_{\theta}(2) &= 1/13 \\
+P_{\theta}(3) &= 3/13 \, , P_{\theta}(4) &= 4/13 \\
 P_{\theta}(5) &= 3/13 \\
 \end{aligned} $$
 
-Có rất nhiều cách để di chuyển các khối đất từ $P_r$ sang $P_{\theta}$, đặt các chiến lược di chuyển (*plan*) có thể 
+Yêu cầu bài toàn là di chuyển các khối đất của $P_r$ để thành $P_{\theta}$, ta viết được khoảng cách khi di chuyển đất 
+giữa các cột đất (hay khoảng cách giữa các state trong phân phối) như sau:  
+
+![Khoảng cách giữa các cột đất]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-earthmover-2.svg){:style="display:block; margin-left:auto; margin-right:auto"}
+
+Có rất nhiều cách để di chuyển các khối đất từ $P_r$ thành $P_{\theta}$, đặt các chiến lược di chuyển (*plan*) có thể 
 là $\gamma \in \Pi$. Ví dụ về một số chiến lược di chuyển các khối đất:
 
-![Ví dụ một vài plan]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-earthmover-2.svg){:style="display:block; margin-left:auto; margin-right:auto"}
+![Ví dụ một vài plan]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-earthmover-3.svg){:style="display:block; margin-left:auto; margin-right:auto"}
 
-Cách tính công thực hiện như đã nói bằng $m \times d$, với plan ${\gamma}_1$, từ bảng phân bổ tương ứng ta tính được công này bằng:
+Cách tính công thực hiện như đã nói bằng $m \times d$, với plan ${\gamma}_1$, từ bảng phân bổ của plan ta tính được 
+công tương ứng bằng 
 
-$$ 1 \times (7-1) + 2 \times (10-1) + 1 \times (8-2) + 2 \times (9-3) = 42 $$
+$$ \begin{aligned}
+\sum_{x,y}\gamma(x,y) D(x,y) &= &\ \gamma_1(1,1) D(1,1) + \gamma_1(1,2) D(1,2) + \gamma_1(1,3) D(1,3) + ... \\
+                             &  &+ \gamma_1(2,1) D(2,1) + \gamma_1(2,2) D(2,2) + \gamma_1(2,3) D(2,3) + ... \\
+                             &  &+ ... \\
+                             &= &\ 2 \times 0 + 0 \times 1 + 1 \times 2 + ... \\
+                             &  &\ 0 \times 1 + 1 \times 0 + 0 \times 1 + ... \\
+                             &= 4 \\
+\end{aligned} $$
 
 Không phải tất cả các plan đều cho kết quả chi phí giống nhau, trong những trường hợp vị trí, hình dạng mô đất phức 
-tạp các cách di chuyển khác nhau có thể tốn chi phí khác nhau. *Earth-Mover distance* tương ứng với plan có chi phí nhỏ 
+tạp các cách di chuyển khác nhau có thể tốn chi phí khác nhau. Ví dụ với plan ${\gamma}_2$ công tính được là 6. 
+*Earth-Mover distance* tương ứng với plan có chi phí nhỏ 
 nhất.
 
 Ta luôn có $\sum_x \gamma(x,y) = P_{\theta}(y)$ và $\sum_y \gamma(x,y) = P_r(x)$. Điều này là tất yếu nếu vì các cách 
 di chuyển là đúng và khối đất được lấy từ phân phối nguồn $P_r$ đặt vào phân phối đích $P_{\theta}$.
 
-![Thể hiện của joined probability distribution]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-earthmover-3.jpeg){:style="display:block; margin-left:auto; margin-right:auto"}
+![Thể hiện của joined probability distribution]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-earthmover-4.svg){:style="display:block; margin-left:auto; margin-right:auto"}
 
 Tương tự với $P_r$ và $P_{\theta}$ là các phân phối xác suất liên tục, tính chất này vẫn được đảm bảo:
 
