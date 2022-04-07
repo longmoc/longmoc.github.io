@@ -25,11 +25,12 @@ công cần thiết.
 Ví dụ chúng ta có phân phối xác suất nguồn $P_r$ đại diện bởi mô đất bên trái hình dưới, phân phối xác suất đích 
 $P_{\theta}$ đại diện bởi hình dạng mô đất phải. Cả hai mô đất đều có thể được lấp đầy bởi 13 khối đất và được chia 
 thành 5 cột đất. Các cột đất của $P_r$ (tương ứng các trạng thái của phân phối) được đặt là $x$, của $P_{\theta}$ được 
-đặt là $y$.
+đặt là $y$. Yêu cầu bài toàn là di chuyển các khối đất của $P_r$ để thành $P_{\theta}$
 
 ![Ý tưởng Earth-Mover dựa trên bài toán di chuyển các khối đất]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-earthmover-1.png){:style="display:block; margin-left:auto; margin-right:auto"}
 
-Hàm phân phối có thể viết như sau:
+Ta viết được hàm phân phối cũng như bảng khoảng cách khi di chuyển đất 
+giữa các cột đất (hay khoảng cách giữa các state trong phân phối):  
 
 $$ \begin{aligned}
 P_r(1) &= 3/13 \, , &P_r(2) = 1/13 \\
@@ -40,9 +41,6 @@ P_{\theta}(1) &= 2/13 \, , &P_{\theta}(2) = 1/13 \\
 P_{\theta}(3) &= 3/13 \, , &P_{\theta}(4) = 4/13 \\
 P_{\theta}(5) &= 3/13 \\
 \end{aligned} $$
-
-Yêu cầu bài toàn là di chuyển các khối đất của $P_r$ để thành $P_{\theta}$, ta viết được khoảng cách khi di chuyển đất 
-giữa các cột đất (hay khoảng cách giữa các state trong phân phối) như sau:  
 
 ![Khoảng cách giữa các cột đất]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-earthmover-2.svg){:style="display:block; margin-left:auto; margin-right:auto"}
 
