@@ -28,7 +28,7 @@ $P_{\theta}$ đại diện bởi hình dạng mô đất phải. Cả hai mô đ
 thành 5 cột đất. Các cột đất của $P_r$ (tương ứng các trạng thái của phân phối) được đặt là $x$, của $P_{\theta}$ được 
 đặt là $y$. Yêu cầu bài toàn là di chuyển các khối đất của $P_r$ để thành $P_{\theta}$
 
-![Ý tưởng Earth-Mover dựa trên bài toán di chuyển các khối đất]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-earthmover-1.png){:style="display:block; margin-left:auto; margin-right:auto"}
+![Ý tưởng Earth-Mover dựa trên bài toán di chuyển các khối đất]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-wasserstein-distance-1.png){:style="display:block; margin-left:auto; margin-right:auto"}
 
 Ta viết được hàm phân phối cũng như bảng khoảng cách khi di chuyển đất 
 giữa các cột đất (hay khoảng cách giữa các state trong phân phối):  
@@ -43,12 +43,12 @@ P_{\theta}(3) &= 3/13 \, , &P_{\theta}(4) = 4/13 \\
 P_{\theta}(5) &= 3/13 \\
 \end{aligned} $$
 
-![Khoảng cách giữa các cột đất]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-earthmover-2.svg){:style="display:block; margin-left:auto; margin-right:auto"}
+![Khoảng cách giữa các cột đất]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-wasserstein-distance-2.svg){:style="display:block; margin-left:auto; margin-right:auto"}
 
 Có rất nhiều cách để di chuyển các khối đất từ $P_r$ thành $P_{\theta}$, đặt các chiến lược di chuyển (*plan*) có thể 
 là $\gamma \in \Pi$. Ví dụ về một số chiến lược di chuyển các khối đất:
 
-![Ví dụ một vài plan]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-earthmover-3.svg){:style="display:block; margin-left:auto; margin-right:auto"}
+![Ví dụ một vài plan]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-wasserstein-distance-3.svg){:style="display:block; margin-left:auto; margin-right:auto"}
 
 Cách tính công thực hiện như đã nói bằng $m \times d$. Ví dụ với plan ${\gamma}_1$, từ bảng phân bổ của plan ta tính được 
 công tương ứng:
@@ -72,7 +72,7 @@ nhất.
 Ta luôn có $\sum_x \gamma(x,y) = P_{\theta}(y)$ và $\sum_y \gamma(x,y) = P_r(x)$. Điều này là tất yếu nếu vì các cách 
 di chuyển là đúng và khối đất được lấy từ phân phối nguồn $P_r$ đặt vào phân phối đích $P_{\theta}$.
 
-![Thể hiện của joined probability distribution]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-earthmover-4.svg){:style="display:block; margin-left:auto; margin-right:auto"}
+![Thể hiện của joined probability distribution]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-wasserstein-distance-4.svg){:style="display:block; margin-left:auto; margin-right:auto"}
 
 Tương tự với $P_r$ và $P_{\theta}$ là các phân phối xác suất liên tục, tính chất này vẫn được đảm bảo:
 
