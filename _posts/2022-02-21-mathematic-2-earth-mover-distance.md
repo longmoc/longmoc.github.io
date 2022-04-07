@@ -52,7 +52,7 @@ là $\gamma \in \Pi$. Ví dụ về một số chiến lược di chuyển các 
 ![Ví dụ một vài plan]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-earthmover-3.svg){:style="display:block; margin-left:auto; margin-right:auto"}
 
 Cách tính công thực hiện như đã nói bằng $m \times d$, với plan ${\gamma}_1$, từ bảng phân bổ của plan ta tính được 
-công tương ứng bằng 
+công tương ứng:
 
 $$ \begin{aligned}
 \sum_{x,y}\gamma(x,y) D(x,y) &= &\ \gamma_1(1,1) D(1,1) + \gamma_1(1,2) D(1,2) + \gamma_1(1,3) D(1,3) + ... \\
