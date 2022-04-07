@@ -56,10 +56,10 @@ công tương ứng:
 
 $$ \begin{aligned}
 \sum_{x,y}\gamma(x,y) D(x,y) &=  &\gamma_1(1,1) D(1,1) + \gamma_1(1,2) D(1,2) + \gamma_1(1,3) D(1,3) + ... \\
-                             &\ +&\gamma_1(2,1) D(2,1) + \gamma_1(2,2) D(2,2) + \gamma_1(2,3) D(2,3) + ... \\
-                             &\ +& ... \\
+                             &\text{ } +&\gamma_1(2,1) D(2,1) + \gamma_1(2,2) D(2,2) + \gamma_1(2,3) D(2,3) + ... \\
+                             &\text{ } +& ... \\
                              &=  &2 \times 0 + 0 \times 1 + 1 \times 2 + ... \\
-                             &\ +&0 \times 1 + 1 \times 0 + 0 \times 1 + ... \\
+                             &\text{ } +&0 \times 1 + 1 \times 0 + 0 \times 1 + ... \\
                              &= &4 \\
 \end{aligned} $$
 
