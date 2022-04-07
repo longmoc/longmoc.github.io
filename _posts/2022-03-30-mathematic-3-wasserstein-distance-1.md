@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "Earth-Mover/Wasserstein distance & Kantorovich-Rubinstein duality"
+title: "Wasserstein distance I: Earth-Mover distance"
 categories: mathematic
 mathjax: true
 header:
@@ -8,7 +8,8 @@ header:
   image_description: "Mathematic"
 ---
 
-*Ghi chú cần thiết về khoảng cách Wasserstein và đối ngẫu Kantorovich-Rubinstein*
+*Ghi chú cần thiết về khoảng cách Wasserstein. Do muốn viết lại đầy đủ những điều học được nên mình viết thành hai 
+phần. Phần một này là ghi chép của mình về khoảng cách Earth-Mover/Wasserstein và ý nghĩa của nó*
 
 ---
 
@@ -93,18 +94,25 @@ Hoặc đối với trường hợp phân phối liên tục:
 $$\int_x \int_y \gamma(x,y) \| x - y \| \,dy\,dx = \mathbb{E}_{(x,y) \sim \gamma}\big[\|x - y\|\big]$$
 
 *Earth-Mover distance* $EMD(P_r, P_{\theta})$ (đối với trường hợp phân phối rời rạc) hoặc *Wasserstein distance* 
-$W(P_r, P_{\theta})$ (đối với trường hợp phân phối liên tục) là giá trị ***infimum*** hay cận dưới nhỏ nhất của khoảng cách trên:
+$W(P_r, P_{\theta})$ (đối với trường hợp phân phối liên tục) là giá trị ***infimum*** hay cận dưới nhỏ nhất của khoảng 
+cách trên:
+
+$$ EMD(P_r, P_{\theta}) = \inf_{\gamma \in \Pi(P_r ,P_{\theta})} \mathbb{E}_{(x,y) \sim \gamma}\big[\|x - y\|\big] $$
 
 $$ W(P_r, P_{\theta}) = \inf_{\gamma \in \Pi(P_r ,P_{\theta})} \mathbb{E}_{(x,y) \sim \gamma}\big[\|x - y\|\big] $$
 
-# Kantorovich-Rubinstein duality
+Công thức này khi đưa về dạng đối ngẫu của chúng (mà ta sẽ phân tích ở phần sau):
 
-Trở lại bài toán tính công $$ \sum_{x,y}\gamma(x,y) D(x,y) $$, việc tính tổng các phần tử của tích element-wise giữa 
-$\gamma$ và $D$ có thể viết dưới dạng $\vec{D}^T\vec{\gamma}$, trong đó $\vec{D}$ và $vec{\gamma}$ lần lượt là các 
-dạng flatten vector của $D$ và $\gamma$.
+$$\mathrm{EMD}(P_r, P_\theta) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim P_r} f(x) - \mathbb{E}_{x \sim P_\theta} f(x)$$
+
+$$ W(p_r, p_\theta) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{s \sim p_r}[f(s)] - \mathbb{E}_{t \sim p_\theta}[f(t)] $$
+
+# Why Wasserstein Distance
+
+Đầu tiên và dễ nhận ra nhất: Wasserstein 
 
 ---
 
-<div align="right"><i>_Hết_</i></div> 
+<div align="right"><i>Còn tiếp</i></div> 
 
 ---
