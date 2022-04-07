@@ -23,22 +23,25 @@ lượng $m$ khoảng cách $d$ sẽ cần một công bằng $m \times d$. Giá
 công cần thiết.
 
 Ví dụ chúng ta có phân phối xác suất nguồn $P_r$ đại diện bởi mô đất bên trái hình dưới, phân phối xác suất đích 
-$P_{\theta}$ đại diện bởi hình dạng mô đất phải. Cả hai mô đất đều có thể được lấp đầy bởi 6 khối đất. Các trạng thái 
-khối đất từ $P_r$ được đặt là $x$ (1, 2, 3 như hình), từ $P_{\theta}$ được đặt là $y$ (7, 8, 9, 10).
+$P_{\theta}$ đại diện bởi hình dạng mô đất phải. Cả hai mô đất đều có thể được lấp đầy bởi 13 khối đất. Các trạng thái 
+khối đất từ $P_r$ được đặt là $x$, từ $P_{\theta}$ được đặt là $y$.
 
 ![Ý tưởng Earth-Mover dựa trên bài toán di chuyển các khối đất]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-earthmover-1.png){:style="display:block; margin-left:auto; margin-right:auto"}
 
 Hàm phân phối có thể viết như sau:
 
 $$ \begin{aligned}
-P_r(1) &= 3/6 = 0.5 \\
-P_r(2) &= 1/6 = 0.1667 \\
-P_r(3) &= 2/6 = 0.3333 \\
+P_r(1) &= 3/13 \\
+P_r(2) &= 1/13 \\
+P_r(3) &= 2/13 \\
+P_r(4) &= 2/13 \\
+P_r(3) &= 5/13 \\
 \\
-P_{\theta}(7) &= 1/6 = 0.1667 \\
-P_{\theta}(8) &= 1/6 = 0.1667 \\
-P_{\theta}(9) &= 2/6 = 0.3333 \\
-P_{\theta}(10) &= 2/6 = 0.3333 \\
+P_{\theta}(1) &= 2/13 \\
+P_{\theta}(2) &= 1/13 \\
+P_{\theta}(3) &= 3/13 \\
+P_{\theta}(4) &= 4/13 \\
+P_{\theta}(5) &= 3/13 \\
 \end{aligned} $$
 
 Có rất nhiều cách để di chuyển các khối đất từ $P_r$ sang $P_{\theta}$, đặt các chiến lược di chuyển (*plan*) có thể 
