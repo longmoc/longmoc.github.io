@@ -47,7 +47,7 @@ P_{\theta}(5) &= 3/13 \\
 Có rất nhiều cách để di chuyển các khối đất từ $P_r$ sang $P_{\theta}$, đặt các chiến lược di chuyển (*plan*) có thể 
 là $\gamma \in \Pi$. Ví dụ về một số chiến lược di chuyển các khối đất:
 
-![Ví dụ một vài plan]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-earthmover-2.jpeg){:style="display:block; margin-left:auto; margin-right:auto"}
+![Ví dụ một vài plan]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-earthmover-2.svg){:style="display:block; margin-left:auto; margin-right:auto"}
 
 Cách tính công thực hiện như đã nói bằng $m \times d$, với plan ${\gamma}_1$, từ bảng phân bổ tương ứng ta tính được công này bằng:
 
