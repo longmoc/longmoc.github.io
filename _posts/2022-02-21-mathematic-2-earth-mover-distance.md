@@ -53,13 +53,13 @@ Cách tính công thực hiện như đã nói bằng $m \times d$, với plan $
 công tương ứng:
 
 $$ \begin{aligned}
-\sum_{x,y}\gamma(x,y) D(x,y) =&\text{ } &\gamma_1(1,1) D(1,1) + \gamma_1(1,2) D(1,2) + \gamma_1(1,3) D(1,3) +\text{ }... \\
+\sum_{x,y}\gamma(x,y) D(x,y) =&\ &\gamma_1(1,1) D(1,1) + \gamma_1(1,2) D(1,2) + \gamma_1(1,3) D(1,3) +\text{ }... \\
                               &+ &\gamma_1(2,1) D(2,1) + \gamma_1(2,2) D(2,2) + \gamma_1(2,3) D(2,3) +\text{ }... \\
-                              &+\text{ } &... \\
-                             = &\text{ } &2 \times 0 + 0 \times 1 + 1 \times 2 +\text{ }... \\
+                              &+ &... \\
+                             = &\ &2 \times 0 + 0 \times 1 + 1 \times 2 +\text{ }... \\
                               &+ &0 \times 1 + 1 \times 0 + 0 \times 1 +\text{ }... \\
-                              &+ \text{ }&... \\
-                             =&\text{ } &4
+                              &+ &... \\
+                             =&\ &4
 \end{aligned} $$
 
 Không phải tất cả các plan đều cho kết quả chi phí giống nhau, trong những trường hợp vị trí, hình dạng mô đất phức 
