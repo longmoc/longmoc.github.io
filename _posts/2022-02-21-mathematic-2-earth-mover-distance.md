@@ -100,7 +100,7 @@ $$ W(P_r, P_{\theta}) = \inf_{\gamma \in \Pi(P_r ,P_{\theta})} \mathbb{E}_{(x,y)
 # Kantorovich-Rubinstein duality
 
 Trở lại bài toán tính công $$ \sum_{x,y}\gamma(x,y) D(x,y) $$, việc tính tổng các phần tử của tích element-wise giữa 
-$\gamma$ và $D$ có thể viết dưới dạng $\vec{D}^T\vec{\gamma}$), trong đó $\vec{D}$ và $vec{\gamma}$ lần lượt là các 
+$\gamma$ và $D$ có thể viết dưới dạng $\vec{D}^T\vec{\gamma}$, trong đó $\vec{D}$ và $vec{\gamma}$ lần lượt là các 
 dạng flatten vector của $D$ và $\gamma$.
 
 ---
