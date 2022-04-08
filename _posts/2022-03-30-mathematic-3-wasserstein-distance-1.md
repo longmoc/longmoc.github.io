@@ -50,6 +50,9 @@ là $\gamma \in \Pi$. Ví dụ về một số chiến lược di chuyển các 
 
 ![Ví dụ một vài plan]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-wasserstein-distance-3.svg){:style="display:block; margin-left:auto; margin-right:auto"}
 
+(Để chính xác hơn thì con số trong bảng $\gamma$ phải chia cho 13 - số nguyên được để vì mục đích dễ nhìn, và có thể 
+cũng dễ hiểu hơn)
+
 Cách tính công thực hiện như đã nói bằng $m \times d$. Ví dụ với plan ${\gamma}_1$, từ bảng phân bổ của plan ta tính được 
 công tương ứng:
 
@@ -58,14 +61,14 @@ $$ \begin{aligned}
 &=&&\gamma_1(1,1) D(1,1) + \gamma_1(1,2) D(1,2) + \gamma_1(1,3) D(1,3) + \ ... \\
 &&+\ &\gamma_1(2,1) D(2,1) + \gamma_1(2,2) D(2,2) + \gamma_1(2,3) D(2,3) +  \ ... \\
 &&+\ &... \\
-&=&&2 \times 0 + 0 \times 1 + 1 \times 2 + \ ... \\
-&&+\ &0 \times 1 + 1 \times 0 + 0 \times 1 + \ ... \\
+&=&&\frac{2}{13} \times 0 + 0 \times 1 + \frac{1}{13} \times 2 + \ ... \\
+&&+\ &0 \times 1 + \frac{2}{13} \times 0 + 0 \times 1 + \ ... \\
 &&+\ &... \\
-&=&&4
+&=&&\frac{4}{13}
 \end{aligned} $$
 
 Không phải tất cả các plan đều cho kết quả chi phí giống nhau, trong những trường hợp vị trí, hình dạng mô đất phức 
-tạp các cách di chuyển khác nhau có thể tốn chi phí khác nhau. Ví dụ với plan ${\gamma}_2$ công tính được là 6. 
+tạp các cách di chuyển khác nhau có thể tốn chi phí khác nhau. Ví dụ với plan ${\gamma}_2$ công tính được là $\frac{6}{13}$. 
 *Earth-Mover distance* tương ứng với công của plan có chi phí nhỏ 
 nhất.
 
