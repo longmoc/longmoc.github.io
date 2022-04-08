@@ -66,10 +66,10 @@ $$ \begin{aligned}
 
 Không phải tất cả các plan đều cho kết quả chi phí giống nhau, trong những trường hợp vị trí, hình dạng mô đất phức 
 tạp các cách di chuyển khác nhau có thể tốn chi phí khác nhau. Ví dụ với plan ${\gamma}_2$ công tính được là 6. 
-*Earth-Mover distance* tương ứng với plan có chi phí nhỏ 
+*Earth-Mover distance* tương ứng với công của plan có chi phí nhỏ 
 nhất.
 
-Ta luôn có $\sum_x \gamma(x,y) = P_{\theta}(y)$ và $\sum_y \gamma(x,y) = P_r(x)$. Điều này là tất yếu nếu vì các cách 
+Ta luôn có $\sum_x \gamma(x,y) = P_{\theta}(y)$ và $\sum_y \gamma(x,y) = P_r(x)$. Điều này là tất yếu vì các cách 
 di chuyển là đúng và khối đất được lấy từ phân phối nguồn $P_r$ đặt vào phân phối đích $P_{\theta}$.
 
 ![Thể hiện của joined probability distribution]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-wasserstein-distance-4.svg){:style="display:block; margin-left:auto; margin-right:auto"}
@@ -109,7 +109,7 @@ $$ W(p_r, p_\theta) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{s \sim p_r
 
 # Why Wasserstein Distance
 
-Đầu tiên và dễ nhận ra nhất: Wasserstein 
+Đầu tiên và dễ nhận ra nhất: Wasserstein ... 
 
 ---
 
