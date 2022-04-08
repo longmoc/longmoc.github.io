@@ -28,7 +28,7 @@ $P_{\theta}$ đại diện bởi hình dạng mô đất phải. Cả hai mô đ
 thành 5 cột đất. Các cột đất của $P_r$ (tương ứng các trạng thái của phân phối) được đặt là $x$, của $P_{\theta}$ được 
 đặt là $y$. Yêu cầu bài toàn là di chuyển các khối đất của $P_r$ để thành $P_{\theta}$
 
-![Ý tưởng Earth-Mover dựa trên bài toán di chuyển các khối đất]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-wasserstein-distance-1.png){:style="display:block; margin-left:auto; margin-right:auto"}
+![Ý tưởng Earth-Mover dựa trên bài toán di chuyển các khối đất]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-wasserstein-distance-1.svg){:style="display:block; margin-left:auto; margin-right:auto"}
 
 Ta viết được hàm phân phối cũng như bảng khoảng cách khi di chuyển đất 
 giữa các cột đất (hay khoảng cách giữa các state trong phân phối):  
@@ -110,7 +110,10 @@ $$ W(p_r, p_\theta) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim P_r
 
 # Why Wasserstein Distance
 
-Đầu tiên và dễ nhận ra nhất: Wasserstein ... 
+Để hiểu tại sao chúng ta cần Wasserstein distance và khác biệt so với những KL/JS divergence, hãy tìm hiểu ví dụ:
+
+Xét các phân phối xác suất xác định trên $\mathbb{R}^2$, phân phối ảnh dữ liệu thực tế $(0, x)$ với $x$ được lấy mẫu 
+ngẫu nhiên đồng nhất từ $U[0, 1]$. Xét các họ phân phối $P$
 
 ---
 
