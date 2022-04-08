@@ -105,7 +105,7 @@ Công thức này khi đưa về dạng đối ngẫu của chúng (mà ta sẽ 
 
 $$\mathrm{EMD}(P_r, P_\theta) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim P_r} f(x) - \mathbb{E}_{x \sim P_\theta} f(x)$$
 
-$$ W(p_r, p_\theta) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{s \sim p_r}[f(s)] - \mathbb{E}_{t \sim p_\theta}[f(t)] $$
+$$ W(p_r, p_\theta) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim P_r}[f(x)] - \mathbb{E}_{x \sim P_\theta}[f(x)] $$
 
 # Why Wasserstein Distance
 
