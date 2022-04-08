@@ -88,7 +88,7 @@ Có thể thấy $\gamma \in \Pi(P_{\theta},P_r)$ là *phân phối xác suất 
 $P_{\theta}$, $P_r$ và $P_{\theta}$, $P_r$ là các *phân phối biên* (*margin distribution*) của $\gamma \in \Pi$.
 
 Xét khoảng cách giữa các trạng thái của hai phân phối là $$\|x - y\|$$. Chi phí di chuyển hay khoảng cách giữa phép dịch 
-chuyển phân phối $p_r$ sang $P_{\theta}$ được viết qua công thức:
+chuyển phân phối $P_{\theta}$ sang $P_r$  được viết qua công thức:
 
 $$\sum_x \sum_y \gamma(x,y) \| x - y \| = \mathbb{E}_{(x,y) \sim \gamma}\big[\|x - y\|\big]$$
 
