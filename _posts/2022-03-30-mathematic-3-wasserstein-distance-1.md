@@ -106,14 +106,14 @@ $$ W(P_{\theta}, P_r) = \inf_{\gamma \in \Pi(P_{\theta}, P_r)} \mathbb{E}_{(x,y)
 
 Công thức này khi đưa về dạng đối ngẫu của chúng (mà ta sẽ phân tích ở phần sau):
 
-$$ W(p_\theta, p_r) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim P_{\theta}}[f(x)] - \mathbb{E}_{x \sim P_r}[f(x)] $$
+$$ W(P_\theta, P_r) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim P_{\theta}}[f(x)] - \mathbb{E}_{x \sim P_r}[f(x)] $$
 
 # Why Wasserstein Distance
 
 Để hiểu tại sao chúng ta cần Wasserstein distance và khác biệt so với những KL/JS divergence, hãy tìm hiểu ví dụ:
 
 Xét các phân phối xác suất xác định trên $\mathbb{R}^2$, phân phối ảnh dữ liệu thực tế $(0, x)$ với $x$ được lấy mẫu 
-ngẫu nhiên đồng nhất từ $U[0, 1]$. Xét các họ phân phối $P$
+ngẫu nhiên đồng nhất từ $U[0, 1]$. Xét các họ phân phối $P_{\theta}$
 
 ---
 
