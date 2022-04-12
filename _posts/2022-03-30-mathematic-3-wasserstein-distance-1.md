@@ -126,22 +126,32 @@ $d(P_r, P_\theta)$ sẽ giảm dần. Nhưng không may điều này không ph�
 
 $$\delta(P_r, P_\theta) =
   \begin{cases}
-    1 &\quad \text{if } \theta \neq 0~, \\
-    0 &\quad \text{if } \theta = 0~.
+    1 &\quad \text{nếu } \theta \neq 0~, \\
+    0 &\quad \text{nếu } \theta = 0~.
   \end{cases}
 $$
 
-- KL divergence: $KL(P\|Q)$ có giá trị bằng $+\infty$ nếu tồn tại điểm $(x, y)$ tại đó $P(x,y) > 0$ và $Q(x,y)=0$) (do
+- KL divergence: $$KL(P\|Q)$$ có giá trị bằng $+\infty$ nếu tồn tại điểm $(x, y)$ tại đó $P(x,y) > 0$ và $Q(x,y)=0$) (do
   $$ \lim_{x \to 0} \log (x) = -\infty$$, xem lại [KL divergence](https://longmoc.github.io/mathematic/mathematic-1-ce-kld-jsd/)). 
-  $KL(P_{\theta}\|P_0)=+\infty$ tại $(\theta, y)$ với $y \in [0,1]$. 
-  Ngược lại các điểm $(0, y)$ ta có $KL(P_0\|P_{\theta})=+\infty$.
+  $$KL(P_{\theta}\|P_0)=+\infty$$ tại $(\theta, y)$ với $y \in [0,1]$. 
+  Ngược lại tại các điểm $(0, y)$ ta có $$KL(P_0\|P_{\theta})=+\infty$$.
   
 $$ KL(P_0 \| P_\theta) = KL(P_\theta \| P_0) =
   \begin{cases}
-    +\infty &\quad \text{if } \theta \neq 0~, \\
-    0 &\quad \text{if } \theta = 0~,
+    +\infty &\quad \text{nếu } \theta \neq 0~, \\
+    0 &\quad \text{nếu } \theta = 0~.
   \end{cases}$$
   
+- Jensen-Shannon divergence: Vì $$JS(P\|Q) = \frac{1}{2}KL(P \| M) + \frac{1}{2}KL(Q \| M)$$ với $M = \frac{P + Q}{2}$, 
+  khi $P>0, Q=0$ hoặc $P=0, Q>0$ ta có $$JS(P\|Q) = \frac{1}{2}\log 2$$
+  
+$$JS(P_0, P_\theta) =
+  \begin{cases}
+    \frac{1}{2}\log 2 &\quad \text{if } \theta \neq 0~, \\
+    0 &\quad \text{if } \theta = 0~.
+  \end{cases}$$
+
+
 ---
 
 <div align="right"><i>Còn tiếp</i></div> 
