@@ -112,8 +112,8 @@ $$ W(P_\theta, P_r) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim P_{
 
 Để hiểu tại sao chúng ta cần Wasserstein distance và khác biệt so với KL/JS divergence, hãy tìm hiểu ví dụ:
 
-Xét các phân phối xác suất xác định trên $\mathbb{R}^2$, phân phối ảnh dữ liệu thực tế $P_r=(0, x)$ với $x$ được lấy mẫu 
-ngẫu nhiên đồng nhất từ $U[0, 1]$. Xét các họ phân phối sinh $P_{\theta}$ dạng $P_{\theta}=(0, x)$, $x$ cũng từ $U[0, 1]$.
+Xét các phân phối xác suất xác định trên $\mathbb{R}^2$, phân phối ảnh dữ liệu thực tế $P_r=(0, y)$ với $y$ được lấy mẫu 
+ngẫu nhiên đồng nhất từ $U[0, 1]$. Xét các họ phân phối sinh $P_{\theta}$ dạng $P_{\theta}=(0, y)$, $y$ cũng từ $U[0, 1]$.
 
 Biểu đồ minh họa phân phối thực và sinh với $\theta = 1$:
 
@@ -151,6 +151,9 @@ $$JS(P_0, P_\theta) =
     0 &\quad \text{if } \theta = 0~.
   \end{cases}$$
 
+- Earth-Mover/Wasserstein distance: $\gamma$ tối ưu trong trường hợp này là di chuyển toàn bộ các điểm từ $(\theta, y)$ 
+sang $(0, y)$ theo phương ngang khoảng cách bằng $\theta$. Do đó $W(P_{\theta}, P_0) = |\theta|$
+  
 
 ---
 
