@@ -120,7 +120,7 @@ Biểu đồ minh họa phân phối thực và sinh với $\theta = 1$:
 ![Phân phối thực và sinh khi theta = 1]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-wasserstein-distance-5.png){:style="display:block; margin-left:auto; margin-right:auto"}
 
 Thuật toán tối ưu sẽ cần được huấn luyện để di chuyển $\theta$ về $0$. Khi tiến dần $\theta \to 0$ khoảng cách 
-$d(P_r, P_\theta)$ sẽ giảm dần. Nhưng không may điều này không phải lúc nào cũng xảy ra.
+$d(P_\theta, P_r)$ sẽ giảm dần. Nhưng không may điều này không phải lúc nào cũng xảy ra.
 
 - Với các đánh giá dạng discriminative, ta luôn có:
 
@@ -145,14 +145,15 @@ $$ KL(P_0 \| P_\theta) = KL(P_\theta \| P_0) =
 - Jensen-Shannon divergence: Vì $$JS(P\|Q) = \frac{1}{2}KL(P \| M) + \frac{1}{2}KL(Q \| M)$$ với $M = \frac{P + Q}{2}$, 
   khi $P>0, Q=0$ hoặc $P=0, Q>0$ ta có $$JS(P\|Q) = \frac{1}{2}\log 2$$
   
-$$JS(P_0, P_\theta) =
+$$JS(P_\theta, P_0) =
   \begin{cases}
     \frac{1}{2}\log 2 &\quad \text{nếu } \theta \neq 0~, \\
     0 &\quad \text{nếu } \theta = 0~.
   \end{cases}$$
 
 - Earth-Mover/Wasserstein distance: $\gamma$ tối ưu trong trường hợp này là di chuyển toàn bộ các điểm từ $(\theta, y)$ 
-sang $(0, y)$ theo phương ngang khoảng cách bằng $\theta$. Do đó $W(P_{\theta}, P_0) = |\theta|$
+sang $(0, y)$ theo phương ngang khoảng cách bằng $\theta$. Do đó $W(P_{\theta}, P_0) = |\theta|$ thỏa mãn giảm dần khi 
+  $\theta$ tiến dần về $0$.
   
 
 ---
