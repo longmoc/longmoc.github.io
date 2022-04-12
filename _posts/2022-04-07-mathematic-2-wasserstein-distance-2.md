@@ -24,7 +24,7 @@ dạng flatten vector của $D$ và $\gamma$. Khi đó có thể đưa về gi�
 Cụ thể dạng *linear program* trong trường hợp này là tối thiểu hóa $\vec{D}^T\vec{\gamma}$. Trong đó $\vec{\gamma}$ 
 tương đương với $x$ và $\vec{D}$ tương đương với $c$.
 
-Điều kiện ràng buộc $Ax \leq b$ là tổng hợp từ các điều kiện $\sum_x \gamma(x,y) = P_{\theta}(y)$ và 
+Điều kiện ràng buộc $Ax \leq b$ tổng hợp từ các điều kiện $\sum_x \gamma(x,y) = P_{\theta}(y)$ và 
 $\sum_y \gamma(x,y) = P_r(x)$. 
 
 Thông tin thêm về *linear programming* có thể tìm hiểu tại [đây](https://en.wikipedia.org/wiki/Linear_programming).
