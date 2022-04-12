@@ -147,8 +147,8 @@ $$ KL(P_0 \| P_\theta) = KL(P_\theta \| P_0) =
   
 $$JS(P_0, P_\theta) =
   \begin{cases}
-    \frac{1}{2}\log 2 &\quad \text{if } \theta \neq 0~, \\
-    0 &\quad \text{if } \theta = 0~.
+    \frac{1}{2}\log 2 &\quad \text{nếu } \theta \neq 0~, \\
+    0 &\quad \text{nếu } \theta = 0~.
   \end{cases}$$
 
 - Earth-Mover/Wasserstein distance: $\gamma$ tối ưu trong trường hợp này là di chuyển toàn bộ các điểm từ $(\theta, y)$ 
