@@ -110,7 +110,7 @@ $$ W(P_\theta, P_r) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim P_{
 
 # Why Wasserstein Distance
 
-Để hiểu tại sao chúng ta cần Wasserstein distance và khác biệt so với những KL/JS divergence, hãy tìm hiểu ví dụ:
+Để hiểu tại sao chúng ta cần Wasserstein distance và khác biệt so với KL/JS divergence, hãy tìm hiểu ví dụ:
 
 Xét các phân phối xác suất xác định trên $\mathbb{R}^2$, phân phối ảnh dữ liệu thực tế $P_r=(0, x)$ với $x$ được lấy mẫu 
 ngẫu nhiên đồng nhất từ $U[0, 1]$. Xét các họ phân phối sinh $P_{\theta}$ dạng $P_{\theta}=(0, x)$, $x$ cũng từ $U[0, 1]$.
@@ -132,8 +132,15 @@ $$\delta(P_r, P_\theta) =
 $$
 
 - KL divergence: $KL(P\|Q)$ có giá trị bằng $+\infty$ nếu tồn tại điểm $(x, y)$ tại đó $P(x,y) > 0$ và $Q(x,y)=0) (do
-  $$\lim_{x \to 0} \log (x) = -\infty$$). $KL(P_{\theta}\|P_0)=+\infty$ tại $(\theta, y)$ với $y \in [0,1]$. 
-  Ngược lại các điểm $(0, y) ta có $KL(P_0\|P_{\theta})=+\infty$
+  $$\lim_{x \to 0} \log (x) = -\infty$$, xem lại [KL divergence](https://longmoc.github.io/mathematic/mathematic-1-ce-kld-jsd/)). 
+  $KL(P_{\theta}\|P_0)=+\infty$ tại $(\theta, y)$ với $y \in [0,1]$. 
+  Ngược lại các điểm $(0, y) ta có $KL(P_0\|P_{\theta})=+\infty$.
+  
+$$ KL(P_0 \| P_\theta) = KL(P_\theta \| P_0) =
+  \begin{cases}
+    +\infty &\quad \text{if } \theta \neq 0~, \\
+    0 &\quad \text{if } \theta = 0~,
+  \end{cases}$$
   
 ---
 
