@@ -112,9 +112,29 @@ $$ W(P_\theta, P_r) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim P_{
 
 Để hiểu tại sao chúng ta cần Wasserstein distance và khác biệt so với những KL/JS divergence, hãy tìm hiểu ví dụ:
 
-Xét các phân phối xác suất xác định trên $\mathbb{R}^2$, phân phối ảnh dữ liệu thực tế $(0, x)$ với $x$ được lấy mẫu 
-ngẫu nhiên đồng nhất từ $U[0, 1]$. Xét các họ phân phối $P_{\theta}$
+Xét các phân phối xác suất xác định trên $\mathbb{R}^2$, phân phối ảnh dữ liệu thực tế $P_r=(0, x)$ với $x$ được lấy mẫu 
+ngẫu nhiên đồng nhất từ $U[0, 1]$. Xét các họ phân phối sinh $P_{\theta}$ dạng $P_{\theta}=(0, x)$, $x$ cũng từ $U[0, 1]$.
 
+Biểu đồ minh họa phân phối thực và sinh với $\theta = 1$:
+
+![Phân phối thực và sinh khi theta = 1]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-wasserstein-distance-5.png){:style="display:block; margin-left:auto; margin-right:auto"}
+
+Thuật toán tối ưu sẽ cần được huấn luyện để di chuyển $\theta$ về $0$. Khi tiến dần $\theta \to 0$ khoảng cách 
+$d(P_r, P_\theta)$ sẽ giảm dần. Nhưng không may điều này không phải lúc nào cũng xảy ra.
+
+- Với các đánh giá dạng discriminative, ta luôn có:
+
+$$\delta(P_r, P_\theta) =
+  \begin{cases}
+    1 &\quad \text{if } \theta \neq 0~, \\
+    0 &\quad \text{if } \theta = 0~.
+  \end{cases}
+$$
+
+- KL divergence: $KL(P\|Q)$ có giá trị bằng $+\infty$ nếu tồn tại điểm $(x, y)$ tại đó $P(x,y) > 0$ và $Q(x,y)=0) (do
+  $$\lim_{x \to 0} \log (x) = -\infty$$). $KL(P_{\theta}\|P_0)=+\infty$ tại $(\theta, y)$ với $y \in [0,1]$. 
+  Ngược lại các điểm $(0, y) ta có $KL(P_0\|P_{\theta})=+\infty$
+  
 ---
 
 <div align="right"><i>Còn tiếp</i></div> 
