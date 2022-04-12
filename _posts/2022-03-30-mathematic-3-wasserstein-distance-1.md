@@ -152,7 +152,7 @@ $$JS(P_\theta, P_0) =
   \end{cases}$$
 
 - Earth-Mover/Wasserstein distance: $\gamma$ tối ưu trong trường hợp này là di chuyển toàn bộ các điểm từ $(\theta, y)$ 
-sang $(0, y)$ theo phương ngang khoảng cách bằng $\theta$. Do đó $W(P_{\theta}, P_0) = |\theta|$ thỏa mãn giảm dần khi 
+sang $(0, y)$ theo phương ngang khoảng cách bằng $\theta$. Do đó $W(P_{\theta}, P_0) = |\theta|$, thỏa mãn giảm dần khi 
   $\theta$ tiến dần về $0$.
   
 Ví dụ này đã chứng tỏ việc tồn tại các phân phối nguồn và đích mà sẽ không hội tụ theo *KL divergence*, *JS divergence*, 
