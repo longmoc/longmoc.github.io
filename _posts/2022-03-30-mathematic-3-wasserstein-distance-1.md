@@ -155,6 +155,9 @@ $$JS(P_\theta, P_0) =
 sang $(0, y)$ theo phương ngang khoảng cách bằng $\theta$. Do đó $W(P_{\theta}, P_0) = |\theta|$ thỏa mãn giảm dần khi 
   $\theta$ tiến dần về $0$.
   
+Ví dụ này đã chứng tỏ việc tồn tại các phân phối nguồn và đích mà sẽ không hội tụ theo *KL divergence*, *JS divergence*, 
+... nhưng có thể hội tụ nếu dùng *EM/Wasserstein distance*. Đồng thời cũng giải thích cho một số trường hợp gradient 
+luôn bằng $0$ khi huấn luyện sử dụng *KL divergence*, *JS divergence*
 
 ---
 
