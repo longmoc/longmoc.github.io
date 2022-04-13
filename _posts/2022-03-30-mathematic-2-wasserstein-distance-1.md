@@ -1,11 +1,12 @@
 ---
-layout: posts
+layout: single
 title: "Wasserstein distance I: Earth-Mover distance"
 categories: mathematic
 mathjax: true
 header:
   image: /assets/images/mathematic.jpeg
   image_description: "Mathematic"
+  teaser: /assets/images/mathematic.jpeg
 ---
 
 *Ghi chú cần thiết về khoảng cách Wasserstein. Do muốn viết lại đầy đủ những điều học được nên mình viết thành hai 

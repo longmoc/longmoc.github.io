@@ -6,6 +6,7 @@ mathjax: true
 header:
   image: /assets/images/mathematic.jpeg
   image_description: "Mathematic"
+  teaser: /assets/images/mathematic.jpeg
 ---
 
 *Phần cuối ghi chú cần thiết về khoảng cách Wasserstein: đối ngẫu Kantorovich-Rubinstein*

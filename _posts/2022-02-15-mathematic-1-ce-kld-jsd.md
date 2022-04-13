@@ -1,11 +1,12 @@
 ---
-layout: posts
+layout: single
 title: "Cross-entropy, Kullback-Leibler divergence & Jensen-Shannon divergence"
 categories: mathematic
 mathjax: true
 header:
   image: /assets/images/mathematic.jpeg
   image_description: "Mathematic"
+  teaser: /assets/images/mathematic.jpeg
 ---
 
 *Các khái niệm được sử dụng trong Machine learning như Cross-entropy, Kullback-Leibler divergence và 

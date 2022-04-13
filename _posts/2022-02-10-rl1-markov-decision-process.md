@@ -1,11 +1,12 @@
 ---
-layout: posts
+layout: single
 title: "Reinforcement learning I: Markov Decision Process"
 categories: reinforcement-learning
 mathjax: true
 header:
   image: /assets/images/rl.jpeg
   image_description: "Studying"
+  teaser: /assets/images/rl.jpeg
 ---
 Mở đầu series Reinforcement Learning (RL) bằng Markov Decision Process(es).
 
