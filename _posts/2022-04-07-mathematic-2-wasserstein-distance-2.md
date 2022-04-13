@@ -1,7 +1,11 @@
 ---
 layout: single
 title: "Wasserstein distance II: Kantorovich-Rubinstein duality"
-categories: mathematic
+categories: 
+  - mathematic
+tags:
+  - Jekyll
+  - update
 mathjax: true
 header:
   image: /assets/images/mathematic.jpeg
