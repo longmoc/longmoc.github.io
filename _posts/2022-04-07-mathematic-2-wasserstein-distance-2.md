@@ -116,7 +116,7 @@ $$\begin{array}{c|c}
 
 \end{array}$$
 
-Mục tiêu $\tilde{z}$ phụ thuộc trực tiếp vào $b\mathbf{b}$, đồng nghĩa với việc các phân phối $P_r$ và $P_\theta$ 
+Mục tiêu $\tilde{z}$ phụ thuộc trực tiếp vào $\mathbf{b}$, đồng nghĩa với việc các phân phối $P_r$ và $P_\theta$ 
 giờ đây đã trở thành biến của hàm tối ưu - điều ta không thể đạt được nếu dùng *primal form*. Dễ thấy $\tilde{z}$ là 
 cận dưới của $z$:
 
@@ -130,7 +130,54 @@ the dual problem*
 
 >Strong duality is a condition in mathematical optimization in which the primal optimal objective and the dual optimal objective are equal
 
+Trở lại với bài toán Earth-Mover, đặt:
 
+$$ \mathbf{y} = \begin{bmatrix} \mathbf{f} \\ \mathbf{g} \end{bmatrix}$$
+
+với $\mathbf{f}, \mathbf{g} \in \mathbb{R}^d$. Lúc này $\mathrm{EMD}(P_r, P_\theta) = \mathbf{f}^T P_r + \mathbf{g}^T P_\theta$. 
+Từ điều kiện ràng buộc $\mathbf{A}^T \mathbf{y} \leq \mathbf{c}$:
+
+
+$$
+\underbrace{
+\left[ \begin{array}{rrr|rrr}
+1 & 0 & 0 & 1 & 0 & 0 \cr
+1 & 0 & 0 & 0 & 1 & 0 \cr
+1 & 0 & 0 & 0 & 0 & 1 \cr \hline
+0 & 1 & 0 & 1 & 0 & 0 \cr
+0 & 1 & 0 & 0 & 1 & 0 \cr
+0 & 1 & 0 & 0 & 0 & 1 \cr \hline
+0 & 0 & 1 & 1 & 0 & 0 \cr
+0 & 0 & 1 & 0 & 1 & 0 \cr
+0 & 0 & 1 & 0 & 0 & 1 \cr \hline
+\end{array}\right]
+}_{\mathbf{A}^T}
+\cdot
+\underbrace{
+\begin{bmatrix}
+f(x_1) \\
+f(x_2) \\
+f(x_3) \\ \hline
+g(x_1) \\
+g(x_2) \\
+g(x_3) \\
+\end{bmatrix}
+}_{y}
+\leq
+\underbrace{
+\begin{bmatrix}
+D(1,1) \\
+D(1,2) \\
+D(1,3) \\ \hline
+D(2,1) \\
+D(2,2) \\
+D(2,3) \\ \hline
+D(3,1) \\
+D(3,2) \\
+D(3,3) \\
+\end{bmatrix}
+}_{\mathbf{c}}
+$$
 
 ---
 
