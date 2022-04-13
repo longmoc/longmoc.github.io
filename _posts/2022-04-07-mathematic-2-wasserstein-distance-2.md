@@ -31,8 +31,8 @@ Programming***. Các *Linear program* là các bài toán được trình bày d
 Cụ thể dạng *linear program* trong trường hợp này là tối thiểu hóa $\vec{D}^T\vec{\gamma}$. Trong đó $\vec{\gamma}$ 
 tương đương với $\mathbf{x}$ và $\vec{D}$ tương đương với $\mathbf{c}$.
 
-Điều kiện ràng buộc $\mathbf{A}\mathbf{x} \leq \mathbf{b}$ tổng hợp từ các điều kiện $\sum_x \gamma(x,y) = P_{\theta}(y)$ và 
-$\sum_y \gamma(x,y) = P_r(x)$.
+Điều kiện ràng buộc $\mathbf{A}\mathbf{x} \leq \mathbf{b}$ tổng hợp từ các điều kiện $\sum_x \gamma(x,y) = P_r(y)$ và 
+$\sum_y \gamma(x,y) = P_{\theta}(x)$.
 
 $$\mathbf{b} = \begin{bmatrix} P_r \\ P_\theta\end{bmatrix}$$
 
@@ -56,6 +56,30 @@ $$
 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 & 1 \cr
 \end{array}\right]
 }_{\mathbf{A}}
+\cdot
+\underbrace{
+\begin{bmatrix}
+\gamma(x_1, y_1) \\
+\gamma(x_1, y_2) \\
+\gamma(x_1, y_3) \\ \hline
+\gamma(x_2, y_1) \\
+\gamma(x_2, y_2) \\
+\gamma(x_2, y_3) \\ \hline
+\gamma(x_3, y_1) \\
+\gamma(x_3, y_2) \\
+\gamma(x_3, y_3) \\
+\end{bmatrix}
+}_{\vec{\gamma}}
+=
+\begin{bmatrix}
+P_r(y_1) \\
+P_r(y_2) \\
+P_r(y_3) \\ \hline
+P_\theta(x_1) \\
+P_\theta(x_2) \\
+P_\theta(x_3) \\
+\end{bmatrix}
+= \underbrace{\begin{bmatrix} P_r \\ P_\theta\end{bmatrix}}_{\mathbf{b}}
 $$
 
 Thông tin thêm về *linear programming* có thể tìm hiểu tại [đây](https://en.wikipedia.org/wiki/Linear_programming).
