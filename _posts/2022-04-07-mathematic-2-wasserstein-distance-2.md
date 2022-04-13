@@ -37,7 +37,7 @@ $\sum_y \gamma(x,y) = P_{\theta}(x)$.
 $$\mathbf{b} = \begin{bmatrix} P_r \\ P_\theta\end{bmatrix}$$
 
 Gọi số state của hai phân phối $P_{\theta}$ và $P_r$ là $l$, khi đó $\mathbf{b} \in \mathbb{R}^{2l}$ và 
-$\vec{\gamma} \in \mathbb{R}^{l^2}$. $\mathbf{A}\vec{\gamma} = \mathbf{b} $\Rightarrow \mathbf{A} \in \mathbb{R}^{2l \times l^2}$.
+$\vec{\gamma} \in \mathbb{R}^{l^2}$. $\mathbf{A}\vec{\gamma} = \mathbf{b} \Rightarrow \mathbf{A} \in \mathbb{R}^{2l \times l^2}$.
 
 Ví dụ với $l=3$:
 
