@@ -32,11 +32,16 @@ Cụ thể dạng *linear program* trong trường hợp này là tối thiểu 
 tương đương với $\mathbf{x}$ và $\vec{D}$ tương đương với $\mathbf{c}$.
 
 Điều kiện ràng buộc $\mathbf{A}\mathbf{x} \leq \mathbf{b}$ tổng hợp từ các điều kiện $\sum_x \gamma(x,y) = P_{\theta}(y)$ và 
-$\sum_y \gamma(x,y) = P_r(x)$. Khi đó có thể tính được $\mathbf{A}$ và $\mathbf{b}$ theo:
+$\sum_y \gamma(x,y) = P_r(x)$.
 
 $$\mathbf{b} = \begin{bmatrix} P_r \\ P_\theta\end{bmatrix}$$
 
-$$\mathbf{A}vec{\gamma} = \mathbf{b}$$
+Gọi số state của hai phân phối $P_{\theta}$ và $P_r$ là $l$, khi đó kích thước của $\mathbf{b}$ là $2l$, của $\gamma$ là 
+$1 \times l^2$.
+
+$$\mathbf{A}\vec{\gamma} = \mathbf{b} $$
+
+$\Rightarrow$ kích thước của $\mathbf{A}$ là $$
 
 Thông tin thêm về *linear programming* có thể tìm hiểu tại [đây](https://en.wikipedia.org/wiki/Linear_programming).
 
