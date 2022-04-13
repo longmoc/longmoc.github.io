@@ -181,8 +181,19 @@ $$
 $$ \Leftrightarrow f(x_i) + g(x_j) \leq \mathbf{D}_{i,j}$$. 
 
 Biết $\mathbf{D}_{i,i} = 0 \Rightarrow g(x_i) \leq -f(x_i) \Rightarrow f(x_i) + g(x_j) \leq f(x_i) - f(x_j)$. Vì vậy để 
-tối ưu đạt cực đại thì $g(x_i) = -f(x_i) \Leftrightarrow g = f$. 
-Khi đó ta có $f(x_i) - f(x_j) \leq \mathbf{D}_{i,j}$ và $f(x_i) - f(x_j) \geq -\mathbf{D}_{i,j}$.
+tối ưu đạt cực đại thì $g(x_i) = -f(x_i) \Leftrightarrow g = f$. Khi đó ta có:
+
+$$
+\begin{aligned}
+&\left\{
+\begin{aligned} 
+f(x_i) - f(x_j) &\leq \mathbf{D}_{i,j} \\ 
+f(x_i) - f(x_j) &\geq -\mathbf{D}_{i,j}
+\end{aligned} 
+\right
+\Leftrightarrow &f(x_i) - f(x_j) \leq
+\end{aligned} 
+$$
 
 ---
 
