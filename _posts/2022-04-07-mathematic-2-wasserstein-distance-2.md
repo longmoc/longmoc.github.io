@@ -16,8 +16,8 @@ header:
 
 Trở lại bài toán tính công $$\sum_{x,y}\gamma(x,y) D(x,y)$$, việc tính tổng các phần tử của tích element-wise giữa 
 $\gamma$ và $D$ có thể viết dưới dạng $\vec{D}^T\vec{\gamma}$, trong đó $\vec{D}$ và $\vec{\gamma}$ lần lượt là các 
-dạng flatten vector của $D$ và $\gamma$. Khi đó có thể đưa về giải quyết bài toán bằng ***Linear Programming***. Các 
-*Linear program* là các bài toán được trình bày dưới dạng chính tắc:
+dạng flatten vector của $D$ và $\gamma$. Khi đó có thể đưa về giải quyết bài toán bằng ***Quy hoạch tuyến tính - Linear 
+Programming***. Các *Linear program* là các bài toán được trình bày dưới dạng chính tắc:
 
 > Find a vector $x$ that maximizes $c^Tx$ subject to $Ax \leq b$ and $x \geq 0$.
 
@@ -42,6 +42,28 @@ Adversarial Network* (*GAN*): generator network sinh ra phân phối sinh $P_{\t
 dụng để huấn luyện mạng này. Thông thường, việc huấn luyện này cần tính giá trị $\nabla_{P_\theta} \mathrm{EMD}(P_{\theta}, P_r)$. 
 Tuy nhiên $P_\theta$ và $P_r$ không đóng vai trò là các biến của quá trình tối ưu nên tính toán trực tiếp gradient không 
 khả khi.
+
+May mắn có một cách tính $\mathbb{EMD}$ tiện dụng hơn. Mỗi *LP* đều có hai dạng thể hiện vấn đề: dạng chính (primal form) 
+và dạng đối ngẫu (dual form).
+
+$$\begin{array}{c|c}
+
+\mathbf{primal \ form:} & \mathbf{dual \ form:}\\
+
+\begin{array}{rrcl}
+\mathrm{minimize} \ & z & = & \ \mathbf{c}^T \mathbf{x}, \\
+\mathrm{so \ that} \ & \mathbf{A} \mathbf{x} & = & \ \mathbf{b} \\
+\mathrm{and}\  & \mathbf{x} & \geq &\ \mathbf{0}
+\end{array} &
+
+\begin{array}{rrcl}
+\mathrm{maximize} \ & \tilde{z} & = & \ \mathbf{b}^T \mathbf{y}, \\
+\mathrm{so \ that} \ & \mathbf{A}^T \mathbf{y} & \leq & \ \mathbf{c} \\ \\
+\end{array}
+
+\end{array}$$
+
+
 
 ---
 
