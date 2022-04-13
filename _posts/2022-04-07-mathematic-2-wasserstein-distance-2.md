@@ -70,7 +70,21 @@ $$\begin{array}{c|c}
 
 \end{array}$$
 
-Hàm mục tiêu $\tilde{z}$
+Hàm mục tiêu $\tilde{z}$ phụ thuộc trực tiếp vào $b\mathbf{b}$, đồng nghĩa với việc các phân phối $P_r$ và $P_\theta}$ 
+giờ đây đã trở thành biến của hàm tối ưu - điều ta không thể đạt được nếu dùng *primal form*. $\tilde{z}$ còn là cận dưới 
+của $z$:
+
+$$z = \mathbf{c}^T \mathbf{x} \geq \mathbf{y}^T \mathbf{A} \mathbf{x} = \mathbf{y}^T \mathbf{b} = \tilde{z}$$
+
+Đây chính là định lý ***weak duality*** (*đối ngẫu yếu*): 
+>*the primal problem has optimal value larger than or equal to 
+the dual problem*
+
+Đồng nghĩa với việc *duality gap* là lớn hơn hoặc bằng $0$. Ngoài ra còn có định lý *strong duality* với $z=\tilde{z}$:
+
+>Strong duality is a condition in mathematical optimization in which the primal optimal objective and the dual optimal objective are equal
+
+
 
 ---
 
