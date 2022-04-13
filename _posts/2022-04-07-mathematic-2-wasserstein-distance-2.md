@@ -180,7 +180,9 @@ $$
 
 $$ \Leftrightarrow f(x_i) + g(x_j) \leq \mathbf{D}_{i,j}$$. 
 
-Biết $\mathbf{D}_{i,i} = 0 \Rightarrow g(x_i) \leq -f(x_i)$
+Biết $\mathbf{D}_{i,i} = 0 \Rightarrow g(x_i) \leq -f(x_i) \Rightarrow f(x_i) + g(x_j) \leq f(x_i) - f(x_j)$. Vì vậy để 
+tối ưu đạt cực đại thì $g(x_i) = -f(x_i) \Leftrightarrow g = f$. 
+Khi đó 
 
 ---
 
