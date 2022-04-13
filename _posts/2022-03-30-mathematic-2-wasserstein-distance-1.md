@@ -31,7 +31,7 @@ thành 5 cột đất. Các cột đất của $P_{\theta}$ (tương ứng các 
 
 ![Ý tưởng Earth-Mover dựa trên bài toán di chuyển các khối đất]({{ site.url }}{{ site.baseurl }}/assets/images/posts/m2-wasserstein-distance-1.svg){:style="display:block; margin-left:auto; margin-right:auto"}
 
-Ta viết được hàm phân phối cũng như bảng khoảng cách $D$ khi di chuyển đất 
+Ta viết được hàm phân phối cũng như bảng khoảng cách $\mathbf{D}$ khi di chuyển đất 
 giữa các cột đất (hay khoảng cách giữa các state trong phân phối):  
 
 $$ \begin{aligned}
@@ -58,9 +58,9 @@ Cách tính công thực hiện như đã nói bằng $m \times d$. Ví dụ v�
 công tương ứng:
 
 $$ \begin{aligned}
-&&&\sum_{x,y}\gamma_1(x,y) D(x,y) \\
-&=&&\gamma_1(1,1) D(1,1) + \gamma_1(1,2) D(1,2) + \gamma_1(1,3) D(1,3) + \ ... \\
-&&+\ &\gamma_1(2,1) D(2,1) + \gamma_1(2,2) D(2,2) + \gamma_1(2,3) D(2,3) +  \ ... \\
+&&&\sum_{x,y}\gamma_1(x,y) \mathbf{D}(x,y) \\
+&=&&\gamma_1(1,1) \mathbf{D}(1,1) + \gamma_1(1,2) \mathbf{D}(1,2) + \gamma_1(1,3) \mathbf{D}(1,3) + \ ... \\
+&&+\ &\gamma_1(2,1) \mathbf{D}(2,1) + \gamma_1(2,2) \mathbf{D}(2,2) + \gamma_1(2,3) \mathbf{D}(2,3) +  \ ... \\
 &&+\ &... \\
 &=&&\frac{2}{13} \times 0 + 0 \times 1 + \frac{1}{13} \times 2 + \ ... \\
 &&+\ &0 \times 1 + \frac{2}{13} \times 0 + 0 \times 1 + \ ... \\

@@ -130,9 +130,9 @@ the dual problem*
 
 >Strong duality is a condition in mathematical optimization in which the primal optimal objective and the dual optimal objective are equal
 
-Trở lại với bài toán Earth-Mover, đặt:
+Trở lại với bài toán Earth-Mover, $\tilde{z}$ cực đại tại $y^*$, đặt:
 
-$$ \mathbf{y} = \begin{bmatrix} \mathbf{f} \\ \mathbf{g} \end{bmatrix}$$
+$$ \mathbf{y^*} = \begin{bmatrix} \mathbf{f} \\ \mathbf{g} \end{bmatrix}$$
 
 với $\mathbf{f}, \mathbf{g} \in \mathbb{R}^d$. Lúc này $\mathrm{EMD}(P_r, P_\theta) = \mathbf{f}^T P_r + \mathbf{g}^T P_\theta$. 
 Từ điều kiện ràng buộc $\mathbf{A}^T \mathbf{y} \leq \mathbf{c}$:
@@ -178,7 +178,7 @@ D(3,3) \\
 }_{\mathbf{c}}
 $$
 
-Từ đó ta được $f(x_i) + g(x_j) \leq \mathbf{D}_{i,j}$
+Từ đó ta được $f(x_i) + g(x_j) \leq \mathbf{D}_{i,j}$. Biết $\mathbf{D}_{i,i} = 0$
 
 ---
 
