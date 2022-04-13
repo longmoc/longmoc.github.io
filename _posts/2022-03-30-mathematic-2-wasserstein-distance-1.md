@@ -14,7 +14,7 @@ phần. Phần một này là ghi chép của mình về khoảng cách Earth-Mo
 
 ---
 
-# Earth-Mover/Wasserstein distance
+## Earth-Mover/Wasserstein distance
 
 ***Earth-Mover*** (*EM* hay ***Wasserstein***) *distance* là một giá trị đo khoảng cách giữa hai phân phối. 
 Ý tưởng của *EM* dựa trên tối thiểu hóa hoạt động của máy xúc trong việc xúc đất từ nơi này sang nơi khác với vị trí, 
@@ -109,7 +109,7 @@ Công thức khi đưa về dạng đối ngẫu (mà ta sẽ phân tích ở ph
 
 $$ W(P_\theta, P_r) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim P_{\theta}}[f(x)] - \mathbb{E}_{x \sim P_r}[f(x)] $$
 
-# Why Wasserstein Distance
+## Why Wasserstein Distance
 
 Để hiểu tại sao *Wasserstein distance* cần thiết và khác biệt so với *KL/JS divergence*, hãy tìm hiểu ví dụ:
 

@@ -137,7 +137,6 @@ $$ \mathbf{y} = \begin{bmatrix} \mathbf{f} \\ \mathbf{g} \end{bmatrix}$$
 với $\mathbf{f}, \mathbf{g} \in \mathbb{R}^d$. Lúc này $\mathrm{EMD}(P_r, P_\theta) = \mathbf{f}^T P_r + \mathbf{g}^T P_\theta$. 
 Từ điều kiện ràng buộc $\mathbf{A}^T \mathbf{y} \leq \mathbf{c}$:
 
-
 $$
 \underbrace{
 \left[ \begin{array}{rrr|rrr}
@@ -178,6 +177,8 @@ D(3,3) \\
 \end{bmatrix}
 }_{\mathbf{c}}
 $$
+
+Từ đó ta được $f(x_i) + g(x_j) \leq \mathbf{D}_{i,j}$
 
 ---
 
