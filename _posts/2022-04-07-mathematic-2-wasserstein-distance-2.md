@@ -47,7 +47,14 @@ Ví dụ với $l=3$
 
 $$
 \underbrace{
-\left[ ]
+\left[ \begin{array}{rrr|rrr|rrr}
+1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \cr
+0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 \cr
+0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 \cr \hline
+1 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 \cr
+0 & 1 & 0 & 0 & 1 & 0 & 0 & 1 & 0 \cr
+0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 & 1 \cr
+\end{array}\right]
 }_{\mathbf{A}}
 $$
 
