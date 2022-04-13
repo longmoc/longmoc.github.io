@@ -70,7 +70,7 @@ $$\begin{array}{c|c}
 
 \end{array}$$
 
-Hàm mục tiêu $\tilde{z}$ phụ thuộc trực tiếp vào $b\mathbf{b}$, đồng nghĩa với việc các phân phối $P_r$ và $P_\theta}$ 
+Mục tiêu $\tilde{z}$ phụ thuộc trực tiếp vào $b\mathbf{b}$, đồng nghĩa với việc các phân phối $P_r$ và $P_\theta$ 
 giờ đây đã trở thành biến của hàm tối ưu - điều ta không thể đạt được nếu dùng *primal form*. $\tilde{z}$ còn là cận dưới 
 của $z$:
 
