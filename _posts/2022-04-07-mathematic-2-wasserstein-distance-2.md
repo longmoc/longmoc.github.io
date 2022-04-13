@@ -21,15 +21,15 @@ header:
 
 ## Linear programming
 
-Trở lại bài toán tính công $$\sum_{x,y}\gamma(x,y) D(x,y)$$, việc tính tổng các phần tử của tích element-wise giữa 
-$\gamma$ và $D$ có thể viết dưới dạng $\vec{D}^T\vec{\gamma}$, trong đó $\vec{D}$ và $\vec{\gamma}$ lần lượt là các 
-dạng flatten vector của $D$ và $\gamma$. Khi đó có thể đưa về giải quyết bài toán bằng ***Quy hoạch tuyến tính - Linear 
+Trở lại bài toán tính công $$\sum_{x,y}\gamma(x,y) \mathbf{D}(x,y)$$, việc tính tổng các phần tử của tích element-wise giữa 
+$\gamma$ và $\mathbf{D}$ có thể viết dưới dạng $\vec{\mathbf{D}}^T\vec{\gamma}$, trong đó $\vec{\mathbf{D}}$ và $\vec{\gamma}$ lần lượt là các 
+dạng flatten vector của $\mathbf{D}$ và $\gamma$. Khi đó có thể đưa về giải quyết bài toán bằng ***Quy hoạch tuyến tính - Linear 
 Programming***. Các *Linear program* là các bài toán được trình bày dưới dạng chính tắc:
 
 > Find a vector $\mathbf{x}$ that maximizes $\mathbf{c}^T\mathbf{x}$ subject to $\mathbf{A}\mathbf{x} \leq \mathbf{b}$ and $\mathbf{x} \geq 0$.
 
-Cụ thể dạng *linear program* trong trường hợp này là tối thiểu hóa $\vec{D}^T\vec{\gamma}$. Trong đó $\vec{\gamma}$ 
-tương đương với $\mathbf{x}$ và $\vec{D}$ tương đương với $\mathbf{c}$.
+Cụ thể dạng *linear program* trong trường hợp này là tối thiểu hóa $\vec{\mathbf{D}}^T\vec{\gamma}$. Trong đó $\vec{\gamma}$ 
+tương đương với $\mathbf{x}$ và $\vec{\mathbf{D}}$ tương đương với $\mathbf{c}$.
 
 Điều kiện ràng buộc $\mathbf{A}\mathbf{x} \leq \mathbf{b}$ tổng hợp từ các điều kiện $\sum_x \gamma(x,y) = P_r(y)$ và 
 $\sum_y \gamma(x,y) = P_{\theta}(x)$.
@@ -165,15 +165,15 @@ g(x_3) \\
 \leq
 \underbrace{
 \begin{bmatrix}
-D(1,1) \\
-D(1,2) \\
-D(1,3) \\ \hline
-D(2,1) \\
-D(2,2) \\
-D(2,3) \\ \hline
-D(3,1) \\
-D(3,2) \\
-D(3,3) \\
+\mathbf{D}(1,1) \\
+\mathbf{D}(1,2) \\
+\mathbf{D}(1,3) \\ \hline
+\mathbf{D}(2,1) \\
+\mathbf{D}(2,2) \\
+\mathbf{D}(2,3) \\ \hline
+\mathbf{D}(3,1) \\
+\mathbf{D}(3,2) \\
+\mathbf{D}(3,3) \\
 \end{bmatrix}
 }_{\mathbf{c}}
 $$
