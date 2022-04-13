@@ -178,7 +178,7 @@ g(x_3) \\
 }_{\mathbf{c}}
 $$
 
-Từ đó ta được $f(x_i) + g(x_j) \leq \mathbf{D}_{i,j}$. Biết $\mathbf{D}_{i,i} = 0$
+Từ đó ta được $f(x_i) + g(x_j) \leq \mathbf{D}_{i,j}$.
 
 ---
 
