@@ -25,14 +25,16 @@ Cụ thể dạng *linear program* trong trường hợp này là tối thiểu 
 tương đương với $x$ và $\vec{D}$ tương đương với $c$.
 
 Điều kiện ràng buộc $Ax \leq b$ tổng hợp từ các điều kiện $\sum_x \gamma(x,y) = P_{\theta}(y)$ và 
-$\sum_y \gamma(x,y) = P_r(x)$. 
+$\sum_y \gamma(x,y) = P_r(x)$.
 
 Thông tin thêm về *linear programming* có thể tìm hiểu tại [đây](https://en.wikipedia.org/wiki/Linear_programming).
 
 
 # Kantorovich-Rubinstein duality
 
-...
+Thực tế cách tối ưu bằng *Linear programming* không khả thi trong trường hợp số lượng các trạng thái là rất nhiều (ví dụ 
+số cột đất có thể là $10^6$) hoặc số chiều dữ liệu lớn (hàng ngàn chiều thay vì một chiều). Vì thế tính toán $\gamma$ 
+trong trường hợp này là rất khó khăn.
 
 ---
 
