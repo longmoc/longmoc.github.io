@@ -36,12 +36,27 @@ $\sum_y \gamma(x,y) = P_r(x)$.
 
 $$\mathbf{b} = \begin{bmatrix} P_r \\ P_\theta\end{bmatrix}$$
 
-Gọi số state của hai phân phối $P_{\theta}$ và $P_r$ là $l$, khi đó kích thước của $\mathbf{b}$ là $2l$, của $\gamma$ là 
-$1 \times l^2$.
+Gọi số state của hai phân phối $P_{\theta}$ và $P_r$ là $l$, khi đó $\mathbf{b} \in \mathbb{R}^{2l}$ và 
+$\vec{\gamma} \in \mathbb{R}^{l^2}$.
 
 $$\mathbf{A}\vec{\gamma} = \mathbf{b} $$
 
-$\Rightarrow$ kích thước của $\mathbf{A}$ là $$
+$\Rightarrow \mathbf{A} \in \mathbb{R}^{2l \times l^2}$
+
+Ví dụ với $l=3$
+
+$$
+\underbrace{
+\left[ \begin{array}{rrr|rrr|rrr}
+1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \cr
+0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 \cr
+0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 \cr
+1 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 \cr
+0 & 1 & 0 & 0 & 1 & 0 & 0 & 1 & 0 \cr
+0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 & 1 \cr
+\right]
+}_{\mathbf{A}}
+$$
 
 Thông tin thêm về *linear programming* có thể tìm hiểu tại [đây](https://en.wikipedia.org/wiki/Linear_programming).
 
