@@ -4,8 +4,10 @@ title: "Wasserstein distance II: Kantorovich-Rubinstein duality"
 categories: 
   - mathematic
 tags:
-  - Jekyll
-  - update
+  - earth-mover-distance
+  - wasserstein-distance
+  - information-theory
+  - kantorovich-rubinstein
 mathjax: true
 header:
   image: /assets/images/mathematic.jpeg
