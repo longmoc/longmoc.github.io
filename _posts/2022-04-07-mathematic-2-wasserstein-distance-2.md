@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: single
 title: "Wasserstein distance II: Kantorovich-Rubinstein duality"
 categories: mathematic
 mathjax: true
