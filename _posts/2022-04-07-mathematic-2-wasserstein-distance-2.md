@@ -37,13 +37,13 @@ số cột đất có thể là $10^6$) hoặc số chiều dữ liệu lớn (h
 trong trường hợp này là rất khó khăn.
 
 Tuy nhiên nhiều trường hợp việc tìm $\gamma$ là không cần thiết, thay vào đó ta chỉ quan tâm tới một giá trị duy nhất 
-là $\mathbb{EMD}$ hay $W$. Ví dụ một ứng dụng của *Wasserstein distance* vào việc huấn luyện mô hình *Generative 
+là $\mathb{EMD}$ hay $W$. Ví dụ một ứng dụng của *Wasserstein distance* vào việc huấn luyện mô hình *Generative 
 Adversarial Network* (*GAN*): generator network sinh ra phân phối sinh $P_{\theta}$ và giá trị $\mathbb{EMD}$ được sử 
 dụng để huấn luyện mạng này. Thông thường, việc huấn luyện này cần tính giá trị $\nabla_{P_\theta} \mathrm{EMD}(P_{\theta}, P_r)$. 
 Tuy nhiên $P_\theta$ và $P_r$ không đóng vai trò là các biến của quá trình tối ưu nên tính toán trực tiếp gradient không 
 khả khi.
 
-May mắn có một cách tính $\mathbb{EMD}$ tiện dụng hơn. Mỗi *LP* đều có hai dạng thể hiện vấn đề: dạng chính (primal form) 
+May mắn có một cách tính $\mathb{EMD}$ tiện dụng hơn. Mỗi *LP* đều có hai dạng thể hiện vấn đề: dạng chính (primal form) 
 và dạng đối ngẫu (dual form).
 
 $$\begin{array}{c|c}
