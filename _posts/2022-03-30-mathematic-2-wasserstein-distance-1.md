@@ -112,8 +112,8 @@ $$ W(P_\theta, P_r) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim P_{
 
 Để hiểu tại sao *Wasserstein distance* cần thiết và khác biệt so với *KL/JS divergence*, hãy tìm hiểu ví dụ:
 
-*Xét các phân phối xác suất xác định trên $\mathbb{R}^2$, phân phối dữ liệu thực tế $P_r=(0, y)$ với $y$ được lấy mẫu 
-ngẫu nhiên đồng nhất từ $U[0, 1]$. Xét các họ phân phối sinh $P_{\theta}$ dạng $P_{\theta}=(0, y)$, $y$ cũng từ $U[0, 1]$.*
+Xét các phân phối xác suất xác định trên $\mathbb{R}^2$, phân phối dữ liệu thực tế $P_r=(0, y)$ với $y$ được lấy mẫu 
+ngẫu nhiên đồng nhất từ $U[0, 1]$. Xét các họ phân phối sinh $P_{\theta}$ dạng $P_{\theta}=(0, y)$, $y$ cũng từ $U[0, 1]$.
 
 Biểu đồ minh họa phân phối thực và sinh với $\theta = 1$:
 
