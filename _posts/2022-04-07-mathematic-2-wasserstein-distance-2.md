@@ -63,7 +63,7 @@ $$\begin{array}{c|c}
 
 \end{array}$$
 
-
+Hàm mục tiêu $\tilde{z}$
 
 ---
 
