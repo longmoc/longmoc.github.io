@@ -26,13 +26,17 @@ $\gamma$ và $D$ có thể viết dưới dạng $\vec{D}^T\vec{\gamma}$, trong 
 dạng flatten vector của $D$ và $\gamma$. Khi đó có thể đưa về giải quyết bài toán bằng ***Quy hoạch tuyến tính - Linear 
 Programming***. Các *Linear program* là các bài toán được trình bày dưới dạng chính tắc:
 
-> Find a vector $x$ that maximizes $c^Tx$ subject to $Ax \leq b$ and $x \geq 0$.
+> Find a vector $\mathbf{x}$ that maximizes $\mathbf{c}^T\mathbf{x}$ subject to $\mathbf{A}\mathbf{x} \leq \mathbf{b}$ and $\mathbf{x} \geq 0$.
 
 Cụ thể dạng *linear program* trong trường hợp này là tối thiểu hóa $\vec{D}^T\vec{\gamma}$. Trong đó $\vec{\gamma}$ 
-tương đương với $x$ và $\vec{D}$ tương đương với $c$.
+tương đương với $\mathbf{x}$ và $\vec{D}$ tương đương với $\mathbf{c}$.
 
-Điều kiện ràng buộc $Ax \leq b$ tổng hợp từ các điều kiện $\sum_x \gamma(x,y) = P_{\theta}(y)$ và 
-$\sum_y \gamma(x,y) = P_r(x)$.
+Điều kiện ràng buộc $\mathbf{A}\mathbf{x} \leq \mathbf{b}$ tổng hợp từ các điều kiện $\sum_x \gamma(x,y) = P_{\theta}(y)$ và 
+$\sum_y \gamma(x,y) = P_r(x)$. Khi đó có thể tính được $\mathbf{A}$ và $\mathbf{b}$ theo:
+
+$$\mathbf{b} = \begin{bmatrix} P_r \\ P_\theta\end{bmatrix}$$
+
+$$\mathbf{A}vec{\gamma} = \mathbf{b}$$
 
 Thông tin thêm về *linear programming* có thể tìm hiểu tại [đây](https://en.wikipedia.org/wiki/Linear_programming).
 
@@ -71,8 +75,8 @@ $$\begin{array}{c|c}
 \end{array}$$
 
 Mục tiêu $\tilde{z}$ phụ thuộc trực tiếp vào $b\mathbf{b}$, đồng nghĩa với việc các phân phối $P_r$ và $P_\theta$ 
-giờ đây đã trở thành biến của hàm tối ưu - điều ta không thể đạt được nếu dùng *primal form*. $\tilde{z}$ còn là cận dưới 
-của $z$:
+giờ đây đã trở thành biến của hàm tối ưu - điều ta không thể đạt được nếu dùng *primal form*. Dễ thấy $\tilde{z}$ là 
+cận dưới của $z$:
 
 $$z = \mathbf{c}^T \mathbf{x} \geq \mathbf{y}^T \mathbf{A} \mathbf{x} = \mathbf{y}^T \mathbf{b} = \tilde{z}$$
 
