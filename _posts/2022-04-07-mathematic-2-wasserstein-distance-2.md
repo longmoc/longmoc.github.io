@@ -39,7 +39,7 @@ $$\mathbf{b} = \begin{bmatrix} P_r \\ P_\theta\end{bmatrix}$$
 Gọi số state của hai phân phối $P_{\theta}$ và $P_r$ là $l$, khi đó $\mathbf{b} \in \mathbb{R}^{2l}$ và 
 $\vec{\gamma} \in \mathbb{R}^{l^2}$. $\mathbf{A}\vec{\gamma} = \mathbf{b} $\Rightarrow \mathbf{A} \in \mathbb{R}^{2l \times l^2}$.
 
-Ví dụ với $l=3$
+Ví dụ với $l=3$:
 
 $$
 \underbrace{
@@ -77,6 +77,8 @@ P_\theta(x_3) \\
 \end{bmatrix}
 = \underbrace{\begin{bmatrix} P_r \\ P_\theta\end{bmatrix}}_{\mathbf{b}}
 $$
+
+Khi đã biết $\mathbf{c}^T$, $\mathbf{A}$ và $\mathbf{b}$ sử dụng *LP* tìm được $\mathbf{x}$ hay $\vec{\gamma}$ tối ưu.
 
 Thông tin thêm về *linear programming* có thể tìm hiểu tại [đây](https://en.wikipedia.org/wiki/Linear_programming).
 
