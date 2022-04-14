@@ -159,8 +159,5 @@ Ví dụ này đã chứng tỏ việc tồn tại các phân phối nguồn và
 ... nhưng có thể hội tụ nếu dùng *EM/Wasserstein distance*. Đồng thời cũng giải thích cho một số trường hợp gradient 
 luôn bằng $0$ khi huấn luyện sử dụng *KL divergence*, *JS divergence*.
 
----
-
 <div align="right"><i>Còn tiếp</i></div> 
-
 ---
