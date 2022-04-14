@@ -24,7 +24,7 @@ Kantorovich-Rubinstein. Phần này sẽ tìm hiểu công thức đó có đư�
 
 ## Linear programming
 
-Trở lại bài toán tính công $$\sum_{x,y}\gamma(x,y) \mathbf{D}(x,y)$$, việc tính tổng các phần tử của tích element-wise giữa 
+Trở lại bài toán tính công $\sum_{x,y}\gamma(x,y) \mathbf{D}(x,y)$, việc tính tổng các phần tử của tích element-wise giữa 
 $\gamma$ và $\mathbf{D}$ có thể viết dưới dạng $\vec{\mathbf{D}}^T\vec{\gamma}$, trong đó $\vec{\mathbf{D}}$ và $\vec{\gamma}$ lần lượt là các 
 dạng flatten vector của $\mathbf{D}$ và $\gamma$. Khi đó có thể đưa về giải quyết bài toán bằng ***Quy hoạch tuyến tính - Linear 
 Programming***. Các *Linear program* là các bài toán được trình bày dưới dạng chính tắc:
@@ -195,9 +195,7 @@ f(x_i) - f(x_j) \geq -\mathbf{D}_{i,j}
 \end{aligned} 
 $$
 
-$$
-\Leftrightarrow \ |f(x_i) - f(x_j)| \leq \mathbf{D}_{i,j} \tag{1}\label{1} \ \ \ \ \ \ \ \
-$$
+$$ \Leftrightarrow \ |f(x_i) - f(x_j)| \leq \mathbf{D}_{i,j} \tag{1}\label{1} \ \ \ \ \ \ \ \ $$
 
 
 ---
