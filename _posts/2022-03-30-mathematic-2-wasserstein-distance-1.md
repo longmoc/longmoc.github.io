@@ -159,6 +159,18 @@ Ví dụ này đã chứng tỏ việc tồn tại các phân phối nguồn và
 ... nhưng có thể hội tụ nếu dùng *EM/Wasserstein distance*. Đồng thời cũng giải thích cho một số trường hợp gradient 
 luôn bằng $0$ khi huấn luyện sử dụng *KL divergence*, *JS divergence*.
 
+$$
+\begin{aligned}
+&\left\{
+\begin{aligned} 
+f(x_i) - f(x_j) &\leq \mathbf{D}_{i,j} \\ 
+f(x_i) - f(x_j) &\geq -\mathbf{D}_{i,j}
+\end{aligned} 
+\right
+\Leftrightarrow &f(x_i) - f(x_j) \leq
+\end{aligned}
+$$
+
 
 ---
 
