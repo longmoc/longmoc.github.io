@@ -137,7 +137,7 @@ Trở lại với bài toán Earth-Mover, $\tilde{z}$ cực đại tại $y^*$, 
 
 $$ \mathbf{y^*} = \begin{bmatrix} \mathbf{f} \\ \mathbf{g} \end{bmatrix}$$
 
-với $\mathbf{f}, \mathbf{g} \in \mathbb{R}^d$. Lúc này $\mathrm{EMD}(P_r, P_\theta) = \mathbf{f}^T P_r + \mathbf{g}^T P_\theta \tag{1}\label{1}$. 
+với $\mathbf{f}, \mathbf{g} \in \mathbb{R}^d$. Lúc này $\mathrm{EMD}(P_r, P_\theta) = \mathbf{f}^T P_r + \mathbf{g}^T P_\theta$. 
 Từ điều kiện ràng buộc $\mathbf{A}^T \mathbf{y} \leq \mathbf{c}$:
 
 $$
@@ -186,7 +186,7 @@ $$ \Leftrightarrow f(x_i) + g(x_j) \leq \mathbf{D}_{i,j}$$.
 Biết $\mathbf{D}_{i,i} = 0 \Rightarrow g(x_i) \leq -f(x_i) \Rightarrow f(x_i) + g(x_j) \leq f(x_i) - f(x_j)$. Vì vậy để 
 tối ưu đạt cực đại thì $g(x_i) = -f(x_i) \Leftrightarrow g = f$. 
 
-Khi đó ta có thể viết $\eqref{1}$ thành:
+Khi đó ta có thể viết $\mathbf{f}^T P_r + \mathbf{g}^T P_\theta$ thành:
 
 $$\mathbb{E}_{x \sim P_r}[f(x)] - \mathbb{E}_{x \sim P_\theta}[f(x)]$$
 
