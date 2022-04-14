@@ -223,7 +223,3 @@ $$ W(P_\theta, P_r) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim P_{
 
 Hết
 ---
-
-<div align="right"><i>_Hết_</i></div> 
-
----
