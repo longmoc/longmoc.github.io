@@ -85,4 +85,7 @@ $$ \begin{aligned} v &= \mathrm{R} + \gamma \mathrm{P} \\ v &= (1-\gamma \mathrm
 
 Độ phức tạp thuật toán là $ O(n^3) $ với $ n $ là số state.
 
+<div align="center">.</div> 
+
 <div align="right"><i>(Còn tiếp)</i></div> 
+---
