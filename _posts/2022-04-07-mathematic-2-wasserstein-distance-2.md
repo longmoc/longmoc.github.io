@@ -123,8 +123,8 @@ cận dưới của $z$:
 $$z = \mathbf{c}^T \mathbf{x} \geq \mathbf{y}^T \mathbf{A} \mathbf{x} = \mathbf{y}^T \mathbf{b} = \tilde{z}$$
 
 Đây chính là định lý ***weak duality*** (*đối ngẫu yếu*): 
->the primal problem has optimal value larger than or equal to 
-the dual problem
+>*the primal problem has optimal value larger than or equal to 
+the dual problem*
 
 Đồng nghĩa với việc *duality gap* là lớn hơn hoặc bằng $0$. Ngoài ra còn có định lý *strong duality* với $z=\tilde{z}$:
 
@@ -185,14 +185,12 @@ tối ưu đạt cực đại thì $g(x_i) = -f(x_i) \Leftrightarrow g = f$. Khi
 
 $$
 \begin{aligned}
-&\left\{
-\begin{aligned} 
+&\begin{cases}
 f(x_i) - f(x_j) &\leq \mathbf{D}_{i,j} \\ 
 f(x_i) - f(x_j) &\geq -\mathbf{D}_{i,j}
-\end{aligned} 
-\right
+\end{cases} \\
 \Leftrightarrow &f(x_i) - f(x_j) \leq
-\end{aligned}
+\end{aligned} 
 $$
 
 ---
