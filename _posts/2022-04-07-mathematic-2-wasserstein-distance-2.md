@@ -201,7 +201,7 @@ f(x_i) - f(x_j) \geq -\mathbf{D}_{i,j}
 \end{aligned} 
 $$
 
-$$ \Leftrightarrow \ |f(x_i) - f(x_j)| \leq \mathbf{D}_{i,j} \tag{2}\label{2} \ \ $$
+$$ \Leftrightarrow \ |f(x_i) - f(x_j)| \leq \mathbf{D}_{i,j} \tag{2}\label{2} $$
 
 Để biết ý nghĩa của $\eqref{1}$ 
 
