@@ -161,14 +161,12 @@ luôn bằng $0$ khi huấn luyện sử dụng *KL divergence*, *JS divergence*
 
 $$
 \begin{aligned}
-&\left\{
-\begin{aligned} 
+&\begin{cases}
 f(x_i) - f(x_j) &\leq \mathbf{D}_{i,j} \\ 
 f(x_i) - f(x_j) &\geq -\mathbf{D}_{i,j}
-\end{aligned} 
-\right
+\end{cases} \\
 \Leftrightarrow &f(x_i) - f(x_j) \leq
-\end{aligned}
+\end{aligned} 
 $$
 
 
