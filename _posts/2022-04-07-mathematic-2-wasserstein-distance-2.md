@@ -188,7 +188,7 @@ tối ưu đạt cực đại thì $g(x_i) = -f(x_i) \Leftrightarrow g = f$.
 
 Khi đó ta có thể viết $\mathbf{f}^T P_r + \mathbf{g}^T P_\theta$ thành:
 
-$$\mathbb{E}_{x \sim P_r}[f(x)] - \mathbb{E}_{x \sim P_\theta}[f(x)]$$
+$$\mathbb{E}_{x \sim P_r}[f(x)] - \mathbb{E}_{x \sim P_\theta}[f(x)] \tag{1}\label{1}$$
 
 Mặt khác, lúc này:
 
@@ -201,11 +201,18 @@ f(x_i) - f(x_j) \geq -\mathbf{D}_{i,j}
 \end{aligned} 
 $$
 
-$$ \Leftrightarrow \ |f(x_i) - f(x_j)| \leq \mathbf{D}_{i,j} \tag{1}\label{1} $$
+$$ \Leftrightarrow \ |f(x_i) - f(x_j)| \leq \mathbf{D}_{i,j} \tag{2}\label{2} $$
 
-Để biết ý nghĩa của $\eqref{1}$ ta đến với khái niệm của *Lipschitz function*
+Trước khi tiếp tục hãy đến với khái niệm của ***Lipschitz function***:
 
->
+> Xét $d_X$ và $d_Y$ là các hàm tính khoảng cách trên không gian $X$ và $Y$. Hàm số $f: X \to Y$ được gọi là $K$-Lipschitz 
+> nếu với mọi $x_1, x_2 \in X$,
+> 
+> $$ d_Y(f(x_1), f(x_2)) \le K d_X(x_1, x_2) $$
+
+Hiểu một cách trực quan thì dộ dốc của hàm *$K$-Lipschitz* không bao giờ vượt quá giá trị $K$. Trở lại với $\eqref{2}$, 
+xét $|f(x_i) - f(x_j)|$ là *Euclidean distance* giữa $f(x_i)$ và $f(x_j)$, dễ thấy hàm $f$ là hàm *1-Lipschitz* ($K=1$).
+$\mathrm{EMD}$ giải theo dạng đối ngẫu là cận trên của $\eqref{1}$
 
 ---
 
