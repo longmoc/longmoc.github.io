@@ -162,12 +162,13 @@ luôn bằng $0$ khi huấn luyện sử dụng *KL divergence*, *JS divergence*
 $$
 \begin{aligned}
 &\begin{cases}
-f(x_i) - f(x_j) &\leq \mathbf{D}_{i,j} \\ 
-f(x_i) - f(x_j) &\geq -\mathbf{D}_{i,j}
+f(x_i) - f(x_j) \leq \mathbf{D}_{i,j} \\ 
+f(x_i) - f(x_j) \geq -\mathbf{D}_{i,j}
 \end{cases} \\
-\Leftrightarrow &f(x_i) - f(x_j) \leq
+\Leftrightarrow &\ |f(x_i) - f(x_j)| \leq \mathbf{D}_{i,j}
 \end{aligned} 
 $$
+
 
 
 ---
