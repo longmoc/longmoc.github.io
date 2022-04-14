@@ -212,7 +212,9 @@ Trước khi tiếp tục hãy đến với khái niệm của ***Lipschitz func
 
 Hiểu một cách trực quan thì dộ dốc của hàm *$K$-Lipschitz* không bao giờ vượt quá giá trị $K$. Trở lại với $\eqref{2}$, 
 xét $|f(x_i) - f(x_j)|$ là *Euclidean distance* giữa $f(x_i)$ và $f(x_j)$, dễ thấy hàm $f$ là hàm *1-Lipschitz* ($K=1$).
-$\mathrm{EMD}$ giải theo dạng đối ngẫu là cận trên của $\eqref{1}$
+$\mathrm{EMD}(P_{\theta}, P_r)$ giải theo dạng đối ngẫu là cận trên của $\eqref{1}$. Vì thế ta có:
+
+$$ \mathrm{EMD}(P_{\theta}, P_r) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim P_{\theta}}[f(x)] - \mathbb{E}_{x \sim P_r}[f(x)] $$
 
 ---
 
