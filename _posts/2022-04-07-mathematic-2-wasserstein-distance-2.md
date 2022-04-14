@@ -189,9 +189,13 @@ $$
 f(x_i) - f(x_j) \leq \mathbf{D}_{i,j} \\ 
 f(x_i) - f(x_j) \geq -\mathbf{D}_{i,j}
 \end{cases} \\
-\Leftrightarrow &\ |f(x_i) - f(x_j)| \leq \mathbf{D}_{i,j}
 \end{aligned} 
 $$
+
+$$
+\Leftrightarrow \ |f(x_i) - f(x_j)| \leq \mathbf{D}_{i,j} \tag{2}\label{2} \ \ \ \ \ \ \ \
+$$
+
 ---
 
 <div align="right"><i>_Hết_</i></div> 
