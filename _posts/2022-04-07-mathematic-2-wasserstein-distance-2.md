@@ -221,5 +221,6 @@ Tương tự với phân phối liên tục ta cũng có được công thức c
 $$ W(P_\theta, P_r) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim P_{\theta}}[f(x)] - \mathbb{E}_{x \sim P_r}[f(x)] $$
 
 
-Hết
+
+<div align="right"><i>Còn tiếp</i></div> 
 ---
