@@ -149,10 +149,7 @@ JS divergence dùng làm độ đo sẽ có ý nghĩa hơn so với KL divergenc
 
 Căn bậc hai của JS divergence score được gọi là *Jensen-Shannon distance* hay *JS distance*.
 
+<div align="center">.</div> 
 
-
----
-
-<div align="right"><i>_Hết_</i></div> 
-
+<div align="right"><i>(Hết)</i></div> 
 ---
