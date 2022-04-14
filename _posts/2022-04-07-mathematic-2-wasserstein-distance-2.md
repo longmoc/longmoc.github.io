@@ -19,7 +19,8 @@ header:
 
 ---
 
-Trong phần trước ta đã nêu ra công thức của Earth-Mover và Wesserstein distance theo kết quả của phương pháp đối ngẫu
+Trong phần trước ta đã nêu ra công thức của Earth-Mover và Wesserstein distance theo kết quả của phương pháp đối ngẫu 
+Kantorovich-Rubinstein. Phần này sẽ tìm hiểu công thức đó có được như thế nào.
 
 ## Linear programming
 
