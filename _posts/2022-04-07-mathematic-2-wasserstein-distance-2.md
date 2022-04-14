@@ -185,6 +185,7 @@ $$ \Leftrightarrow f(x_i) + g(x_j) \leq \mathbf{D}_{i,j}$$.
 
 Biết $\mathbf{D}_{i,i} = 0 \Rightarrow g(x_i) \leq -f(x_i) \Rightarrow f(x_i) + g(x_j) \leq f(x_i) - f(x_j)$. Vì vậy để 
 tối ưu đạt cực đại thì $g(x_i) = -f(x_i) \Leftrightarrow g = f$. 
+
 Khi đó ta có thể viết $\mathbf{f}^T P_r + \mathbf{g}^T P_\theta$ dưới dạng $\mathbb{E}_{x \sim P_r}[f(x)] - \mathbb{E}_{x \sim P_\theta}[f(x)]$.
 
 Mặt khác, lúc này:
@@ -199,8 +200,6 @@ f(x_i) - f(x_j) \geq -\mathbf{D}_{i,j}
 $$
 
 $$ \Leftrightarrow \ |f(x_i) - f(x_j)| \leq \mathbf{D}_{i,j} \tag{1}\label{1} \ \ $$
-
-
 
 
 ---
