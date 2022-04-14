@@ -216,6 +216,12 @@ $\mathrm{EMD}(P_{\theta}, P_r)$ giải theo dạng đối ngẫu là cận trên
 
 $$ \mathrm{EMD}(P_{\theta}, P_r) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim P_{\theta}}[f(x)] - \mathbb{E}_{x \sim P_r}[f(x)] $$
 
+Tương tự với phân phối liên tục ta cũng có được công thức của $W(P_\theta, P_r)$:
+
+$$ W(P_\theta, P_r) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim P_{\theta}}[f(x)] - \mathbb{E}_{x \sim P_r}[f(x)] $$
+
+
+
 ---
 
 <div align="right"><i>_Hết_</i></div> 
