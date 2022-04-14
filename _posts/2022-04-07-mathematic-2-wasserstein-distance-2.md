@@ -186,13 +186,12 @@ tối ưu đạt cực đại thì $g(x_i) = -f(x_i) \Leftrightarrow g = f$. Khi
 $$
 \begin{aligned}
 &\begin{cases}
-f(x_i) - f(x_j) &\leq \mathbf{D}_{i,j} \\ 
-f(x_i) - f(x_j) &\geq -\mathbf{D}_{i,j}
+f(x_i) - f(x_j) \leq \mathbf{D}_{i,j} \\ 
+f(x_i) - f(x_j) \geq -\mathbf{D}_{i,j}
 \end{cases} \\
-\Leftrightarrow &f(x_i) - f(x_j) \leq \tag{2}\label{2}
+\Leftrightarrow &\ |f(x_i) - f(x_j)| \leq \mathbf{D}_{i,j}
 \end{aligned} 
 $$
-
 ---
 
 <div align="right"><i>_Hết_</i></div> 
