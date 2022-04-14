@@ -19,6 +19,8 @@ header:
 
 ---
 
+Trong phần trước ta đã nêu ra công thức của Earth-Mover và Wesserstein distance theo kết quả của phương pháp đối ngẫu
+
 ## Linear programming
 
 Trở lại bài toán tính công $$\sum_{x,y}\gamma(x,y) \mathbf{D}(x,y)$$, việc tính tổng các phần tử của tích element-wise giữa 
@@ -193,8 +195,9 @@ f(x_i) - f(x_j) \geq -\mathbf{D}_{i,j}
 $$
 
 $$
-\Leftrightarrow \ |f(x_i) - f(x_j)| \leq \mathbf{D}_{i,j} \tag{2}\label{2} \ \ \ \ \ \ \ \
+\Leftrightarrow \ |f(x_i) - f(x_j)| \leq \mathbf{D}_{i,j} \tag{1}\label{1} \ \ \ \ \ \ \ \
 $$
+
 
 ---
 

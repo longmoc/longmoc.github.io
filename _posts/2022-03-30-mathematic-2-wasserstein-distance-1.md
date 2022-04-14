@@ -105,7 +105,7 @@ $$ \mathrm{EMD}(P_{\theta}, P_r) = \inf_{\gamma \in \Pi(P_{\theta}, P_r)} \mathb
 
 $$ W(P_{\theta}, P_r) = \inf_{\gamma \in \Pi(P_{\theta}, P_r)} \mathbb{E}_{(x,y) \sim \gamma}\big[\|x - y\|\big] $$
 
-Công thức khi đưa về dạng đối ngẫu (mà ta sẽ phân tích ở phần sau):
+Công thức có được khi sử dụng ***Kantorovich-Rubinstein duality*** (mà ta sẽ phân tích ở phần sau):
 
 $$ W(P_\theta, P_r) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim P_{\theta}}[f(x)] - \mathbb{E}_{x \sim P_r}[f(x)] $$
 
