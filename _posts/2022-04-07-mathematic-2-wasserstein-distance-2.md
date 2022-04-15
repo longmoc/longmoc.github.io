@@ -286,7 +286,7 @@ W(P_\theta, P_r) &= \sup_{f, g}{\bigg[\mathbb{E}_{x \sim P_{\theta}}[f(x)] + \ma
 
 Vì vậy:
 
-$$ W(p, q) = \sup_{\lVert h \lVert_{L \leq 1}} \bigg[\mathbb{E}_{x \sim p}[h(x)] - \mathbb{E}_{y \sim q}[h(y)]\bigg] $$
+$$ W(P_\theta, P_r) = \sup_{\lVert h \lVert_{L \leq 1}} \bigg[\mathbb{E}_{x \sim P_{\theta}}[h(x)] - \mathbb{E}_{y \sim P_r}[h(y)]\bigg] $$
 
 
 <div align="center">.</div> 
