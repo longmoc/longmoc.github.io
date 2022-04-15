@@ -221,7 +221,7 @@ tương tự. Ta sẽ chứng minh công thức này qua việc chứng minh đ�
 
 **Theorem.**  *(Kantorovich-Rubinstein)*
 
-$$ W(p, q) = \inf_{\pi \in \Pi(p, q)} \mathbb{E}_{(x,y) \sim \pi}\big[\|x - y\|_2\big] =
+$$ W(p, q) = \inf_{\pi \in \Pi(p, q)} \mathbb{E}_{(x,y) \sim \pi}\big[\|x - y\|\big] =
 \sup_{\lVert h \lVert_{L \leq 1}} \bigg[\mathbb{E}_{x \sim p}[h(x)] - \mathbb{E}_{y \sim q}[h(y)]\bigg] $$
 
 *Chứng minh*. Nhắc lại từ phần trước:
@@ -246,13 +246,22 @@ $$
 \begin{aligned} 
 W(P_\theta, P_r) &= \inf_{\gamma \in \Pi}{\sup_{f, g}{\mathcal{L}(\gamma, f, g)}} \\
 &= \sup_{f, g}{\inf_{\gamma \in \Pi}{\mathcal{L}(\gamma, f, g)}} \\
-&= \sup_{f, g}{\inf_{\gamma \in \Pi}{\mathbb{E}_{x \sim P_{\theta}}[f(x)] + \mathbb{E}_{y \sim P_r}[g(y)] +\int_x{ \int_y \gamma(x,y) \big(\| x - y \| - f(x) - g(y)\big)\,dy\,dx} }}
+&= \sup_{f, g}{\inf_{\gamma \in \Pi}{\bigg[\mathbb{E}_{x \sim P_{\theta}}[f(x)] + \mathbb{E}_{y \sim P_r}[g(y)] +\int_x{ \int_y \gamma(x,y) \big(\| x - y \| - f(x) - g(y)\big)\,dy\,dx}\bigg]}}
 \end{aligned}
 $$
 
-Mặt khác: $$ f(x) + g(y) \leq \|x-y\| $$
+Mặt khác: $$ f(x) + g(y) \leq \|x-y\| $$ nên:
 
+$$
+W(P_\theta, P_r) = \sup_{f, g}{\bigg[\mathbb{E}_{x \sim P_{\theta}}[f(x)] + \mathbb{E}_{y \sim P_r}[g(y)]\bigg]}
+$$
 
+Bây giờ, xét $h$ là một hàm $1$-Lipschitz:
+
+$$
+\mathbb{E}_{x \sim P_{\theta}}[h(x)] - \mathbb{E}_{y \sim P_r}[h(y)] = 
+\int_x{\int_y{\big(h(x)-h(y)\big)\gamma(x,y)\,dy}dx} 
+$$
 
 Tương tự với phân phối liên tục ta cũng có được công thức của $W(P_\theta, P_r)$:
 
