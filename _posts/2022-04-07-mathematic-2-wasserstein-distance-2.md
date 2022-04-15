@@ -219,7 +219,7 @@ $$ \mathrm{EMD}(P_{\theta}, P_r) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E
 Ở trên ta đã chứng minh công thức với các phân phối rời rạc. Đối với các phân phối liên tục, công thức cũng có dạng 
 tương tự. Ta sẽ chứng minh công thức này qua việc chứng minh định lý ***Kantorovich-Rubinstein***.
 
-*Theorem.*  *(Kantorovich-Rubinstein)*
+**Theorem.**  *(Kantorovich-Rubinstein)*
 
 $$ W(p, q) = \inf_{\pi \in \Pi(p, q)} \mathbb{E}_{(x,y) \sim \pi}\big[\|x - y\|_2\big] =
 \sup_{\lVert h \lVert_{L \leq 1}} \bigg[\mathbb{E}_{x \sim p}[h(x)] - \mathbb{E}_{y \sim q}[h(y)]\bigg] $$
@@ -247,9 +247,7 @@ W(P_\theta, P_r)  = \inf_{\gamma \in \Pi}{\sup_{f, g}{\mathcal{L}(\gamma, f, g)}
 = \sup_{f, g}{\inf_{\gamma \in \Pi}{\mathcal{L}(\gamma, f, g)}}
 $$
 
-Mặt khác:
-
-$$ f(x) + g(y) \leq \|x-y\| $$
+Mặt khác: $$ f(x) + g(y) \leq \|x-y\| $$
 
 Tương tự với phân phối liên tục ta cũng có được công thức của $W(P_\theta, P_r)$:
 
