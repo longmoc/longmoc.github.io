@@ -137,7 +137,7 @@ Trở lại với bài toán Earth-Mover, $\tilde{z}$ cực đại tại $y^*$, 
 
 $$ \mathbf{y^*} = \begin{bmatrix} \mathbf{f} \\ \mathbf{g} \end{bmatrix}$$
 
-với $\mathbf{f}, \mathbf{g} \in \mathbb{R}^d$. Lúc này $\mathrm{EMD}(P_r, P_\theta) = \mathbf{f}^T P_r + \mathbf{g}^T P_\theta$. 
+với $\mathbf{f}, \mathbf{g} \in \mathbb{R}^d$. Lúc này $\mathrm{EMD}(P_\theta, P_r) = \mathbf{f}^T P_\theta + \mathbf{g}^T P_r$. 
 Từ điều kiện ràng buộc $\mathbf{A}^T \mathbf{y} \leq \mathbf{c}$:
 
 $$
@@ -160,11 +160,11 @@ $$
 f(x_1) \\
 f(x_2) \\
 f(x_3) \\ \hline
-g(x_1) \\
-g(x_2) \\
-g(x_3) \\
+g(y_1) \\
+g(y_2) \\
+g(y_3) \\
 \end{bmatrix}
-}_{y}
+}_{\mathbf{y}}
 \leq
 \underbrace{
 \begin{bmatrix}
@@ -181,7 +181,7 @@ g(x_3) \\
 }_{\mathbf{c}}
 $$
 
-$$ \Leftrightarrow f(x_i) + g(x_j) \leq \mathbf{D}_{i,j}$$. 
+$$ \Leftrightarrow f(x_i) + g(y_j) \leq \mathbf{D}_{i,j}$$. 
 
 Biết $\mathbf{D}_{i,i} = 0 \Rightarrow g(x_i) \leq -f(x_i) \Rightarrow f(x_i) + g(x_j) \leq f(x_i) - f(x_j)$. Vì vậy để 
 tối ưu đạt cực đại thì $g(x_i) = -f(x_i) \Leftrightarrow g = f$. 
@@ -201,7 +201,7 @@ f(x_i) - f(x_j) \geq -\mathbf{D}_{i,j}
 \end{aligned} 
 $$
 
-$$ \Leftrightarrow \ |f(x_i) - f(x_j)| \leq \mathbf{D}_{i,j} \tag{2}\label{2} $$
+$$ \Leftrightarrow \ |f(x_i) - f(y_j)| \leq \mathbf{D}_{i,j} \tag{2}\label{2} $$
 
 Trước khi tiếp tục hãy đến với khái niệm của ***Lipschitz function***:
 
@@ -215,6 +215,8 @@ xét $|f(x_i) - f(x_j)|$ là *Euclidean distance* giữa $f(x_i)$ và $f(x_j)$, 
 $\mathrm{EMD}(P_{\theta}, P_r)$ giải theo dạng đối ngẫu là cận trên của $\eqref{1}$. Vì thế ta có:
 
 $$ \mathrm{EMD}(P_{\theta}, P_r) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim P_{\theta}}[f(x)] - \mathbb{E}_{x \sim P_r}[f(x)] $$
+
+
 
 Tương tự với phân phối liên tục ta cũng có được công thức của $W(P_\theta, P_r)$:
 
