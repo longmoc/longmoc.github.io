@@ -132,7 +132,7 @@ $$\delta(P_r, P_\theta) =
 $$
 
 - KL divergence: $$KL(P\|Q)$$ có giá trị bằng $+\infty$ nếu tồn tại điểm $(x, y)$ tại đó $P(x,y) > 0$ và $Q(x,y)=0$) (do
-  $$ \lim_{x \to 0} \log (x) = -\infty$$, xem lại [KL divergence](https://longmoc.github.io/mathematic/mathematic-1-ce-kld-jsd/)). 
+  $$ \lim_{x \to 0} \log (x) = -\infty$$, xem lại [KL divergence](https://longmoc.github.io/mathematic/mathematic-1-ce-kld-jsd/#kullback-leibler-divergence)). 
   $$KL(P_{\theta}\|P_0)=+\infty$$ tại $(\theta, y)$ với $y \in [0,1]$. 
   Ngược lại tại các điểm $(0, y)$ ta có $$KL(P_0\|P_{\theta})=+\infty$$.
   
