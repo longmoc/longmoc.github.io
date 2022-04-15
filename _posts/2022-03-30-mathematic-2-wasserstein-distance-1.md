@@ -107,7 +107,9 @@ $$ W(P_{\theta}, P_r) = \inf_{\gamma \in \Pi(P_{\theta}, P_r)} \mathbb{E}_{(x,y)
 
 Công thức có được khi sử dụng ***Kantorovich-Rubinstein duality*** (mà ta sẽ phân tích ở phần sau):
 
-$$ W(P_\theta, P_r) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim P_{\theta}}[f(x)] - \mathbb{E}_{x \sim P_r}[f(x)] $$
+$$ \mathrm{EMD}(P_\theta, P_r) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim P_{\theta}}[f(x)] - \mathbb{E}_{x \sim P_r}[f(x)] $$
+
+$$ W(P_\theta, P_r) = \sup_{\lVert h \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim P_{\theta}}[h(x)] - \mathbb{E}_{y \sim P_r}[h(y)] $$
 
 ## Why Wasserstein Distance
 
