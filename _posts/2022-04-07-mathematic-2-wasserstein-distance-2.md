@@ -234,8 +234,10 @@ $$\begin{aligned}
 Sử dụng nhân tử Lagrange $f: \mathcal{X} \to \mathbb{R}, \ g: \mathcal{Y} \to \mathbb{R}$, ta có:
 
 $$\begin{aligned} 
-\mathcal{L}(\gamma, f, g) = \int_x \int_y \gamma(x,y) \| x - y \| \,dy\,dx &+  \int_{x}{ f(x)\bigg( p_\theta(x) -  \int_{y}{\gamma(x,y)\ dy}\bigg) \ dx} \\
-&+ \int_{y}{ g(y)\bigg( p_r(y) -  \int_{x}{\gamma(x,y)\ dx}\bigg)\ dy}
+\mathcal{L}(\gamma, f, g) &= 
+\begin{aligned} \int_x \int_y \gamma(x,y) \| x - y \| \,dy\,dx &+  \int_{x}{ f(x)\bigg( p_\theta(x) -  \int_{y}{\gamma(x,y)\ dy}\bigg) \ dx} \\
+&+ \int_{y}{ g(y)\bigg( p_r(y) -  \int_{x}{\gamma(x,y)\ dx}\bigg)\ dy} \end{aligned} \\
+&= \int_x{ \int_y \gamma(x,y) \big(\| x - y \| - f(x) - g(y)\big)\,dy\,dx} \ + \mathbb{E}_{x \sim P_{\theta}}[f(x)] + \mathbb{E}_{y \sim P_r}[g(y)]
 \end{aligned} $$
 
 Tương tự với phân phối liên tục ta cũng có được công thức của $W(P_\theta, P_r)$:
