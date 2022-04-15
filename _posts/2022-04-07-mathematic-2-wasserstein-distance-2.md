@@ -86,7 +86,7 @@ Khi đã biết $\mathbf{c}^T$, $\mathbf{A}$ và $\mathbf{b}$ sử dụng *LP* t
 Thông tin thêm về *linear programming* có thể tìm hiểu tại [đây](https://en.wikipedia.org/wiki/Linear_programming).
 
 
-## Kantorovich-Rubinstein duality
+## Dual form
 
 Thực tế cách tối ưu bằng *Linear programming* không khả thi trong trường hợp số lượng các trạng thái là rất nhiều (ví dụ 
 số cột đất có thể là $10^6$) hoặc số chiều dữ liệu lớn (hàng ngàn chiều thay vì một chiều). Vì thế tính toán $\gamma$ 
@@ -216,6 +216,8 @@ $\mathrm{EMD}(P_{\theta}, P_r)$ giải theo dạng đối ngẫu là cận trên
 
 $$ \mathrm{EMD}(P_{\theta}, P_r) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim P_{\theta}}[f(x)] - \mathbb{E}_{x \sim P_r}[f(x)] $$
 
+## Kantorovich-Rubinstein duality
+
 Ở trên ta đã chứng minh công thức với các phân phối rời rạc. Đối với các phân phối liên tục, công thức cũng có dạng 
 tương tự. Ta sẽ chứng minh công thức này qua việc chứng minh định lý ***Kantorovich-Rubinstein***.
 
@@ -286,7 +288,7 @@ W(P_\theta, P_r) &= \sup_{f, g}{\bigg[\mathbb{E}_{x \sim P_{\theta}}[f(x)] + \ma
 
 Vì vậy:
 
-$$ W(P_\theta, P_r) = \sup_{\lVert h \lVert_{L \leq 1}} \bigg[\mathbb{E}_{x \sim P_{\theta}}[h(x)] - \mathbb{E}_{y \sim P_r}[h(y)]\bigg] $$
+$$ W(P_\theta, P_r) = \sup_{\lVert h \lVert_{L \leq 1}} \mathbb{E}_{x \sim P_{\theta}}[h(x)] - \mathbb{E}_{y \sim P_r}[h(y)]$$
 
 
 <div align="center">.</div> 
