@@ -247,6 +247,10 @@ W(P_\theta, P_r)  = \inf_{\gamma \in \Pi}{\sup_{f, g}{\mathcal{L}(\gamma, f, g)}
 = \sup_{f, g}{\inf_{\gamma \in \Pi}{\mathcal{L}(\gamma, f, g)}}
 $$
 
+Mặt khác:
+
+$$ f(x) + g(y) \leq \|x-y\| $$
+
 Tương tự với phân phối liên tục ta cũng có được công thức của $W(P_\theta, P_r)$:
 
 $$ W(P_\theta, P_r) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim P_{\theta}}[f(x)] - \mathbb{E}_{x \sim P_r}[f(x)] $$
