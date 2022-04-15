@@ -270,6 +270,18 @@ $$
 \sup_{\lVert h \lVert_{L \leq 1}}{\bigg[\mathbb{E}_{x \sim P_{\theta}}[h(x)] - \mathbb{E}_{y \sim P_r}[h(y)]\bigg]} \leq W(P_\theta, P_r)
 $$
 
+Với mọi $f,g$ thỏa mãn $$f(x) + g(y) \leq \|x-y\|$$:
+
+$$
+f(x) + g(y) \leq h(x) - h(y)
+\Rightarrow \mathbb{E}_{x \sim P_{\theta}}[f(x)] + \mathbb{E}_{y \sim P_r}[g(y)] \leq \mathbb{E}_{x \sim P_{\theta}}[h(x)] - \mathbb{E}_{y \sim P_r}[h(y)]$$
+
+Tổng hợp lại được:
+
+$$\begin{aligned} 
+W(P_\theta, P_r) = \sup_{f, g}{\bigg[\mathbb{E}_{x \sim P_{\theta}}[f(x)] + \mathbb{E}_{y \sim P_r}[g(y)]\bigg]}
+\end{aligned}$$
+
 Tương tự với phân phối liên tục ta cũng có được công thức của $W(P_\theta, P_r)$:
 
 $$ W(P_\theta, P_r) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim P_{\theta}}[f(x)] - \mathbb{E}_{x \sim P_r}[f(x)] $$
