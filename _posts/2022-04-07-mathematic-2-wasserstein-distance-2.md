@@ -129,7 +129,7 @@ $$z = \mathbf{c}^T \mathbf{x} \geq \mathbf{y}^T \mathbf{A} \mathbf{x} = \mathbf{
 >*the primal problem has optimal value larger than or equal to 
 the dual problem*
 
-Đồng nghĩa với việc *duality gap* là lớn hơn hoặc bằng $0$. Ngoài ra còn có định lý *strong duality* với $z=\tilde{z}$:
+Đồng nghĩa với việc *duality gap* là lớn hơn hoặc bằng $0$. Ngoài ra còn có định lý ***strong duality*** với $z=\tilde{z}$:
 
 >Strong duality is a condition in mathematical optimization in which the primal optimal objective and the dual optimal objective are equal
 
@@ -256,7 +256,7 @@ $$
 W(P_\theta, P_r) = \sup_{f, g}{\bigg[\mathbb{E}_{x \sim P_{\theta}}[f(x)] + \mathbb{E}_{y \sim P_r}[g(y)]\bigg]}
 $$
 
-Bây giờ, xét $h$ là một hàm $1$-Lipschitz:
+Bây giờ, xét $h$ là một hàm $1$-*Lipschitz*:
 
 $$\begin{aligned} 
 \mathbb{E}_{x \sim P_{\theta}}[h(x)] - \mathbb{E}_{y \sim P_r}[h(y)] &= 
