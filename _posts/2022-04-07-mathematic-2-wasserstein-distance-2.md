@@ -224,6 +224,19 @@ tương tự. Ta sẽ chứng minh công thức này qua việc chứng minh đ�
 $$ W(p, q) = \inf_{\pi \in \Pi(p, q)} \mathbb{E}_{(x,y) \sim \pi}\big[\|x - y\|_2\big] =
 \sup_{\lVert h \lVert_{L \leq 1}} \bigg[\mathbb{E}_{x \sim p}[h(x)] - \mathbb{E}_{y \sim q}[h(y)]\bigg] $$
 
+*Chứng minh*. Nhắc lại từ phần trước:
+
+$$\begin{aligned} 
+&\int_{x}{\gamma(x,y) \ dx} = p_r(y) \\
+&\int_{y}{\gamma(x,y) \ dy} = p_{\theta}(x)
+\end{aligned} $$
+
+Sử dụng nhân tử Lagrange $f: \mathcal{X} \to \mathbb{R}, \ g: \mathcal{Y} \to \mathbb{R}$, ta có:
+
+$$\begin{aligned} 
+\mathcal{L}(\gamma, f, g) = \int_x \int_y \gamma(x,y) \| x - y \| \,dy\,dx &+  \int_{x}{ f(x)\bigg( p_\theta(x) -  \int_{y}{\gamma(x,y)\ dy}\bigg) \ dx} \\
+&+ \int_{y}{ g(y)\bigg( p_r(y) -  \int_{x}{\gamma(x,y)\ dx}\bigg)\ dy}
+\end{aligned} $$
 
 Tương tự với phân phối liên tục ta cũng có được công thức của $W(P_\theta, P_r)$:
 
