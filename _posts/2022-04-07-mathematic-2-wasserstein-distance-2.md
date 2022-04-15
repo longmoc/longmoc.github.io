@@ -183,8 +183,8 @@ $$
 
 $$ \Leftrightarrow f(x_i) + g(y_j) \leq \mathbf{D}_{i,j}$$. 
 
-Biết $\mathbf{D}_{i,i} = 0 \Rightarrow g(x_i) \leq -f(x_i) \Rightarrow f(x_i) + g(x_j) \leq f(x_i) - f(x_j)$. Vì vậy để 
-tối ưu đạt cực đại thì $g(x_i) = -f(x_i) \Leftrightarrow g = f$. 
+Biết $\mathbf{D}_{i,i} = 0 \Rightarrow g(y_i) \leq -f(x_i) \Rightarrow f(x_i) + g(y_j) \leq f(x_i) - f(x_j)$. Vì vậy để 
+tối ưu đạt cực đại thì $g(y_i) = -f(x_i) \Leftrightarrow g = f$. 
 
 Khi đó ta có thể viết $\mathbf{f}^T P_r + \mathbf{g}^T P_\theta$ thành:
 
@@ -201,7 +201,7 @@ f(x_i) - f(x_j) \geq -\mathbf{D}_{i,j}
 \end{aligned} 
 $$
 
-$$ \Leftrightarrow \ |f(x_i) - f(y_j)| \leq \mathbf{D}_{i,j} \tag{2}\label{2} $$
+$$ \Leftrightarrow \ |f(x_i) - f(x_j)| \leq \mathbf{D}_{i,j} \tag{2}\label{2} $$
 
 Trước khi tiếp tục hãy đến với khái niệm của ***Lipschitz function***:
 
@@ -216,6 +216,13 @@ $\mathrm{EMD}(P_{\theta}, P_r)$ giải theo dạng đối ngẫu là cận trên
 
 $$ \mathrm{EMD}(P_{\theta}, P_r) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim P_{\theta}}[f(x)] - \mathbb{E}_{x \sim P_r}[f(x)] $$
 
+Ở trên ta đã chứng minh công thức với các phân phối rời rạc. Đối với các phân phối liên tục, công thức cũng có dạng 
+tương tự. Ta sẽ chứng minh công thức này qua việc chứng minh định lý ***Kantorovich-Rubinstein***.
+
+*Theorem.*  *(Kantorovich-Rubinstein)*
+
+$$ W(p, q) = \inf_{\pi \in \Pi(p, q)} \mathbb{E}_{(x,y) \sim \pi}\big[\|x - y\|_2\big] =
+\sup_{\lVert h \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim p}[h(x)] - \mathbb{E}_{y \sim q}[h(x)] $$
 
 
 Tương tự với phân phối liên tục ta cũng có được công thức của $W(P_\theta, P_r)$:
