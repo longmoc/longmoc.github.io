@@ -264,6 +264,12 @@ $$\begin{aligned}
 &\leq \int_x{\int_y{\|x-y\|\gamma(x,y)\,dy}dx} 
 \end{aligned}$$
 
+Kéo theo:
+
+$$
+\sup_{\lVert h \lVert_{L \leq 1}}{\bigg[\mathbb{E}_{x \sim P_{\theta}}[h(x)] - \mathbb{E}_{y \sim P_r}[h(y)]\bigg]} \leq W(P_\theta, P_r)
+$$
+
 Tương tự với phân phối liên tục ta cũng có được công thức của $W(P_\theta, P_r)$:
 
 $$ W(P_\theta, P_r) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim P_{\theta}}[f(x)] - \mathbb{E}_{x \sim P_r}[f(x)] $$
