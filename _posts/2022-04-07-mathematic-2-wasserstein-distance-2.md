@@ -258,10 +258,11 @@ $$
 
 Bây giờ, xét $h$ là một hàm $1$-Lipschitz:
 
-$$
-\mathbb{E}_{x \sim P_{\theta}}[h(x)] - \mathbb{E}_{y \sim P_r}[h(y)] = 
-\int_x{\int_y{\big(h(x)-h(y)\big)\gamma(x,y)\,dy}dx} 
-$$
+$$\begin{aligned} 
+\mathbb{E}_{x \sim P_{\theta}}[h(x)] - \mathbb{E}_{y \sim P_r}[h(y)] &= 
+\int_x{\int_y{\big(h(x)-h(y)\big)\gamma(x,y)\,dy}dx} \\
+&\leq \int_x{\int_y{\|x-y\|\gamma(x,y)\,dy}dx} 
+\end{aligned}$$
 
 Tương tự với phân phối liên tục ta cũng có được công thức của $W(P_\theta, P_r)$:
 
