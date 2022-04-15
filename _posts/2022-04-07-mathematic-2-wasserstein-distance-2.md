@@ -280,7 +280,7 @@ Tổng hợp lại được:
 
 $$\begin{aligned} 
 W(P_\theta, P_r) &= \sup_{f, g}{\bigg[\mathbb{E}_{x \sim P_{\theta}}[f(x)] + \mathbb{E}_{y \sim P_r}[g(y)]\bigg]} \\
-&\sup_{\lVert h \lVert_{L \leq 1}}{\bigg[\mathbb{E}_{x \sim P_{\theta}}[h(x)] - \mathbb{E}_{y \sim P_r}[h(y)]\bigg]} \\
+&\leq \sup_{\lVert h \lVert_{L \leq 1}}{\bigg[\mathbb{E}_{x \sim P_{\theta}}[h(x)] - \mathbb{E}_{y \sim P_r}[h(y)]\bigg]} \\
 &\leq W(P_\theta, P_r)
 \end{aligned}$$
 
