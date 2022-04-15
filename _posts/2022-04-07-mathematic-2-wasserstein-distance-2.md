@@ -279,8 +279,16 @@ f(x) + g(y) \leq h(x) - h(y)
 Tổng hợp lại được:
 
 $$\begin{aligned} 
-W(P_\theta, P_r) = \sup_{f, g}{\bigg[\mathbb{E}_{x \sim P_{\theta}}[f(x)] + \mathbb{E}_{y \sim P_r}[g(y)]\bigg]}
+W(P_\theta, P_r) &= \sup_{f, g}{\bigg[\mathbb{E}_{x \sim P_{\theta}}[f(x)] + \mathbb{E}_{y \sim P_r}[g(y)]\bigg]} \\
+&\sup_{\lVert h \lVert_{L \leq 1}}{\bigg[\mathbb{E}_{x \sim P_{\theta}}[h(x)] - \mathbb{E}_{y \sim P_r}[h(y)]\bigg]} \\
+&\leq W(P_\theta, P_r)
 \end{aligned}$$
+
+Vì vậy:
+
+$$ W(p, q) = \inf_{\pi \in \Pi(p, q)} \mathbb{E}_{(x,y) \sim \pi}\big[\|x - y\|\big] =
+\sup_{\lVert h \lVert_{L \leq 1}} \bigg[\mathbb{E}_{x \sim p}[h(x)] - \mathbb{E}_{y \sim q}[h(y)]\bigg] $$
+
 
 Tương tự với phân phối liên tục ta cũng có được công thức của $W(P_\theta, P_r)$:
 
