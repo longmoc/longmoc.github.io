@@ -242,11 +242,13 @@ $$\begin{aligned}
 
 Sử dụng *strong duality*:
 
-$$\begin{aligned} 
+$$
+\begin{aligned} 
 W(P_\theta, P_r) &= \inf_{\gamma \in \Pi}{\sup_{f, g}{\mathcal{L}(\gamma, f, g)}} \\
 &= \sup_{f, g}{\inf_{\gamma \in \Pi}{\mathcal{L}(\gamma, f, g)}} \\
-&= \sup_{f, g}{\inf_{\gamma \in \Pi}{\int_x{ \int_y \gamma(x,y) \big(\| x - y \| - f(x) - g(y)\big)\,dy\,dx} \ + \mathbb{E}_{x \sim P_{\theta}}[f(x)] + \mathbb{E}_{y \sim P_r}[g(y)]}
-\end{aligned}$$
+&= \sup_{f, g}{\inf_{\gamma \in \Pi}{\mathbb{E}_{x \sim P_{\theta}}[f(x)] + \mathbb{E}_{y \sim P_r}[g(y)] +\int_x{ \int_y \gamma(x,y) \big(\| x - y \| - f(x) - g(y)\big)\,dy\,dx} }}
+\end{aligned}
+$$
 
 Mặt khác: $$ f(x) + g(y) \leq \|x-y\| $$
 
