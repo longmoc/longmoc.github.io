@@ -13,6 +13,13 @@ header:
 bài note sẽ đề cập đến Wasserstein-GAN và ý nghĩa đối với những hạn chế của mô hình GAN thông thường*.
 
 ---
+## Hạn chế của Vanilla GAN Loss
+ 
+Một vấn đề thường thấy khi huấn luyện các mô hình GAN với GAN Loss là ở một giai đoạn nhất định *discriminator* thực 
+hiện tốt khả năng phân biệt nhưng *generator* lại không đủ tốt dẫn đến gradient của *generator* bị triệt tiêu và không 
+học được gì.
+
+$$ \nabla_{}\log (1-D(G(z))) \to 0 $$
 
 ## Wasserstein GAN
 
