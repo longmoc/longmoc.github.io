@@ -16,7 +16,7 @@ header:
 ## Epipolar Geometry
 
 Xét điểm $mathbf{X}$ trong không gian 3D (thấy qua hai ảnh) thu được tại $mathbf{x}$ trên ảnh thứ nhất và $mathbf{x'}$ 
-trên ảnh thứ hai. 
+trên ảnh thứ hai. Hai *camera center* lần lượt là $\mathbf{C}$ và $C'$
 
 ...
 
