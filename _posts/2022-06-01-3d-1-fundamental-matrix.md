@@ -15,10 +15,11 @@ header:
 
 ## Epipolar Geometry
 
-Xét điểm $mathbf{X}$ trong không gian 3D (thấy qua hai ảnh) thu được tại $mathbf{x}$ trên ảnh thứ nhất và $mathbf{x'}$ 
+Xét điểm $mathbf{X}$ trong không gian 3D (thấy qua hai ảnh) thu được tại $\mathbf{x}$ trên ảnh thứ nhất và $\mathbf{x'}$ 
 trên ảnh thứ hai. Hai *camera center* lần lượt là $\mathbf{C}$ và $\mathbf{C'}$ tạo thành baseline cho *stereo system*. 
 Dễ thấy các điểm $x$, $x'$, $\mathbf{C}$, $\mathbf{C'}$ và $X$ là *đồng phẳng* (*coplanar*) do đó 
-$\mathbf{\overrightarrow{Cx}}\cdot \left(\mathbf{\overrightarrow{CC'}}\times\mathbf{\overrightarrow{C'x'}}\right)=0$
+$\mathbf{\overrightarrow{Cx}}\cdot \left(\mathbf{\overrightarrow{CC'}}\times\mathbf{\overrightarrow{C'x'}}\right)=0$. 
+Mặt phẳng tạo bởi các điểm đó ký hiệu là $\pi$.
 
 ...
 
