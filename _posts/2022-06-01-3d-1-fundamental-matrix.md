@@ -17,9 +17,15 @@ header:
 
 Xét điểm $\mathbf{X}$ trong không gian 3D (thấy qua hai ảnh) thu được tại $\mathbf{x}$ trên ảnh thứ nhất và $\mathbf{x'}$ 
 trên ảnh thứ hai. Hai *camera center* lần lượt là $\mathbf{C}$ và $\mathbf{C'}$ tạo thành baseline cho *stereo system*. 
-Dễ thấy các điểm $\mathbf{x}$, $\mathbf{x'}$, $\mathbf{C}$, $\mathbf{C'}$ và $\mathbf{X}$ là *đồng phẳng* (*coplanar*) do đó 
-$\mathbf{\overrightarrow{Cx}}\cdot \left(\mathbf{\overrightarrow{CC'}}\times\mathbf{\overrightarrow{C'x'}}\right)=0$. 
+Dễ thấy các điểm $\mathbf{x}$, $\mathbf{x'}$, $\mathbf{C}$, $\mathbf{C'}$ và $\mathbf{X}$ là *đồng phẳng* (*coplanar*) 
+do đó $\mathbf{\overrightarrow{Cx}}\cdot \left(\mathbf{\overrightarrow{CC'}}\times\mathbf{\overrightarrow{C'x'}}\right)=0$. 
 Mặt phẳng tạo bởi các điểm đó ký hiệu là $\pi$. Các tia back-project từ $\mathbf{x}$ và $\mathbf{x'}$ giao nhau tại $\mathbf{X}$.
+
+![Coplanar]({{ site.url }}{{ site.baseurl }}/assets/images/posts/3d-1-1.png){:style="display:block; margin-left:auto; margin-right:auto"}
+
+
+Giả sử chúng ta chỉ biết trước điểm $\mathbf{x}$ mà không biết $\mathbf{x'}$. Vì $\mathbf{x'}$ nằm trên mặt phẳng $\pi$ 
+được định nghĩa qua camera baseline $\mathbf{CC'}$ và $\mathbf{\overrightarrow{Cx}}$
 
 ...
 
