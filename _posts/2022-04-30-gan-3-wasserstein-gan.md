@@ -25,7 +25,7 @@ Một vấn đề thường thấy khi huấn luyện các mô hình GAN với G
 hiện tốt khả năng phân biệt nhưng *generator* lại không đủ tốt dẫn đến gradient của *generator* bị triệt tiêu và không 
 học được gì.
 
-$$ -\nabla_{}\log (1-D(G(z))) \to 0 $$
+$$ -\nabla_{\theta_g}\log (1-D(G(z))) \to 0 $$
 
 Ở bài báo gốc tác giả cũng lường trước vấn đề này nên đề xuất một hàm loss thay thế. Tuy nhiên gradient của hàm này lại 
 có phương sai rất lớn làm quá trình huấn luyện không ổn định (*unstable*)
