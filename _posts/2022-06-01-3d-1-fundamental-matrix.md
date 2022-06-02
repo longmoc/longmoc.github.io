@@ -24,8 +24,18 @@ Mặt phẳng tạo bởi các điểm đó ký hiệu là $\pi$. Các tia back-
 ![Coplanar]({{ site.url }}{{ site.baseurl }}/assets/images/posts/3d-1-1.png){:style="display:block; margin-left:auto; margin-right:auto"}
 
 
-Giả sử chúng ta chỉ biết trước điểm $\mathbf{x}$ mà không biết $\mathbf{x'}$. Vì $\mathbf{x'}$ nằm trên mặt phẳng $\pi$ 
-được định nghĩa qua camera baseline $\mathbf{CC'}$ và $\mathbf{\overrightarrow{Cx}}$
+Giả sử chúng ta chỉ biết trước điểm $\mathbf{x}$ mà không biết $\mathbf{x'}$. $\mathbf{x'}$ nằm trên mặt phẳng $\pi$ 
+được định nghĩa qua camera baseline $\mathbf{CC'}$ và $\mathbf{\overrightarrow{Cx}}$ $\Rightarrow$ $\mathbf{x'}$ nằm 
+trên đường thẳng $\mathbf{l'}$ là giao tuyến của $\pi$ và mặt phẳng ảnh thứ hai. Có thể thấy trên ảnh thứ hai 
+$\mathbf{l'}$ chính là hình ảnh của tia back-projected từ $\mathbf{x}$. $\mathbf{l'}$ được gọi là *epipolar line* tương ứng 
+với $\mathbf{x}$. Điều này có ý nghĩa trong việc giới hạn tìm kiếm các điểm $\mathbf{x'}$ trên $\mathbf{l'}$.
+
+* **Epipole** là giao điểm của baseline $\mathbf{CC'}$ với các mặt phẳng ảnh (Ví dụ $\mathbf{e}$ và $\mathbf{e'}$).
+* **Epipolar plane** chỉ các mặt phẳng chứa baseline.
+* **Epipolar line** là giao tuyến giữa *epipolar plane* và mặt phẳng ảnh. *Tất cả các epipolar line trên cùng mặt phẳng 
+  ảnh giao nhau tại epipole*.
+  
+## Fundamental Matrix
 
 ...
 
