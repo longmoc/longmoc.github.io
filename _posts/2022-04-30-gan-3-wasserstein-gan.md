@@ -14,7 +14,7 @@ bài note sẽ đề cập đến Wasserstein-GAN - giải quyết những hạn
 
 *Nội dung phần này có liên quan đến một số note trước đó như Vanilla GAN và đặc biệt là Wasserstein distance*.
 
---
+---
 
 Tác giả của paper [Wasserstein GAN](https://arxiv.org/abs/1701.07875) - Arjovsky đã nêu ra những hạn chế của GAN thông 
 thường và đề xuất một biến thể mang tên Wasserstein GAN.
