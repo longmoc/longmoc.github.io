@@ -51,10 +51,13 @@ Vanilla GAN, khá tương đồng với *value function* trong Reinforcement lea
 ***critic*** để phản ánh đúng vai trò của nó. Nhãn của mô hình cũng thay đổi từ $0$, $1$ sang $-1$, $1$. 
 
 ![GAN]({{ site.url }}{{ site.baseurl }}/assets/images/posts/g2-vanilla-gan.jpeg){:style="display:block; margin-left:auto; margin-right:auto"}
-<div align="center">**Vanilla GAN**</div> 
+<div align="center"><i>Vanilla GAN</i></div> 
+
+
 
 ![WGAN]({{ site.url }}{{ site.baseurl }}/assets/images/posts/g2-wgan.jpeg){:style="display:block; margin-left:auto; margin-right:auto"}
-<div align="center">**WGAN**</div> 
+<div align="center"><i>WGAN</i></div> 
+
 
 Để đảm bảo ràng buộc $f$ phải là *1-Lipschitz*, WGAN đơn giản chỉ sử dụng phương pháp clipping làm hạn chế giá trị 
 weight tối đa của $f$ sau mỗi batch. Như trong paper tác giả giới hạn *critic* weights trong khoảng nhất định 
