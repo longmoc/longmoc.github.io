@@ -30,7 +30,7 @@ $$ -\nabla_{\theta_g}\log (1-D(G(z))) \to 0 $$
 Ở bài báo gốc tác giả cũng lường trước vấn đề này nên đề xuất một hàm loss thay thế. Tuy nhiên gradient của hàm này lại 
 có phương sai rất lớn làm quá trình huấn luyện không ổn định (*unstable*)
 
-$$ \nabla_{}\log D(G(z)) \to \text{large variance of gradient} $$ 
+$$ \nabla_{\theta_g}\log D(G(z)) \to \text{large variance of gradient} $$ 
 
 
 ## Wasserstein GAN
