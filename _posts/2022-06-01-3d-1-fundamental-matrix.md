@@ -38,7 +38,8 @@ với $\mathbf{x}$. Điều này có ý nghĩa trong việc giới hạn tìm ki
 ## Fundamental Matrix
 
 *Fundamental Matrix* $\mathbf{F}$ là biểu diễn đại số của *epipolar geometry*, mang cả tính hình học và số học.
-$\mathbf{x}_i'^{\ \mathbf{T}}\mathbf{F} \mathbf{x}_i = 0$ với 
+$\mathbf{x}_i'^{\ \mathbf{T}}\mathbf{F} \mathbf{x}_i = 0$ với $i=1,2,....,m$. Công thức này gọi là *epipolar constraint* 
+hoặc *correspondance condition* (hay *Longuet-Higgins* equation). $\mathbf{F}$ 
 ...
 
 <div align="center">.</div> 
