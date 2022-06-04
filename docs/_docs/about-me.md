@@ -1,13 +1,8 @@
 ---
 layout: single
 title: "Fourier Transform"
-categories: 
-  - mathematic
-tags:
-  - fourier-series
-  - fourier-transform
-  - fast-fourier-transform
-mathjax: true
+permalink: /about-me/
+toc: true
 header:
   image: /assets/images/51281910550_1647e1056b_k.jpg
   image_description: "Chrysanthemum morifolium"
