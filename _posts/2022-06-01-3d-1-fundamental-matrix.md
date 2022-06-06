@@ -60,9 +60,11 @@ constraint. Hệ thuần nhất này cần ít nhất 8 điểm để tìm nghi�
 Nhóm $N$ *correspondences point* (với $N \geq 8$) - tương ứng $N$ vector $\mathbf{a}$ theo hàng thành ma trận hạng số 
 $\mathbf{A}$ ta được $$\mathbf{A} \cdot \mathbf{x} = 0$$.
 
-Lúc này việc giải hệ thuần nhất có thể thực hiện thông qua giải bài toán *linear least squares* sử dụng *Singular Value 
-Decomposition (SVD)* (tìm hiểu thêm về [SVD](https://machinelearningcoban.com/2017/06/07/svd/))
+Lúc này việc giải hệ thuần nhất có thể thực hiện thông qua giải bài toán *linear least squares* sử dụng ***Singular Value 
+Decomposition*** (*SVD*) (tìm hiểu thêm về [SVD](https://machinelearningcoban.com/2017/06/07/svd/))
 
+Khi áp dụng SVD cho ma trận $\mathbf{A}$ thu được $\mathbf{USV^T}$ với $\mathbf{U}$ và $\mathbf{V}$ là các ma trận trực 
+giao và ma trận đường chéo $\mathbf{S}$ chứa các *singular value*. Các giá trị riêng $\mathbf{\sigma_i}$
 ...
 
 <div align="center">.</div> 
