@@ -57,8 +57,11 @@ Ký hiệu $$ \mathbf{a^T} = \begin{bmatrix} x_i x'_i & x_i y'_i & x_i & y_i x'_
 
 Mỗi cặp điểm ảnh *correspondences* $\mathbf{x}$, $\mathbf{x'}$ sẽ tạo ra một vector hệ số $\mathbf{a}$ ứng với một 
 constraint. Hệ thuần nhất này cần ít nhất 8 điểm để tìm nghiệm, do đó nó còn được gọi là [Eight-point algorithm.](https://en.wikipedia.org/wiki/Eight-point_algorithm).
-Nhóm $N$ *correspondences point* (với $N \geq 8$) - tương ứng $N$ vector $\mathbf{a}$ theo cột thành ma trận hạng số 
-$\mathbf{A}$ ta được $$\mathbf{A^T} \cdot \mathbf{F} = 0$$.
+Nhóm $N$ *correspondences point* (với $N \geq 8$) - tương ứng $N$ vector $\mathbf{a}$ theo hàng thành ma trận hạng số 
+$\mathbf{A}$ ta được $$\mathbf{A} \cdot \mathbf{x} = 0$$.
+
+Lúc này việc giải hệ thuần nhất có thể thực hiện thông qua giải bài toán *linear least squares* sử dụng *Singular Value 
+Decomposition (SVD)* (tìm hiểu thêm về [SVD](https://machinelearningcoban.com/2017/06/07/svd/))
 
 ...
 
