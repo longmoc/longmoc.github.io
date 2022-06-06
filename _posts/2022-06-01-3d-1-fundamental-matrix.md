@@ -64,7 +64,8 @@ Lúc này việc giải hệ thuần nhất có thể thực hiện thông qua g
 Decomposition*** (*SVD*) (tìm hiểu thêm về [SVD](https://machinelearningcoban.com/2017/06/07/svd/))
 
 Khi áp dụng SVD cho ma trận $\mathbf{A}$ thu được $\mathbf{USV^T}$ với $\mathbf{U}$ và $\mathbf{V}$ là các ma trận trực 
-giao và ma trận đường chéo $\mathbf{S}$ chứa các *singular value*. Các giá trị riêng $\mathbf{\sigma_i}$
+giao và ma trận đường chéo $\mathbf{S}$ chứa các *singular value*. Các giá trị riêng $\sigma_i$ ($i\in[1,9], i\in\mathbb{Z}$) 
+là các giá trị dương và giảm dần, $\sigma_9=0$ vì chỉ có 8 phương trình cho 9 ẩn.
 ...
 
 <div align="center">.</div> 
