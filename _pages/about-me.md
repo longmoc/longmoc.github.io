@@ -9,6 +9,7 @@ header:
   teaser: /assets/images/51281910550_1647e1056b_k.jpg
 ---
 
+
 <div align="center"><i>Note lại những kiến thức cần thiết</i></div>
 
 ---
