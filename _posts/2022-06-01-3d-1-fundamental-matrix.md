@@ -53,7 +53,7 @@ $$
 $$
 
 Ký hiệu $$ \mathbf{a^T} = \begin{bmatrix} x_i x'_i & x_i y'_i & x_i & y_i x'_i & y_i y'_i & y_i &  x'_i & y'_i & 1 \end{bmatrix}
-\Rightarrow \mathbf{a^T} \cdot \mathbf{F} = 0$$.
+\Rightarrow \mathbf{a^T} \cdot \mathbf{f} = 0$$.
 
 Mỗi cặp điểm ảnh *correspondences* $\mathbf{x}$, $\mathbf{x'}$ sẽ tạo ra một vector hệ số $\mathbf{a}$ ứng với một 
 constraint. Hệ thuần nhất này cần ít nhất 8 điểm để tìm nghiệm, do đó nó còn được gọi là [Eight-point algorithm.](https://en.wikipedia.org/wiki/Eight-point_algorithm).
