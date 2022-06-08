@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Fundamental Matrix"
+title: "Structure from Motion I: Estimating Fundamental Matrix"
 categories: 3d-reconstruction
 mathjax: true
 header:
@@ -9,9 +9,24 @@ header:
   teaser: /assets/images/3d.jpeg
 ---
 
-*Fundamental matrix*.
+*3D scene reconstruction với Structure from Motion*.
 
 ---
+## Structure from Motion (SfM)
+
+Là phương pháp để tái tạo 3D scene đồng thời tìm được các camera pose của *monocular camera w.r.t* từ các 
+scene cho trước. Đúng như tên gọi SfM sẽ tạo ra toàn bộ rigid structure từ bộ ảnh với nhiều view point khác nhau (tương 
+tự như việc di chuyển camera).
+
+SfM được hình thành từ các bước:
+
+* *Feature matching* và *Outlier rejection*
+* Ước lượng *Fundamental matrix* và *Essential matrix*
+* Ước lượng *Camera pose* từ *Essential matrix*
+* Kiểm tra *Cheirality Condition* sử dụng *Triangulation*
+* Perspective-n-Point
+* Bundle Adjustment
+
 
 ## Epipolar Geometry
 
@@ -57,15 +72,22 @@ Ký hiệu $$ \mathbf{a^T} = \begin{bmatrix} x_i x'_i & x_i y'_i & x_i & y_i x'_
 
 Mỗi cặp điểm ảnh *correspondences* $\mathbf{x}$, $\mathbf{x'}$ sẽ tạo ra một vector hệ số $\mathbf{a}$ ứng với một 
 constraint. Hệ thuần nhất này cần ít nhất 8 điểm để tìm nghiệm, do đó nó còn được gọi là [Eight-point algorithm.](https://en.wikipedia.org/wiki/Eight-point_algorithm).
-Nhóm $N$ *correspondences point* (với $N \geq 8$) - tương ứng $N$ vector $\mathbf{a}$ theo hàng thành ma trận hạng số 
+Nhóm $N$ *correspondence points* (với $N \geq 8$) - tương ứng $N$ vector $\mathbf{a}$ theo hàng thành ma trận hạng số 
 $\mathbf{A}$ ta được $$\mathbf{A} \cdot \mathbf{f} = 0$$.
 
 Lúc này việc giải hệ thuần nhất có thể thực hiện thông qua giải bài toán *linear least squares* sử dụng ***Singular Value 
-Decomposition*** (*SVD*) (tìm hiểu thêm về [SVD](https://machinelearningcoban.com/2017/06/07/svd/))
+Decomposition*** (*SVD*) (tìm hiểu thêm về [SVD](https://cmsc426.github.io/math-tutorial/#svd))
 
 Khi áp dụng SVD cho ma trận $\mathbf{A}$ thu được $\mathbf{USV^T}$ với $\mathbf{U}$ và $\mathbf{V}$ là các ma trận trực 
 giao và ma trận đường chéo $\mathbf{S}$ chứa các *singular value*. Các giá trị riêng $\sigma_i$ ($i\in[1,9], i\in\mathbb{Z}$) 
-là các giá trị dương và giảm dần, $\sigma_9=0$ vì chỉ có 8 phương trình cho 9 ẩn.
+là các giá trị dương và giảm dần, $\sigma_9=0$ vì chỉ có 8 phương trình cho 9 ẩn. Như vậy, cột cuối của ma trận $\mathbf{V}$ 
+là nghiệm đúng cần tìm $\sigma_i\neq 0 \  \forall i\in[1,8], i\in\mathbb{Z}$. Tuy nhiên vẫn có trường hợp $\sigma_9\neq0$ 
+do có nhiễu từ các *correspondence*, dẫn đến ước lượng ma trận $\mathbf{F}$ có hạng bằng 3 - tương đương với việc có 
+*empty null-space* - không tồn giao điểm của họ các đường thẳng và không có *epipoles* nào. Để đảm bảo ràng buộc hạng 
+luôn bằng 2 thì *singular value* cuối cùng của $\mathbf{F}$ được đặt cố định bằng 0. 
+
+![F rank]({{ site.url }}{{ site.baseurl }}/assets/images/posts/3d-1-2.png){:style="display:block; margin-left:auto; margin-right:auto"}
+
 ...
 
 <div align="center">.</div> 
