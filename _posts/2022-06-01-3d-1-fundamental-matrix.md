@@ -30,8 +30,12 @@ SfM được hình thành từ các bước:
 
 ## Epipolar Geometry
 
+Epipolar geometry (hình học Epipolar) là hình học nội xạ ảnh giữa hai view khác nhau. Nó chỉ phụ thuộc vào các 
+*internal parameters* của camera (ma trận $\mathbf{K}$) và pose tương ứng. Nó hoàn toàn đôc lập với scene structure.
+
 Xét điểm $\mathbf{X}$ trong không gian 3D (thấy qua hai ảnh) thu được tại $\mathbf{x}$ trên ảnh thứ nhất và $\mathbf{x'}$ 
-trên ảnh thứ hai. Hai *camera center* lần lượt là $\mathbf{C}$ và $\mathbf{C'}$ tạo thành baseline cho *stereo system*. 
+trên ảnh thứ hai. Hai *camera center* lần lượt là $\mathbf{C}$ và $\mathbf{C'}$ tạo thành baseline cho *stereo system* 
+(hệ hai ảnh có view khác nhau).
 Dễ thấy các điểm $\mathbf{x}$, $\mathbf{x'}$, $\mathbf{C}$, $\mathbf{C'}$ và $\mathbf{X}$ là *đồng phẳng* (*coplanar*) 
 do đó $\mathbf{\overrightarrow{Cx}}\cdot \left(\mathbf{\overrightarrow{CC'}}\times\mathbf{\overrightarrow{C'x'}}\right)=0$. 
 Mặt phẳng tạo bởi các điểm đó ký hiệu là $\pi$. Các tia back-project từ $\mathbf{x}$ và $\mathbf{x'}$ giao nhau tại $\mathbf{X}$.
@@ -52,7 +56,8 @@ với $\mathbf{x}$. Điều này có ý nghĩa trong việc giới hạn tìm ki
   
 ## Fundamental Matrix
 
-*Fundamental Matrix* $\mathbf{F}$ - có dạng ma trận $3\times 3$ với hạng bằng 2 - là biểu diễn đại số của *epipolar geometry*, 
+*Fundamental Matrix* $\mathbf{F}$ - có dạng ma trận $3\times 3$ với hạng bằng 2 - liên quan đến tập corresponding của 
+các điểm trên hai hình ảnh có góc chụp khác nhau. *Fundamental Matrix* $\mathbf{F}$ là biểu diễn đại số của *epipolar geometry*, 
 mang cả tính hình học và số học. $\mathbf{x}_i'^{\ \mathbf{T}}\mathbf{F} \mathbf{x}_i = 0$ với $i=1,2,....,m$. Công thức này gọi là *epipolar constraint* 
 hoặc *correspondance condition* (hay *Longuet-Higgins* equation). $\mathbf{F}$ là ma trận $3 \times 3$ nên ta có thể 
 viết dưới dạng hệ phương trình tuyến tính thuần nhất:
