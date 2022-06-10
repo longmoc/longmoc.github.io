@@ -38,6 +38,8 @@ với $w=w(x_1,x_2,\dots, x_n)$ là hàm đa biến chưa biết và $F(\dots)$ 
 
 ### Quasilinear Equations, Characteristic System, General Solution
 
+### Quasilinear Equations,
+
 Một *phương trình vi phân từng phần tựa tuyến tính bậc nhất* (*first-order quasi-linear PDE*) có hai biến độc lập sẽ có dạng chung:
 
 $$ f(x,y,w)\frac{\partial w}{\partial x}+g(x,y,w)\frac{\partial w}{\partial y}=h(x,y,w). \tag{1}\label{1}$$
@@ -46,6 +48,20 @@ Các phương trình dạng này được gặp trong nhiều ứng dụng khác
 dẫn truyền nhiệt, lý thuyết sóng, âm học, dòng chảy nhiều pha, kỹ thuật hóa học... 
 
 Nếu các hàm $f$, $g$ và $h$ độc lập so với $w$ chưa biết thì phương trình $(\ref{1})$ là *tuyến tính* (*linear*).
+
+#### Characteristic system. General solution
+
+Hệ các phương trình vi phân thông thường
+
+$$\frac{dx}{f(x,y,w)}=\frac{dy}{g(x,y,w)}=\frac{dw}{h(x,y,w)} \tag{2}\label{2}$$
+
+là *hệ phương trình đặc trưng* (*characteristic system*) của phương trình $(\ref{1})$. Giả sử tìm được hai nghiệm riêng 
+độc lập của hệ này có dạng: 
+
+$$\tag{3}\label{3}
+u_{1}(x, y, w)=C_{1},\qquad u_{2}(x,y,w)=C_{2},$$
+
+
 
 <div align="center">.</div> 
 
