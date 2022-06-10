@@ -43,6 +43,7 @@ Một phương trình vi phân từng phần tựa tuyến tính bậc nhất (f
 $$ f(x,y,w)\frac{\partial w}{\partial x}+g(x,y,w)\frac{\partial w}{\partial y}=h(x,y,w). \tag{1}\label{1}$$
 
 
+
 <div align="center">.</div> 
 
 <div align="right"><i>(Hết)</i></div> 
