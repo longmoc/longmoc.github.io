@@ -61,7 +61,13 @@ là *hệ phương trình đặc trưng* (*characteristic system*) của phươn
 $$\tag{3}\label{3}
 u_{1}(x, y, w)=C_{1},\qquad u_{2}(x,y,w)=C_{2},$$
 
+với $C_1$ và $C_2$ là hằng số bất kỳ. Nghiệm riêng đó gọi là tích phân của hệ phương trình $(\ref{2})$. Khi đó có thể viết 
+nghiệm chung của phương trình $(\ref{1})$:
 
+$$\tag{4}\label{4}
+\Phi(u_{1},u_{2})=0$$
+
+trong đó $\Phi$ là một hàm bất kỳ của hai biến.
 
 <div align="center">.</div> 
 
