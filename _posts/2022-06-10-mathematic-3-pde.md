@@ -45,7 +45,7 @@ $$ f(x,y,w)\frac{\partial w}{\partial x}+g(x,y,w)\frac{\partial w}{\partial y}=h
 Các phương trình dạng này được gặp trong nhiều ứng dụng khác nhau như cơ học liên tục, khí động học, thủy động lực học, 
 dẫn truyền nhiệt, lý thuyết sóng, âm học, dòng chảy nhiều pha, kỹ thuật hóa học... 
 
-Nếu các hàm $f$, $g$ và $h$ độc lập so với $w$ chưa biết thì phương trình $\ref{1}$ là *tuyến tính* (*linear*).
+Nếu các hàm $f$, $g$ và $h$ độc lập so với $w$ chưa biết thì phương trình $(\ref{1})$ là *tuyến tính* (*linear*).
 
 <div align="center">.</div> 
 
