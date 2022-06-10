@@ -69,7 +69,5 @@ $$\tag{4}\label{4}
 
 trong đó $\Phi$ là một hàm bất kỳ của hai biến.
 
-<div align="center">.</div> 
-
-<div align="right"><i>(Hết)</i></div> 
+<div align="center">.</div>
 ---
