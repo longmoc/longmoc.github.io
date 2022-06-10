@@ -29,7 +29,7 @@ Một nghiệm đúng (*exact solution*) là nghiệm riêng của phương trì
 
 ### General Form
 
-Một phương trình vi phân từng phần bậc nhất (First-order PDE) với $n$ biến độc lập có dạng chuẩn:
+Một *phương trình vi phân từng phần bậc nhất* (*First-order PDE*) với $n$ biến độc lập có dạng chuẩn:
 
 $$F\biggl(x_1,x_2,\dots, x_n,w,\frac{\partial w}{\partial x_1},
 \frac{\partial w}{\partial x_2},\dots,\frac{\partial w}{\partial x_n}\biggl)=0$$
@@ -38,11 +38,14 @@ với $w=w(x_1,x_2,\dots, x_n)$ là hàm đa biến chưa biết và $F(\dots)$ 
 
 ### Quasilinear Equations, Characteristic System, General Solution
 
-Một phương trình vi phân từng phần tựa tuyến tính bậc nhất (first-order quasi-linear PDE) có hai biến độc lập sẽ có dạng chung:
+Một *phương trình vi phân từng phần tựa tuyến tính bậc nhất* (*first-order quasi-linear PDE*) có hai biến độc lập sẽ có dạng chung:
 
 $$ f(x,y,w)\frac{\partial w}{\partial x}+g(x,y,w)\frac{\partial w}{\partial y}=h(x,y,w). \tag{1}\label{1}$$
 
+Các phương trình dạng này được gặp trong nhiều ứng dụng khác nhau như cơ học liên tục, khí động học, thủy động lực học, 
+dẫn truyền nhiệt, lý thuyết sóng, âm học, dòng chảy nhiều pha, kỹ thuật hóa học... 
 
+Nếu các hàm $f$, $g$ và $h$ độc lập so với $w$ chưa biết thì phương trình $\ref{1}$ là *tuyến tính* (*linear*).
 
 <div align="center">.</div> 
 
