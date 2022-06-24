@@ -56,7 +56,7 @@ Hệ các phương trình vi phân thông thường
 $$\frac{dx}{f(x,y,w)}=\frac{dy}{g(x,y,w)}=\frac{dw}{h(x,y,w)} \tag{2}\label{2}$$
 
 là *hệ phương trình đặc trưng* (*characteristic system*) của phương trình $(\ref{1})$. Giả sử tìm được hai nghiệm riêng 
-độc lập của hệ này có dạng: 
+độc lập của hệ này có dạng:
 
 $$\tag{3}\label{3}
 u_{1}(x, y, w)=C_{1},\qquad u_{2}(x,y,w)=C_{2},$$
