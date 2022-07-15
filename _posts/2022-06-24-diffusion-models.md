@@ -23,7 +23,9 @@ ngẫu nhiên làm đầu vào của learned denoising process.
 Đặc biệt, mô hình Diffusion là mô hình latent variable ánh xạ đến latent space thông qua một *fixed Markov chain*. 
 Chuỗi Markov này thêm lần lượt nhiễu vào dữ liệu theo thứ tự xác định để thu được *approximate posterior* 
 $q(\textbf{x}_{1:T}|\textbf{x}_0)$, với $\textbf{x}_1, ... , \textbf{x}_T$ là các latent variable có cùng kích thước với ``
-$\textbf{x}_0$
+$\textbf{x}_0$. Ảnh đầu vào được biến đổi về dạng gần như hoàn toàn chỉ là Gaussian noise. Quá trình huấn luyện đảo 
+ngược quá trình này - tức là huấn luyện $p_\theta(x_{t-1}|x_t)$
+
 
 
 <div align="center">.</div> 
