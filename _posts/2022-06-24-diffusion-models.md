@@ -48,7 +48,7 @@ $$q(\textbf{x}_{1:T}|\textbf{x}_0):=\prod_{t=1}^{T}q(\textbf{x}_t|\textbf{x}_{t-
 
 Nhắc lại về phân phối Gaussian đơn biến:
 
-$$\mathcal{N}(x|\mu) = \frac{1}{(2\pi \sigma^2)^{1/2}}exp\left\{-\frac{1}{2\sigma^2}(x-\mu)^2\right\}$$
+$$\mathcal{N}(x|\mu) = \frac{1}{(2\pi \sigma^2)^{1/2}}\exp\left\{-\frac{1}{2\sigma^2}(x-\mu)^2\right\}$$
 
 <div align="center">.</div> 
 
