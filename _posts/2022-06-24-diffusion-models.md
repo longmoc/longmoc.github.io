@@ -46,9 +46,9 @@ thấp. Kết hợp điều này với giả thuyết Markov dẫn đến một 
 
 $$q(\textbf{x}_{1:T}|\textbf{x}_0):=\prod_{t=1}^{T}q(\textbf{x}_t|\textbf{x}_{t-1})=\prod_{t=1}^{T}\mathcal{N}(\textbf{x}_t|\sqrt{1-\beta_t}\textbf{x}_{t-1},\beta_t\mathbf{I})$$
 
-Nhắc lại về phân phối Gaussian đơn biến:
+Nhắc lại về phân phối Gaussian đơn biến
 
-$$\mathcal{N}(x|\mu) = \frac{1}{(2\pi \sigma^2)^{1/2}}\exp\left\{-\frac{1}{2\sigma^2}(x-\mu)^2\right\}$$
+$$\mathcal{N}(x|\mu,\sigma) = \frac{1}{(2\pi \sigma^2)^{1/2}}\ \exp\bigg(-\frac{1}{2\sigma^2}(x-\mu)^2\bigg)$$
 
 <div align="center">.</div> 
 
