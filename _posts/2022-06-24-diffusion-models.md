@@ -44,9 +44,11 @@ là ảnh), và *reverse process* (*reverse diffusion process*), biến đổi n
 Quá trình chuyển đổi chuỗi lấy mẫu của forward process có thể được đặt thành conditional Gaussian khi noise level đủ 
 thấp. Kết hợp điều này với giả thuyết Markov dẫn đến một tham số hóa đơn giản của forward process:
 
-$$q(\textbf{x}_{1:T}|\textbf{x}_0):=\prod_{t=1}^{T}q(\textbf{x}_t|\textbf{x}_{t-1})=\prod_{t=1}^{T}\mathcal{N}(\textbf{x}_t;\sqrt{1-\beta_t}\textbf{x}_{t-1},\beta_t\mathbf{I})$$
+$$q(\textbf{x}_{1:T}|\textbf{x}_0):=\prod_{t=1}^{T}q(\textbf{x}_t|\textbf{x}_{t-1})=\prod_{t=1}^{T}\mathcal{N}(\textbf{x}_t\middle\|\sqrt{1-\beta_t}\textbf{x}_{t-1},\beta_t\mathbf{I})$$
 
+Nhắc lại về phân phối Gaussian đơn biến:
 
+$$\mathcal{N} = \frac{1}{(2\pi \sigma^2)^{1/2}}exp\left\-\frac{1}{2\sigma^2}(x-){\right\}$$
 
 <div align="center">.</div> 
 
