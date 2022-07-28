@@ -73,6 +73,5 @@ Nếu $X,Y$ liên tục:
 $$f_{Z}(z) = \int_{x\in\Omega_X}f_X(x)f_Y(z-x) \ dx$$
 
 
-
 <div align="center">.</div>
 ---
