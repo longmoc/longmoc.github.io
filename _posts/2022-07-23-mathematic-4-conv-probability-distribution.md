@@ -41,7 +41,13 @@ $$\Omega_Z = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12} $$
 Xác suất các trường hợp này là không đồng nhất, chỉ có một cách đổ hai xí ngầu ra tổng bằng 2 nhưng có 6 cách để đổ ra 
 tổng bằng 7. Muốn tính xác suất mỗi trường hợp ta phải tính tổng tất cả các khả năng có thể của $X$ trong $\Omega_X{1,2,3,4,5,6}$
 
-$$\mathbb{P}(Z=3) = \mathbb{P}(X=1,Y=2) + \mathbb{P}(X=2,Y=1) + \mathbb{P}(X=3,Y=0) + \mathbb{P}(X=4,Y=-1) + \mathbb{P}(X=5,Y=-2) + \mathbb{P}(X=6,Y=-3)$$
+$$\begin{aligned} 
+\mathbb{P}(Z=3) &= \mathbb{P}(X=1,Y=2) + \mathbb{P}(X=2,Y=1) + \mathbb{P}(X=3,Y=0) + \mathbb{P}(X=4,Y=-1) + \mathbb{P}(X=5,Y=-2) + \mathbb{P}(X=6,Y=-3) \\
+&= \mathbb{P}(X=1)\mathbb{P}(Y=2) + \mathbb{P}(X=2)\mathbb{P}(Y=1) + \mathbb{P}(X=3)\mathbb{P}(Y=0) + 
+\mathbb{P}(X=4)\mathbb{P}(Y=-1) + \mathbb{P}(X=5)\mathbb{P}(Y=-2) + \mathbb{P}(X=6)\mathbb{P}(Y=-3) \\
+&= \frac{1}{6}\cdot\frac{1}{6} + \frac{1}{6}\cdot\frac{1}{6} + \frac{1}{6}\cdot 0 + \frac{1}{6}\cdot 0 + \frac{1}{6}\cdot 0 + \frac{1}{6}\cdot 0 \\
+&= \frac{1}{18}
+\end{aligned}$$
 
 <div align="center">.</div>
 ---
