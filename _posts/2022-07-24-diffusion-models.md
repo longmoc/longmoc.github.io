@@ -52,7 +52,19 @@ $$\mathcal{N}(x|\mu,\sigma) = \frac{1}{(2\pi \sigma^2)^{1/2}}\ \exp\bigg(-\frac{
 
 Áp dụng công thức [LTP](https://longmoc.github.io/mathematic/mathematic-4-conv-probability-distribution/)
 
-$$p_{X_t}(x_t)=\int p(x_t|x_{t-1})p(x_{t-1}) \ dx_{t-1}$$
+$$
+\begin{aligned} 
+p_{X_t}(x_t) &= \int p_{X_t|X_{t-1}}(x_t|x_{t-1})p_{X_{t-1}}(x_{t-1}) \ dx_{t-1} \\
+&= \int \mathcal{N}(x_t|x_{t-1}, 1)p(x_{t-1}) \ dx_{t-1} \\
+&= \int \mathcal{N}(x_t - x_{t-1}|0, 1)p(x_{t-1}) \ dx_{t-1}
+\end{aligned}
+$$
+
+Có thể thấy biểu thức cuối là định nghĩa toán học của [convolution](https://longmoc.github.io/mathematic/mathematic-4-conv-probability-distribution/#convolution), 
+do đó:
+
+$$p_{X_t}(x_t) = $$
+
 
 Ảnh đầu vào bị làm nhiễu bằng cộng thêm Gaussian noise:
 
