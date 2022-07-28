@@ -54,7 +54,7 @@ $$
 Dạng tổng quát hơn, để tính $p_{Z}(z)=\mathbb{P}(Z=z)$ với mọi $z$ ta dùng:
 
 $$\begin{aligned} 
-p_{Z}(z) &= \mathbb{P}(Z=2) \\
+p_{Z}(z) &= \mathbb{P}(Z=z) \\
 &= \sum_{x\in\Omega_X}\mathbb{P}(X=x,Y=z-x) \\
 &= \sum_{x\in\Omega_X}\mathbb{P}(X=x)\mathbb{P}(Y=z-x) \\
 &= \sum_{x\in\Omega_X}p_X(x)p_Y(z-x)
