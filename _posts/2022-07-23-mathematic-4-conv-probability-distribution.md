@@ -60,6 +60,22 @@ p_{Z}(z) &= \mathbb{P}(Z=z) \\
 &= \sum_{x\in\Omega_X}p_X(x)p_Y(z-x)
 \end{aligned}$$
 
+Công thức cuối là công thức rất tổng quát và được sử dụng cho mọi tổng của hai biến ngẫu nhiên rời rạc độc lập. Dễ dàng 
+đưa ra công thức tương tự với trường hợp $X$ và $Y$ là hai biến liên tục. Cuối cùng ta có công thức Convolution
+
+Với $X,Y$ là các biến ngẫu nhiên độc lập, $Z=X+Y$.
+Nếu $X,Y$ rời rạc:
+
+$$p_{Z}(z) = \sum_{x\in\Omega_X}p_X(x)p_Y(z-x)$$
+
+Nếu $X,Y$ liên tục:
+
+$$f_{Z}(z) = \int_{x\in\Omega_X}f_X(x)f_Y(z-x) \ dx$$
+
+
+
+
+
 
 <div align="center">.</div>
 ---
