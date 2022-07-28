@@ -50,6 +50,14 @@ Nhắc lại về phân phối Gaussian đơn biến
 
 $$\mathcal{N}(x|\mu,\sigma) = \frac{1}{(2\pi \sigma^2)^{1/2}}\ \exp\bigg(-\frac{1}{2\sigma^2}(x-\mu)^2\bigg)$$
 
+
+
+Ảnh đầu vào bị làm nhiễu bằng cộng thêm Gaussian noise:
+
+$$\textbf{x}_t \sim \mathcal{N}(x|0,1) \iff \textbf{x}_t = \textbf{x}_{t-1} + \mathcal{N}(0,1)$$
+
+
+
 <div align="center">.</div> 
 
 ---
