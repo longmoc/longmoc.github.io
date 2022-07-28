@@ -50,7 +50,7 @@ Nhắc lại về phân phối Gaussian đơn biến
 
 $$\mathcal{N}(x|\mu,\sigma) = \frac{1}{(2\pi \sigma^2)^{1/2}}\ \exp\bigg(-\frac{1}{2\sigma^2}(x-\mu)^2\bigg)$$
 
-
+Áp dụng công thức 
 
 Ảnh đầu vào bị làm nhiễu bằng cộng thêm Gaussian noise:
 

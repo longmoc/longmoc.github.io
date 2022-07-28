@@ -34,7 +34,7 @@ Vậy phân phối tổng lượng vàng khai thác được, $Z = X+Y$, là gì
 
 Cho $X,Y \sim Unif(1,6)$ là các lần tung độc lập của xí ngầu 6 mặt. Tính hàm khối xác suất (PMF) của $Z=X+Y$
 
-Phạm vi các trường hợp của Z là tổng của hai xí ngầu trong đó kết quả mỗi xí ngầu thuộc $\{1, 2, 3, 4, 5, 6\}$:
+Các giá trị của Z là tổng của hai xí ngầu trong đó kết quả mỗi xí ngầu thuộc không gian mẫu $\{1, 2, 3, 4, 5, 6\}$:
 
 $$\Omega_Z = \{2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12\} $$
 
@@ -71,9 +71,6 @@ $$p_{Z}(z) = \sum_{x\in\Omega_X}p_X(x)p_Y(z-x)$$
 Nếu $X,Y$ liên tục:
 
 $$f_{Z}(z) = \int_{x\in\Omega_X}f_X(x)f_Y(z-x) \ dx$$
-
-
-
 
 
 
