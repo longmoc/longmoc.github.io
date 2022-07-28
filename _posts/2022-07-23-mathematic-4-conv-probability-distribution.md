@@ -32,7 +32,7 @@ Vậy phân phối tổng lượng vàng khai thác được, $Z = X+Y$, là gì
 
 Để giải những bài toán như trên, hay tìm hiểu một ví dụ cụ thể như sau:
 
-`Cho $X,Y \sim Unif(1,4)$`
+Cho $X,Y \sim Unif(1,6)$ là các lần tung độc lập của xí ngầu 6 mặt. Tính hàm khối xác suất (PMF) của $Z=X+Y$
 
 <div align="center">.</div>
 ---
