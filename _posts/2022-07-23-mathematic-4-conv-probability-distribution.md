@@ -36,9 +36,12 @@ Cho $X,Y \sim Unif(1,6)$ là các lần tung độc lập của xí ngầu 6 m�
 
 Phạm vi các trường hợp của Z là tổng của hai xí ngầu trong đó kết quả mỗi xí ngầu thuộc ${1, 2, 3, 4, 5, 6}$:
 
-$$\omega_Z = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12} $$
+$$\Omega_Z = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12} $$
 
 Xác suất các trường hợp này là không đồng nhất, chỉ có một cách đổ hai xí ngầu ra tổng bằng 2 nhưng có 6 cách để đổ ra 
-tổng bằng 7. Muốn tính xác suất mỗi trường hợp ta phải tính tổng tất cả các khả năng có thể của $X$ trong $\omega_X{1,2,3,4,5,6}$
+tổng bằng 7. Muốn tính xác suất mỗi trường hợp ta phải tính tổng tất cả các khả năng có thể của $X$ trong $\Omega_X{1,2,3,4,5,6}$
+
+$$\mathbb{P}(Z=3) = \mathbb{P}(X=1,Y=2) + \mathbb{P}(X=2,Y=1) + \mathbb{P}(X=3,Y=0) + \mathbb{P}(X=4,Y=-1) + \mathbb{P}(X=5,Y=-2) + \mathbb{P}(X=6,Y=-3)$$
+
 <div align="center">.</div>
 ---
