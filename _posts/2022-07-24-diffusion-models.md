@@ -57,7 +57,7 @@ Với $\beta_1, ..., \beta_T$ là *variance schedule* (cố định hoặc đư�
 một Gaussian đẳng hướng với $T$ đủ lớn.
 {: .text-justify}
 
->Nhắc lại về phân phối Gaussian đơn biến
+>Nhắc lại về phân phối Gaussian đơn biến:
 >
 >$$\mathcal{N}(x|\mu,\sigma) = \frac{1}{(2\pi \sigma^2)^{1/2}}\ \exp\bigg(-\frac{1}{2\sigma^2}(x-\mu)^2\bigg)$$
 >
