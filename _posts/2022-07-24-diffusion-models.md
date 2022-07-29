@@ -91,7 +91,6 @@ Bắt đầu với Gaussian noise thuần túy $p(\textbf{x}_{T}) = \mathcal{N}(
 sẽ học được phân phối $p_\theta(\textbf{x}_{0:T})$ theo:
 {: .text-justify}
 
-
 $$
 \begin{aligned}
 p_\theta(\textbf{x}_{0:T}) &= p(\textbf{x}_T)\prod_{t=1}^{T}p_\theta(\textbf{x}_{t-1}|\textbf{x}_t) \\
