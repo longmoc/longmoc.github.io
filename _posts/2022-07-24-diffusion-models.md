@@ -53,38 +53,38 @@ thấp. Kết hợp điều này với giả thuyết Markov dẫn đến một 
 
 $$q(\textbf{x}_{1:T}|\textbf{x}_0):=\prod_{t=1}^{T}q(\textbf{x}_t|\textbf{x}_{t-1})=\prod_{t=1}^{T}\mathcal{N}(\textbf{x}_t|\sqrt{1-\beta_t}\textbf{x}_{t-1},\beta_t\mathbf{I})$$
 
-Nhắc lại về phân phối Gaussian đơn biến
+Với $\beta_1, ..., \beta_T$ là *variance schedule* (cố định hoặc được huấn luyện) mục đích đảm bảo $x_T$ tiến tới 
+một Gaussian đẳng hướng với $T$ đủ lớn.
 {: .text-justify}
 
-$$\mathcal{N}(x|\mu,\sigma) = \frac{1}{(2\pi \sigma^2)^{1/2}}\ \exp\bigg(-\frac{1}{2\sigma^2}(x-\mu)^2\bigg)$$
-
-Áp dụng công thức [LTP](https://longmoc.github.io/mathematic/mathematic-4-conv-probability-distribution/)
+>Nhắc lại về phân phối Gaussian đơn biến
+>
+>$$\mathcal{N}(x|\mu,\sigma) = \frac{1}{(2\pi \sigma^2)^{1/2}}\ \exp\bigg(-\frac{1}{2\sigma^2}(x-\mu)^2\bigg)$$
+>
+>Áp dụng công thức [LTP](https://longmoc.github.io/mathematic/mathematic-4-conv-probability-distribution/)
 {: .text-justify}
-
-$$
+>
+>$$
 \begin{aligned} 
 p_{X_t}(x_t) &= \int p_{X_t|X_{t-1}}(x_t|x_{t-1})p_{X_{t-1}}(x_{t-1}) \ dx_{t-1} \\
 &= \int \mathcal{N}(x_t|x_{t-1}, 1)p_{X_{t-1}}(x_{t-1}) \ dx_{t-1} \\
 &= \int \mathcal{N}(x_t - x_{t-1}|0, 1)p_{X_{t-1}}(x_{t-1}) \ dx_{t-1}
 \end{aligned}
 $$
-
-Có thể thấy biểu thức cuối là định nghĩa toán học của [convolution](https://longmoc.github.io/mathematic/mathematic-4-conv-probability-distribution/#convolution), 
+>
+>Có thể thấy biểu thức cuối là định nghĩa toán học của [convolution](https://longmoc.github.io/mathematic/mathematic-4-conv-probability-distribution/#convolution), 
 do đó:
 {: .text-justify}
+>
+>$$p_{X_t}(x_t) = (\mathcal{N}(0,1) * p_{X_{t-1}})(x_t)$$
+>
+>dẫn đến:
+>
+>$$X_t = \mathcal{N}(0,1) + X_{t-1}$$
 
-$$p_{X_t}(x_t) = (\mathcal{N}(0,1) * p_{X_{t-1}})(x_t)$$
-
-dẫn đến:
-{: .text-justify}
-
-$$X_t = \mathcal{N}(0,1) + X_{t-1}$$
-
-
-Ảnh đầu vào bị làm nhiễu bằng cộng thêm Gaussian noise:
-{: .text-justify}
-
-$$\textbf{x}_t \sim \mathcal{N}(x|0,1) \iff \textbf{x}_t = \textbf{x}_{t-1} + \mathcal{N}(0,1)$$
+>Vì thế tại mỗi bước, ảnh bị làm nhiễu bằng cộng thêm Gaussian noise:
+>
+>$$\textbf{x}_t \sim \mathcal{N}(x|0,1) \iff \textbf{x}_t = \textbf{x}_{t-1} + \mathcal{N}(0,1)$$
 
 
 
