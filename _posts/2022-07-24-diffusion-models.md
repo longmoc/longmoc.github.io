@@ -127,7 +127,18 @@ $$
 
 Sử dụng Bayes'rule:
 
-$$  $$
+$$ q(\textbf{x}_{t-1}|\textbf{x}_t,\textbf{x}_0) = \frac{q(\textbf{x}_t|\textbf{x}_{t-1})q(\textbf{x}_{t-1}|\textbf{x}_0)}{q(\textbf{x}_t|\textbf{x}_0)} \tag{2}\label{2} $$
+
+Từ $\ref{1}$ và $\ref{2}$:
+
+$$
+\begin{aligned}
+\mathbb{E}_q\bigg[-\log \frac{p_\theta(\textbf{x}_{0:T})}{q(\textbf{x}_{1:T}|\textbf{x}_0)}\bigg]  &= 
+\mathbb{E}_q\bigg[-\log p(\textbf{x}_T) - \log \frac{p_\theta(\textbf{x}_0|\textbf{x}_1)}{q(\textbf{x}_1|\textbf{x}_0)} - 
+\sum_{t=2}^{T} \log \frac{p_\theta(\textbf{x}_{t-1}|\textbf{x}_t)}{q(\textbf{x}_t|\textbf{x}_{t-1})}\bigg]
+\end{aligned}
+\tag{1}\label{1} 
+$$
 
 <div align="center">.</div> 
 
