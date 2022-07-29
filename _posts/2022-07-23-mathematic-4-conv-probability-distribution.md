@@ -39,7 +39,8 @@ Các giá trị của Z là tổng của hai xí ngầu với mỗi xí ngầu t
 $$\Omega_Z = \{2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12\} $$
 
 Xác suất các trường hợp này là không đồng nhất, chỉ có một cách đổ hai xí ngầu ra tổng bằng 2 nhưng có 6 cách để đổ ra 
-tổng bằng 7. Muốn tính xác suất mỗi trường hợp ta phải tính tổng tất cả các khả năng có thể của $X$ trong $\Omega_X\{1,2,3,4,5,6\}$
+tổng bằng 7. Muốn tính xác suất mỗi trường hợp ta phải tính tổng tất cả các khả năng có thể của $X$ trong 
+$$\Omega_X\{1,2,3,4,5,6\}$$
 
 $$
 \Tiny
