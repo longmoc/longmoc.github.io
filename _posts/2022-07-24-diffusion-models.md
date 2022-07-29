@@ -87,10 +87,10 @@ do đó:
 > (Ta tạm bỏ qua variance scheduled để đơn giản việc chứng minh)
 
 Trong quá trình huấn luyện, mô hình sẽ học cách đảo ngược quá trình diffusion trên để tạo ra ảnh mới.
-{: .text-justify}
-
 Bắt đầu với Gaussian noise thuần túy $p(\textbf{x}_{T}) = \mathcal{N}(\textbf{x}_T, \textbf{0}, \textbf{I})$, mô hình 
 sẽ học được phân phối $p_\theta(\textbf{x}_{0:T})$ theo:
+{: .text-justify}
+
 
 $$
 \begin{aligned}
