@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "What am I doing hear?"
+title: "What am I doing here?"
 permalink: /about-me/
 toc: true
 header:
