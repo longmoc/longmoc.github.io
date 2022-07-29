@@ -141,14 +141,14 @@ $$z = \mathbf{c}^T \mathbf{x} \geq \mathbf{y}^T \mathbf{A} \mathbf{x} = \mathbf{
 
 Đây chính là định lý ***weak duality*** (*đối ngẫu yếu*): 
 >*the primal problem has optimal value larger than or equal to 
-the dual problem* {: .text-justify}
-> {: .text-justify}
+the dual problem* 
+{: .text-justify}
 
 Đồng nghĩa với việc *duality gap* là lớn hơn hoặc bằng $0$. Ngoài ra còn có định lý ***strong duality*** với $z=\tilde{z}$:
 {: .text-justify}
 
 >Strong duality is a condition in mathematical optimization in which the primal optimal objective and the dual optimal objective are equal
-> {: .text-justify}
+{: .text-justify}
 
 Trở lại với bài toán Earth-Mover, $\tilde{z}$ cực đại tại $y^*$, đặt:
 {: .text-justify}
