@@ -16,11 +16,13 @@ header:
 ---
 
 *Phần cuối ghi chú cần thiết về khoảng cách Wasserstein: đối ngẫu Kantorovich-Rubinstein*
+{: .text-justify}
 
 ---
 
 Trong phần trước ta đã nêu ra công thức của Earth-Mover và Wesserstein distance theo kết quả của phương pháp đối ngẫu 
 Kantorovich-Rubinstein. Phần này sẽ tìm hiểu công thức đó có được như thế nào.
+{: .text-justify}
 
 ## Linear programming
 
@@ -28,21 +30,26 @@ Trở lại bài toán tính công $\sum_{x,y}\gamma(x,y) \mathbf{D}(x,y)$, vi�
 $\gamma$ và $\mathbf{D}$ có thể viết dưới dạng $\vec{\mathbf{D}}^T\vec{\gamma}$, trong đó $\vec{\mathbf{D}}$ và $\vec{\gamma}$ lần lượt là các 
 dạng flatten vector của $\mathbf{D}$ và $\gamma$. Khi đó có thể đưa về giải quyết bài toán bằng ***Quy hoạch tuyến tính - Linear 
 Programming***. Các *Linear program* là các bài toán được trình bày dưới dạng chính tắc:
+{: .text-justify}
 
 > Find a vector $\mathbf{x}$ that maximizes $\mathbf{c}^T\mathbf{x}$ subject to $\mathbf{A}\mathbf{x} \leq \mathbf{b}$ and $\mathbf{x} \geq 0$.
 
 Cụ thể dạng *linear program* trong trường hợp này là tối thiểu hóa $\vec{\mathbf{D}}^T\vec{\gamma}$. Trong đó $\vec{\gamma}$ 
 tương đương với $\mathbf{x}$ và $\vec{\mathbf{D}}$ tương đương với $\mathbf{c}$.
+{: .text-justify}
 
 Điều kiện ràng buộc $\mathbf{A}\mathbf{x} \leq \mathbf{b}$ tổng hợp từ các điều kiện $\sum_x \gamma(x,y) = P_r(y)$ và 
 $\sum_y \gamma(x,y) = P_{\theta}(x)$.
+{: .text-justify}
 
 $$\mathbf{b} = \begin{bmatrix} P_r \\ P_\theta\end{bmatrix}$$
 
 Gọi số state của hai phân phối $P_{\theta}$ và $P_r$ là $l$, khi đó $\mathbf{b} \in \mathbb{R}^{2l}$ và 
 $\vec{\gamma} \in \mathbb{R}^{l^2}$. $\mathbf{A}\vec{\gamma} = \mathbf{b} \Rightarrow \mathbf{A} \in \mathbb{R}^{2l \times l^2}$.
+{: .text-justify}
 
 Ví dụ với $l=3$:
+{: .text-justify}
 
 $$
 \underbrace{
@@ -82,8 +89,10 @@ P_\theta(x_3) \\
 $$
 
 Khi đã biết $\mathbf{c}^T$, $\mathbf{A}$ và $\mathbf{b}$ sử dụng *LP* tìm được $\mathbf{x}$ hay $\vec{\gamma}$ tối ưu.
+{: .text-justify}
 
 Thông tin thêm về *linear programming* có thể tìm hiểu tại [đây](https://en.wikipedia.org/wiki/Linear_programming).
+{: .text-justify}
 
 
 ## Dual form
@@ -91,6 +100,7 @@ Thông tin thêm về *linear programming* có thể tìm hiểu tại [đây](h
 Thực tế cách tối ưu bằng *Linear programming* không khả thi trong trường hợp số lượng các trạng thái là rất nhiều (ví dụ 
 số cột đất có thể là $10^6$) hoặc số chiều dữ liệu lớn (hàng ngàn chiều thay vì một chiều). Vì thế tính toán $\gamma$ 
 trong trường hợp này là rất khó khăn.
+{: .text-justify}
 
 Tuy nhiên nhiều trường hợp việc tìm $\gamma$ là không cần thiết, thay vào đó ta chỉ quan tâm tới một giá trị duy nhất 
 là $\mathrm{EMD}$ hay $W$. Ví dụ một ứng dụng của *Wasserstein distance* vào việc huấn luyện mô hình *Generative 
@@ -98,9 +108,11 @@ Adversarial Network* (*GAN*): generator network sinh ra phân phối sinh $P_{\t
 dụng để huấn luyện mạng này. Thông thường, việc huấn luyện này cần tính giá trị $\nabla_{P_\theta} \mathrm{EMD}(P_{\theta}, P_r)$. 
 Tuy nhiên $P_\theta$ và $P_r$ không đóng vai trò là các biến của quá trình tối ưu nên tính toán trực tiếp gradient không 
 khả khi.
+{: .text-justify}
 
 May mắn có một cách tính $\mathrm{EMD}$ tiện dụng hơn. Mỗi *LP* đều có hai dạng thể hiện vấn đề: dạng chính (primal form) 
 và dạng đối ngẫu (dual form).
+{: .text-justify}
 
 $$\begin{array}{c|c}
 
@@ -122,23 +134,29 @@ $$\begin{array}{c|c}
 Mục tiêu $\tilde{z}$ phụ thuộc trực tiếp vào $\mathbf{b}$, đồng nghĩa với việc các phân phối $P_r$ và $P_\theta$ 
 giờ đây đã trở thành biến của hàm tối ưu - điều ta không thể đạt được nếu dùng *primal form*. Dễ thấy $\tilde{z}$ là 
 cận dưới của $z$:
+{: .text-justify}
 
 $$z = \mathbf{c}^T \mathbf{x} \geq \mathbf{y}^T \mathbf{A} \mathbf{x} = \mathbf{y}^T \mathbf{b} = \tilde{z}$$
 
 Đây chính là định lý ***weak duality*** (*đối ngẫu yếu*): 
 >*the primal problem has optimal value larger than or equal to 
 the dual problem*
+> {: .text-justify}
 
 Đồng nghĩa với việc *duality gap* là lớn hơn hoặc bằng $0$. Ngoài ra còn có định lý ***strong duality*** với $z=\tilde{z}$:
+{: .text-justify}
 
 >Strong duality is a condition in mathematical optimization in which the primal optimal objective and the dual optimal objective are equal
+> {: .text-justify}
 
 Trở lại với bài toán Earth-Mover, $\tilde{z}$ cực đại tại $y^*$, đặt:
+{: .text-justify}
 
 $$ \mathbf{y^*} = \begin{bmatrix} \mathbf{f} \\ \mathbf{g} \end{bmatrix}$$
 
 với $\mathbf{f}, \mathbf{g} \in \mathbb{R}^d$. Lúc này $\mathrm{EMD}(P_\theta, P_r) = \mathbf{f}^T P_\theta + \mathbf{g}^T P_r$. 
 Từ điều kiện ràng buộc $\mathbf{A}^T \mathbf{y} \leq \mathbf{c}$:
+{: .text-justify}
 
 $$
 \underbrace{
@@ -185,12 +203,15 @@ $$ \Leftrightarrow f(x_i) + g(y_j) \leq \mathbf{D}_{i,j}$$.
 
 Biết $\mathbf{D}_{i,i} = 0 \Rightarrow g(y_i) \leq -f(x_i) \Rightarrow f(x_i) + g(y_j) \leq f(x_i) - f(x_j)$. Vì vậy để 
 tối ưu đạt cực đại thì $g(y_i) = -f(x_i) \Leftrightarrow g = f$. 
+{: .text-justify}
 
 Khi đó ta có thể viết $\mathbf{f}^T P_r + \mathbf{g}^T P_\theta$ thành:
+{: .text-justify}
 
 $$\mathbb{E}_{x \sim P_r}[f(x)] - \mathbb{E}_{x \sim P_\theta}[f(x)] \tag{1}\label{1}$$
 
 Mặt khác, lúc này:
+{: .text-justify}
 
 $$
 \begin{aligned}
@@ -204,15 +225,18 @@ $$
 $$ \Leftrightarrow \ |f(x_i) - f(x_j)| \leq \mathbf{D}_{i,j} \tag{2}\label{2} $$
 
 Trước khi tiếp tục hãy đến với khái niệm của ***Lipschitz function***:
+{: .text-justify}
 
 > Xét $d_X$ và $d_Y$ là các hàm tính khoảng cách trên không gian $X$ và $Y$. Hàm số $f: X \to Y$ được gọi là $K$-Lipschitz 
 > nếu với mọi $x_1, x_2 \in X$,
+> {: .text-justify}
 > 
 > $$ d_Y(f(x_1), f(x_2)) \le K d_X(x_1, x_2) $$
 
 Hiểu một cách trực quan thì dộ dốc của hàm *$K$-Lipschitz* không bao giờ vượt quá giá trị $K$. Trở lại với $\eqref{2}$, 
 xét $|f(x_i) - f(x_j)|$ là *Euclidean distance* giữa $f(x_i)$ và $f(x_j)$, dễ thấy hàm $f$ là hàm *1-Lipschitz* ($K=1$).
 $\mathrm{EMD}(P_{\theta}, P_r)$ giải theo dạng đối ngẫu là cận trên của $\eqref{1}$. Vì thế ta có:
+{: .text-justify}
 
 $$ \mathrm{EMD}(P_{\theta}, P_r) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E}_{x \sim P_{\theta}}[f(x)] - \mathbb{E}_{x \sim P_r}[f(x)] $$
 
@@ -220,13 +244,16 @@ $$ \mathrm{EMD}(P_{\theta}, P_r) = \sup_{\lVert f \lVert_{L \leq 1}} \ \mathbb{E
 
 Ở trên ta đã chứng minh công thức với các phân phối rời rạc. Đối với các phân phối liên tục, công thức cũng có dạng 
 tương tự. Ta sẽ chứng minh công thức này qua việc chứng minh định lý ***Kantorovich-Rubinstein***.
+{: .text-justify}
 
 **Theorem.**  *(Kantorovich-Rubinstein)*
+{: .text-justify}
 
 $$ W(p, q) = \inf_{\pi \in \Pi(p, q)} \mathbb{E}_{(x,y) \sim \pi}\big[\|x - y\|\big] =
 \sup_{\lVert h \lVert_{L \leq 1}} \bigg[\mathbb{E}_{x \sim p}[h(x)] - \mathbb{E}_{y \sim q}[h(y)]\bigg] $$
 
 *Chứng minh*. Nhắc lại từ phần trước:
+{: .text-justify}
 
 $$\begin{aligned} 
 &\int_{x}{\gamma(x,y) \ dx} = p_r(y) \\
@@ -234,6 +261,7 @@ $$\begin{aligned}
 \end{aligned} $$
 
 Sử dụng nhân tử Lagrange $f: \mathcal{X} \to \mathbb{R}, \ g: \mathcal{Y} \to \mathbb{R}$, ta có:
+{: .text-justify}
 
 $$\begin{aligned} 
 \mathcal{L}(\gamma, f, g) &= 
@@ -243,6 +271,7 @@ $$\begin{aligned}
 \end{aligned} $$
 
 Sử dụng *strong duality*:
+{: .text-justify}
 
 $$
 \begin{aligned} 
@@ -253,12 +282,14 @@ W(P_\theta, P_r) &= \inf_{\gamma \in \Pi}{\sup_{f, g}{\mathcal{L}(\gamma, f, g)}
 $$
 
 Mặt khác: $$ f(x) + g(y) \leq \|x-y\| $$ nên:
+{: .text-justify}
 
 $$
 W(P_\theta, P_r) = \sup_{f, g}{\bigg[\mathbb{E}_{x \sim P_{\theta}}[f(x)] + \mathbb{E}_{y \sim P_r}[g(y)]\bigg]}
 $$
 
 Bây giờ, xét $h$ là một hàm $1$-*Lipschitz*:
+{: .text-justify}
 
 $$\begin{aligned} 
 \mathbb{E}_{x \sim P_{\theta}}[h(x)] - \mathbb{E}_{y \sim P_r}[h(y)] &= 
@@ -267,18 +298,21 @@ $$\begin{aligned}
 \end{aligned}$$
 
 Kéo theo:
+{: .text-justify}
 
 $$
 \sup_{\lVert h \lVert_{L \leq 1}}{\bigg[\mathbb{E}_{x \sim P_{\theta}}[h(x)] - \mathbb{E}_{y \sim P_r}[h(y)]\bigg]} \leq W(P_\theta, P_r)
 $$
 
 Với mọi $f,g$ thỏa mãn $$f(x) + g(y) \leq \|x-y\|$$:
+{: .text-justify}
 
 $$
 f(x) + g(y) \leq h(x) - h(y)
 \Rightarrow \mathbb{E}_{x \sim P_{\theta}}[f(x)] + \mathbb{E}_{y \sim P_r}[g(y)] \leq \mathbb{E}_{x \sim P_{\theta}}[h(x)] - \mathbb{E}_{y \sim P_r}[h(y)]$$
 
 Tổng hợp lại được:
+{: .text-justify}
 
 $$\begin{aligned} 
 W(P_\theta, P_r) &= \sup_{f, g}{\bigg[\mathbb{E}_{x \sim P_{\theta}}[f(x)] + \mathbb{E}_{y \sim P_r}[g(y)]\bigg]} \\
@@ -287,6 +321,7 @@ W(P_\theta, P_r) &= \sup_{f, g}{\bigg[\mathbb{E}_{x \sim P_{\theta}}[f(x)] + \ma
 \end{aligned}$$
 
 Vì vậy:
+{: .text-justify}
 
 $$ W(P_\theta, P_r) = \sup_{\lVert h \lVert_{L \leq 1}} \mathbb{E}_{x \sim P_{\theta}}[h(x)] - \mathbb{E}_{y \sim P_r}[h(y)]$$
 
