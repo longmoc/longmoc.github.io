@@ -62,7 +62,6 @@ một Gaussian đẳng hướng với $T$ đủ lớn.
 >$$\mathcal{N}(x|\mu,\sigma) = \frac{1}{(2\pi \sigma^2)^{1/2}}\ \exp\bigg(-\frac{1}{2\sigma^2}(x-\mu)^2\bigg)$$
 >
 >Áp dụng công thức [LTP](https://longmoc.github.io/mathematic/mathematic-4-conv-probability-distribution/)
-{: .text-justify}
 >
 >$$
 \begin{aligned} 
@@ -74,17 +73,18 @@ $$
 >
 >Có thể thấy biểu thức cuối là định nghĩa toán học của [convolution](https://longmoc.github.io/mathematic/mathematic-4-conv-probability-distribution/#convolution), 
 do đó:
-{: .text-justify}
 >
 >$$p_{X_t}(x_t) = (\mathcal{N}(0,1) * p_{X_{t-1}})(x_t)$$
 >
 >dẫn đến:
 >
 >$$X_t = \mathcal{N}(0,1) + X_{t-1}$$
-
+>
 >Vì thế tại mỗi bước, ảnh bị làm nhiễu bằng cộng thêm Gaussian noise:
 >
 >$$\textbf{x}_t \sim \mathcal{N}(x|0,1) \iff \textbf{x}_t = \textbf{x}_{t-1} + \mathcal{N}(0,1)$$
+> 
+> (Trong chứng minh trên ta tạm bỏ qua variance scheduled)
 
 
 
