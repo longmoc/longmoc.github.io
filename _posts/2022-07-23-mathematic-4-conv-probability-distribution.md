@@ -10,16 +10,20 @@ header:
 ---
 
 *Cách tìm ra phân phối tổng của hai biến ngẫu nhiên độc lập sử dụng Convolution*
+{: .text-justify}
 
 ---
 
 Trước tiên hãy nhắc lại Law of Total Probability (LTP) cho biến ngẫu nhiên rời rạc:
+{: .text-justify}
 
 Với $X$, $Y$ là hai biến ngẫu nhiên rời rạc:
+{: .text-justify}
 
 $$ p_X(x) = \sum_y p_{X,Y}(x,y) = \sum _y p_{X|Y}(x|y)p_Y(y)$$
 
 Đối với biến liên tục, nếu $X$, $Y$ là hai biến ngẫu nhiên liên tục:
+{: .text-justify}
 
 $$ f_X(x) = \int_{-\infty}^{+\infty} f_{X,Y}(x,y) \ dy = \int_{-\infty}^{+\infty} f_{X|Y}(x|y)f_Y(y) \ dy$$
 
@@ -29,17 +33,23 @@ Trong xác suất thống kê, *convolution* là phép toán cho phép ta lấy 
 Giả sử một công ty khai thác có sản lượng vàng khai thác được là $X$ tấn mỗi năm ở nước A và $Y$ tấn mỗi năm ở nước B. việc 
 khai thác của công ty giữa các nước này là hoàn toàn độc lập với nhau, và bạn đã có một vài phân phối để mô hình hóa chúng. 
 Vậy phân phối tổng lượng vàng khai thác được $Z = X+Y$ là gì?
+{: .text-justify}
 
 Để giải những bài toán như trên, hay tìm hiểu một ví dụ cụ thể như sau:
+{: .text-justify}
 
 Cho $X,Y \sim Unif(1,6)$ là các lần tung độc lập của xí ngầu 6 mặt. Tính hàm khối xác suất (PMF) của $Z=X+Y$
+{: .text-justify}
 
 Các giá trị của Z là tổng của hai xí ngầu với mỗi xí ngầu thuộc không gian mẫu $$\{1, 2, 3, 4, 5, 6\}$$:
+{: .text-justify}
 
 $$\Omega_Z = \{2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12\} $$
 
 Xác suất các trường hợp này là không đồng nhất, chỉ có một cách đổ hai xí ngầu ra tổng bằng 2 nhưng có 6 cách để đổ ra 
 tổng bằng 7. Muốn tính xác suất mỗi trường hợp ta phải tính tổng tất cả các khả năng có thể của $X$ trong 
+{: .text-justify}
+
 $$\Omega_X\{1,2,3,4,5,6\}$$
 
 $$
@@ -53,6 +63,7 @@ $$
 \end{aligned}$$
 
 Dạng tổng quát hơn, để tính $p_{Z}(z)=\mathbb{P}(Z=z)$ với mọi $z$ ta dùng:
+{: .text-justify}
 
 $$\begin{aligned} 
 p_{Z}(z) &= \mathbb{P}(Z=z) \\
@@ -62,14 +73,18 @@ p_{Z}(z) &= \mathbb{P}(Z=z) \\
 \end{aligned}$$
 
 Công thức cuối là công thức rất tổng quát và được sử dụng cho mọi tổng của hai biến ngẫu nhiên rời rạc độc lập. Dễ dàng 
-đưa ra công thức tương tự với trường hợp $X$ và $Y$ là hai biến liên tục. Cuối cùng ta có công thức Convolution
+đưa ra công thức tương tự với trường hợp $X$ và $Y$ là hai biến liên tục. Cuối cùng ta có công thức Convolution:
+{: .text-justify}
 
 Với $X,Y$ là các biến ngẫu nhiên độc lập, $Z=X+Y$.
+{: .text-justify}
 Nếu $X,Y$ rời rạc:
+{: .text-justify}
 
 $$p_{Z}(z) = \sum_{x\in\Omega_X}p_X(x)p_Y(z-x)$$
 
 Nếu $X,Y$ liên tục:
+{: .text-justify}
 
 $$f_{Z}(z) = \int_{x\in\Omega_X}f_X(x)f_Y(z-x) \ dx$$
 
