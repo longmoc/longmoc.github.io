@@ -76,13 +76,13 @@ Công thức cuối là công thức rất tổng quát và được sử dụng
 {: .text-justify}
 
 >Với $X,Y$ là các biến ngẫu nhiên độc lập, $Z=X+Y$.
-
->*Nếu $X,Y$ rời rạc:
-
+>
+>Nếu $X,Y$ rời rạc:
+>
 >$$p_{Z}(z) = \sum_{x\in\Omega_X}p_X(x)p_Y(z-x)$$
-
->*Nếu $X,Y$ liên tục:
-
+>
+>Nếu $X,Y$ liên tục:
+>
 >$$f_{Z}(z) = \int_{x\in\Omega_X}f_X(x)f_Y(z-x) \ dx$$
 
 
