@@ -83,7 +83,7 @@ do đó:
 >
 >$$\textbf{x}_t \sim \mathcal{N}(x|0,1) \iff \textbf{x}_t = \textbf{x}_{t-1} + \mathcal{N}(0,1)$$
 > 
-> (Ta tạm bỏ qua variance scheduled)
+> (Ta tạm bỏ qua variance scheduled để đơn giản việc chứng minh)
 
 
 
