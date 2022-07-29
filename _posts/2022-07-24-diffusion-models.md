@@ -105,7 +105,7 @@ transition chỉ phụ thuộc vào timestep trước vì tính chất của Mar
 ## Optimizing
 
 Mô hình Diffusion được huấn luyện nhằm tìm ra reverse Markov transition tối đa hóa likelihood của training data. Trong 
-thực tế điều này tương đương với việc tối thiểu hóa giới hạn trên của trừ ($-$) log likelihood.
+thực tế điều này tương đương với việc tối thiểu hóa giới hạn trên của âm ($-$) log likelihood.
 {: .text-justify}
 
 $$\mathbb{E}\big[-\log p_\theta(\textbf{x}_0)\big] \leq \mathbb{E}_q\bigg[-\log \frac{p_\theta(\textbf{x}_{0:T})}{q(\textbf{x}_{1:T}|\textbf{x}_0)}\bigg] = L_{vlb}$$
