@@ -110,6 +110,14 @@ thực tế điều này tương đương với việc tối thiểu hóa giới
 
 $$\mathbb{E}\big[-\log p_\theta(\textbf{x}_0)\big] \leq \mathbb{E}_q\bigg[-\log \frac{p_\theta(\textbf{x}_{0:T})}{q(\textbf{x}_{1:T}|\textbf{x}_0)}\bigg] = L_{vlb}$$
 
+*(Dễ thấy $L_{vlb}$ chính là giới hạn trên cần tối thiểu, đây cũng chính là âm của [Evidence lower bound - ELBO](https://en.wikipedia.org/wiki/Evidence_lower_bound))*
+{: .text-justify}
+
+Từ khai triển Markov cho $p_\theta(\textbf{x}_{0:T})$ ở trên ta có:
+
+$$
+\mathbb{E}_q\bigg[-\log \frac{p_\theta(\textbf{x}_{0:T})}{q(\textbf{x}_{1:T}|\textbf{x}_0)}\bigg]  = 
+$$
 
 <div align="center">.</div> 
 
