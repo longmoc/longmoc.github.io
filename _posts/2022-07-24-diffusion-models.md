@@ -138,7 +138,6 @@ $$
 \sum_{t=2}^{T} \log \frac{p_\theta(\textbf{x}_{t-1}|\textbf{x}_t)q(\textbf{x}_{t-1}|\textbf{x}_0)}
 {q(\textbf{x}_{t-1}|\textbf{x}_t,\textbf{x}_0)q(\textbf{x}_t|\textbf{x}_0)}\bigg]
 \end{aligned}
-\tag{1}\label{1} 
 $$
 
 <div align="center">.</div> 
