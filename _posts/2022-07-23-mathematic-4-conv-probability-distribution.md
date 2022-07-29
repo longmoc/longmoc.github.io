@@ -38,7 +38,7 @@ Vậy phân phối tổng lượng vàng khai thác được $Z = X+Y$ là gì?
 Để giải những bài toán như trên, hay tìm hiểu một ví dụ cụ thể như sau:
 {: .text-justify}
 
-Cho $X,Y \sim Unif(1,6)$ là các lần tung độc lập của xí ngầu 6 mặt. Tính hàm khối xác suất (PMF) của $Z=X+Y$
+>Cho $X,Y \sim Unif(1,6)$ là các lần tung độc lập của xí ngầu 6 mặt. Tính hàm khối xác suất (PMF) của $Z=X+Y$
 {: .text-justify}
 
 Các giá trị của Z là tổng của hai xí ngầu với mỗi xí ngầu thuộc không gian mẫu $$\{1, 2, 3, 4, 5, 6\}$$:
@@ -75,17 +75,17 @@ Công thức cuối là công thức rất tổng quát và được sử dụng
 đưa ra công thức tương tự với trường hợp $X$ và $Y$ là hai biến liên tục. Cuối cùng ta có công thức Convolution:
 {: .text-justify}
 
-Với $X,Y$ là các biến ngẫu nhiên độc lập, $Z=X+Y$.
+>Với $X,Y$ là các biến ngẫu nhiên độc lập, $Z=X+Y$.
 {: .text-justify}
-Nếu $X,Y$ rời rạc:
-{: .text-justify}
-
-$$p_{Z}(z) = \sum_{x\in\Omega_X}p_X(x)p_Y(z-x)$$
-
-Nếu $X,Y$ liên tục:
+>Nếu $X,Y$ rời rạc:
 {: .text-justify}
 
-$$f_{Z}(z) = \int_{x\in\Omega_X}f_X(x)f_Y(z-x) \ dx$$
+>$$p_{Z}(z) = \sum_{x\in\Omega_X}p_X(x)p_Y(z-x)$$
+
+>Nếu $X,Y$ liên tục:
+{: .text-justify}
+
+>$$f_{Z}(z) = \int_{x\in\Omega_X}f_X(x)f_Y(z-x) \ dx$$
 
 
 <div align="center">.</div>
