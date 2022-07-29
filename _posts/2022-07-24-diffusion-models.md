@@ -25,33 +25,40 @@ ngẫu nhiên làm đầu vào của learned denoising process.
 Chuỗi Markov này thêm lần lượt nhiễu vào dữ liệu theo thứ tự xác định để thu được *approximate posterior* 
 $q(\textbf{x}_{1:T}|\textbf{x}_0)$, với $\textbf{x}_1, ... , \textbf{x}_T$ là các latent variable có cùng kích thước với ``
 $\textbf{x}_0$. Quá trình này là *forward process* hoặc *diffusion process*.
+{: .text-justify}
 
 ![]({{ site.url }}{{ site.baseurl }}/assets/images/posts/diffusion-1-1.png){:style="display:block; margin-left:auto; margin-right:auto"}
 
 Ảnh đầu vào được biến đổi về dạng gần như hoàn toàn chỉ là Gaussian noise. Quá trình huấn luyện là nghịch 
 đảo của *forward process* - tức là huấn luyện $p_\theta(x_{t-1}|x_t)$. Đi ngược chuỗi đó ta sẽ sinh ảnh mới từ noise sample.
+{: .text-justify}
 
 ![]({{ site.url }}{{ site.baseurl }}/assets/images/posts/diffusion-1-2.png){:style="display:block; margin-left:auto; margin-right:auto"}
 
 Các mô hình Diffusion đã đạt State-of-the-Art trong nhóm mô hình sinh ảnh. Việc không yêu cầu adversarial training 
 giúp mô hình này có lợi thế về scalability và parallelizability.
+{: .text-justify}
 
 
 ## Mathematical theory
 
 Như đã giới thiệu, Diffusion model bao gồm *forward process* (*diffusion process*), lần lượt làm nhiễu dữ liệu (thường 
 là ảnh), và *reverse process* (*reverse diffusion process*), biến đổi nhiễu thành dạng sample thuộc phân phối đích.
+{: .text-justify}
 
 Quá trình chuyển đổi chuỗi lấy mẫu của forward process có thể được đặt thành conditional Gaussian khi noise level đủ 
 thấp. Kết hợp điều này với giả thuyết Markov dẫn đến một tham số hóa đơn giản của forward process:
+{: .text-justify}
 
 $$q(\textbf{x}_{1:T}|\textbf{x}_0):=\prod_{t=1}^{T}q(\textbf{x}_t|\textbf{x}_{t-1})=\prod_{t=1}^{T}\mathcal{N}(\textbf{x}_t|\sqrt{1-\beta_t}\textbf{x}_{t-1},\beta_t\mathbf{I})$$
 
 Nhắc lại về phân phối Gaussian đơn biến
+{: .text-justify}
 
 $$\mathcal{N}(x|\mu,\sigma) = \frac{1}{(2\pi \sigma^2)^{1/2}}\ \exp\bigg(-\frac{1}{2\sigma^2}(x-\mu)^2\bigg)$$
 
 Áp dụng công thức [LTP](https://longmoc.github.io/mathematic/mathematic-4-conv-probability-distribution/)
+{: .text-justify}
 
 $$
 \begin{aligned} 
@@ -63,15 +70,18 @@ $$
 
 Có thể thấy biểu thức cuối là định nghĩa toán học của [convolution](https://longmoc.github.io/mathematic/mathematic-4-conv-probability-distribution/#convolution), 
 do đó:
+{: .text-justify}
 
 $$p_{X_t}(x_t) = (\mathcal{N}(0,1) * p_{X_{t-1}})(x_t)$$
 
 dẫn đến:
+{: .text-justify}
 
 $$X_t = \mathcal{N}(0,1) + X_{t-1}$$
 
 
 Ảnh đầu vào bị làm nhiễu bằng cộng thêm Gaussian noise:
+{: .text-justify}
 
 $$\textbf{x}_t \sim \mathcal{N}(x|0,1) \iff \textbf{x}_t = \textbf{x}_{t-1} + \mathcal{N}(0,1)$$
 
