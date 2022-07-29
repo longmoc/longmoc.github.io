@@ -11,6 +11,7 @@ header:
 
 *Các khái niệm được sử dụng trong Machine learning như Cross-entropy, Kullback-Leibler divergence và 
 Jensen-Shannon divergence được bắt nguồn từ lý thuyết thông tin.*
+{: .text-justify}
 
 ---
 
