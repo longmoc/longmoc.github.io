@@ -50,8 +50,8 @@ là ảnh), và *reverse process* (*reverse diffusion process*), biến đổi n
 Quá trình chuyển đổi chuỗi lấy mẫu của forward process có thể được đặt thành conditional Gaussian khi noise level đủ 
 thấp. Kết hợp điều này với giả thuyết Markov dẫn đến một tham số hóa đơn giản của forward process:
 {: .text-justify}
+
 $$q(\textbf{x}_{1:T}|\textbf{x}_0):=\prod_{t=1}^{T}q(\textbf{x}_t|\textbf{x}_{t-1})=\prod_{t=1}^{T}\mathcal{N}(\textbf{x}_t|\sqrt{1-\beta_t}\textbf{x}_{t-1},\beta_t\mathbf{I})$$
-{: .text-center}
 
 Với $\beta_1, ..., \beta_T$ là *variance schedule* (cố định hoặc được huấn luyện) mục đích đảm bảo $x_T$ tiến tới 
 một Gaussian đẳng hướng với $T$ đủ lớn.
@@ -86,7 +86,8 @@ do đó:
 > 
 > (Ta tạm bỏ qua variance scheduled để đơn giản việc chứng minh)
 
-
+Trong quá trình huấn luyện, mô hình sẽ học cách đảo ngược quá trình diffusion trên để tạo ra ảnh mới.
+{: .text-justify}
 
 <div align="center">.</div> 
 
