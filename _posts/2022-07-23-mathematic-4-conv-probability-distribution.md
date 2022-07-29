@@ -77,7 +77,7 @@ Công thức cuối là công thức rất tổng quát và được sử dụng
 
 >Với $X,Y$ là các biến ngẫu nhiên độc lập, $Z=X+Y$.
 {: .text-justify}
->Nếu $X,Y$ rời rạc:
+Nếu $X,Y$ rời rạc:
 {: .text-justify}
 
 >$$p_{Z}(z) = \sum_{x\in\Omega_X}p_X(x)p_Y(z-x)$$
