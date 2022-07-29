@@ -113,10 +113,16 @@ $$\mathbb{E}\big[-\log p_\theta(\textbf{x}_0)\big] \leq \mathbb{E}_q\bigg[-\log 
 *(Dễ thấy $L_{vlb}$ chính là giới hạn trên cần tối thiểu, đây cũng chính là âm của [Evidence lower bound - ELBO](https://en.wikipedia.org/wiki/Evidence_lower_bound))*
 {: .text-justify}
 
-Từ khai triển Markov cho $p_\theta(\textbf{x}_{0:T})$ ở trên ta có:
+Từ khai triển $p_\theta(\textbf{x}_{0:T})$ và Markov ở trên ta có:
 
 $$
-\mathbb{E}_q\bigg[-\log \frac{p_\theta(\textbf{x}_{0:T})}{q(\textbf{x}_{1:T}|\textbf{x}_0)}\bigg]  = 
+\begin{aligned}
+\mathbb{E}_q\bigg[-\log \frac{p_\theta(\textbf{x}_{0:T})}{q(\textbf{x}_{1:T}|\textbf{x}_0)}\bigg]  &= 
+\mathbb{E}_q\bigg[-\log p(\textbf{x}_T) - \log \frac{\prod_{t=1}^{T}p_\theta(\textbf{x}_{t-1}|\textbf{x}_t)}{\prod_{t=1}^{T}q(\textbf{x}_t|\textbf{x}_{t-1})}\bigg] \\
+&= \mathbb{E}_q\bigg[-\log p(\textbf{x}_T) - \log \frac{p_\theta(\textbf{x}_0|\textbf{x}_1)}{q(\textbf{x}_1|\textbf{x}_0)} - 
+\sum_{t=2}^{T} \log \frac{p_\theta(\textbf{x}_{t-1}|\textbf{x}_t)}{q(\textbf{x}_t|\textbf{x}_{t-1})}\bigg]
+\end{aligned}
+\tag{1}\label{1} 
 $$
 
 <div align="center">.</div> 
