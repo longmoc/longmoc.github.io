@@ -10,6 +10,7 @@ header:
 ---
 
 *Sinh ảnh với mô hình Diffusion*.
+{: .text-justify}
 
 ---
 
