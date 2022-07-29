@@ -33,6 +33,7 @@ Programming***. Các *Linear program* là các bài toán được trình bày d
 {: .text-justify}
 
 > Find a vector $\mathbf{x}$ that maximizes $\mathbf{c}^T\mathbf{x}$ subject to $\mathbf{A}\mathbf{x} \leq \mathbf{b}$ and $\mathbf{x} \geq 0$.
+> {: .text-justify}
 
 Cụ thể dạng *linear program* trong trường hợp này là tối thiểu hóa $\vec{\mathbf{D}}^T\vec{\gamma}$. Trong đó $\vec{\gamma}$ 
 tương đương với $\mathbf{x}$ và $\vec{\mathbf{D}}$ tương đương với $\mathbf{c}$.
@@ -140,7 +141,7 @@ $$z = \mathbf{c}^T \mathbf{x} \geq \mathbf{y}^T \mathbf{A} \mathbf{x} = \mathbf{
 
 Đây chính là định lý ***weak duality*** (*đối ngẫu yếu*): 
 >*the primal problem has optimal value larger than or equal to 
-the dual problem*
+the dual problem* {: .text-justify}
 > {: .text-justify}
 
 Đồng nghĩa với việc *duality gap* là lớn hơn hoặc bằng $0$. Ngoài ra còn có định lý ***strong duality*** với $z=\tilde{z}$:
