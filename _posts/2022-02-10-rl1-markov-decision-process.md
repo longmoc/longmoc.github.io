@@ -15,9 +15,11 @@ Chúng ta sẽ mô tả lại environment qua các thuộc tính:
 * State: trạng thái của environment tại một thời điểm
 * Action: Hành động của agent
 * Reward: Phần thưởng tương ứng của mỗi state (Action không có reward, mà action sẽ đẩy environment sang state mới và state đó sinh reward).
+{: .text-justify}
 
 ### Markov Process
 Một state *s* được coi là Markov state khi: Tương lai sinh ra từ state đó độc lập có điều kiện (conditionally independent) với quá khứ theo *s* đã biết.
+{: .text-justify}
 
 $$ P(s_{t+1}|s_{t}) = P(s_{t+1}|s_1, s_2, ..., s_t) $$
 
@@ -29,10 +31,12 @@ $$ \mathrm{P}=\begin{bmatrix}p_{11} & ... & p_{1n} \\ ... & ... & ... \\ p_{n1} 
 
 Markov process là một memory-less random process và có thể được mô tả qua tuple (S,P) 
 với S là không gian trạng thái *state space* và P là *state transition probability function.*
+{: .text-justify}
 
 ### Markov Reward Process
 
 Là Markov process với đánh giá thưởng phạt. Có thể định nghĩa Markov Reward Process (MRP) qua tuple (S, P, R, $ \gamma $) 
+{: .text-justify}
 
 * S : state space hữu hạn
 * P : state transition probability function
@@ -43,6 +47,7 @@ $$ R_t = \sum_{t'=t+1}^{T}{\gamma^{t'-t-1}r_{t'}} $$
 
 Dễ thấy, $ \gamma=0 $ thể hiện sự short-sign, chỉ quan tâm đến reward kế tiếp. 
 Mặt khác $ \gamma=1 $ thể hiện far-sign, quan tâm đến toàn bộ reward tương lai.
+{: .text-justify}
 
 Nói thêm về $ \gamma $, giả sử max reward là giá trị *m*, khi đó:
 
@@ -59,12 +64,14 @@ Lưu ý về việc sử dụng khái niệm kỳ vọng - expectation - $ \math
 lí do là bởi vì có thể sẽ có tính ngẫu nhiên trong quá trình chuyển trạng thái. 
 Environment có thể sẽ có một stochastic policy, đồng nghĩa với việc cần tổng hoà các kết quả của 
 nhiều action. Hoặc transition function là stochastic, thì việc chuyển trạng thái không phải lúc nào 
-cũng đạt xác suất 100%. 
+cũng đạt xác suất 100%.
+{: .text-justify}
 
 ### Bellman Equation
 
 Phương trình Bellman - [Bellman equation](https://en.wikipedia.org/wiki/Bellman_equation) được sử dụng để chia nhỏ một bài toán tối ưu động 
 thành các bài toán con đơn giản hơn. Bellman equation có dạng:
+{: .text-justify}
 
 $$ v(s) = \mathop{max}_{a}(R(s,a) + \gamma v(s')) $$
 
@@ -78,6 +85,7 @@ $$ \begin{aligned} v(s) &= \mathrm{E}[R_t \mid s_t=s] \\ &= \mathrm{E}[r_{t+1} +
 $$ \begin{aligned} \Rightarrow v(s) &=  \mathrm{E}[r_{t+1}+ \gamma\mathrm{E}[R_{t+1} \mid s_{t+1}=s_{t+1}] \mid s_t=s] \\ \Rightarrow v(s) &= \mathrm{E}[r_{t+1} + \gamma v(s_{t+1}) \mid s_t=s] \end{aligned} $$
 
 Chúng ta đã đưa state-value function về dạng Bellman, có thể đơn giản hoá phương trình và giải theo dynamic programming.
+{: .text-justify}
 
 $$ v(s) = \mathrm{R}_s + \gamma \sum_{s' \in S}{\mathrm{P}_{ss'}v(s')} $$
 
