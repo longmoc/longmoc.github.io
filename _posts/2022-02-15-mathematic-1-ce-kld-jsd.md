@@ -25,8 +25,10 @@ Entropy được tính dựa trên xác suất sự kiện.
 
 Là việc đo lường độ bất ngờ, không chắc chắn của event.
 
-- Low probability event: High information $ \sim $ surprising
+- Low probability event: High information $ \sim $ surprising 
+  {: .text-justify}
 - Hight probability event: Low information $ \sim $ unsurprising
+{: .text-justify}
 
 (Nói thêm về ý nghĩa trực giác: một event không chắc chắn (unlikely event) được xảy ra sẽ cho nhiều thông tin hơn 
 việc biết một sự kiện chắc chắn (likely event) được xảy ra).
