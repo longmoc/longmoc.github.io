@@ -99,7 +99,7 @@ p_\theta(\textbf{x}_{0:T}) &= p(\textbf{x}_T)\prod_{t=1}^{T}p_\theta(\textbf{x}_
 $$
 
 Những tham số phụ thuộc theo thời gian của Gaussian transition sẽ được mô hình huấn luyện và phân phối reverse diffusion 
-transition chỉ phụ thuộc vào timestep trước (hoặc sau nếu đi theo chiều reverse diffusion) vì tính chất của Markov.
+transition chỉ phụ thuộc vào timestep trước vì tính chất của Markov.
 {: .text-justify}
 
 ## Optimizing
