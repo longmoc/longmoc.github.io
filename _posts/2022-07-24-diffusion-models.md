@@ -86,14 +86,15 @@ do đó:
 >$$\textbf{x}_t \sim \mathcal{N}(x_{t-1};0,1) \iff \textbf{x}_t = \textbf{x}_{t-1} + \mathcal{N}(0,1)$$
 > 
 > (Ta tạm bỏ qua variance scheduled để đơn giản việc chứng minh)
-> 
-> Một thuộc tính cần chú ý của forward process là cho phép ta lấy mẫu $\textbf{x}_t$ tại timestep $t$ bất kỳ thuộc tiến trình, khi đó:
-> 
-> $$q(\textbf{x}_{t}|\textbf{x}_0) = \mathcal{N}\left(\textbf{x}_t;\sqrt{\prod_{s=1}^t(1-\beta_s)}\textbf{x}_0,\left(1-\prod_{s=1}^{t}(1-\beta_s)\right)\mathbf{I}\right)$$
-> 
-> $$q(\textbf{x}_{t}|\textbf{x}_0) = \mathcal{N}\left(\textbf{x}_t;\sqrt{\bar{\alpha}_t}\textbf{x}_0,\left(1-\bar{\alpha}_t\right)\mathbf{I}\right)$$
-> 
-> trong đó $$\bar{\alpha}_t = \prod_{s=1}^t(1-\beta_s)$$
+
+Một thuộc tính cần chú ý của forward process là cho phép ta lấy mẫu $\textbf{x}_t$ tại timestep $t$ bất kỳ thuộc tiến trình, khi đó:
+{: .text-justify}
+
+$$q(\textbf{x}_{t}|\textbf{x}_0) = \mathcal{N}\left(\textbf{x}_t;\sqrt{\prod_{s=1}^t(1-\beta_s)}\textbf{x}_0,\left(1-\prod_{s=1}^{t}(1-\beta_s)\right)\mathbf{I}\right)$$
+
+$$q(\textbf{x}_{t}|\textbf{x}_0) = \mathcal{N}\left(\textbf{x}_t;\sqrt{\bar{\alpha}_t}\textbf{x}_0,\left(1-\bar{\alpha}_t\right)\mathbf{I}\right)$$
+
+trong đó $$\bar{\alpha}_t = \prod_{s=1}^t(1-\beta_s)$$
 
 Trong quá trình huấn luyện, mô hình sẽ học cách đảo ngược quá trình diffusion trên để tạo ra ảnh mới.
 Bắt đầu với Gaussian noise thuần túy $$p(\textbf{x}_{T}) = \mathcal{N}(\textbf{x}_T; \textbf{0}, \textbf{I})$$, mô hình 
@@ -189,10 +190,11 @@ của forward process. Hậu nghiệm này có thể điều chỉnh được do
 
 $$
 q(\textbf{x}_{t-1}|\textbf{x}_t,\textbf{x}_0) = \mathcal{N}(\textbf{x}_{t-1};\tilde{\mu}_t(\textbf{x}_t,\textbf{x}_0), \tilde{\beta}_t\mathbf{I})
-q(\textbf{x}_{t-1}|\textbf{x}_t,\textbf{x}_0) = \mathcal{N}(\textbf{x}_{t-1};\sqrt{1-\beta_t}\textbf{x}_{t-1},\beta_t\mathbf{I})
 $$
 
-trong đó $\tilde{\mu}_t(\textbf{x}_t,\textbf{x}_0) = $
+trong đó $$\tilde{\mu}_t(\textbf{x}_t,\textbf{x}_0) = \frac{\sqrt{\bar{\alpha}_t-1}\beta_t}{1-\bar{\alpha}_t}\textbf{x}_0 
++ \frac{\sqrt{\bar{\alpha}_t}(1-\bar{\alpha}_{t-1})}{1-\bar{\alpha}_t}\textbf{x}_t$$ và 
+  $$ \tilde{\beta}_t = \frac{1-\bar{\alpha}_{t-1}}{1-\bar{\alpha}_t}\beta_t$$
 
 <div align="center">.</div> 
 
