@@ -52,7 +52,7 @@ Quá trình chuyển đổi chuỗi lấy mẫu của forward process có thể 
 thấp. Kết hợp điều này với giả thuyết Markov dẫn đến một tham số hóa đơn giản của forward process:
 {: .text-justify}
 
-$$q(\textbf{x}_{1:T}|\textbf{x}_0):=\prod_{t=1}^{T}q(\textbf{x}_t|\textbf{x}_{t-1})=\prod_{t=1}^{T}\mathcal{N}(\textbf{x}_t;\sqrt{1-\beta_t}\textbf{x}_{t-1},\beta_t\mathbf{I})$$
+$$q(\textbf{x}_{1:T}|\textbf{x}_0)=\prod_{t=1}^{T}q(\textbf{x}_t|\textbf{x}_{t-1})=\prod_{t=1}^{T}\mathcal{N}(\textbf{x}_t;\sqrt{1-\beta_t}\textbf{x}_{t-1},\beta_t\mathbf{I})$$
 
 Với $\beta_1, ..., \beta_T$ là *variance schedule* (cố định hoặc được huấn luyện) mục đích đảm bảo $x_T$ tiến tới 
 một Gaussian đẳng hướng với $T$ đủ lớn.
@@ -86,6 +86,14 @@ do đó:
 >$$\textbf{x}_t \sim \mathcal{N}(x_{t-1};0,1) \iff \textbf{x}_t = \textbf{x}_{t-1} + \mathcal{N}(0,1)$$
 > 
 > (Ta tạm bỏ qua variance scheduled để đơn giản việc chứng minh)
+> 
+> Một thuộc tính cần chú ý của forward process là cho phép ta lấy mẫu $\textbf{x}_t$ tại timestep $t$ bất kỳ thuộc tiến trình, khi đó:
+> 
+> $$q(\textbf{x}_{t}|\textbf{x}_0) = \mathcal{N}\left(\textbf{x}_t;\sqrt{\prod_{s=1}^t(1-\beta_s)}\textbf{x}_0,\left(1-\prod_{s=1}^{t}(1-\beta_s)\right)\mathbf{I}\right)$$
+> 
+> $$q(\textbf{x}_{t}|\textbf{x}_0) = \mathcal{N}\left(\textbf{x}_t;\sqrt{\bar{\alpha}_t}\textbf{x}_0,\left(1-\bar{\alpha}_t\right)\mathbf{I}\right)$$
+> 
+> trong đó $$\bar{\alpha}_t = \prod_{s=1}^t(1-\beta_s)$$
 
 Trong quá trình huấn luyện, mô hình sẽ học cách đảo ngược quá trình diffusion trên để tạo ra ảnh mới.
 Bắt đầu với Gaussian noise thuần túy $$p(\textbf{x}_{T}) = \mathcal{N}(\textbf{x}_T; \textbf{0}, \textbf{I})$$, mô hình 
