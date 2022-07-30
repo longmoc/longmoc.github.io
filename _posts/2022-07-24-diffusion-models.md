@@ -164,7 +164,7 @@ $$
   \bigg] \\
 &= \mathbb{E}_q\bigg[-\log \frac{p(\textbf{x}_T)}{q(\textbf{x}_T|\textbf{x}_0)}
 -\sum_{t=2}^{T} \log \frac{p_\theta(\textbf{x}_{t-1}|\textbf{x}_t)}{q(\textbf{x}_{t-1}|\textbf{x}_t,\textbf{x}_0)}
--\log p_\theta(\textbf{x}_0|\textbf{x}_1)
+-\log p_\theta(\textbf{x}_0|\textbf{x}_1) \bigg]
 \end{aligned}
 $$
 
