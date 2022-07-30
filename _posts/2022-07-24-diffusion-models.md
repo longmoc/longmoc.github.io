@@ -136,7 +136,7 @@ $$
 - \sum_{t=2}^{T} \log \frac{p_\theta(\textbf{x}_{t-1}|\textbf{x}_t)q(\textbf{x}_{t-1}|\textbf{x}_0)}
 {q(\textbf{x}_{t-1}|\textbf{x}_t,\textbf{x}_0)q(\textbf{x}_t|\textbf{x}_0)} \\
 &= - \sum_{t=2}^{T} \log \frac{p_\theta(\textbf{x}_{t-1}|\textbf{x}_t)}{q(\textbf{x}_{t-1}|\textbf{x}_t,\textbf{x}_0)}
-- \sum_{t=2}^{T} \frac{q(\textbf{x}_{t-1}|\textbf{x}_0)}{q(\textbf{x}_t|\textbf{x}_0)}
+- \sum_{t=2}^{T} \log\frac{q(\textbf{x}_{t-1}|\textbf{x}_0)}{q(\textbf{x}_t|\textbf{x}_0)}
 \end{aligned}
 \tag{2}\label{2} 
 $$
