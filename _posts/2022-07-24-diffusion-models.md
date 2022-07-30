@@ -167,6 +167,11 @@ $$
 \end{aligned}
 $$
 
+$$
+\Rightarrow L_{vlb} = D_{KL}(q(\textbf{x}_T|\textbf{x}_0)\|p(\textbf{x}_T)) 
++ \sum_{t=2}^{T}D_{KL}(q(\textbf{x}_{t-1}|\textbf{x}_t,\textbf{x}_0)\|p_\theta(\textbf{x}_{t-1}|\textbf{x}_t))
+-\log p_\theta(\textbf{x}_0|\textbf{x}_1)
+$$
 
 <div align="center">.</div> 
 
