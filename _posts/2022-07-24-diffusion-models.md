@@ -52,7 +52,7 @@ Quá trình chuyển đổi chuỗi lấy mẫu của forward process có thể 
 thấp. Kết hợp điều này với giả thuyết Markov dẫn đến một tham số hóa đơn giản của forward process:
 {: .text-justify}
 
-$$q(\textbf{x}_{1:T}|\textbf{x}_0):=\prod_{t=1}^{T}q(\textbf{x}_t|\textbf{x}_{t-1})=\prod_{t=1}^{T}\mathcal{N}(\textbf{x}_t|\sqrt{1-\beta_t}\textbf{x}_{t-1},\beta_t\mathbf{I})$$
+$$q(\textbf{x}_{1:T}|\textbf{x}_0):=\prod_{t=1}^{T}q(\textbf{x}_t|\textbf{x}_{t-1})=\prod_{t=1}^{T}\mathcal{N}(\textbf{x}_t;\sqrt{1-\beta_t}\textbf{x}_{t-1},\beta_t\mathbf{I})$$
 
 Với $\beta_1, ..., \beta_T$ là *variance schedule* (cố định hoặc được huấn luyện) mục đích đảm bảo $x_T$ tiến tới 
 một Gaussian đẳng hướng với $T$ đủ lớn.
@@ -83,7 +83,7 @@ do đó:
 >
 >Vì thế tại mỗi bước, ảnh bị làm nhiễu bằng cộng thêm Gaussian noise:
 >
->$$\textbf{x}_t \sim \mathcal{N}(x;0,1) \iff \textbf{x}_t = \textbf{x}_{t-1} + \mathcal{N}(0,1)$$
+>$$\textbf{x}_t \sim \mathcal{N}(x_{t-1};0,1) \iff \textbf{x}_t = \textbf{x}_{t-1} + \mathcal{N}(0,1)$$
 > 
 > (Ta tạm bỏ qua variance scheduled để đơn giản việc chứng minh)
 
@@ -180,8 +180,11 @@ của forward process. Hậu nghiệm này có thể điều chỉnh được do
 {: .text-justify}
 
 $$
-q(\textbf{x}_{t-1}|\textbf{x}_t,\textbf{x}_0) = \mathcal{N}(\textbf{x}_{t-1};)
+q(\textbf{x}_{t-1}|\textbf{x}_t,\textbf{x}_0) = \mathcal{N}(\textbf{x}_{t-1};\tilde{\mu}_t(\textbf{x}_t,\textbf{x}_0), \tilde{\beta}_t\mathbf{I})
+q(\textbf{x}_{t-1}|\textbf{x}_t,\textbf{x}_0) = \mathcal{N}(\textbf{x}_{t-1};\sqrt{1-\beta_t}\textbf{x}_{t-1},\beta_t\mathbf{I})
 $$
+
+trong đó $\tilde{\mu}_t(\textbf{x}_t,\textbf{x}_0) = $
 
 <div align="center">.</div> 
 
