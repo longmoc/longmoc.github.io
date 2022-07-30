@@ -60,15 +60,15 @@ một Gaussian đẳng hướng với $T$ đủ lớn.
 
 >Nhắc lại về phân phối Gaussian đơn biến:
 >
->$$\mathcal{N}(x|\mu,\sigma) = \frac{1}{(2\pi \sigma^2)^{1/2}}\ \exp\bigg(-\frac{1}{2\sigma^2}(x-\mu)^2\bigg)$$
+>$$\mathcal{N}(x;\mu,\sigma) = \frac{1}{(2\pi \sigma^2)^{1/2}}\ \exp\bigg(-\frac{1}{2\sigma^2}(x-\mu)^2\bigg)$$
 >
 >Áp dụng công thức [LTP](https://longmoc.github.io/mathematic/mathematic-4-conv-probability-distribution/)
 >
 >$$
 \begin{aligned} 
 p_{X_t}(x_t) &= \int p_{X_t|X_{t-1}}(x_t|x_{t-1})p_{X_{t-1}}(x_{t-1}) \ dx_{t-1} \\
-&= \int \mathcal{N}(x_t|x_{t-1}, 1)p_{X_{t-1}}(x_{t-1}) \ dx_{t-1} \\
-&= \int \mathcal{N}(x_t - x_{t-1}|0, 1)p_{X_{t-1}}(x_{t-1}) \ dx_{t-1}
+&= \int \mathcal{N}(x_t;x_{t-1}, 1)p_{X_{t-1}}(x_{t-1}) \ dx_{t-1} \\
+&= \int \mathcal{N}(x_t - x_{t-1};0, 1)p_{X_{t-1}}(x_{t-1}) \ dx_{t-1}
 \end{aligned}
 $$
 >
@@ -83,19 +83,19 @@ do đó:
 >
 >Vì thế tại mỗi bước, ảnh bị làm nhiễu bằng cộng thêm Gaussian noise:
 >
->$$\textbf{x}_t \sim \mathcal{N}(x|0,1) \iff \textbf{x}_t = \textbf{x}_{t-1} + \mathcal{N}(0,1)$$
+>$$\textbf{x}_t \sim \mathcal{N}(x;0,1) \iff \textbf{x}_t = \textbf{x}_{t-1} + \mathcal{N}(0,1)$$
 > 
 > (Ta tạm bỏ qua variance scheduled để đơn giản việc chứng minh)
 
 Trong quá trình huấn luyện, mô hình sẽ học cách đảo ngược quá trình diffusion trên để tạo ra ảnh mới.
-Bắt đầu với Gaussian noise thuần túy $$p(\textbf{x}_{T}) = \mathcal{N}(\textbf{x}_T, \textbf{0}, \textbf{I})$$, mô hình 
+Bắt đầu với Gaussian noise thuần túy $$p(\textbf{x}_{T}) = \mathcal{N}(\textbf{x}_T; \textbf{0}, \textbf{I})$$, mô hình 
 sẽ học được phân phối $p_\theta(\textbf{x}_{0:T})$ theo:
 {: .text-justify}
 
 $$
 \begin{aligned}
 p_\theta(\textbf{x}_{0:T}) &= p(\textbf{x}_T)\prod_{t=1}^{T}p_\theta(\textbf{x}_{t-1}|\textbf{x}_t) \\
-&= p(\textbf{x}_T)\prod_{t=1}^{T}\mathcal{N}\big(\textbf{x}_{t-1}|\mu_\theta(\textbf{x}_t, t), \Sigma_\theta(\textbf{x}_t, t)\big)
+&= p(\textbf{x}_T)\prod_{t=1}^{T}\mathcal{N}\big(\textbf{x}_{t-1};\mu_\theta(\textbf{x}_t, t), \Sigma_\theta(\textbf{x}_t, t)\big)
 \end{aligned}
 $$
 
@@ -173,6 +173,14 @@ $$
 + \sum_{t=2}^{T}\underbrace{D_{KL}(q(\textbf{x}_{t-1}|\textbf{x}_t,\textbf{x}_0)\|p_\theta(\textbf{x}_{t-1}|\textbf{x}_t))}_{L_{t-1}} \ 
 \underbrace{-\log p_\theta(\textbf{x}_0|\textbf{x}_1)}_{L_0}
   \tag{4}\label{4} 
+$$
+  
+Phương trình $\ref{4}$ sử dụng $D_{KL}$ để so sánh trực tiếp $p_\theta(\textbf{x}_{t-1}|\textbf{x}_t))$ với hậu nghiệm 
+của forward process. Hậu nghiệm này có thể điều chỉnh được do có điều kiện trên $\textbf{x}_0$:
+{: .text-justify}
+
+$$
+q(\textbf{x}_{t-1}|\textbf{x}_t,\textbf{x}_0) = \mathcal{N}(\textbf{x}_{t-1};)
 $$
 
 <div align="center">.</div> 
