@@ -41,7 +41,8 @@ giúp mô hình này có lợi thế về scalability và parallelizability.
 {: .text-justify}
 
 
-## Mathematical theory
+## Background
+### Diffusion theory
 
 Như đã giới thiệu, Diffusion model bao gồm *forward process* (*diffusion process*), lần lượt làm nhiễu dữ liệu (thường 
 là ảnh), và *reverse process* (*reverse diffusion process*), biến đổi nhiễu thành dạng sample thuộc phân phối đích.
@@ -102,7 +103,7 @@ Những tham số phụ thuộc theo thời gian của Gaussian transition sẽ 
 transition chỉ phụ thuộc vào timestep trước vì tính chất của Markov.
 {: .text-justify}
 
-## Optimizing
+### Training
 
 Mô hình Diffusion được huấn luyện nhằm tìm ra reverse Markov transition tối đa hóa likelihood của training data. Trong 
 thực tế điều này tương đương với việc tối thiểu hóa giới hạn trên của âm ($-$) log likelihood.
@@ -171,6 +172,7 @@ $$
 \Rightarrow L_{vlb} = \underbrace{D_{KL}(q(\textbf{x}_T|\textbf{x}_0)\|p(\textbf{x}_T))}_{L_T}
 + \sum_{t=2}^{T}\underbrace{D_{KL}(q(\textbf{x}_{t-1}|\textbf{x}_t,\textbf{x}_0)\|p_\theta(\textbf{x}_{t-1}|\textbf{x}_t))}_{L_{t-1}} \ 
 \underbrace{-\log p_\theta(\textbf{x}_0|\textbf{x}_1)}_{L_0}
+  \tag{4}\label{4} 
 $$
 
 <div align="center">.</div> 
