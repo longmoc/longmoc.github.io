@@ -184,8 +184,8 @@ $$
   \tag{4}\label{4} 
 $$
   
-Phương trình $\ref{4}$ sử dụng $D_{KL}$ để so sánh trực tiếp $p_\theta(\textbf{x}_{t-1}|\textbf{x}_t))$ với hậu nghiệm 
-của forward process. Hậu nghiệm này có thể điều chỉnh được do có điều kiện trên $\textbf{x}_0$:
+Phương trình $\ref{4}$ có $L_{t-1}$ sử dụng $D_{KL}$ để so sánh trực tiếp $p_\theta(\textbf{x}_{t-1}|\textbf{x}_t))$ với 
+hậu nghiệm của forward process. Hậu nghiệm này có thể điều chỉnh được do có điều kiện trên $\textbf{x}_0$:
 {: .text-justify}
 
 $$
