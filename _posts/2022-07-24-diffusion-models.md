@@ -112,7 +112,7 @@ Những tham số phụ thuộc theo thời gian của Gaussian transition sẽ 
 transition chỉ phụ thuộc vào timestep trước vì tính chất của Markov.
 {: .text-justify}
 
-### Training
+### Criterion
 
 Mô hình Diffusion được huấn luyện nhằm tìm ra reverse Markov transition tối đa hóa likelihood của training data. Trong 
 thực tế điều này tương đương với việc tối thiểu hóa giới hạn trên của âm ($-$) log likelihood.
