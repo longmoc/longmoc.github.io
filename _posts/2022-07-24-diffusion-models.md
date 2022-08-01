@@ -180,7 +180,7 @@ $$
 $$
 \Rightarrow L_{vlb} = \underbrace{D_{KL}(q(\textbf{x}_T|\textbf{x}_0)\|p(\textbf{x}_T))}_{L_T}
 + \sum_{t=2}^{T}\underbrace{D_{KL}(q(\textbf{x}_{t-1}|\textbf{x}_t,\textbf{x}_0)\|p_\theta(\textbf{x}_{t-1}|\textbf{x}_t))}_{L_{t-1}} \ 
-\underbrace{\mathbb{E}_q\left[-\log p_\theta(\textbf{x}_0|\textbf{x}_1)\right]}_{L_0}
++ \underbrace{\mathbb{E}_q\left[-\log p_\theta(\textbf{x}_0|\textbf{x}_1)\right]}_{L_0}
   \tag{4}\label{4} 
 $$
   
