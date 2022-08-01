@@ -196,7 +196,7 @@ với $$\tilde{\mu}_t(\textbf{x}_t,\textbf{x}_0) = \frac{\sqrt{\bar{\alpha}_t-1}
 và $$ \tilde{\beta}_t = \frac{1-\bar{\alpha}_{t-1}}{1-\bar{\alpha}_t}\beta_t$$.
 
 Kết luận, tất cả KL-divergence trong $\ref{4}$ đều so sánh giữa hai Gaussian với nhau, do đó có thể tính toán bằng 
-Rao-Blackwell dưới biểu thức dạng đóng thay vì sử dụng ước lượng high variance Monte Carlo.
+Rao-Blackwell dưới biểu thức dạng đóng thay vì ước lượng high variance Monte Carlo.
 {: .text-justify}
 
 
