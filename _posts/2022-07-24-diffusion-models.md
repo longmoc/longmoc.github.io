@@ -185,15 +185,20 @@ $$
 $$
   
 Phương trình $\ref{4}$ có $L_{t-1}$ sử dụng $D_{KL}$ để so sánh trực tiếp $p_\theta(\textbf{x}_{t-1}|\textbf{x}_t))$ với 
-hậu nghiệm của forward process. Hậu nghiệm này có thể điều chỉnh được do có điều kiện trên $\textbf{x}_0$:
+hậu nghiệm của forward process. Hậu nghiệm này là trackable do có điều kiện trên $\textbf{x}_0$:
 {: .text-justify}
 
 $$
 q(\textbf{x}_{t-1}|\textbf{x}_t,\textbf{x}_0) = \mathcal{N}(\textbf{x}_{t-1};\tilde{\mu}_t(\textbf{x}_t,\textbf{x}_0), \tilde{\beta}_t\mathbf{I})
 $$
 
-trong đó $$\tilde{\mu}_t(\textbf{x}_t,\textbf{x}_0) = \frac{\sqrt{\bar{\alpha}_t-1}\beta_t}{1-\bar{\alpha}_t}\textbf{x}_0 + \frac{\sqrt{\bar{\alpha}_t}(1-\bar{\alpha}_{t-1})}{1-\bar{\alpha}_t}\textbf{x}_t$$ 
+với $$\tilde{\mu}_t(\textbf{x}_t,\textbf{x}_0) = \frac{\sqrt{\bar{\alpha}_t-1}\beta_t}{1-\bar{\alpha}_t}\textbf{x}_0 + \frac{\sqrt{\bar{\alpha}_t}(1-\bar{\alpha}_{t-1})}{1-\bar{\alpha}_t}\textbf{x}_t$$ 
 và $$ \tilde{\beta}_t = \frac{1-\bar{\alpha}_{t-1}}{1-\bar{\alpha}_t}\beta_t$$.
+
+Kết luận, tất cả KL-divergence trong $\ref{4}$ đều so sánh giữa hai Gaussian với nhau, do đó có thể tính toán bằng 
+Rao-Blackwell dưới dạng biểu thức đóng thay vì sử dụng ước lượng high variance Monte Carlo.
+
+
 
 <div align="center">.</div> 
 
