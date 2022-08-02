@@ -228,12 +228,16 @@ Trong đó cần định nghĩa dạng hàm số của $\mu_\theta$ hoặc $\Sig
 phức tạp như của [Alex Nichol, Prafulla Dhariwal](https://arxiv.org/abs/2102.09672) hay đơn giản của [J. Ho](https://arxiv.org/abs/2006.11239):
 {: .text-justify}
 
-$$\Sigma_\theta(x_t, t) = \sigma_t^2 \\
+$$\Sigma_\theta(x_t, t) = \sigma_t^2\mathbf{I} \\
 \sigma_t^2 = \beta_t$$
 
 Điều này nghĩa là ta đã giả định rằng Gaussian đa biến là tích vô hướng của các Gaussian độc lập với variance xác định - variance 
-giá trị thay đổi theo thời gian. Ta đặt những variance này theo variance schedule của forward process.
+giá trị thay đổi theo thời gian. Ta đặt những variance này theo variance schedule của forward process. Từ đây ta có:
 {: .text-justify}
+
+$$p_\theta(x_{t-1}|x_t) = \mathcal{N}\left(\textbf{x}_{t-1};\mu_\theta(\textbf{x}_t, t), \sigma_\theta^2\mathbf{I}\right)$$
+
+
 
 
 <div align="center">.</div> 
