@@ -248,7 +248,7 @@ $\tilde{\mu}_t$ tức giá trị trung bình hậu nghiệm của forward proces
 
 $$\mu_\theta(\textbf{x}_t, t) = \frac{1}{\sqrt{\alpha_t}}\left(\textbf{x}_t - \frac{\beta_t}{\sqrt{1-\bar{\alpha}_t}}\epsilon_\theta(\textbf{x}_t, t)\right)$$
 
-điều này dẫn đến một hàm loss thay thế mà theo đánh giá của J. Ho là ổn định và có kết quả tốt hơn:
+điều này dẫn đến một hàm loss thay thế mà theo đánh giá của J. Ho là ổn định và có *"better result"*:
 
 $$L_{simp}(\theta) = \mathbb{E}_{t,\textbf{x}_{0},\epsilon}\left[\lVert \epsilon - \epsilon_\theta\left(\sqrt{\bar{\alpha}}_t\textbf{x}_{0} + \sqrt{1-\bar{\alpha}_t}\epsilon,t\right) \rVert^2\right]$$ 
 
