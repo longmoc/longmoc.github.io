@@ -199,6 +199,16 @@ Kết luận, tất cả KL-divergence trong $\ref{4}$ đều so sánh giữa ha
 Rao-Blackwell dưới biểu thức dạng đóng thay vì ước lượng high variance Monte Carlo.
 {: .text-justify}
 
+## Diffusion model
+
+Mô hình Diffusion là một dạng mô hình latent variable có class giới hạn, nhưng rất tự do/linh hoạt. Đối với forward 
+process, cần phải chọn variance schedule $\beta_t$ thích hợp (nhìn chung giá trị của variance thường có xu hướng tăng). 
+Còn reverse process ta sẽ chọn kiến trúc mạng và Gaussian distribution paramaterization. Ràng buộc duy nhất là kiến trúc 
+mạng đáp ứng input và output có chung kích thước.
+
+### Forward process and $L_T$
+
+
 
 
 <div align="center">.</div> 
