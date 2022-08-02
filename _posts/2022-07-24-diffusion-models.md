@@ -231,6 +231,8 @@ phức tạp như của [Alex Nichol, Prafulla Dhariwal](https://arxiv.org/abs/2
 $$\Sigma_\theta(x_t, t) = \sigma_t^2 \\
 \sigma_t^2 = \beta_t$$
 
+Điều này nghĩa 
+
 <div align="center">.</div> 
 
 ---
