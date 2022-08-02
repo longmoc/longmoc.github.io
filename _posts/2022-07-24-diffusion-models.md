@@ -237,7 +237,9 @@ giá trị thay đổi theo thời gian. Ta đặt những variance này theo va
 
 $$p_\theta(x_{t-1}|x_t) = \mathcal{N}\left(\textbf{x}_{t-1};\mu_\theta(\textbf{x}_t, t), \sigma_\theta^2\mathbf{I}\right)$$
 
+Nên có thể viết:
 
+$$L_{t-1} = \mathbb{E}_q\left[\frac{1}{2\simga_t^2}\lVert \tilde{\mu}_t(\textbf{x}_t,\textbf{x}_0) - \mu_\theta(\textbf{x}_t,t)\rVert^2\right] + C$$
 
 
 <div align="center">.</div> 
