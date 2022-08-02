@@ -224,7 +224,12 @@ Chúng ta cần lựa chọn Gaussian distribution parameter cho reverse Markov 
 
 $$p_\theta(x_{t-1}|x_t) = \mathcal{N}\left(\textbf{x}_{t-1};\mu_\theta(\textbf{x}_t, t), \Sigma_\theta(\textbf{x}_t, t)\right)$$
 
+Trong đó cần định nghĩa dạng hàm số của $\mu_\theta$ hoặc $\Sigma_\theta$. Có nhiều cách để chọn hàm $\Sigma_\theta$, 
+phức tạp như của [Alex Nichol, Prafulla Dhariwal](https://arxiv.org/abs/2102.09672) hay đơn giản của [J. Ho](https://arxiv.org/abs/2006.11239):
+{: .text-justify}
 
+$$\Sigma_\theta(x_t, t) = \sigma_t^2 \\
+\sigma_t^2 = \beta_t$$
 
 <div align="center">.</div> 
 
