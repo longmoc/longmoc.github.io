@@ -218,6 +218,11 @@ thành tập những hằng số time-dependent. Ví dụ một linear schedule 
 trong qua trình huấn luyện và có thể bỏ qua.
 {: .text-justify}
 
+#### Reverse process and $L_{1:T-1}$
+
+Chúng ta cần lựa chọn Gaussian distribution parameter cho reverse Markov transitions:
+
+$$p_\theta(x_{t-1}|x_t) = \mathcal{N}\left(\textbf{x}_{t-1};\mu_\theta(\textbf{x}_t, t), \Sigma_\theta(\textbf{x}_t, t)\right)$$
 
 
 
