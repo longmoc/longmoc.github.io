@@ -210,7 +210,12 @@ mạng đáp ứng input và output có chung kích thước.
 #### Forward process and $L_T$
 
 Theo tác giả paper [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239) chúng ta có thể bỏ qua việc 
-variance là tham số có thể được huấn luyện (như đề cập phần *Diffusion theory*)
+variance là tham số có thể được huấn luyện (như đề cập phần *Diffusion theory*). Thay vào đó, variance schedule được đặt 
+thành tập những hằng số time-dependent. Ví dụ một linear schedule từ $\beta_1 = 10^{-4}$ đến $\beta_T = 0.2$,...
+{: .text-justify}
+
+Điều này dẫn đến xấp xỉ hậu nghiệm của $q$ không có learnable parameter nào, $L_T$ trở thành hằng số (bất kể variance schedule được chọn là gì) 
+trong qua trình huấn luyện và có thể bỏ qua.
 {: .text-justify}
 
 
