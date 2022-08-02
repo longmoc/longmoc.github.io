@@ -206,9 +206,10 @@ process, cần phải chọn variance schedule $\beta_t$ thích hợp (nhìn chu
 Còn reverse process ta sẽ chọn kiến trúc mạng và Gaussian distribution paramaterization. Ràng buộc duy nhất là kiến trúc 
 mạng đáp ứng input và output có chung kích thước.
 
-### Forward process and $L_T$
+#### Forward process and $L_T$
 
-
+Theo tác giả paper [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239) chúng ta có thể bỏ qua việc 
+variance là tham số có thể được huấn luyện (như đề cập phần *Diffusion theory*)
 
 
 <div align="center">.</div> 
