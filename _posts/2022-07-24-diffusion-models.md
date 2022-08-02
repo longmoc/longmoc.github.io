@@ -205,11 +205,13 @@ Mô hình Diffusion là một dạng mô hình latent variable có class giới 
 process, cần phải chọn variance schedule $\beta_t$ thích hợp (nhìn chung giá trị của variance thường có xu hướng tăng). 
 Còn reverse process ta sẽ chọn kiến trúc mạng và Gaussian distribution paramaterization. Ràng buộc duy nhất là kiến trúc 
 mạng đáp ứng input và output có chung kích thước.
+{: .text-justify}
 
 #### Forward process and $L_T$
 
 Theo tác giả paper [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239) chúng ta có thể bỏ qua việc 
 variance là tham số có thể được huấn luyện (như đề cập phần *Diffusion theory*)
+{: .text-justify}
 
 
 <div align="center">.</div> 
