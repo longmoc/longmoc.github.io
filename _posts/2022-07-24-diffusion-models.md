@@ -231,7 +231,10 @@ phức tạp như của [Alex Nichol, Prafulla Dhariwal](https://arxiv.org/abs/2
 $$\Sigma_\theta(x_t, t) = \sigma_t^2 \\
 \sigma_t^2 = \beta_t$$
 
-Điều này nghĩa 
+Điều này nghĩa là ta đã giả định rằng Gaussian đa biến là tích vô hướng của các Gaussian độc lập với variance xác định - variance 
+giá trị thay đổi theo thời gian. Ta đặt những variance này theo variance schedule của forward process.
+{: .text-justify}
+
 
 <div align="center">.</div> 
 
