@@ -242,10 +242,10 @@ Nên có thể viết:
 $$L_{t-1} = \mathbb{E}_q\left[\frac{1}{2\sigma_t^2}\lVert \tilde{\mu}_t(\textbf{x}_t,\textbf{x}_0) - \mu_\theta(\textbf{x}_t,t)\rVert^2\right] + C$$
 
 Với C là hằng số không phụ thuộc vào $\theta$. Tham số đơn giản nhất có thể chọn được của $\mu_\theta$ là một mô hình dự đoán 
-$\tilde{\mu}_t$ 
-tức giá trị trung bình hậu nghiệm của forward process. Tuy nhiên tác giả J. Ho đưa ra vỉệc huấn luyện 
-$\mu_\theta$ 
-để dự đoán noise component tại mỗi timestep bất kỳ cho ra kết quả tốt hơn.
+$\tilde{\mu}_t$ tức giá trị trung bình hậu nghiệm của forward process. 
+{: .text-justify}
+
+Tuy nhiên tác giả J. Ho đưa ra vỉệc huấn luyện $\mu_\theta$ để dự đoán noise component tại mỗi timestep bất kỳ cho ra kết quả tốt hơn.
 {: .text-justify}
 
 $$\mu_\theta(\textbf{x}_t, t) = \frac{1}{\sqrt{\alpha_t}}\left(\textbf{x}_t - \frac{\beta_t}{\sqrt{1-\bar{\alpha}_t}}\epsilon_\theta(\textbf{x}_t, t)\right)$$
