@@ -285,7 +285,8 @@ pixel tương ứng trên ảnh nhiễu tại thời điểm $t = 1$:
 
 $$\mathcal{N}(\textbf{x};\mu_\theta^i(\textbf{x}_1,1),\sigma_1^2)$$
 
-Giả sử ảnh bao gồm các giá trị nguyên $0, 1, ...,255$ (ảnh RGB thông thường)
+Giả sử ảnh bao gồm các giá trị nguyên $0, 1, ...,255$ (ảnh RGB thông thường), được scaled về $[-1, 1]$. Sử dụng nhiều 
+bucket nhỏ, scaled pixel có giá trị $x$ tương ứng với bucket range $[x-1/255,x+1/255]$
 
 
 
