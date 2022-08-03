@@ -265,6 +265,14 @@ kích thước. Mô hình kiến trúc dạng U-Net thường được sử dụ
 
 #### Reverse process decoder and $L_0$
 
+Tại bước cuối cùng của chuỗi các biển đổi theo conditional Gaussian distribution liên tục, cần đạt được mục tiêu sinh ảnh 
+giống với data distribution. Do đó cần tìm cách có được discrete (log) likelihood cho mỗi pixel trên toàn bộ kích thước ảnh. 
+Bước cuối của reverse diffusion chain được đặt thành một decoder độc lập rời rạc. Để xác định likelihood của ảnh $\textbf{x}_0$ 
+cho trước trên $\textbf{x}_1$, bước đầu tiên ta phải ép điều kiện độc lộc giữa các chiều dữ liệu:
+
+$$p_\theta(\textbf{x}_0|\textbf{x}_1) = \prod_{i=1}^D p_\theta(\textbf{x}_0^i|\textbf{x}_1^i)$$
+
+$D$ là kích thước của dữ liệu và chỉ số $i$ là chỉ số trên mỗi chiều.
 
 
 
