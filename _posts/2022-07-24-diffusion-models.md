@@ -231,8 +231,8 @@ phức tạp như của [Alex Nichol, Prafulla Dhariwal](https://arxiv.org/abs/2
 $$\Sigma_\theta(x_t, t) = \sigma_t^2\mathbf{I} \\
 \sigma_t^2 = \beta_t$$
 
-Điều này nghĩa là ta đã giả định rằng Gaussian đa biến là tích vô hướng của các Gaussian độc lập với variance xác định - variance 
-giá trị thay đổi theo thời gian. Ta đặt những variance này theo variance schedule của forward process. Từ đây ta có:
+Điều này nghĩa là ta đã giả định rằng Gaussian đa biến là tích vô hướng của các Gaussian độc lập với variance phụ thuộc 
+thời gian xác định  Ta đặt những variance này theo variance schedule của forward process. Từ đây ta có:
 {: .text-justify}
 
 $$p_\theta(x_{t-1}|x_t) = \mathcal{N}\left(\textbf{x}_{t-1};\mu_\theta(\textbf{x}_t, t), \sigma_\theta^2\mathbf{I}\right)$$
@@ -259,7 +259,15 @@ Langevin dynamic. Theo đó Diffusion model và Score-based model giống như s
 và cơ học lượng tử matrix-based - phát hiện ra hai công thức tương đương của cùng một hiện tượng.
 {: .text-justify}
 
-#### Network architecture
+Để xác định kiến trúc mô hình $\epsilon_\theta$, ta nhắc lại điều kiện ràng buộc (duy nhất): input và output có cùng 
+kích thước. Mô hình kiến trúc dạng U-Net thường được sử dụng cho mục tiêu này.
+{: .text-justify}
+
+#### Reverse process decoder and $L_0$
+
+
+
+
 
 
 
