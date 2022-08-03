@@ -242,7 +242,7 @@ Nên có thể viết:
 $$L_{t-1} = \mathbb{E}_q\left[\frac{1}{2\sigma_t^2}\lVert \tilde{\mu}_t(\textbf{x}_t,\textbf{x}_0) - \mu_\theta(\textbf{x}_t,t)\rVert^2\right] + C$$
 
 Với C là hằng số không phụ thuộc vào $\theta$. Tham số đơn giản nhất có thể chọn được của $\mu_\theta$ là một mô hình dự đoán 
-$\tilde{\mu}_t $ 
+$\tilde{\mu}_t$ 
 tức giá trị trung bình hậu nghiệm của forward process. Tuy nhiên tác giả J. Ho đưa ra vỉệc huấn luyện 
 $\mu_\theta$ 
 để dự đoán noise component tại mỗi timestep bất kỳ cho ra kết quả tốt hơn.
@@ -255,8 +255,8 @@ $$\mu_\theta(\textbf{x}_t, t) = \frac{1}{\sqrt{\alpha_t}}\left(\textbf{x}_t - \f
 $$L_{simp}(\theta) = \mathbb{E}_{t,\textbf{x}_{0},\epsilon}\left[\lVert \epsilon - \epsilon_\theta\left(\sqrt{\bar{\alpha}}_t\textbf{x}_{0} + \sqrt{1-\bar{\alpha}_t}\epsilon,t\right) \rVert^2\right]$$ 
 
 Tác giả cũng lưu ý các mối liên hệ giữa công thức của Diffusion model với *Score-matching generative model* dựa trên 
-Langevin dynamic. Có vẻ như Diffusion model và Score-based model giống như hai mặt của đồng xu, giống như sự phát triển 
-của cơ học lượng tử wave-based và cơ học lượng tử matrix-based phát hiện ra hai công thức tương đương của cùng một hiện tượng.
+Langevin dynamic. Theo đó Diffusion model và Score-based model giống như sự phát triển của cơ học lượng tử wave-based 
+và cơ học lượng tử matrix-based - phát hiện ra hai công thức tương đương của cùng một hiện tượng.
 {: .text-justify}
 
 #### Network architecture
