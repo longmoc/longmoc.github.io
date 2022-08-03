@@ -269,13 +269,23 @@ Tại bước cuối cùng của chuỗi các biển đổi theo conditional Gau
 giống với data distribution. Do đó cần tìm cách có được discrete (log) likelihood cho mỗi pixel trên toàn bộ kích thước ảnh. 
 Bước cuối của reverse diffusion chain được đặt thành một decoder độc lập rời rạc. Để xác định likelihood của ảnh $\textbf{x}_0$ 
 cho trước trên $\textbf{x}_1$, bước đầu tiên ta phải ép điều kiện độc lộc giữa các chiều dữ liệu:
+{: .text-justify}
 
 $$p_\theta(\textbf{x}_0|\textbf{x}_1) = \prod_{i=1}^D p_\theta(\textbf{x}_0^i|\textbf{x}_1^i)$$
 
-$D$ là kích thước của dữ liệu và chỉ số $i$ là chỉ số trên mỗi chiều.
+$D$ là kích thước của dữ liệu và chỉ số $i$ là chỉ số trên mỗi chiều. Ta có thể dùng ma trận hiệp phương sai để biến đổi 
+công thức của Gaussian đa biến thành tích của các Gaussian đơn biến theo kích thước dữ liệu:
+{: .text-justify}
 
+$$\mathcal{N}\left(\textbf{x};\mu_\theta(\textbf{x}_1, 1), \sigma_\theta^2\mathbf{I}\right) = \prod_{i=1}^D\mathcal{N}\left(\textbf{x};\mu_\theta^i(\textbf{x}_1,1),\sigma_1^2\right)$$
 
+Mục tiêu là xác định giá trị số nguyên với mỗi pixel cho trước và điều kiện đã biết là phân phối các possible value cho 
+pixel tương ứng trên ảnh nhiễu tại thời điểm $t = 1$:
+{: .text-justify}
 
+$$\mathcal{N}(\textbf{x};\mu_\theta^i(\textbf{x}_1,1),\sigma_1^2)$$
+
+Giả sử ảnh bao gồm các giá trị nguyên $0, 1, ...,255$ (ảnh RGB thông thường)
 
 
 
