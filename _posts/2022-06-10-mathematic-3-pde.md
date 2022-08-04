@@ -43,7 +43,7 @@ với $w=w(x_1,x_2,\dots, x_n)$ là hàm đa biến chưa biết và $F(\dots)$ 
 
 ### Quasilinear Equations, Characteristic System, General Solution
 
-### Quasilinear Equations,
+### Quasilinear Equations
 
 Một *phương trình vi phân từng phần tựa tuyến tính bậc nhất* (*first-order quasi-linear PDE*) có hai biến độc lập sẽ có dạng chung:
 {: .text-justify}
