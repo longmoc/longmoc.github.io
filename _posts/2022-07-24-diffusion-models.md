@@ -268,7 +268,7 @@ kích thước. Mô hình kiến trúc dạng U-Net thường được sử dụ
 Tại bước cuối cùng của chuỗi các biển đổi theo conditional Gaussian distribution liên tục, cần đạt được mục tiêu sinh ảnh 
 giống với data distribution. Do đó cần tìm cách có được discrete (log) likelihood cho mỗi pixel trên toàn bộ kích thước ảnh. 
 Bước cuối của reverse diffusion chain được đặt thành một decoder độc lập rời rạc. Để xác định likelihood của ảnh $\textbf{x}_0$ 
-cho trước trên $\textbf{x}_1$, bước đầu tiên ta phải ép điều kiện độc lộc giữa các chiều dữ liệu:
+cho trước trên $\textbf{x}_1$, bước đầu tiên ta phải ép điều kiện độc lập giữa các chiều dữ liệu:
 {: .text-justify}
 
 $$p_\theta(\textbf{x}_0|\textbf{x}_1) = \prod_{i=1}^D p_\theta(\textbf{x}_0^i|\textbf{x}_1^i)$$
@@ -285,9 +285,34 @@ pixel tương ứng trên ảnh nhiễu tại thời điểm $t = 1$:
 
 $$\mathcal{N}(\textbf{x};\mu_\theta^i(\textbf{x}_1,1),\sigma_1^2)$$
 
-Giả sử ảnh bao gồm các giá trị nguyên $0, 1, ...,255$ (ảnh RGB thông thường), được scaled về $[-1, 1]$. Sử dụng nhiều 
-bucket nhỏ, scaled pixel có giá trị $x$ tương ứng với bucket range $[x-1/255,x+1/255]$
+Giả sử ảnh bao gồm các giá trị nguyên $0, 1, ...,255$ (ảnh RGB thông thường), được scale tuyến tính về $[-1, 1]$. Xác 
+suất pixel có giá trị $x$ trên phân phối Gaussian đơn biến của vị trí pixel đó tại $\textbf{x}_1$ được tính theo: 
+{: .text-justify}
 
+$$\int_{\delta_{-}(x)}^{\delta_+(x)}\mathcal{N}\left(x;\mu_\theta(\textbf{x}_1, 1), \sigma_\theta^2\right) \ dx$$
+
+$$ 
+\begin{split}
+\delta_+(x) =
+\begin{cases}
++\infty  & \text{if $x=1$} \\
+x+\frac{1}{255} & \text{if $x\lt1$}
+\end{cases}
+\end{split}
+\ \ \ \ \ \ \ 
+\begin{split}
+
+\delta_-(x) =
+\begin{cases}
+-\infty  & \text{if $x=-1$} \\
+x-\frac{1}{255} & \text{if $x\gt-1$}
+\end{cases}
+\end{split}
+$$
+
+Công thức trên toàn kích thước ảnh:
+
+$$p_\theta(\textbf{x}_0|\textbf{x}_1) = \prod_{i=1}^{D}\int_{\delta_{-}(x_0^i)}^{\delta_+(x_0^i)}\mathcal{N}\left(x;\mu_\theta^i(\textbf{x}_1, 1), \sigma_\theta^2\right) \ dx$$
 
 
 <div align="center">.</div> 
