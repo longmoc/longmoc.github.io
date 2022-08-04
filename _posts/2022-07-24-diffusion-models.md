@@ -314,7 +314,15 @@ Công thức trên toàn kích thước ảnh:
 
 $$p_\theta(\textbf{x}_0|\textbf{x}_1) = \prod_{i=1}^{D}\int_{\delta_{-}(x_0^i)}^{\delta_+(x_0^i)}\mathcal{N}\left(x;\mu_\theta^i(\textbf{x}_1, 1), \sigma_\theta^2\right) \ dx$$
 
+## Training and Sampling
 
+Từ hàm mục tiêu đã được đơn giản hóa như ở trên:
+
+$$L_{simp}(\theta) = \mathbb{E}_{t,\textbf{x}_{0},\epsilon}\left[\lVert \epsilon - \epsilon_\theta\left(\sqrt{\bar{\alpha}}_t\textbf{x}_{0} + \sqrt{1-\bar{\alpha}_t}\epsilon,t\right) \rVert^2\right]$$ 
+
+Việc huấn luyện và lấy mẫu được mô tả như sau:
+
+![]({{ site.url }}{{ site.baseurl }}/assets/images/posts/diffusion-1-3.png){:style="display:block; margin-left:auto; margin-right:auto"}
 
 
 <div align="center">.</div> 
