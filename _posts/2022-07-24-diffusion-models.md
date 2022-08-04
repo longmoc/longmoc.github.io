@@ -315,6 +315,8 @@ Công thức trên toàn kích thước ảnh:
 $$p_\theta(\textbf{x}_0|\textbf{x}_1) = \prod_{i=1}^{D}\int_{\delta_{-}(x_0^i)}^{\delta_+(x_0^i)}\mathcal{N}\left(x;\mu_\theta^i(\textbf{x}_1, 1), \sigma_\theta^2\right) \ dx$$
 
 
+
+
 <div align="center">.</div> 
 
 ---
