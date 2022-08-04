@@ -232,7 +232,7 @@ $$\Sigma_\theta(x_t, t) = \sigma_t^2\mathbf{I} \\
 \sigma_t^2 = \beta_t$$
 
 Điều này nghĩa là ta đã giả định rằng Gaussian đa biến là tích vô hướng của các Gaussian độc lập với variance phụ thuộc 
-thời gian xác định  Ta đặt những variance này theo variance schedule của forward process. Từ đây ta có:
+thời gian xác định. Ta đặt những variance này theo variance schedule của forward process. Từ đây ta có:
 {: .text-justify}
 
 $$p_\theta(x_{t-1}|x_t) = \mathcal{N}\left(\textbf{x}_{t-1};\mu_\theta(\textbf{x}_t, t), \sigma_\theta^2\mathbf{I}\right)$$
