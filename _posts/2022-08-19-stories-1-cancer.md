@@ -1,15 +1,15 @@
 ---
 layout: single
-title: "Diffusion Models"
-categories: diffusion-models
+title: "Cancer"
+categories: stories
 mathjax: true
 header:
-  image: /assets/images/gan.jpeg
-  image_description: "Creative"
-  teaser: /assets/images/gan.jpeg
+  image: /assets/images/stories.png
+  image_description: "Stories"
+  teaser: /assets/images/stories.png
 ---
 
-*Sinh ảnh với mô hình Diffusion*.
+*This note, it shouldn't be here somehow...*.
 {: .text-justify}
 
 ---
