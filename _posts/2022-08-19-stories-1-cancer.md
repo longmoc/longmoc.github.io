@@ -29,10 +29,10 @@ Seeing people are dying by cancer is terrible experience - but rather than that,
 family more and to be kind to others.
 {: .text-justify}
 
-I once heard someone say
+...I once heard someone say:
 {: .text-justify}
 
-**"If you die of cancer, the cancer also die. So it's a draw"**
+***"If you die of cancer, the cancer also die. So it's a draw"***
 {: .text-center}
 
 *No one is defeated by cancer.*
