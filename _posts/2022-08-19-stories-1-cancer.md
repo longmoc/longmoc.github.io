@@ -14,7 +14,7 @@ header:
 
 ---
 
-Last week I watched a video about a streamer/Youtube creator who was gone because of cancer when he was 22 and in his 
+Last week I watched a video about a streamer/Youtuber who was gone because of cancer when he was 22 and in his 
 prime of career. He had been a jovial person with an upbeat personality til the last days of his life.
 But a lot of terminal cancer patients I know did not have that positive thinking.
 {: .text-justify}
