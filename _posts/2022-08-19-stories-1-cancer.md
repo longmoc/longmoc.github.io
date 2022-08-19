@@ -38,6 +38,8 @@ family more and to be kind to others.
 *No one is defeated by cancer.*
 {: .text-right}
 
+\*
+{: .text-center}
 
 ![]({{ site.url }}{{ site.baseurl }}/assets/images/posts/story-1-1.jpg){:style="display:block; margin-left:auto; margin-right:auto"}
 
