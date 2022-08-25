@@ -103,7 +103,7 @@ trong đó $$\bar{\alpha}_t = \prod_{s=1}^t(1-\beta_s)$$. Ta có thể lấy m�
 $\mu = \sqrt{\bar{\alpha}_t}\textbf{x}_0$ và $\sigma^2 = (1-\bar{\alpha}_t)\mathbf{I}$:
 {: .text-justify}
 
-$$\textbf{x}_t = \sqrt{\bar{\alpha}_t}\textbf{x}_0 + \sqrt{1-\bar{\alpha}_t}\epsilon, \ \ \epsilon ~ \mathcal{N}(0,\mathbf{I}) \tag{*}\label{0} $$
+$$\textbf{x}_t = \sqrt{\bar{\alpha}_t}\textbf{x}_0 + \sqrt{1-\bar{\alpha}_t}\epsilon, \ \ \epsilon \sim \mathcal{N}(0,\mathbf{I}) \tag{*}\label{0} $$
 
 
 Trong quá trình huấn luyện, mô hình sẽ học cách đảo ngược quá trình diffusion trên để tạo ra ảnh mới.
@@ -258,7 +258,8 @@ cần làm rõ yếu tố ngẫu nhiên này. Một cách tiếp cận là thự
 dưới dạng:
 {: .text-justify}
 
-$$\tilde{\mu}_t = \frac{1}{\sqrt{\alpha_t}}\left(\textbf{x}_t - \frac{\beta_t}{\sqrt{1-\bar{\alpha}_t}}\epsilon\right)$$
+$$\tilde{\mu}_t = \frac{1}{\sqrt{\alpha_t}}\left(\textbf{x}_t - \frac{\beta_t}{\sqrt{1-\bar{\alpha}_t}}\epsilon\right), 
+\ \ \epsilon \sim \mathcal{N}(0,\mathbf{I}) \tag{*}\label{0}$$
 
 Theo đó tác giả J. Ho đưa ra vỉệc huấn luyện $\mu_\theta$ để dự đoán noise component tại mỗi timestep bất kỳ:
 {: .text-justify}
