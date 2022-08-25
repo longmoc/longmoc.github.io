@@ -103,7 +103,7 @@ trong đó $$\bar{\alpha}_t = \prod_{s=1}^t(1-\beta_s)$$. Ta có thể lấy m�
 $\mu = \sqrt{\bar{\alpha}_t}\textbf{x}_0$ và $\sigma^2 = (1-\bar{\alpha}_t)\mathbf{I}$:
 {: .text-justify}
 
-$$\textbf{x}_t = \sqrt{\bar{\alpha}_t}\textbf{x}_0 + \sqrt{1-\bar{\alpha}_t}\epsilon, \ \ \epsilon ~ \mathcal{N}(0,\mathbf{I}) \tag{0}\label{*} $$
+$$\textbf{x}_t = \sqrt{\bar{\alpha}_t}\textbf{x}_0 + \sqrt{1-\bar{\alpha}_t}\epsilon, \ \ \epsilon ~ \mathcal{N}(0,\mathbf{I}) \tag{*}\label{0} $$
 
 
 Trong quá trình huấn luyện, mô hình sẽ học cách đảo ngược quá trình diffusion trên để tạo ra ảnh mới.
