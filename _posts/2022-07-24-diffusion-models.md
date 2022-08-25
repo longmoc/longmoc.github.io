@@ -40,6 +40,11 @@ Các mô hình Diffusion đã đạt State-of-the-Art trong nhóm mô hình sinh
 giúp mô hình này có lợi thế về scalability và parallelizability.
 {: .text-justify}
 
+Ý tưởng về mô hình Diffusion có lẽ bắt đầu từ bài báo của Sohl-Dickstein, 
+[Deep Unsupervised Learning using Nonequilibrium Thermodynamics](https://arxiv.org/abs/1503.03585), 2015 
+nhưng thực sự phổ biến và trở nên hoàn thiện từ bài báo của J. Ho [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239) năm 2020.
+{: .text-justify}
+
 
 ## Background
 #### Diffusion theory
@@ -94,7 +99,12 @@ $$q(\textbf{x}_{t}|\textbf{x}_0) = \mathcal{N}\left(\textbf{x}_t;\sqrt{\prod_{s=
 
 $$q(\textbf{x}_{t}|\textbf{x}_0) = \mathcal{N}\left(\textbf{x}_t;\sqrt{\bar{\alpha}_t}\textbf{x}_0,\left(1-\bar{\alpha}_t\right)\mathbf{I}\right)$$
 
-trong đó $$\bar{\alpha}_t = \prod_{s=1}^t(1-\beta_s)$$
+trong đó $$\bar{\alpha}_t = \prod_{s=1}^t(1-\beta_s)$$. Ta có thể lấy mẫu $\textbf{x}_t$ thuộc phân phối Gaussian có 
+$\mu = \sqrt{\bar{\alpha}_t}\textbf{x}_0$ và $\sigma^2 = (1-\bar{\alpha}_t)\mathbf{I}$:
+{: .text-justify}
+
+$$\textbf{x}_t = \sqrt{\bar{\alpha}_t}\textbf{x}_0 + \sqrt{1-\bar{\alpha}_t}\epsilon, \ \ \epsilon ~ \mathcal{N}(0,\mathbf{I}) \tag{0}\label{*} $$
+
 
 Trong quá trình huấn luyện, mô hình sẽ học cách đảo ngược quá trình diffusion trên để tạo ra ảnh mới.
 Bắt đầu với Gaussian noise thuần túy $$p(\textbf{x}_{T}) = \mathcal{N}(\textbf{x}_T; \textbf{0}, \textbf{I})$$, mô hình 
@@ -242,15 +252,20 @@ Nên có thể viết:
 $$L_{t-1} = \mathbb{E}_q\left[\frac{1}{2\sigma_t^2}\lVert \tilde{\mu}_t(\textbf{x}_t,\textbf{x}_0) - \mu_\theta(\textbf{x}_t,t)\rVert^2\right] + C$$
 
 Với $C$ là hằng số không phụ thuộc vào $\theta$. Tham số đơn giản nhất có thể chọn được của $\mu_\theta$ là một mô hình dự đoán 
-$\tilde{\mu}_t$ tức giá trị trung bình hậu nghiệm của forward process. 
+$\tilde{\mu}_t$ tức giá trị trung bình hậu nghiệm của forward process. Tuy nhiên $\tilde{\mu}_t$ có chứa yếu tố ngẫu nhiên 
+(do mỗi quá trình chuyển tiếp được gán thêm gaussian noise ngẫu nhiên) ẩn bên trong, do đó muốn backpropagation hiệu quả 
+cần làm rõ yếu tố ngãu nhiên này. Một cách tiếp cận là thực hiện reparameterization, từ $\ref{0}$ viết lại $\tilde{\mu}_t$ 
+dưới dạng:
 {: .text-justify}
 
-Tuy nhiên tác giả J. Ho đưa ra vỉệc huấn luyện $\mu_\theta$ để dự đoán noise component tại mỗi timestep bất kỳ cho ra kết quả tốt hơn.
+$$\tilde{\mu}_t = \frac{1}{\sqrt{\alpha_t}}\left(\textbf{x}_t - \frac{\beta_t}{\sqrt{1-\bar{\alpha}_t}}\epsilon\right)$$
+
+ Theo đó tác giả J. Ho đưa ra vỉệc huấn luyện $\mu_\theta$ để dự đoán noise component tại mỗi timestep bất kỳ:
 {: .text-justify}
 
 $$\mu_\theta(\textbf{x}_t, t) = \frac{1}{\sqrt{\alpha_t}}\left(\textbf{x}_t - \frac{\beta_t}{\sqrt{1-\bar{\alpha}_t}}\epsilon_\theta(\textbf{x}_t, t)\right)$$
 
-điều này dẫn đến một hàm loss thay thế mà theo đánh giá của J. Ho là ổn định và có *"better result"*:
+điều này dẫn đến một hàm loss thay thế mà theo đánh giá của J. Ho là ổn định và cho kết quả tốt:
 
 $$L_{simp}(\theta) = \mathbb{E}_{t,\textbf{x}_{0},\epsilon}\left[\lVert \epsilon - \epsilon_\theta\left(\sqrt{\bar{\alpha}}_t\textbf{x}_{0} + \sqrt{1-\bar{\alpha}_t}\epsilon,t\right) \rVert^2\right]$$ 
 
