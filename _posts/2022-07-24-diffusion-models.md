@@ -254,13 +254,13 @@ $$L_{t-1} = \mathbb{E}_q\left[\frac{1}{2\sigma_t^2}\lVert \tilde{\mu}_t(\textbf{
 Với $C$ là hằng số không phụ thuộc vào $\theta$. Tham số đơn giản nhất có thể chọn được của $\mu_\theta$ là một mô hình dự đoán 
 $\tilde{\mu}_t$ tức giá trị trung bình hậu nghiệm của forward process. Tuy nhiên $\tilde{\mu}_t$ có chứa yếu tố ngẫu nhiên 
 (do mỗi quá trình chuyển tiếp được gán thêm gaussian noise ngẫu nhiên) ẩn bên trong, do đó muốn backpropagation hiệu quả 
-cần làm rõ yếu tố ngãu nhiên này. Một cách tiếp cận là thực hiện reparameterization, từ $\ref{0}$ viết lại $\tilde{\mu}_t$ 
+cần làm rõ yếu tố ngẫu nhiên này. Một cách tiếp cận là thực hiện reparameterization, từ $\ref{0}$ viết lại $\tilde{\mu}_t$ 
 dưới dạng:
 {: .text-justify}
 
 $$\tilde{\mu}_t = \frac{1}{\sqrt{\alpha_t}}\left(\textbf{x}_t - \frac{\beta_t}{\sqrt{1-\bar{\alpha}_t}}\epsilon\right)$$
 
- Theo đó tác giả J. Ho đưa ra vỉệc huấn luyện $\mu_\theta$ để dự đoán noise component tại mỗi timestep bất kỳ:
+Theo đó tác giả J. Ho đưa ra vỉệc huấn luyện $\mu_\theta$ để dự đoán noise component tại mỗi timestep bất kỳ:
 {: .text-justify}
 
 $$\mu_\theta(\textbf{x}_t, t) = \frac{1}{\sqrt{\alpha_t}}\left(\textbf{x}_t - \frac{\beta_t}{\sqrt{1-\bar{\alpha}_t}}\epsilon_\theta(\textbf{x}_t, t)\right)$$
