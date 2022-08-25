@@ -258,8 +258,7 @@ cần làm rõ yếu tố ngẫu nhiên này. Một cách tiếp cận là thự
 dưới dạng:
 {: .text-justify}
 
-$$\tilde{\mu}_t = \frac{1}{\sqrt{\alpha_t}}\left(\textbf{x}_t - \frac{\beta_t}{\sqrt{1-\bar{\alpha}_t}}\epsilon\right), 
-\ \ \epsilon \sim \mathcal{N}(0,\mathbf{I}) \tag{*}\label{0}$$
+$$\tilde{\mu}_t = \frac{1}{\sqrt{\alpha_t}}\left(\textbf{x}_t - \frac{\beta_t}{\sqrt{1-\bar{\alpha}_t}}\epsilon\right), \ \ \epsilon \sim \mathcal{N}(0,\mathbf{I}) \tag{*}\label{0}$$
 
 Theo đó tác giả J. Ho đưa ra vỉệc huấn luyện $\mu_\theta$ để dự đoán noise component tại mỗi timestep bất kỳ:
 {: .text-justify}
