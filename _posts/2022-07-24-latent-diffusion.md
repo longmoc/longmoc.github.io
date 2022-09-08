@@ -1,0 +1,34 @@
+---
+layout: single
+title: "Latent Diffusion Models"
+categories: diffusion-models
+mathjax: true
+header:
+  image: /assets/images/gan.jpeg
+  image_description: "Creative"
+  teaser: /assets/images/gan.jpeg
+---
+
+*Diffusion models (DMs) đã thay thế GANs trở thành mô hình sinh ảnh hiệu quả, đặc biệt với ảnh có độ phân giải cao. 
+Song mô hình Diffusion gốc vẫn tồn tại hạn chế. Một trong số đó là việc các biến đổi hoạt động trực tiếp trên pixel 
+space, dẫn đến yêu cầu về resource quá lớn và mất nhiều thời gian.*
+{: .text-justify}
+
+*Latent Diffusion Models (LDMs) thực thi các thành phần diffusion trên latent space từ pretrained autoencoder để giảm 
+thiểu hạn chế kể trên*.
+{: .text-justify}
+
+---
+
+## Latent Representations
+
+LDMs sử dụng các perceptual compression model đã được huấn luyện $/Epsilon$ và $/Delta$ để đưa ảnh từ pixel space về 
+latent space kích thước nhỏ và hiệu quả hơn. Không những giúp tốc độ sinh nhanh hơn, giảm yêu cầu resource mà còn cho 
+phép thực hiện nhiều tác vụ hơn. Việc nén dữ liệu đầu vào về latent space có thể coi như hành động encode, dó đó có thể 
+feed nhiều loại input khác nhau như ảnh hoặc text. Model sẽ học để mã hóa các loại dữ liệu này về cùng một sub-space mà 
+diffusion model sử dụng để sinh dữ liệu. Vì thế ta có thể sử dụng văn bản để sinh ảnh theo chỉ dẫn.
+
+
+<div align="center">.</div> 
+
+---
