@@ -34,6 +34,9 @@ Nhắc lại *DMs*, mục tiêu huấn luyện có thể viết dưới dạng �
 
 $$L_{DM} = \mathbb{E}_{\textbf{x}_t,\epsilon \sim \mathcal{N}(0,\mathbf{I}),t}\left[\lVert\epsilon - \epsilon_\theta(\textbf{x}_t,t)\rVert^2_2\right]$$
 
+Theo đó, mục tiêu huấn luyện của *LMDs*:
+
+$$L_{DM} = \mathbb{E}_{\varepsilon(\textbf{x}),\epsilon \sim \mathcal{N}(0,\mathbf{I}),t}\left[\lVert\epsilon - \epsilon_\theta(\textbf{z}_t,t)\rVert^2_2\right]$$
 
 <div align="center">.</div> 
 
