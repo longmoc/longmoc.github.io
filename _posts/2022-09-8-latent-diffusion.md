@@ -22,11 +22,17 @@ thiểu hạn chế kể trên*.
 
 ## Latent Representations
 
-LDMs sử dụng các perceptual compression model đã được huấn luyện $/Epsilon$ và $/Delta$ để đưa ảnh từ pixel space về 
+*LDMs* sử dụng các perceptual compression model đã được huấn luyện $/Epsilon$ và $/Delta$ để đưa ảnh từ pixel space về 
 latent space kích thước nhỏ và hiệu quả hơn. Không những giúp tốc độ sinh nhanh hơn, giảm yêu cầu resource mà còn cho 
 phép thực hiện nhiều tác vụ hơn. Việc nén dữ liệu đầu vào về latent space có thể coi như hành động encode, dó đó có thể 
 feed nhiều loại input khác nhau như ảnh hoặc text. Model sẽ học để mã hóa các loại dữ liệu này về cùng một sub-space mà 
 diffusion model sử dụng để sinh dữ liệu. Vì thế ta có thể sử dụng văn bản để sinh ảnh theo chỉ dẫn.
+
+![]({{ site.url }}{{ site.baseurl }}/assets/images/posts/diffusion-2-1.jpg){:style="display:block; margin-left:auto; margin-right:auto"}
+
+Nhắc lại *DMs*, mục tiêu huấn luyện có thể viết dưới dạng đơn giản thành:
+
+$$L_{DM} = \math
 
 
 <div align="center">.</div> 
