@@ -37,7 +37,7 @@ thế ta có thể sử dụng văn bản để sinh ảnh theo chỉ dẫn.
 
 ![]({{ site.url }}{{ site.baseurl }}/assets/images/posts/diffusion-2-1.jpg){:style="display:block; margin-left:auto; margin-right:auto"}
 
-Nhắc lại *DMs*, mục tiêu huấn luyện có thể viết dưới dạng đơn giản thành:
+Nhắc lại *DMs*, mục tiêu huấn luyện có thể viết dưới dạng đơn giản:
 {: .text-justify}
 
 $$L_{DM} = \mathbb{E}_{\textbf{x}_t,\epsilon \sim \mathcal{N}(0,\mathbf{I}),t}\left[\lVert\epsilon - \epsilon_\theta(\textbf{x}_t,t)\rVert^2_2\right]$$
