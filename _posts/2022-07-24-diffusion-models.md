@@ -261,7 +261,7 @@ dưới dạng:
 $$\tilde{\mu}_t = \frac{1}{\sqrt{\alpha_t}}\left(\textbf{x}_t - \frac{\beta_t}{\sqrt{1-\bar{\alpha}_t}}\epsilon\right), 
 \ \ \epsilon \sim \mathcal{N}(0,\mathbf{I})$$
 
-Theo đó tác giả J. Ho đưa ra vỉệc huấn luyện $\mu_\theta$ để dự đoán noise component tại mỗi timestep bất kỳ:
+Theo đó tác giả J. Ho đưa ra việc huấn luyện $\mu_\theta$ để dự đoán noise component tại mỗi timestep bất kỳ:
 {: .text-justify}
 
 $$\mu_\theta(\textbf{x}_t, t) = \frac{1}{\sqrt{\alpha_t}}\left(\textbf{x}_t - \frac{\beta_t}{\sqrt{1-\bar{\alpha}_t}}\epsilon_\theta(\textbf{x}_t, t)\right)$$
