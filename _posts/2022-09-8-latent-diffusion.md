@@ -22,8 +22,7 @@ thiểu hạn chế kể trên*.
 
 ## Latent Representations
 
-*LDMs* sử dụng các perceptual compression model đã được huấn luyện $\mathcal{E}$ và $\mathcal{D} để đưa ảnh từ pixel space về 
-low-dimensional latent space hiệu quả hơn. So sánh với high-dimensional pixel space thì latent space phù hợp với loại 
+*LDMs* sử dụng các perceptual compression model đã được huấn luyện $\mathcal{E}$ và $\mathcal{D} để đưa ảnh từ pixel space về low-dimensional latent space hiệu quả hơn. So sánh với high-dimensional pixel space thì latent space phù hợp với loại 
 mô hình sinh likelihood-based:
 {: .text-justify}
 - Tập trung vào những phần quan trọng, có ý nghĩa của dữ liệu
