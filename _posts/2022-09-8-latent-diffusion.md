@@ -35,7 +35,7 @@ text. Model sẽ học để mã hóa các loại dữ liệu này về cùng m�
 thế ta có thể sử dụng văn bản để sinh ảnh theo chỉ dẫn.
 {: .text-justify}
 
-![]({{ site.url }}{{ site.baseurl }}/assets/images/posts/diffusion-2-1.jpg){:style="display:block; margin-left:auto; margin-right:auto"}
+![]({{ site.url }}{{ site.baseurl }}/assets/images/posts/diffusion-2-1.png){:style="display:block; margin-left:auto; margin-right:auto"}
 
 Nhắc lại *DMs*, mục tiêu huấn luyện có thể viết dưới dạng đơn giản:
 {: .text-justify}
