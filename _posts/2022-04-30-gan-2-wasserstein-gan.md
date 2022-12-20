@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Generative Adversarial Networks III: Wasserstein GAN"
+title: "Generative Adversarial Networks II: Wasserstein GAN"
 categories: generative-adversarial-networks
 mathjax: true
 header:
