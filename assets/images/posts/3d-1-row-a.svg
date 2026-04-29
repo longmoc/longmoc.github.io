@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="290" viewBox="0 0 960 290">
+  <defs>
+    <style>
+      .bg { fill: #fcfcf8; }
+      .box { fill: white; stroke: #1f2937; stroke-width: 2; rx: 14; ry: 14; }
+      .arrow { stroke: #4b5563; stroke-width: 3; fill: none; marker-end: url(#m); }
+      .title { font: 700 20px Arial, sans-serif; fill: #111827; }
+      .txt { font: 16px Arial, sans-serif; fill: #374151; }
+      .mono { font: 14px 'Courier New', monospace; fill: #111827; }
+    </style>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4b5563"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="960" height="290"/>
+  <text class="title" x="35" y="36">One correspondence contributes one row to A</text>
+  <rect class="box" x="35" y="70" width="250" height="140"/>
+  <rect class="box" x="345" y="70" width="260" height="140"/>
+  <rect class="box" x="665" y="52" width="255" height="180"/>
+  <text class="title" x="98" y="112">x  ↔  x'</text>
+  <text class="txt" x="64" y="144">homogeneous image points</text>
+  <text class="mono" x="56" y="174">x  = [x,  y,  1]^T</text>
+  <text class="mono" x="56" y="198">x' = [x', y', 1]^T</text>
+  <text class="title" x="390" y="112">x'^T F x = 0</text>
+  <text class="txt" x="374" y="144">expand by entries of F</text>
+  <text class="mono" x="376" y="176">a_i^T f = 0</text>
+  <text class="mono" x="376" y="200">one linear constraint</text>
+  <text class="mono" x="686" y="98">a_i^T = [x'x, x'y, x',</text>
+  <text class="mono" x="686" y="124">         y'x, y'y, y',</text>
+  <text class="mono" x="686" y="150">         x,   y,   1 ]</text>
+  <text class="mono" x="686" y="188">stack all rows</text>
+  <text class="mono" x="686" y="212">to obtain  A f = 0</text>
+  <path class="arrow" d="M285 142 H345"/>
+  <path class="arrow" d="M605 142 H665"/>
+</svg>

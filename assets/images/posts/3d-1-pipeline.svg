@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="240" viewBox="0 0 960 240">
+  <defs>
+    <style>
+      .bg { fill: #fbfbf5; }
+      .box { fill: #fff; stroke: #1f2937; stroke-width: 2; rx: 14; ry: 14; }
+      .arrow { stroke: #4b5563; stroke-width: 3; fill: none; marker-end: url(#m); }
+      .t1 { font: 700 18px Arial, sans-serif; fill: #111827; text-anchor: middle; }
+      .t2 { font: 14px Arial, sans-serif; fill: #374151; text-anchor: middle; }
+    </style>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4b5563"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="960" height="240"/>
+  <rect class="box" x="25" y="74" width="160" height="92"/>
+  <rect class="box" x="210" y="74" width="160" height="92"/>
+  <rect class="box" x="395" y="74" width="160" height="92"/>
+  <rect class="box" x="580" y="74" width="160" height="92"/>
+  <rect class="box" x="765" y="74" width="170" height="92"/>
+  <text class="t1" x="105" y="107">Matching</text>
+  <text class="t2" x="105" y="132">correspondences</text>
+  <text class="t1" x="290" y="107">RANSAC</text>
+  <text class="t2" x="290" y="132">outlier rejection</text>
+  <text class="t1" x="475" y="107">Estimate F</text>
+  <text class="t2" x="475" y="132">epipolar geometry</text>
+  <text class="t1" x="660" y="107">Compute E</text>
+  <text class="t2" x="660" y="132">with K, K'</text>
+  <text class="t1" x="850" y="107">Recover pose</text>
+  <text class="t2" x="850" y="128">R, t and</text>
+  <text class="t2" x="850" y="148">triangulation</text>
+  <path class="arrow" d="M185 120 H210"/>
+  <path class="arrow" d="M370 120 H395"/>
+  <path class="arrow" d="M555 120 H580"/>
+  <path class="arrow" d="M740 120 H765"/>
+  <text class="t2" x="34" y="40">Two-view Structure from Motion</text>
+</svg>

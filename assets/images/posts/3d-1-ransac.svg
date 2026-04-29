@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320">
+  <defs>
+    <style>
+      .bg { fill: #fcfcf8; }
+      .panel { fill: white; stroke: #1f2937; stroke-width: 2; rx: 14; ry: 14; }
+      .title { font: 700 20px Arial, sans-serif; fill: #111827; }
+      .txt { font: 15px Arial, sans-serif; fill: #374151; }
+      .good { fill: #15803d; }
+      .bad { fill: #b91c1c; }
+      .line { stroke: #94a3b8; stroke-width: 2; }
+      .arrow { stroke: #4b5563; stroke-width: 3; fill: none; marker-end: url(#m); }
+    </style>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4b5563"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="960" height="320"/>
+  <text class="title" x="35" y="36">RANSAC keeps the model supported by the largest consensus set</text>
+  <rect class="panel" x="35" y="65" width="270" height="210"/>
+  <rect class="panel" x="345" y="65" width="270" height="210"/>
+  <rect class="panel" x="655" y="65" width="270" height="210"/>
+  <text class="title" x="90" y="100">Raw matches</text>
+  <line class="line" x1="75" y1="132" x2="265" y2="132"/>
+  <circle class="good" cx="102" cy="156" r="6"/>
+  <circle class="good" cx="144" cy="170" r="6"/>
+  <circle class="bad" cx="186" cy="150" r="6"/>
+  <circle class="good" cx="224" cy="184" r="6"/>
+  <circle class="bad" cx="248" cy="160" r="6"/>
+  <text class="txt good" x="78" y="228">green: inlier candidates</text>
+  <text class="txt bad" x="78" y="250">red: obvious outliers</text>
+  <text class="title" x="405" y="100">Hypothesize F</text>
+  <text class="txt" x="382" y="138">sample 8 matches</text>
+  <text class="txt" x="382" y="164">fit normalized 8-point model</text>
+  <text class="txt" x="382" y="190">measure epipolar residuals</text>
+  <text class="txt" x="382" y="216">count consensus set</text>
+  <text class="title" x="725" y="100">Best model</text>
+  <line class="line" x1="692" y1="142" x2="888" y2="170"/>
+  <circle class="good" cx="718" cy="148" r="6"/>
+  <circle class="good" cx="768" cy="155" r="6"/>
+  <circle class="good" cx="820" cy="163" r="6"/>
+  <circle class="good" cx="858" cy="168" r="6"/>
+  <circle class="bad" cx="890" cy="208" r="6"/>
+  <text class="txt" x="688" y="228">refit F on all inliers</text>
+  <text class="txt" x="688" y="250">reject points far from epipolar line</text>
+  <path class="arrow" d="M305 170 H345"/>
+  <path class="arrow" d="M615 170 H655"/>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300">
+  <defs>
+    <style>
+      .bg { fill: #fbfbf5; }
+      .box { fill: white; stroke: #1f2937; stroke-width: 2; rx: 14; ry: 14; }
+      .arrow { stroke: #4b5563; stroke-width: 3; fill: none; marker-end: url(#m); }
+      .title { font: 700 20px Arial, sans-serif; fill: #111827; }
+      .txt { font: 16px Arial, sans-serif; fill: #374151; }
+      .mono { font: 15px 'Courier New', monospace; fill: #111827; }
+      .bad { fill: #b91c1c; }
+      .good { fill: #15803d; }
+    </style>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4b5563"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="960" height="300"/>
+  <text class="title" x="35" y="35">Project the least-squares estimate back to rank 2</text>
+  <rect class="box" x="30" y="68" width="280" height="180"/>
+  <rect class="box" x="340" y="68" width="280" height="180"/>
+  <rect class="box" x="650" y="68" width="280" height="180"/>
+  <text class="title" x="102" y="108">Initial estimate</text>
+  <text class="mono" x="58" y="142">F~ = U diag(σ1, σ2, σ3)</text>
+  <text class="mono" x="114" y="166">V^T</text>
+  <text class="txt" x="78" y="198">noise makes σ3 &gt; 0</text>
+  <text class="txt bad" x="94" y="224">rank(F~) = 3</text>
+  <text class="title" x="405" y="108">Enforce constraint</text>
+  <text class="mono" x="386" y="142">diag(σ1, σ2, σ3)</text>
+  <text class="mono" x="441" y="176">↓</text>
+  <text class="mono" x="394" y="212">diag(σ1, σ2, 0)</text>
+  <text class="title" x="746" y="108">Valid F</text>
+  <text class="mono" x="675" y="142">F = U diag(σ1, σ2, 0)</text>
+  <text class="mono" x="770" y="166">V^T</text>
+  <text class="txt" x="710" y="198">closest rank-2 matrix</text>
+  <text class="txt good" x="730" y="224">rank(F) = 2</text>
+  <path class="arrow" d="M310 158 H340"/>
+  <path class="arrow" d="M620 158 H650"/>
+</svg>
