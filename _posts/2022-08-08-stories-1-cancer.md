@@ -9,33 +9,27 @@ header:
   teaser: /assets/images/stories.png
 ---
 
-*This note, it shouldn't be here somehow...*.
+*This note probably doesn’t belong here, but I wanted to share it…*.
 {: .text-justify}
 
 ---
 
-Last week I watched a video about a streamer/Youtuber who was gone because of cancer when he was 22 and in his 
-prime of career. He had been a jovial person with an upbeat personality til the last days of his life.
-But a lot of terminal cancer patients I know did not have that positive thinking.
+Last week, I watched a video about a streamer/YouTuber who passed away from cancer at the age of 22, right at the peak of his career. He remained cheerful and positive until the final days of his life. However, many terminal cancer patients I’ve known didn’t have that same mindset.
 {: .text-justify}
 
-They tended to lose their optimism and gave in to discouragement and self-pity. 
-The true that you might only live up to few months can knock you out whether you're rich or poor, old or young. 
-Sometime I wonder what I would do if it were me. That's terrible!
+They often lost their optimism and gave in to discouragement and self-pity. The reality that you might only have a few months left to live can affect anyone deeply, regardless of whether they are rich or poor, young or old. Sometimes I wonder what I would do if I were in that situation. It’s a frightening thought.
 {: .text-justify}
 
-I also noticed the way the family and friends treated that patients, looked after both their physical and emotional needs.
-Seeing people are dying by cancer is terrible experience - but rather than that, such experiences taught me to value 
-family more and to be kind to others.
+I also noticed how family and friends supported those patients, taking care of both their physical and emotional needs. Watching someone suffer from cancer is a painful experience, but it also teaches us to value our loved ones more and to treat others with kindness.
 {: .text-justify}
 
 ...I once heard someone say:
 {: .text-justify}
 
-***"If you die of cancer, the cancer also die. So it's a draw"***
+***"If you die of cancer, the cancer dies too. So it’s a draw."***
 {: .text-center}
 
-*No one is defeated by cancer.*
+*In a way, no one is truly defeated by cancer.*
 {: .text-right}
 
 
