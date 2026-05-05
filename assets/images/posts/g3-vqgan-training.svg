@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="360" viewBox="0 0 980 360">
+  <defs>
+    <style>
+      .bg { fill: transparent; }
+      .panel { fill: #ffffff; stroke: #1f2937; stroke-width: 1.6; }
+      .title { font: 700 18px Georgia, 'Times New Roman', serif; fill: #111827; }
+      .mono { font: 16px 'Courier New', monospace; fill: #111827; }
+      .note { font: 14px Georgia, 'Times New Roman', serif; fill: #374151; }
+    </style>
+  </defs>
+  <rect class="bg" width="980" height="360"/>
+  <rect class="panel" x="36" y="38" width="908" height="286"/>
+
+  <text class="title" x="62" y="68">Training objective for VQGAN autoencoder</text>
+
+  <text class="mono" x="72" y="110">1. z_e = E(x)</text>
+  <text class="mono" x="72" y="142">2. q   = argmin_k ||z_e - e_k||_2</text>
+  <text class="mono" x="72" y="174">3. z_q = e_q</text>
+  <text class="mono" x="72" y="206">4. x̂   = D(z_q)</text>
+
+  <text class="mono" x="72" y="252">5. L_rec    = ||x - x̂||_1</text>
+  <text class="mono" x="72" y="284">6. L_perc   = Σ_l ||φ_l(x) - φ_l(x̂)||_1</text>
+
+  <text class="mono" x="500" y="110">7. L_code   = ||sg[z_e] - e||_2^2</text>
+  <text class="mono" x="500" y="142">8. L_commit = β ||z_e - sg[e]||_2^2</text>
+  <text class="mono" x="500" y="174">9. L_GAN    from D_patch(x, x̂)</text>
+
+  <text class="mono" x="500" y="222">10. L = λ_rec L_rec + λ_perc L_perc</text>
+  <text class="mono" x="528" y="254">    + λ_code (L_code + L_commit)</text>
+  <text class="mono" x="528" y="286">    + λ_GAN L_GAN</text>
+
+  <text class="note" x="62" y="350">The encoder, codebook, decoder, and patch discriminator are optimized through these coupled losses.</text>
+</svg>
